@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Eleitoral - Resumo IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ Radar Eleitoral</h1>
+        <p>Consulte o resumo das propostas com IA.</p>
+
+        <div class="search-box">
+            <input type="text" id="inputId" placeholder="Ex: 130002539775" value="130002539775">
+            <button id="btnResumo">Gerar Resumo</button>
+        </div>
+
+        <div id="loading" class="hidden">⏳ O Gemini está lendo a proposta...</div>
+
+        <div id="resultado" class="hidden">
+            <h3>Síntese da Proposta</h3>
+            <div id="textoResumo"></div>
+            <div class="disclaimer">
+                ⚠️ Aviso: Resumo gerado por Inteligência Artificial a partir do plano de governo original.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btnResumo').addEventListener('click', async () => {
+            const inputId = document.getElementById('inputId').value.trim();
+            const loading = document.getElementById('loading');
+            const resultado = document.getElementById('resultado');
+            const textoResumo = document.getElementById('textoResumo');
+
+            if (!inputId) {
+                alert("Digite o ID do candidato!");
+                return;
+            }
+
+            // Interface atualiza para carregamento
+            loading.classList.remove('hidden');
+            resultado.classList.add('hidden');
+            textoResumo.innerHTML = '';
+
+            try {
+                // Chama a NOSSA API segura, não o Google diretamente
+                const response = await fetch('/api/resumo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id_candidato: inputId })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.erro || 'Erro desconhecido da API');
+                }
+
+                // Exibe o resultado convertendo quebras de linha
+                textoResumo.innerHTML = data.resumo.replace(/\n/g, '<br>');
+                resultado.classList.remove('hidden');
+
+            } catch (error) {
+                alert(`Erro: ${error.message}`);
+            } finally {
+                loading.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

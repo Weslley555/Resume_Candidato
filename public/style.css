@@ -1,0 +1,100 @@
+:root {
+    /* Paleta de Cores */
+    --bg-body: #121212;
+    --bg-container: #1e1e1e;
+    --bg-input: #2c2c2c;
+
+    --text-main: #e0e0e0;
+    --text-input: white;
+    --text-muted: #888;
+    --text-inverse: #121212; /* Usado no texto do botão */
+
+    --accent-color: #f39c12;
+    --accent-hover: #e67e22;
+    --accent-rgb: 243, 156, 18; /* Separado para usar com transparência (rgba) */
+
+    --border-color: #333;
+
+    /* Tipografia e Geometria */
+    --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+
+    /* Espaçamentos Padronizados */
+    --space-sm: 12px;
+    --space-md: 20px;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px var(--space-md);
+}
+
+.container {
+    background-color: var(--bg-container);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: var(--space-md) 0;
+}
+
+input {
+    flex: 1;
+    padding: var(--space-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-input);
+    color: var(--text-input);
+}
+
+button {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--accent-color);
+    color: var(--text-inverse);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+.hidden {
+    display: none;
+}
+
+#resultado {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    /* O truque do RGB permite injetar opacidade em uma variável */
+    background-color: rgba(var(--accent-rgb), 0.1);
+    border-left: 4px solid var(--accent-color);
+    border-radius: var(--radius-sm);
+}
+
+.disclaimer {
+    margin-top: var(--space-md);
+    font-size: 0.85em;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+}
