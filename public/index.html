@@ -3,71 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar Eleitoral - Resumo IA</title>
+    <title>Radar Eleitoral 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🎙️ Radar Eleitoral</h1>
-        <p>Consulte o resumo das propostas com IA.</p>
+    <div class="container-principal">
+        <!-- 1. Barra de Pesquisa Superior -->
+        <header class="barra-pesquisa">
+            <div class="filtro-grupo">
+                <label>Nome:</label>
+                <input type="text" id="inputNome" placeholder="Ex: Alexandre">
+            </div>
 
-        <div class="search-box">
-            <input type="text" id="inputId" placeholder="Ex: 130002539775" value="130002539775">
-            <button id="btnResumo">Gerar Resumo</button>
+            <div class="filtro-grupo">
+                <label>UF:</label>
+                <select id="selectUF">
+                    <option value="">Todos</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="BR">Brasil</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Cargo:</label>
+                <select id="selectCargo">
+                    <option value="">Todos</option>
+                    <option value="PRESIDENTE">Presidente</option>
+                    <option value="GOVERNADOR">Governador</option>
+                    <option value="SENADOR">Senador</option>
+                    <option value="DEPUTADO FEDERAL">Deputado Federal</option>
+                    <option value="DEPUTADO ESTADUAL">Deputado Estadual</option>
+                </select>
+            </div>
+
+            <button id="btnPesquisar" class="btn-primary">🔎 Pesquisar</button>
+        </header>
+
+        <!-- 2. Lista de Resultados -->
+        <div id="areaResultados" class="area-resultados">
+            <p id="msgResultados" class="texto-mutado">Digite um nome ou selecione os filtros para pesquisar.</p>
+            <div id="listaCandidatos" class="lista-cards">
+                <!-- O JavaScript vai injetar os resultados aqui -->
+            </div>
         </div>
 
-        <div id="loading" class="hidden">⏳ O Gemini está lendo a proposta...</div>
+        <!-- 3. Ficha Completa do Candidato (Dossiê) -->
+        <div id="areaFicha" class="area-ficha hidden">
+            <button id="btnVoltar" class="btn-secundario">← Voltar para a busca</button>
 
-        <div id="resultado" class="hidden">
-            <h3>Síntese da Proposta</h3>
-            <div id="textoResumo"></div>
-            <div class="disclaimer">
-                ⚠️ Aviso: Resumo gerado por Inteligência Artificial a partir do plano de governo original.
+            <div id="conteudoFicha">
+                <!-- Cabeçalho -->
+                <div class="ficha-header">
+                    <h2 id="candNome">NOME DO CANDIDATO</h2>
+                    <p>📌 Cargo: <span id="candCargo"></span> | Partido: <span id="candPartido"></span></p>
+                    <p>📍 UF: <span id="candUF"></span> | ID: <span id="candID"></span></p>
+                </div>
+
+                <!-- Perfil -->
+                <div class="ficha-secao">
+                    <h3>📋 PERFIL</h3>
+                    <p>• Ocupação: <span id="candOcupacao"></span></p>
+                    <p>• Escolaridade: <span id="candEscolaridade"></span></p>
+                    <p>• Gênero: <span id="candGenero"></span> | Cor/Raça: <span id="candRaca"></span></p>
+                </div>
+
+                <!-- Patrimônio -->
+                <div class="ficha-secao">
+                    <h3>💰 PATRIMÔNIO DECLARADO</h3>
+                    <p>Total Declarado: <strong id="candTotalBens">R$ 0,00</strong></p>
+                    <table class="tabela-bens">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaBensCorpo">
+                            <!-- JS injeta os bens aqui -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Botão de IA -->
+                <div class="ficha-secao secao-ia">
+                    <h3>📄 PROPOSTA DE GOVERNO</h3>
+                    <button id="btnGerarResumo" class="btn-warning">✨ Gerar Resumo com IA</button>
+                    <div id="loadingIA" class="hidden">⏳ Analisando o plano de governo com Gemini...</div>
+                    <div id="resultadoIA" class="resultado-ia hidden"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        document.getElementById('btnResumo').addEventListener('click', async () => {
-            const inputId = document.getElementById('inputId').value.trim();
-            const loading = document.getElementById('loading');
-            const resultado = document.getElementById('resultado');
-            const textoResumo = document.getElementById('textoResumo');
+    <script src="script.js"></script>
 
-            if (!inputId) {
-                alert("Digite o ID do candidato!");
-                return;
-            }
-
-            // Interface atualiza para carregamento
-            loading.classList.remove('hidden');
-            resultado.classList.add('hidden');
-            textoResumo.innerHTML = '';
-
-            try {
-                // Chama a NOSSA API segura, não o Google diretamente
-                const response = await fetch('/api/resumo', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id_candidato: inputId })
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.erro || 'Erro desconhecido da API');
-                }
-
-                // Exibe o resultado convertendo quebras de linha
-                textoResumo.innerHTML = data.resumo.replace(/\n/g, '<br>');
-                resultado.classList.remove('hidden');
-
-            } catch (error) {
-                alert(`Erro: ${error.message}`);
-            } finally {
-                loading.classList.add('hidden');
-            }
-        });
-    </script>
+    <footer class="site-footer">
+        <a href="/privacidade">🔒 Política de Privacidade</a>
+        &nbsp;·&nbsp;
+        Open source · GPL-3.0
+        &nbsp;·&nbsp;
+        Dados coletados em 04/09/2026
+    </footer>
 </body>
 </html>

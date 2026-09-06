@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         }
 
         // 2. Busca o texto no "banco" interno (sem deixar o usuário enviar o texto)
-        const filePath = path.join(process.cwd(), 'api', 'propostas.json');
+        const filePath = path.join(process.cwd(), 'api', 'textos_propostas.json');
         const propostasDB = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
         const textoProposta = propostasDB[id_candidato];
