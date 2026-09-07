@@ -99,7 +99,14 @@ function renderizarResultados(resultados) {
         btn.onclick = () => abrirFicha(cand.id, cand.uf);
 
         const info = document.createElement('div');
-        info.innerHTML = `<strong>${cand.nome}</strong><br><span class="texto-mutado">${cand.cargo || 'Cargo Indefinido'} • ${cand.uf} • ID: ${cand.id}</span>`;
+        const strong = document.createElement('strong');
+        strong.textContent = cand.nome;
+        info.appendChild(strong);
+        info.appendChild(document.createElement('br'));
+        const span = document.createElement('span');
+        span.className = 'texto-mutado';
+        span.textContent = `${cand.cargo || 'Cargo Indefinido'} • ${cand.uf} • ID: ${cand.id}`;
+        info.appendChild(span);
 
         div.appendChild(btn);
         div.appendChild(info);
@@ -139,19 +146,19 @@ async function abrirFicha(id, uf) {
     candidatoAtual = dados;
 
     // 4.1. Preenchendo o Cabeçalho e Perfil
-    const nomeOficial = dados.perfil.nome || "Candidato";
-    const nomeUrna = dados.perfil.nomeUrna || "Não informado";
+    const nomeOficial = dados.perfil?.nome || "Candidato";
+    const nomeUrna = dados.perfil?.nomeUrna || "Não informado";
 
     document.getElementById('candNome').innerText = `${nomeOficial} (Urna: ${nomeUrna})`;
-    document.getElementById('candCargo').innerText = dados.perfil.cargo || dados.cargo || "";
-    document.getElementById('candPartido').innerText = dados.perfil.partido;
-    document.getElementById('candUF').innerText = dados.uf;
-    document.getElementById('candID').innerText = dados.id;
+    document.getElementById('candCargo').innerText = dados.perfil?.cargo || dados.cargo || "Não informado";
+    document.getElementById('candPartido').innerText = dados.perfil?.partido || "Não informado";
+    document.getElementById('candUF').innerText = dados.uf || uf || "Não informado";
+    document.getElementById('candID').innerText = dados.id || id || "Não informado";
 
-    document.getElementById('candOcupacao').innerText = dados.perfil.ocupacao || "Não informado";
-    document.getElementById('candEscolaridade').innerText = dados.perfil.escolaridade || "Não informado";
-    document.getElementById('candGenero').innerText = dados.perfil.genero || "Não informado";
-    document.getElementById('candRaca').innerText = dados.perfil.raca || "Não informado";
+    document.getElementById('candOcupacao').innerText = dados.perfil?.ocupacao || "Não informado";
+    document.getElementById('candEscolaridade').innerText = dados.perfil?.escolaridade || "Não informado";
+    document.getElementById('candGenero').innerText = dados.perfil?.genero || "Não informado";
+    document.getElementById('candRaca').innerText = dados.perfil?.raca || "Não informado";
 
     // 4.2. Preenchendo o Patrimônio
     let totalBens = 0;
@@ -160,11 +167,15 @@ async function abrirFicha(id, uf) {
 
     if (dados.bens && dados.bens.length > 0) {
         dados.bens.forEach(bem => {
-            const valorNum = parseFloat(bem.valor.replace(',', '.'));
+            const valorNum = parseFloat(String(bem.valor).replace(',', '.'));
             if (!isNaN(valorNum)) totalBens += valorNum;
 
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${bem.tipo}</td><td>${bem.descricao}</td><td>R$ ${bem.valor}</td>`;
+            ['tipo', 'descricao', 'valor'].forEach(campo => {
+                const td = document.createElement('td');
+                td.textContent = campo === 'valor' ? `R$ ${bem.valor}` : bem[campo];
+                tr.appendChild(td);
+            });
             tabelaCorpo.appendChild(tr);
         });
     } else {
@@ -185,6 +196,7 @@ async function abrirFicha(id, uf) {
         btnGerarResumo.classList.remove('texto-mutado');
     } else {
         btnGerarResumo.disabled = true;
+        btnGerarResumo.classList.add('texto-mutado');
         btnGerarResumo.innerText = "Sem proposta anexada";
     }
 
@@ -213,24 +225,46 @@ btnGerarResumo.addEventListener('click', async () => {
     resultadoIA.classList.add('hidden');
 
     try {
-        // Envia apenas o ID na URL usando o método padrão (GET)
-        const res = await fetch(`/api/resumo?id=${candidatoAtual.id}`);
+        // Envia o ID do candidato no corpo da requisição via POST
+        const res = await fetch('/api/resumo', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id_candidato: candidatoAtual.id }),
+        });
         const data = await res.json();
 
         loadingIA.classList.add('hidden');
         resultadoIA.classList.remove('hidden');
 
         if (res.ok && data.resumo) {
-            // Converte as quebras de linha do Gemini para <br> do HTML
-            const textoFormatado = data.resumo.replace(/\n/g, '<br>');
-            resultadoIA.innerHTML = textoFormatado;
+            // Renderiza o resumo da IA de forma segura: textContent para evitar XSS, <br> explícitos para quebras de linha
+            resultadoIA.innerHTML = '';
+            const linhas = data.resumo.split('\n');
+            linhas.forEach((linha, i) => {
+                resultadoIA.appendChild(document.createTextNode(linha));
+                if (i < linhas.length - 1) {
+                    resultadoIA.appendChild(document.createElement('br'));
+                }
+            });
         } else {
-            resultadoIA.innerHTML = `<span style="color: #ff4c4c;">Erro: ${data.erro || "Falha desconhecida"}</span>`;
+            resultadoIA.innerHTML = '';
+            const span = document.createElement('span');
+            span.style.color = '#ff4c4c';
+            span.textContent = `Erro: ${data.erro || "Falha desconhecida"}`;
+            resultadoIA.appendChild(span);
         }
 
     } catch (e) {
+        console.error(e);
         loadingIA.classList.add('hidden');
         resultadoIA.classList.remove('hidden');
-        resultadoIA.innerHTML = `<span style="color: #ff4c4c;">Erro de comunicação com o servidor. Verifique o console.</span>`;
+        resultadoIA.innerHTML = '';
+        const span = document.createElement('span');
+        span.style.color = '#ff4c4c';
+        span.textContent = 'Erro de comunicação com o servidor. Verifique o console (F12).';
+        resultadoIA.appendChild(span);
     }
 });
+
+// Dá o pontapé inicial!
+carregarListaBusca();

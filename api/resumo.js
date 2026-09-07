@@ -25,7 +25,7 @@ export default async function handler(req, res) {
         const filePath = path.join(process.cwd(), 'api', 'textos_propostas.json');
         const propostasDB = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-        const textoProposta = propostasDB[id_candidato];
+        const textoProposta = propostasDB[id_candidato] || propostasDB[`MG_${id_candidato}`] || propostasDB[`BR_${id_candidato}`];
 
         if (!textoProposta) {
             return res.status(404).json({ erro: 'Proposta não encontrada para este candidato.' });
