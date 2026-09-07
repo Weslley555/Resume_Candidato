@@ -33,7 +33,7 @@ artificial (Gemini).
 ├── middleware.js              # Rate limiting por IP (Upstash Redis)
 ├── vercel.json                # Rewrites (ex: /privacidade → /privacidade.html)
 ├── package.json
-├── LICENSE                    # GPL-3.0
+├── LICENSE                    # AGPL-3.0
 └── README.md
 ```
 
@@ -101,6 +101,6 @@ integralmente esse princípio.
 
 ## Licença
 
-Este projeto é licenciado sob a **GNU General Public License v3.0
-(GPL-3.0)**. Consulte o arquivo [`LICENSE`](./LICENSE) para os termos
+Este projeto é licenciado sob a **GNU Affero General Public License v3.0
+(AGPL-3.0)**. Consulte o arquivo [`LICENSE`](./LICENSE) para os termos
 completos.
