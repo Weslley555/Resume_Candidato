@@ -133,5 +133,17 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
     line-height: 1.6;
 }
 
+.disclaimer-ia {
+    margin-top: 1rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--text-muted);
+    background: rgba(255, 193, 7, 0.06);
+    border-left: 3px solid #ffc107;
+    border-radius: 3px;
+    line-height: 1.5;
+}
+
 .hidden { display: none !important; }
 .texto-mutado { color: var(--text-muted); }

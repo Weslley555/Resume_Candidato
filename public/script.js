@@ -16,6 +16,9 @@ const btnGerarResumo = document.getElementById('btnGerarResumo');
 const loadingIA = document.getElementById('loadingIA');
 const resultadoIA = document.getElementById('resultadoIA');
 
+// Disclaimer de IA exibido junto a todo resumo
+const DISCLAIMER_IA = 'Resumo gerado por Inteligência Artificial a partir do texto oficial da proposta de governo — pode conter imprecisões.';
+
 // ==========================================
 // 2. ESTADO DA APLICAÇÃO (Memória)
 // ==========================================
@@ -185,19 +188,21 @@ async function abrirFicha(id, uf) {
     // Formata o total para R$ brasileiro
     document.getElementById('candTotalBens').innerText = totalBens.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-    // 4.3. Resetando a IA
+    // 4.3. Resetando a IA e verificando cache
     resultadoIA.classList.add('hidden');
     resultadoIA.innerHTML = '';
-    btnGerarResumo.innerText = "✨ Gerar Resumo com IA";
+    btnGerarResumo.innerText = '✨ Verificando...';
+    btnGerarResumo.disabled = true;
 
     // Se o candidato não tiver PDF de proposta, desativamos o botão
-    if (dados.documentos && dados.documentos.propostas && dados.documentos.propostas.length > 0) {
-        btnGerarResumo.disabled = false;
-        btnGerarResumo.classList.remove('texto-mutado');
-    } else {
+    const temProposta = dados.documentos && dados.documentos.propostas && dados.documentos.propostas.length > 0;
+    if (!temProposta) {
         btnGerarResumo.disabled = true;
         btnGerarResumo.classList.add('texto-mutado');
-        btnGerarResumo.innerText = "Sem proposta anexada";
+        btnGerarResumo.innerText = 'Sem proposta anexada';
+    } else {
+        // Verifica se já existe resumo em cache para este candidato
+        verificarCacheResumo(dados.id);
     }
 
     // 4.4. Transição de Tela
@@ -214,13 +219,108 @@ btnVoltar.addEventListener('click', () => {
 });
 
 // ==========================================
-// 5. COMUNICAÇÃO COM A VERCEL (Motor Gemini)
+// 5. VERIFICAÇÃO DE CACHE (endpoint leve)
+// ==========================================
+async function verificarCacheResumo(idCandidato) {
+    try {
+        const res = await fetch(`/api/resumo?id_candidato=${encodeURIComponent(idCandidato)}`);
+        if (!res.ok) {
+            configurarBotaoResumo(false);
+            return;
+        }
+        const data = await res.json();
+        configurarBotaoResumo(data.cached === true);
+    } catch (error) {
+        console.error('Erro ao verificar cache de resumo:', error);
+        configurarBotaoResumo(false);
+    }
+}
+
+function configurarBotaoResumo(cached) {
+    btnGerarResumo.disabled = false;
+    btnGerarResumo.classList.remove('texto-mutado');
+    if (cached) {
+        btnGerarResumo.innerText = '📄 Mostrar resumo';
+        btnGerarResumo.dataset.cached = 'true';
+    } else {
+        btnGerarResumo.innerText = '✨ Gerar Resumo com IA';
+        btnGerarResumo.dataset.cached = 'false';
+    }
+}
+
+// ==========================================
+// 6. EXIBIÇÃO DE RESUMO (compartilhada)
+// ==========================================
+function exibirResumo(textoResumo) {
+    resultadoIA.classList.remove('hidden');
+    resultadoIA.innerHTML = '';
+
+    // Renderiza o resumo de forma segura: textContent para evitar XSS, <br> explícitos para quebras de linha
+    const linhas = textoResumo.split('\n');
+    linhas.forEach((linha, i) => {
+        resultadoIA.appendChild(document.createTextNode(linha));
+        if (i < linhas.length - 1) {
+            resultadoIA.appendChild(document.createElement('br'));
+        }
+    });
+
+    // Disclaimer de IA
+    const disclaimer = document.createElement('p');
+    disclaimer.className = 'disclaimer-ia';
+    disclaimer.textContent = DISCLAIMER_IA;
+    resultadoIA.appendChild(disclaimer);
+}
+// ==========================================
+// 7. COMUNICAÇÃO COM A VERCEL (Motor Gemini)
 // ==========================================
 btnGerarResumo.addEventListener('click', async () => {
     if (!candidatoAtual) return;
 
+    // Se já existe em cache, busca via GET e exibe sem chamar Gemini
+    if (btnGerarResumo.dataset.cached === 'true') {
+        btnGerarResumo.disabled = true;
+        btnGerarResumo.innerText = 'Carregando...';
+        loadingIA.classList.remove('hidden');
+        resultadoIA.classList.add('hidden');
+
+        try {
+            const res = await fetch('/api/resumo', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id_candidato: candidatoAtual.id }),
+            });
+
+            loadingIA.classList.add('hidden');
+
+            const contentType = res.headers.get('content-type') || '';
+            if (!contentType.includes('application/json')) {
+                const text = await res.text();
+                console.error('Resposta não-JSON:', res.status, text.substring(0, 200));
+                mostrarErroIA(`Erro ${res.status}: O servidor retornou uma resposta inesperada.`);
+                return;
+            }
+
+            const data = await res.json();
+
+            if (res.ok && data.resumo) {
+                exibirResumo(data.resumo);
+            } else {
+                mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
+            }
+        } catch (e) {
+            console.error(e);
+            loadingIA.classList.add('hidden');
+            mostrarErroIA('Erro de comunicação com o servidor. Verifique o console (F12).');
+        }
+
+        btnGerarResumo.disabled = false;
+        btnGerarResumo.innerText = '📄 Mostrar resumo';
+        return;
+    }
+
+    // Cache não existe — chama o Gemini normalmente
     btnGerarResumo.disabled = true;
-    btnGerarResumo.innerText = "Processando...";
+    btnGerarResumo.innerText = 'Processando...';
     loadingIA.classList.remove('hidden');
     resultadoIA.classList.add('hidden');
 
@@ -233,52 +333,44 @@ btnGerarResumo.addEventListener('click', async () => {
         });
 
         loadingIA.classList.add('hidden');
-        resultadoIA.classList.remove('hidden');
-        resultadoIA.innerHTML = '';
 
         // Verifica se a resposta é válida antes de tentar parsear JSON
         const contentType = res.headers.get('content-type') || '';
         if (!contentType.includes('application/json')) {
             const text = await res.text();
             console.error('Resposta não-JSON:', res.status, text.substring(0, 200));
-            const span = document.createElement('span');
-            span.style.color = '#ffc107';
-            span.textContent = `Erro ${res.status}: O servidor retornou uma resposta inesperada. Verifique se as variáveis de ambiente estão configuradas.`;
-            resultadoIA.appendChild(span);
+            mostrarErroIA(`Erro ${res.status}: O servidor retornou uma resposta inesperada. Verifique se as variáveis de ambiente estão configuradas.`);
             return;
         }
 
         const data = await res.json();
 
         if (res.ok && data.resumo) {
-            // Renderiza o resumo da IA de forma segura: textContent para evitar XSS, <br> explícitos para quebras de linha
-            resultadoIA.innerHTML = '';
-            const linhas = data.resumo.split('\n');
-            linhas.forEach((linha, i) => {
-                resultadoIA.appendChild(document.createTextNode(linha));
-                if (i < linhas.length - 1) {
-                    resultadoIA.appendChild(document.createElement('br'));
-                }
-            });
+            exibirResumo(data.resumo);
+            // Após gerar com sucesso, atualiza o botão para "Mostrar resumo"
+            btnGerarResumo.innerText = '📄 Mostrar resumo';
+            btnGerarResumo.dataset.cached = 'true';
         } else {
-            resultadoIA.innerHTML = '';
-            const span = document.createElement('span');
-            span.style.color = '#ff4c4c';
-            span.textContent = `Erro: ${data.erro || "Falha desconhecida"}`;
-            resultadoIA.appendChild(span);
+            mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
         }
 
     } catch (e) {
         console.error(e);
         loadingIA.classList.add('hidden');
-        resultadoIA.classList.remove('hidden');
-        resultadoIA.innerHTML = '';
-        const span = document.createElement('span');
-        span.style.color = '#ff4c4c';
-        span.textContent = 'Erro de comunicação com o servidor. Verifique o console (F12).';
-        resultadoIA.appendChild(span);
+        mostrarErroIA('Erro de comunicação com o servidor. Verifique o console (F12).');
     }
+
+    btnGerarResumo.disabled = false;
 });
+
+function mostrarErroIA(mensagem) {
+    resultadoIA.classList.remove('hidden');
+    resultadoIA.innerHTML = '';
+    const span = document.createElement('span');
+    span.style.color = '#ff4c4c';
+    span.textContent = mensagem;
+    resultadoIA.appendChild(span);
+}
 
 // Dá o pontapé inicial!
 carregarListaBusca();

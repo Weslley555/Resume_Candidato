@@ -254,8 +254,46 @@
 
         <hr>
 
-        <!-- 6. Open Source -->
-        <h2>6. Código Aberto</h2>
+        <!-- 7. Resumos gerados por IA -->
+        <h2>7. Resumos Gerados por Inteligência Artificial</h2>
+        <p>
+            O <strong>Radar Eleitoral 2026</strong> oferece uma funcionalidade de resumo
+            automatizado das propostas de governo dos candidatos, utilizando
+            <strong>Inteligência Artificial</strong> (Google Gemini).
+        </p>
+        <ul>
+            <li>
+                Os resumos são gerados exclusivamente a partir de
+                <strong>documentos públicos oficiais</strong> — as propostas de governo
+                registradas no <strong>TSE</strong> (Tribunal Superior Eleitoral),
+                conforme exigido pela legislação eleitoral.
+            </li>
+            <li>
+                Os resumos são <strong>armazenados em cache</strong> (Redis, via
+                integração Vercel/Upstash) para evitar reprocessamento desnecessário
+                e reduzir custos de API. Nenhum dado pessoal do usuário é armazenado
+                nesse processo.
+            </li>
+            <li>
+                O conteúdo resumido refere-se a <strong>figuras públicas no exercício
+                de candidatura</strong>, com base em documento que a legislação
+                eleitoral já exige que seja tornado público.
+            </li>
+        </ul>
+
+        <div class="aviso-box">
+            <p>
+                <strong>⚠️ Aviso importante:</strong> Resumos gerados por IA podem
+                conter imprecisões, omissões ou viés involuntário. Recomenda-se
+                sempre consultar o documento original da proposta de governo para
+                uma compreensão completa.
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- 8. Open Source -->
+        <h2>8. Código Aberto</h2>
         <p>
             O <strong>Radar Eleitoral 2026</strong> é um projeto de código aberto
             (<em>open source</em>) licenciado sob a
@@ -269,8 +307,8 @@
 
         <hr>
 
-        <!-- 7. Contato -->
-        <h2>7. Contato</h2>
+        <!-- 9. Contato -->
+        <h2>9. Contato</h2>
         <p>
             Em caso de dúvidas sobre esta política, abra uma <em>issue</em> no
             repositório do projeto.
