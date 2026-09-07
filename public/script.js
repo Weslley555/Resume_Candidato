@@ -231,10 +231,24 @@ btnGerarResumo.addEventListener('click', async () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id_candidato: candidatoAtual.id }),
         });
-        const data = await res.json();
 
         loadingIA.classList.add('hidden');
         resultadoIA.classList.remove('hidden');
+        resultadoIA.innerHTML = '';
+
+        // Verifica se a resposta é válida antes de tentar parsear JSON
+        const contentType = res.headers.get('content-type') || '';
+        if (!contentType.includes('application/json')) {
+            const text = await res.text();
+            console.error('Resposta não-JSON:', res.status, text.substring(0, 200));
+            const span = document.createElement('span');
+            span.style.color = '#ffc107';
+            span.textContent = `Erro ${res.status}: O servidor retornou uma resposta inesperada. Verifique se as variáveis de ambiente estão configuradas.`;
+            resultadoIA.appendChild(span);
+            return;
+        }
+
+        const data = await res.json();
 
         if (res.ok && data.resumo) {
             // Renderiza o resumo da IA de forma segura: textContent para evitar XSS, <br> explícitos para quebras de linha
