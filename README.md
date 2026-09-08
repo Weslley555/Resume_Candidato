@@ -1,5 +1,7 @@
 # Radar Eleitoral 2026
 
+🔗 **Acesse:** [Radar Eleitoral 2026](https://resume-candidato.vercel.app/)
+
 Plataforma de transparência eleitoral que permite buscar candidatos das eleições
 de 2026 (Minas Gerais e Presidência do Brasil), consultar dossiês com perfil,
 patrimônio declarado e gerar resumo do plano de governo por inteligência
@@ -51,8 +53,25 @@ coletados em **04 de setembro de 2026**:
 | **Câmara dos Deputados**              | Proposições legislativas, votações, mandatos          |
 | **Senado Federal**                    | Atividade legislativa, mandatos                       |
 
+📦 **Bases de dados originais:** [Conjunto de dados — Portal de Dados Abertos do TSE](https://dadosabertos.tse.jus.br/dataset/?tags=Ano+2026)
+
 O projeto **não realiza atualização em tempo real** — os dados refletem o
 estado das bases públicas na data de coleta.
+
+## 🐛 Problemas conhecidos
+
+### `middleware.js` bloqueando requisições em localhost
+
+O `middleware.js` é responsável pelo rate limiting por IP via Upstash Redis —
+impedindo abusos e controlando o volume de chamadas à API do Gemini em produção.
+Ao subir o deploy na Vercel, **não apresenta erro algum**, porém em ambiente
+**localhost** ele intercepta e bloqueia as requisições de resumo do Gemini.
+
+> **Solução para testes locais:** renomeie o arquivo para `middleware.js.bak`
+> enquanto estiver desenvolvendo localmente. Lembre-se de restaurar o nome
+> original antes de fazer deploy.
+
+---
 
 ## ⚠️ Nota metodológica — Registros criminais e cassações
 
@@ -64,6 +83,24 @@ A interpretação correta é sempre: *"consta registro nas bases públicas"* —
 **nunca** *"crime cometido"*. O Brasil adota o princípio constitucional da
 **presunção de inocência** (art. 5.º, LVII, CF/88). Este projeto respeita
 integralmente esse princípio.
+
+## 🧭 Como usar o site
+
+1. **Acesse** [radar-eleitoral-2026](https://resume-candidato.vercel.app/) pelo navegador.
+2. **Busque um candidato** pelo nome ou partido no campo de pesquisa da página inicial.
+3. **Selecione o candidato** na lista de resultados para abrir o dossiê completo.
+4. No dossiê você encontrará:
+   - Informações cadastrais (partido, cargo, estado, situação da candidatura)
+   - Patrimônio declarado ao TSE
+   - Histórico legislativo (quando disponível)
+   - Certidões e registros constantes nas bases públicas
+5. Clique em **"Resumir Plano de Governo"** para acionar a IA (Gemini) e obter
+   um resumo automático das propostas do candidato.
+
+> **Observação:** O resumo por IA está sujeito ao rate limit de 20 requisições
+> por minuto por IP em produção.
+
+---
 
 ## Como rodar localmente
 
