@@ -1,21 +1,4 @@
-﻿import fs from 'fs';
-import path from 'path';
-
-// Helper: lê e parseia um JSON de /data sem lançar exceção — retorna null em caso de falha
-function lerJSON(nomeArquivo) {
-    try {
-        const filePath = path.join(process.cwd(), 'data', nomeArquivo);
-        return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    } catch {
-        return null;
-    }
-}
-
-// Helper: busca uma chave com acesso direto
-function buscarPorChave(db, id) {
-    if (!db || !id) return null;
-    return db[id] ?? null;
-}
+﻿import { lerJSON, buscarPorChave } from '../lib/jsonCache.js';
 
 export default async function handler(req, res) {
     // CORS
@@ -27,15 +10,15 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
     if (req.method !== 'GET') return res.status(405).json({ erro: 'Método não permitido.' });
 
-    // Parâmetro: id no formato "UF_SQ_CANDIDATO" (ex: "MG_280001234567")
+    // Parâmetro: id no format "UF_SQ_CANDIDATO" (ex: "MG_280001234567")
     const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
     const id = url.searchParams.get('id');
 
     if (!id || !id.includes('_')) {
-        return res.status(400).json({ erro: 'Parâmetro "id" é obrigatório e deve seguir o formato UF_SQ_CANDIDATO.' });
+        return res.status(400).json({ erro: 'Parâmetro \"id\" é obrigatório e deve seguir o formato UF_SQ_CANDIDATO.' });
     }
 
-    // Carrega todos os bancos (leitura síncrona em serverless — aceitável para cold start)
+    // Carrega todos os bancos (com cache em memória — leitura síncrona aceitável para cold start)
     const patrimonioDb  = lerJSON('patrimonio.json');
     const financeiroDb  = lerJSON('financeiro.json');
     const documentosDb  = lerJSON('documentos.json');

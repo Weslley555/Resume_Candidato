@@ -151,6 +151,14 @@ function renderizarResultados(resultados) {
 
 // Helpers compartilhados entre as funções de renderização
 
+// Escapa HTML para prevenir XSS — usar SEMPRE que interpolar dados externos em innerHTML
+function escaparHTML(texto) {
+    if (texto === null || texto === undefined) return '';
+    const div = document.createElement('div');
+    div.textContent = String(texto);
+    return div.innerHTML;
+}
+
 // Normaliza valor: retorna null para vazios / não-divulgáveis
 function normalizarValor(raw) {
     if (raw === null || raw === undefined) return null;
@@ -201,10 +209,10 @@ function renderizarDadosCandidato(cand, fallback) {
 
     // Nome completo destacado
     if (nomeCompleto) {
-        html += `<p class="cand-nome-completo">${nomeCompleto}</p>`;
+        html += `<p class="cand-nome-completo">${escaparHTML(nomeCompleto)}</p>`;
     }
     if (nomeUrna && nomeUrna !== nomeCompleto) {
-        html += `<p class="cand-nome-urna">Urna: <strong>${nomeUrna}</strong></p>`;
+        html += `<p class="cand-nome-urna">Urna: <strong>${escaparHTML(nomeUrna)}</strong></p>`;
     }
 
     // Grid de campos
@@ -220,7 +228,7 @@ function renderizarDadosCandidato(cand, fallback) {
     if (itens.length > 0) {
         html += '<dl class="cand-dados-dl">';
         itens.forEach(({ label, valor }) => {
-            html += `<div class="cand-dados-item"><dt>${label}</dt><dd>${valor}</dd></div>`;
+            html += `<div class="cand-dados-item"><dt>${escaparHTML(label)}</dt><dd>${escaparHTML(valor)}</dd></div>`;
         });
         html += '</dl>';
     }
@@ -240,7 +248,7 @@ function renderizarDadosCandidato(cand, fallback) {
     if (extraItens.length > 0) {
         html += '<details class="cand-dados-extra"><summary>Mais informações</summary><dl class="cand-dados-dl">';
         extraItens.forEach(({ label, valor }) => {
-            html += `<div class="cand-dados-item"><dt>${label}</dt><dd>${valor}</dd></div>`;
+            html += `<div class="cand-dados-item"><dt>${escaparHTML(label)}</dt><dd>${escaparHTML(valor)}</dd></div>`;
         });
         html += '</dl></details>';
     }
@@ -282,10 +290,10 @@ function renderizarPatrimonio(patrimonio) {
         const renderItem = (bem) => `
             <div class="cand-patr-item">
                 <div class="cand-patr-item-desc">
-                    <span class="cand-patr-tipo">${bem.tipo || 'Bem'}</span>
-                    <span class="cand-patr-desc">${bem.descricao || '-'}</span>
+                    <span class="cand-patr-tipo">${escaparHTML(bem.tipo || 'Bem')}</span>
+                    <span class="cand-patr-desc">${escaparHTML(bem.descricao || '-')}</span>
                 </div>
-                <span class="cand-patr-valor">${bem.valor || 'R$ 0,00'}</span>
+                <span class="cand-patr-valor">${escaparHTML(String(bem.valor || 'R$ 0,00'))}</span>
             </div>
         `;
 
@@ -347,7 +355,7 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro) {
         const cls = julgamento === 'DEFERIDO' ? 'status-positivo' : 'status-atencao';
         html += `<div class="cand-juridico-item ${cls}">
             <span class="cand-juridico-label">Situação do julgamento</span>
-            <span class="cand-juridico-status">${julgamento}</span>
+            <span class="cand-juridico-status">${escaparHTML(julgamento)}</span>
         </div>`;
     }
 
@@ -357,7 +365,7 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro) {
         temConteudo = true;
         html += `<div class="cand-juridico-item">
             <span class="cand-juridico-label">Candidatura à reeleição</span>
-            <span class="cand-juridico-status">${reeleicao}</span>
+            <span class="cand-juridico-status">${escaparHTML(reeleicao)}</span>
         </div>`;
     }
 
@@ -404,7 +412,7 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro) {
             <ul class="cand-docs-lista">`;
         docs.propostas.forEach(p => {
             const nome = nomeLegivelDocumento(p.nome || p.caminho);
-            html += `<li>${nome}</li>`;
+            html += `<li>${escaparHTML(nome)}</li>`;
         });
         html += `</ul></div>`;
     }
@@ -418,7 +426,7 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro) {
             <ul class="cand-docs-lista">`;
         docs.certidoes.forEach(c => {
             const nome = nomeLegivelDocumento(c.nome || c.caminho);
-            html += `<li>${nome}</li>`;
+            html += `<li>${escaparHTML(nome)}</li>`;
         });
         html += `</ul></div>`;
     }
@@ -452,10 +460,9 @@ async function abrirFicha(id, uf) {
         }
     }
 
-    // Tenta buscar a chave nos dois formatos possíveis
+    // Busca a chave no formato UF_SQ_CANDIDATO (único formato usado pelo índice)
     const chaveComUF = `${uf}_${id}`;
-    const chaveSemUF = id;
-    const dados = dadosCandidatos[chaveComUF] || dadosCandidatos[chaveSemUF];
+    const dados = dadosCandidatos[chaveComUF];
 
     if (!dados) {
         console.error("ID procurado:", id, "UF:", uf);
@@ -480,7 +487,7 @@ async function abrirFicha(id, uf) {
     const imgFoto = document.getElementById('candFoto');
     const caminhoFoto = dadosExtrasAtual?.foto?.arquivo;
     if (caminhoFoto) {
-        imgFoto.src = caminhoFoto;
+        imgFoto.src = caminhoFoto.startsWith('/') ? caminhoFoto : '/' + caminhoFoto;
     } else {
         // Placeholder SVG 120x120 quando não há foto disponível
         imgFoto.src = 'data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 120 120%22%3E%3Crect width%3D%22120%22 height%3D%22120%22 fill%3D%22%23333%22%2F%3E%3Ccircle cx%3D%2260%22 cy%3D%2245%22 r%3D%2226%22 fill%3D%22%23666%22%2F%3E%3Cellipse cx%3D%2260%22 cy%3D%22108%22 rx%3D%2240%22 ry%3D%2228%22 fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E';
@@ -508,7 +515,7 @@ async function abrirFicha(id, uf) {
     btnGerarResumo.disabled = true;
 
     // Se o candidato não tiver PDF de proposta, desativamos o botão
-    const temProposta = dados.documentos && dados.documentos.propostas && dados.documentos.propostas.length > 0;
+    const temProposta = dadosExtrasAtual?.documentos?.propostas && dadosExtrasAtual.documentos.propostas.length > 0;
     if (!temProposta) {
         btnGerarResumo.disabled = true;
         btnGerarResumo.classList.add('texto-mutado');
