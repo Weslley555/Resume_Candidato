@@ -78,12 +78,26 @@ export default async function handler(req, res) {
         const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
         // 5. Busca o texto no "banco" interno (sem deixar o usuário enviar o texto)
-        const filePath = path.join(process.cwd(), 'api', 'textos_propostas.json');
+        const filePath = path.join(process.cwd(), 'data', 'textos_propostas.json');
         const propostasDB = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
         const textoProposta = propostasDB[id_candidato] || propostasDB[`MG_${id_candidato}`] || propostasDB[`BR_${id_candidato}`];
 
         if (!textoProposta) {
+            // Cargos legislativos nunca têm proposta de governo — não é falha, é característica do cargo
+            const CARGOS_SEM_PROPOSTA = ['DEPUTADO FEDERAL', 'DEPUTADO ESTADUAL', 'SENADOR'];
+            const candidatosDB = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'candidatos.json'), 'utf8'));
+            const dadosCand = candidatosDB[id_candidato]
+                          || candidatosDB[`MG_${id_candidato}`]
+                          || candidatosDB[`BR_${id_candidato}`];
+            const cargo = dadosCand?.cargo || '';
+            if (CARGOS_SEM_PROPOSTA.some(c => cargo.toUpperCase().includes(c))) {
+                return res.status(200).json({
+                    semProposta: true,
+                    mensagem: 'Este cargo não possui proposta de governo — acompanhe o histórico de votações (em breve).'
+                });
+            }
+            // Cargo executivo sem proposta = ausência genuína
             return res.status(404).json({ erro: 'Proposta não encontrada para este candidato.' });
         }
 

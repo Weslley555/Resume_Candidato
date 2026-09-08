@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar Eleitoral 2026</title>
+    <title>Resume Candidato 2026</title>
     <link rel="stylesheet" href="style.css">
     <script>
         // Aplicar tema antes da renderização para evitar flash
@@ -26,7 +26,7 @@
             aria-labelledby="modalBoasVindasTitulo">
             <button id="btnFecharModal" class="modal-fechar" aria-label="Fechar">&times;</button>
 
-            <h2 id="modalBoasVindasTitulo" class="modal-titulo">Bem-vindo ao Radar Eleitoral 2026</h2>
+            <h2 id="modalBoasVindasTitulo" class="modal-titulo">Bem-vindo ao Resume Candidato 2026</h2>
 
             <p>Este site reúne informações básicas sobre os candidatos às eleições de 2026.</p>
 
@@ -68,17 +68,17 @@
         <div class="logo-header">
             <a href="/">
                 <span class="icon-img logo-img">
-                    <img class="img-b" src="icons/logo_b.svg" alt="Radar Eleitoral 2026">
-                    <img class="img-p" src="icons/logo_p.svg" alt="Radar Eleitoral 2026">
+                    <img class="img-b" src="icons/logo_b.svg" alt="Resume Candidato 2026">
+                    <img class="img-p" src="icons/logo_p.svg" alt="Resume Candidato 2026">
                 </span>
             </a>
         </div>
 
         <!-- 1. Barra de Pesquisa Superior -->
         <header class="barra-pesquisa">
-            <div class="filtro-grupo">
-                <label>Nome:</label>
-                <input type="text" id="inputNome" placeholder="Ex: Alexandre">
+            <div class="filtro-grupo filtro-nome-numero">
+                <label>Nome ou N.º Candidatura:</label>
+                <input type="text" id="inputBusca" placeholder="Ex: Alexandre ou 13" autocomplete="off">
             </div>
 
             <div class="filtro-grupo">
@@ -131,58 +131,69 @@
                         alt=""></span> Voltar para a busca</button>
 
             <div id="conteudoFicha">
-                <!-- Cabeçalho -->
-                <div class="ficha-header">
-                    <h2 id="candNome">NOME DO CANDIDATO</h2>
-                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p"
-                                src="icons/mapa_p.svg" alt=""></span> Cargo: <span id="candCargo"></span> | Partido:
-                        <span id="candPartido"></span>
-                    </p>
-                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p"
-                                src="icons/mapa_p.svg" alt=""></span> UF: <span id="candUF"></span> | ID: <span
-                            id="candID"></span></p>
-                </div>
 
-                <!-- Perfil -->
-                <div class="ficha-secao">
-                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p"
-                                src="icons/doc_p.svg" alt=""></span> PERFIL</h3>
-                    <p>• Ocupação: <span id="candOcupacao"></span></p>
-                    <p>• Escolaridade: <span id="candEscolaridade"></span></p>
-                    <p>• Gênero: <span id="candGenero"></span> | Cor/Raça: <span id="candRaca"></span></p>
-                </div>
+    <!-- Dossier Header — identificador + última atualização -->
+    <div class="dossier-header">
+        <span class="dossier-id">SQ_CANDIDATO: <strong id="candIdHeader"></strong></span>
+        <span class="dossier-update">Última atualização: 04/09/2026</span>
+    </div>
 
-                <!-- Patrimônio -->
-                <div class="ficha-secao">
-                    <h3><span class="icon-img"><img class="img-b" src="icons/money_b.svg" alt=""><img class="img-p"
-                                src="icons/money_p.svg" alt=""></span> PATRIMÔNIO DECLARADO</h3>
-                    <p>Total Declarado: <strong id="candTotalBens">R$ 0,00</strong></p>
-                    <table class="tabela-bens">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Descrição</th>
-                                <th>Valor</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabelaBensCorpo">
-                            <!-- JS injeta os bens aqui -->
-                        </tbody>
-                    </table>
-                </div>
+    <!-- Grid 2 colunas -->
+    <div class="dossier-grid">
 
-                <!-- Botão de IA -->
-                <div class="ficha-secao secao-ia">
-                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p"
-                                src="icons/doc_p.svg" alt=""></span> PROPOSTA DE GOVERNO</h3>
-                    <button id="btnGerarResumo" class="btn-warning"><span class="icon-img-fixed"><img
-                                src="icons/star_p.svg" alt=""></span> Gerar Resumo com IA</button>
-                    <div id="loadingIA" class="hidden"><span class="icon-img"><img class="img-b"
-                                src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg"
-                                alt=""></span> Analisando o plano de governo com Gemini...</div>
-                    <div id="resultadoIA" class="resultado-ia hidden"></div>
+        <!-- ========== COLUNA ESQUERDA ========== -->
+        <div class="dossier-left">
+
+            <!-- Card: Foto do Candidato -->
+            <div class="dossier-card">
+                <div class="dossier-card-photo">
+                    <img id="candFoto" class="cand-foto-perfil" src="" alt="Foto do candidato"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 120 120\'%3E%3Crect width=\'120\' height=\'120\' fill=\'%23333\'/%3E%3Ccircle cx=\'60\' cy=\'45\' r=\'26\' fill=\'%23666\'/%3E%3Cellipse cx=\'60\' cy=\'108\' rx=\'40\' ry=\'28\' fill=\'%23666\'/%3E%3C/svg%3E'">
                 </div>
             </div>
+
+            <!-- Card: Resumo da Proposta de Governo (IA) -->
+            <div class="dossier-card card-proposal">
+                <h3 class="dossier-card-title">RESUMO DA PROPOSTA</h3>
+                <button id="btnGerarResumo" class="btn-warning btn-full-width">
+                    <span class="icon-img-fixed"><img src="icons/star_p.svg" alt=""></span>
+                    Gerar Resumo com IA
+                </button>
+                <div id="loadingIA" class="hidden">
+                    <span class="icon-img"><img class="img-b" src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg" alt=""></span>
+                    Analisando o plano de governo com Gemini...
+                </div>
+                <div id="resultadoIA" class="resultado-ia hidden"></div>
+            </div>
+
+        </div>
+
+        <!-- ========== COLUNA DIREITA ========== -->
+        <div class="dossier-right">
+
+            <!-- Card: Dados do Candidato -->
+            <div class="dossier-card">
+                <h3 class="dossier-card-title">DADOS DO CANDIDATO</h3>
+                <div id="conteudoDadosCandidato"></div>
+            </div>
+
+            <!-- Card: Patrimônio Declarado -->
+            <div class="dossier-card">
+                <h3 class="dossier-card-title">PATRIMÔNIO DECLARADO</h3>
+                <div id="conteudoPatrimonio"></div>
+            </div>
+
+            <!-- Card: Documentos e Situação Jurídica -->
+            <div class="dossier-card">
+                <h3 class="dossier-card-title">DOCUMENTOS E SITUAÇÃO JURÍDICA</h3>
+                <div id="conteudoDocumentosJuridicos"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
         </div>
     </div>
 
@@ -203,8 +214,8 @@
                 document.body.classList.remove('modal-aberto');
                 localStorage.setItem(CHAVE, 'true');
                 // Devolve foco ao input de busca
-                var inputNome = document.getElementById('inputNome');
-                if (inputNome) inputNome.focus();
+                var inputBusca = document.getElementById('inputBusca');
+                if (inputBusca) inputBusca.focus();
             }
 
             // Trap de foco dentro do modal

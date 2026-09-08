@@ -170,6 +170,12 @@ body {
     min-width: 150px;
 }
 
+/* Grupo combinado Nome + Nº — ocupa mais espaço que UF e Cargo */
+.filtro-nome-numero {
+    flex: 2;
+    min-width: 200px;
+}
+
 input,
 select {
     padding: 10px;
@@ -335,6 +341,42 @@ button:disabled {
     border-bottom: 2px dashed var(--border-color);
     padding-bottom: 15px;
     margin-bottom: 15px;
+    text-align: center;
+}
+
+.ficha-header-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ===== SEÇÃO 01 — FOTO ===== */
+.ficha-secao-foto {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 12px;
+    margin-bottom: 4px;
+}
+
+.cand-foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--btn-primary);
+    background-color: var(--bg-input);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .cand-foto-perfil {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+.texto-info-neutra {
+    color: var(--btn-info);
 }
 
 .ficha-secao {
@@ -345,6 +387,135 @@ button:disabled {
 
 .ficha-secao:last-child {
     border-bottom: none;
+}
+
+/* ===== SEÇÃO 02 — PERFIL ===== */
+.perfil-nome-completo {
+    font-size: 1.08em;
+    font-weight: bold;
+    margin: 10px 0 2px;
+    line-height: 1.3;
+}
+
+.perfil-nome-urna {
+    margin: 0 0 14px;
+    font-size: 0.9em;
+}
+
+.perfil-dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.perfil-item {
+    display: flex;
+    flex-direction: column;
+    padding: 9px 8px 9px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.perfil-item dt {
+    font-size: 0.72em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 3px;
+}
+
+.perfil-item dd {
+    margin: 0;
+    font-size: 0.93em;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+@media (max-width: 520px) {
+    .perfil-dl {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SEÇÃO 03 — CANDIDATURA E CAMPANHA ===== */
+/* Destaque para campo de julgamento */
+.candidatura-destaque dd {
+    font-weight: bold;
+}
+
+/* Colorização semântica do status de julgamento via JS não é necessária;
+   o texto já é legível. Borda lateral sutil para destacar o item. */
+.candidatura-destaque {
+    border-left: 3px solid var(--btn-primary);
+    padding-left: 8px;
+}
+
+/* ===== SEÇÃO 04 — PATRIMÔNIO E FINANCEIRO ===== */
+.patrimonio-financeiro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.bloco-info {
+    background-color: var(--bg-input);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.bloco-info h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+.patrimonio-resumo {
+    margin-bottom: 10px;
+}
+
+.patrimonio-resumo p {
+    margin: 4px 0;
+}
+
+.valor-td {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.financeiro-dl {
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.financeiro-dl .perfil-item {
+    padding: 6px 0;
+}
+
+.badge-percentual {
+    display: inline-block;
+    background-color: var(--btn-primary);
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.financeiro-quantidades p {
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .patrimonio-financeiro-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Tabela de Bens */
@@ -365,13 +536,325 @@ button:disabled {
     color: var(--text-muted);
 }
 
-/* Seção IA */
-.secao-ia {
-    background-color: var(--bg-overlay-warning-secao);
-    border-left: 4px solid var(--btn-warning);
-    padding: 15px;
+/* ==========================================
+   DOSSIER — NOVO LAYOUT 2 COLUNAS
+   ========================================== */
+
+/* Header do Dossiê */
+.dossier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 14px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--btn-primary);
+    font-size: 0.82em;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
+.dossier-id {
+    font-family: inherit;
+    letter-spacing: 0.03em;
+}
+
+.dossier-id strong {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.dossier-update {
+    opacity: 0.7;
+}
+
+/* Grid 2 colunas */
+.dossier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .dossier-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card base */
+.dossier-card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.dossier-card-title {
+    margin: 0 0 12px;
+    font-size: 0.82em;
+    letter-spacing: 0.08em;
+    color: var(--btn-primary);
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Card Foto */
+.dossier-card-photo {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+/* Card Proposta (IA) */
+.card-proposal {
+    background-color: var(--bg-overlay-warning-secao);
+    border-left: 4px solid var(--btn-warning);
+}
+
+.btn-full-width {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ===== CARD: DADOS DO CANDIDATO ===== */
+.cand-nome-completo {
+    font-size: 1.08em;
+    font-weight: bold;
+    margin: 0 0 2px;
+    line-height: 1.3;
+}
+
+.cand-nome-urna {
+    margin: 0 0 12px;
+    font-size: 0.85em;
+    color: var(--text-muted);
+}
+
+.cand-dados-dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 0;
+}
+
+.cand-dados-item {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 8px 7px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cand-dados-item dt {
+    font-size: 0.7em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 2px;
+}
+
+.cand-dados-item dd {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.cand-dados-extra {
+    margin-top: 10px;
+    font-size: 0.88em;
+}
+
+.cand-dados-extra summary {
+    cursor: pointer;
+    color: var(--btn-primary);
+    font-size: 0.82em;
+    padding: 4px 0;
+    user-select: none;
+}
+
+.cand-dados-extra summary:hover {
+    opacity: 0.8;
+}
+
+.cand-dados-extra .cand-dados-dl {
+    margin-top: 8px;
+}
+
+@media (max-width: 520px) {
+    .cand-dados-dl {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== CARD: PATRIMÔNIO DECLARADO ===== */
+.cand-patr-quantidade {
+    margin: 0 0 10px;
+    font-size: 0.82em;
+    color: var(--text-muted);
+}
+
+.cand-patr-itens {
+    margin-bottom: 4px;
+}
+
+.cand-patr-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 12px;
+}
+
+.cand-patr-item-desc {
+    flex: 1;
+    min-width: 0;
+}
+
+.cand-patr-tipo {
+    display: block;
+    font-size: 0.72em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+}
+
+.cand-patr-desc {
+    display: block;
+    font-size: 0.88em;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.cand-patr-valor {
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.cand-patr-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 4px;
+    margin-top: 4px;
+    border-top: 2px solid var(--btn-primary);
+    font-size: 0.92em;
+}
+
+.cand-patr-total span {
+    color: var(--text-muted);
+    font-size: 0.82em;
+}
+
+.cand-patr-total strong {
+    font-size: 1.1em;
+}
+
+/* ===== CARD: DOCUMENTOS E SITUAÇÃO JURÍDICA ===== */
+.cand-juridico-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 12px;
+}
+
+.cand-juridico-label {
+    font-size: 0.78em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+}
+
+.cand-juridico-status {
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* Colorização semântica baseada no texto real do status */
+.status-positivo .cand-juridico-status {
+    color: #2ecc71;
+}
+
+.status-atencao .cand-juridico-status {
+    color: var(--btn-warning);
+}
+
+[data-theme="light"] .status-positivo .cand-juridico-status {
+    color: #27ae60;
+}
+
+.cand-juridico-subsecao {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.cand-juridico-subtitulo {
+    margin: 0 0 8px;
+    font-size: 0.8em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Financeiro dentro do card jurídico */
+.cand-fin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 0.88em;
+}
+
+.cand-fin-quantidades {
+    margin-top: 6px;
+    font-size: 0.75em;
+    line-height: 1.5;
+}
+
+/* Lista de documentos (sem links) */
+.cand-docs-lista {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+}
+
+.cand-docs-lista li {
+    padding: 5px 8px;
+    margin-bottom: 3px;
+    background-color: var(--bg-overlay-subtle);
+    border-left: 3px solid var(--btn-info);
+    border-radius: 3px;
+    font-size: 0.82em;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* Badge percentual (reutilizado do financeiro antigo) */
+.badge-percentual {
+    display: inline-block;
+    background-color: var(--btn-primary);
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* ===== SEÇÃO IA (preservada) ===== */
 .resultado-ia {
     margin-top: 15px;
     font-family: 'Segoe UI', sans-serif;
@@ -388,6 +871,19 @@ button:disabled {
     border-left: 3px solid var(--color-warning);
     border-radius: 3px;
     line-height: 1.5;
+}
+
+.texto-info-neutra {
+    color: var(--btn-info);
+}
+
+.btn-sm {
+    font-size: 0.82em;
+    padding: 6px 12px;
+}
+
+.mt-10 {
+    margin-top: 10px;
 }
 
 /* ==========================================

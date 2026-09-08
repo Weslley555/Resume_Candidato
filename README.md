@@ -1,6 +1,6 @@
-# Radar Eleitoral 2026
+# Resume Candidato 2026
 
-🔗 **Acesse:** [Radar Eleitoral 2026](https://resume-candidato.vercel.app/)
+🔗 **Acesse:** [Resume Candidato 2026](https://resume-candidato.vercel.app/)
 
 Plataforma de transparência eleitoral que permite buscar candidatos das eleições
 de 2026 (Minas Gerais e Presidência do Brasil), consultar dossiês com perfil,
