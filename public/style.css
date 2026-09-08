@@ -135,11 +135,18 @@ body {
 }
 
 /* Tema escuro (padrão): mostrar _b, esconder _p */
-.logo-header .logo-img .img-p { display: none; }
+.logo-header .logo-img .img-p {
+    display: none;
+}
 
 /* Tema claro: mostrar _p, esconder _b */
-[data-theme="light"] .logo-header .logo-img .img-b { display: none; }
-[data-theme="light"] .logo-header .logo-img .img-p { display: inline-block; }
+[data-theme="light"] .logo-header .logo-img .img-b {
+    display: none;
+}
+
+[data-theme="light"] .logo-header .logo-img .img-p {
+    display: inline-block;
+}
 
 /* ==========================================
    BARRA DE PESQUISA
@@ -163,7 +170,8 @@ body {
     min-width: 150px;
 }
 
-input, select {
+input,
+select {
     padding: 10px;
     background-color: var(--bg-input);
     color: var(--text-input);
@@ -181,13 +189,34 @@ button {
     transition: 0.2s;
 }
 
-.btn-primary { background-color: var(--btn-primary); }
-.btn-info { background-color: var(--btn-info); color: var(--text-btn-alt); }
-.btn-warning { background-color: var(--btn-warning); color: var(--text-btn-alt); }
-.btn-secundario { background-color: transparent; border: 1px solid var(--text-muted); color: var(--text-muted); }
+.btn-primary {
+    background-color: var(--btn-primary);
+}
 
-button:hover { filter: brightness(1.1); }
-button:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-info {
+    background-color: var(--btn-info);
+    color: var(--text-btn-alt);
+}
+
+.btn-warning {
+    background-color: var(--btn-warning);
+    color: var(--text-btn-alt);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
 /* ==========================================
    TOGGLE DE TEMA — deslizante com sol/lua
@@ -205,13 +234,13 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
     cursor: pointer;
     padding: 0;
     transition: background 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     flex-shrink: 0;
 }
 
 .tema-toggle:hover {
     border-color: var(--text-muted);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .tema-toggle::after {
@@ -224,7 +253,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
     border-radius: 50%;
     background: var(--btn-primary);
     transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="light"] .tema-toggle::after {
@@ -267,17 +296,32 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 }
 
 /* Padrão (tema escuro): mostrar _b, esconder _p */
-.tema-toggle .icone-toggle .img-p { display: none; }
+.tema-toggle .icone-toggle .img-p {
+    display: none;
+}
 
 /* Tema claro: mostrar _p, esconder _b */
-[data-theme="light"] .tema-toggle .icone-toggle .img-b { display: none; }
-[data-theme="light"] .tema-toggle .icone-toggle .img-p { display: block; }
+[data-theme="light"] .tema-toggle .icone-toggle .img-b {
+    display: none;
+}
+
+[data-theme="light"] .tema-toggle .icone-toggle .img-p {
+    display: block;
+}
 
 /* ==========================================
    LISTAS E CARDS
    ========================================== */
-.area-resultados { margin-top: 20px; }
-.lista-cards { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.area-resultados {
+    margin-top: 20px;
+}
+
+.lista-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
 
 /* Ficha do Candidato */
 .area-ficha {
@@ -287,14 +331,39 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
     margin-top: 20px;
 }
 
-.ficha-header { border-bottom: 2px dashed var(--border-color); padding-bottom: 15px; margin-bottom: 15px;}
-.ficha-secao { margin-top: 20px; border-bottom: 1px dashed var(--border-color); padding-bottom: 20px; }
-.ficha-secao:last-child { border-bottom: none; }
+.ficha-header {
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.ficha-secao {
+    margin-top: 20px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 20px;
+}
+
+.ficha-secao:last-child {
+    border-bottom: none;
+}
 
 /* Tabela de Bens */
-.tabela-bens { width: 100%; border-collapse: collapse; margin-top: 10px; }
-.tabela-bens th, .tabela-bens td { padding: 8px; text-align: left; border-bottom: 1px solid var(--border-color); }
-.tabela-bens th { color: var(--text-muted); }
+.tabela-bens {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-bens th,
+.tabela-bens td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tabela-bens th {
+    color: var(--text-muted);
+}
 
 /* Seção IA */
 .secao-ia {
@@ -302,6 +371,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
     border-left: 4px solid var(--btn-warning);
     padding: 15px;
 }
+
 .resultado-ia {
     margin-top: 15px;
     font-family: 'Segoe UI', sans-serif;
@@ -337,11 +407,18 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 }
 
 /* Padrão (tema escuro): mostrar _b (branco), esconder _p (preto) */
-.icon-img .img-p { display: none; }
+.icon-img .img-p {
+    display: none;
+}
 
 /* Tema claro: mostrar _p (preto), esconder _b (branco) */
-[data-theme="light"] .icon-img .img-b { display: none; }
-[data-theme="light"] .icon-img .img-p { display: inline-block; }
+[data-theme="light"] .icon-img .img-b {
+    display: none;
+}
+
+[data-theme="light"] .icon-img .img-p {
+    display: inline-block;
+}
 
 /* Ícones em botões coloridos — usam versão fixa, não alternam com tema */
 .icon-img-fixed img {
@@ -354,8 +431,162 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 /* Ícone do botão de pesquisa — levemente maior */
 #btnPesquisar .icon-img-fixed img {
     height: 1.4em;
+    transform: translateY(-1.5px);
 }
 
-.hidden { display: none !important; }
-.texto-mutado { color: var(--text-muted); }
-.texto-erro { color: var(--color-error); }
+.hidden {
+    display: none !important;
+}
+
+.texto-mutado {
+    color: var(--text-muted);
+}
+
+.texto-erro {
+    color: var(--color-error);
+}
+
+/* ==========================================
+   MODAL DE BOAS-VINDAS
+   ========================================== */
+
+/* Impede scroll do conteúdo por baixo enquanto o modal está aberto */
+body.modal-aberto {
+    overflow: hidden;
+}
+
+/* Overlay semi-transparente */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: modalFadeIn 0.25s ease;
+}
+
+.modal-overlay.modal-visivel {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Caixa do modal */
+.modal-dialog {
+    position: relative;
+    background-color: var(--bg-panel);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--btn-primary);
+    border-radius: 8px;
+    padding: 2rem 2rem 1.5rem;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
+    animation: modalSlideIn 0.28s ease;
+    line-height: 1.6;
+}
+
+@keyframes modalSlideIn {
+    from { opacity: 0; transform: translateY(-18px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* Título */
+.modal-titulo {
+    margin: 0 0 1.2rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    color: var(--btn-primary);
+    padding-right: 2rem; /* espaço para o X */
+}
+
+/* Parágrafos */
+.modal-dialog p {
+    margin: 0.6rem 0;
+    font-size: 0.93rem;
+}
+
+/* Bloco de aviso (⚠️ crime) */
+.modal-aviso {
+    background: var(--bg-overlay-warning);
+    border-left: 4px solid var(--color-warning);
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    margin: 1rem 0;
+}
+
+.modal-aviso p {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 0.93rem;
+}
+
+/* Links dentro do modal */
+.modal-link {
+    color: var(--btn-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.15s;
+}
+
+.modal-link:hover {
+    opacity: 0.75;
+}
+
+/* Botão de fechar (X) */
+.modal-fechar {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.9rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: normal;
+    transition: color 0.15s, background 0.15s;
+}
+
+.modal-fechar:hover {
+    color: var(--text-main);
+    background: var(--bg-overlay-subtle);
+    filter: none;
+}
+
+/* Rodapé do modal com botão principal */
+.modal-rodape {
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-btn-entendi {
+    font-size: 0.92rem;
+    padding: 0.55rem 1.4rem;
+}
+
+/* Responsivo — telas pequenas */
+@media (max-width: 480px) {
+    .modal-dialog {
+        padding: 1.5rem 1.2rem 1.2rem;
+        border-radius: 6px;
+    }
+
+    .modal-titulo {
+        font-size: 1.02rem;
+    }
+}

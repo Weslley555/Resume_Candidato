@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
         // Aplicar tema antes da renderização para evitar flash
-        (function() {
+        (function () {
             var tema = localStorage.getItem('tema-preferido');
             if (tema !== 'light' && tema !== 'dark') {
                 tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -16,7 +17,52 @@
         })();
     </script>
 </head>
+
 <body>
+
+    <!-- ===== Modal de Boas-vindas ===== -->
+    <div id="overlayBoasVindas" class="modal-overlay" role="presentation" aria-hidden="true">
+        <div id="modalBoasVindas" class="modal-dialog" role="dialog" aria-modal="true"
+            aria-labelledby="modalBoasVindasTitulo">
+            <button id="btnFecharModal" class="modal-fechar" aria-label="Fechar">&times;</button>
+
+            <h2 id="modalBoasVindasTitulo" class="modal-titulo">Bem-vindo ao Radar Eleitoral 2026</h2>
+
+            <p>Este site reúne informações básicas sobre os candidatos às eleições de 2026.</p>
+
+            <p>Você pode pesquisar por <strong>nome</strong> ou pelos filtros de <strong>UF</strong> e
+                <strong>cargo</strong>.
+            </p>
+
+            <p>Todas as informações têm como fonte o <strong>TSE</strong> (Tribunal Superior Eleitoral).</p>
+            <p> Informações disponíveis sobre as candidatos do Estado de Minas Gerais e a Presidência do Brasil.</p>
+
+            <p>
+                Não salvamos nenhum dado de pesquisa nem de usuário — apenas o IP, por até 1&nbsp;minuto,
+                usado somente para controle de requisições (evitar abuso do serviço).
+                <a href="/privacidade" class="modal-link">Saiba mais na nossa Política de Privacidade.</a>
+            </p>
+
+            <p>O site também exibe informações como certidões criminais e registros de cassação.</p>
+
+            <div class="modal-aviso">
+                <p>
+                    ⚠️ <strong>Este site não anexa, acusa ou atribui nenhum crime a candidato algum</strong>
+                    — apenas exibe informações já disponíveis publicamente nas bases oficiais.
+                </p>
+            </div>
+
+            <p>
+                Este projeto é open&nbsp;source. Você pode encontrá-lo em:
+                <a href="https://github.com/Weslley555/Resume_Candidato" target="_blank" rel="noopener noreferrer"
+                    class="modal-link">github.com/Weslley555/Resume_Candidato</a>
+            </p>
+
+            <div class="modal-rodape">
+                <button id="btnEntendi" class="btn-primary modal-btn-entendi">Entendi, continuar</button>
+            </div>
+        </div>
+    </div>
     <div class="container-principal">
         <!-- Logo -->
         <div class="logo-header">
@@ -56,7 +102,8 @@
                 </select>
             </div>
 
-            <button id="btnPesquisar" class="btn-primary"><span class="icon-img-fixed"><img src="icons/pesquisa_b.svg" alt=""></span> Pesquisar</button>
+            <button id="btnPesquisar" class="btn-primary"><span class="icon-img-fixed"><img src="icons/pesquisa_b.svg"
+                        alt=""></span> Pesquisar</button>
             <button id="btnTema" class="tema-toggle" aria-label="Alternar para tema claro">
                 <span class="icone-toggle icone-sol">
                     <img class="img-b" src="icons/sol_b.svg" alt="">
@@ -79,19 +126,27 @@
 
         <!-- 3. Ficha Completa do Candidato (Dossiê) -->
         <div id="areaFicha" class="area-ficha hidden">
-            <button id="btnVoltar" class="btn-secundario"><span class="icon-img"><img class="img-b" src="icons/seta_voltar_b.svg" alt=""><img class="img-p" src="icons/seta_voltar_p.svg" alt=""></span> Voltar para a busca</button>
+            <button id="btnVoltar" class="btn-secundario"><span class="icon-img"><img class="img-b"
+                        src="icons/seta_voltar_b.svg" alt=""><img class="img-p" src="icons/seta_voltar_p.svg"
+                        alt=""></span> Voltar para a busca</button>
 
             <div id="conteudoFicha">
                 <!-- Cabeçalho -->
                 <div class="ficha-header">
                     <h2 id="candNome">NOME DO CANDIDATO</h2>
-                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p" src="icons/mapa_p.svg" alt=""></span> Cargo: <span id="candCargo"></span> | Partido: <span id="candPartido"></span></p>
-                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p" src="icons/mapa_p.svg" alt=""></span> UF: <span id="candUF"></span> | ID: <span id="candID"></span></p>
+                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p"
+                                src="icons/mapa_p.svg" alt=""></span> Cargo: <span id="candCargo"></span> | Partido:
+                        <span id="candPartido"></span>
+                    </p>
+                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p"
+                                src="icons/mapa_p.svg" alt=""></span> UF: <span id="candUF"></span> | ID: <span
+                            id="candID"></span></p>
                 </div>
 
                 <!-- Perfil -->
                 <div class="ficha-secao">
-                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p" src="icons/doc_p.svg" alt=""></span> PERFIL</h3>
+                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p"
+                                src="icons/doc_p.svg" alt=""></span> PERFIL</h3>
                     <p>• Ocupação: <span id="candOcupacao"></span></p>
                     <p>• Escolaridade: <span id="candEscolaridade"></span></p>
                     <p>• Gênero: <span id="candGenero"></span> | Cor/Raça: <span id="candRaca"></span></p>
@@ -99,7 +154,8 @@
 
                 <!-- Patrimônio -->
                 <div class="ficha-secao">
-                    <h3><span class="icon-img"><img class="img-b" src="icons/money_b.svg" alt=""><img class="img-p" src="icons/money_p.svg" alt=""></span> PATRIMÔNIO DECLARADO</h3>
+                    <h3><span class="icon-img"><img class="img-b" src="icons/money_b.svg" alt=""><img class="img-p"
+                                src="icons/money_p.svg" alt=""></span> PATRIMÔNIO DECLARADO</h3>
                     <p>Total Declarado: <strong id="candTotalBens">R$ 0,00</strong></p>
                     <table class="tabela-bens">
                         <thead>
@@ -117,9 +173,13 @@
 
                 <!-- Botão de IA -->
                 <div class="ficha-secao secao-ia">
-                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p" src="icons/doc_p.svg" alt=""></span> PROPOSTA DE GOVERNO</h3>
-                    <button id="btnGerarResumo" class="btn-warning"><span class="icon-img-fixed"><img src="icons/star_p.svg" alt=""></span> Gerar Resumo com IA</button>
-                    <div id="loadingIA" class="hidden"><span class="icon-img"><img class="img-b" src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg" alt=""></span> Analisando o plano de governo com Gemini...</div>
+                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p"
+                                src="icons/doc_p.svg" alt=""></span> PROPOSTA DE GOVERNO</h3>
+                    <button id="btnGerarResumo" class="btn-warning"><span class="icon-img-fixed"><img
+                                src="icons/star_p.svg" alt=""></span> Gerar Resumo com IA</button>
+                    <div id="loadingIA" class="hidden"><span class="icon-img"><img class="img-b"
+                                src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg"
+                                alt=""></span> Analisando o plano de governo com Gemini...</div>
                     <div id="resultadoIA" class="resultado-ia hidden"></div>
                 </div>
             </div>
@@ -127,9 +187,76 @@
     </div>
 
     <script src="script.js"></script>
+
+    <!-- Lógica do modal de boas-vindas -->
+    <script>
+        (function () {
+            var CHAVE = 'boasVindasVista';
+            var overlay = document.getElementById('overlayBoasVindas');
+            var modal = document.getElementById('modalBoasVindas');
+            var btnX = document.getElementById('btnFecharModal');
+            var btnOk = document.getElementById('btnEntendi');
+
+            function fecharModal() {
+                overlay.classList.remove('modal-visivel');
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-aberto');
+                localStorage.setItem(CHAVE, 'true');
+                // Devolve foco ao input de busca
+                var inputNome = document.getElementById('inputNome');
+                if (inputNome) inputNome.focus();
+            }
+
+            // Trap de foco dentro do modal
+            function getFocaveis() {
+                return Array.from(modal.querySelectorAll(
+                    'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                ));
+            }
+
+            function trapFoco(e) {
+                if (!overlay.classList.contains('modal-visivel')) return;
+                var focaveis = getFocaveis();
+                if (!focaveis.length) return;
+                var primeiro = focaveis[0];
+                var ultimo = focaveis[focaveis.length - 1];
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === primeiro) {
+                            e.preventDefault();
+                            ultimo.focus();
+                        }
+                    } else {
+                        if (document.activeElement === ultimo) {
+                            e.preventDefault();
+                            primeiro.focus();
+                        }
+                    }
+                }
+                if (e.key === 'Escape') fecharModal();
+            }
+
+            if (!localStorage.getItem(CHAVE)) {
+                overlay.classList.add('modal-visivel');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-aberto');
+                // Foca o botão de fechar ao abrir
+                setTimeout(function () { btnX.focus(); }, 50);
+                document.addEventListener('keydown', trapFoco);
+            }
+
+            btnX.addEventListener('click', fecharModal);
+            btnOk.addEventListener('click', fecharModal);
+
+            // Clique fora do modal (no overlay) fecha
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) fecharModal();
+            });
+        })();
+    </script>
     <script>
         // Alternância de tema com persistência
-        (function() {
+        (function () {
             var btn = document.getElementById('btnTema');
             if (!btn) return;
 
@@ -144,7 +271,7 @@
 
             atualizarBotao();
 
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 var html = document.documentElement;
                 var atual = html.getAttribute('data-theme') || 'dark';
                 var novo = atual === 'dark' ? 'light' : 'dark';
@@ -156,11 +283,13 @@
     </script>
 
     <footer class="site-footer">
-        <a href="/privacidade"><span class="icon-img"><img class="img-b" src="icons/cadeado_b.svg" alt=""><img class="img-p" src="icons/cadeado_p.svg" alt=""></span> Política de Privacidade</a>
+        <a href="/privacidade"><span class="icon-img"><img class="img-b" src="icons/cadeado_b.svg" alt=""><img
+                    class="img-p" src="icons/cadeado_p.svg" alt=""></span> Política de Privacidade</a>
         &nbsp;·&nbsp;
         Open source · GPL-3.0
         &nbsp;·&nbsp;
         Dados coletados em 04/09/2026
     </footer>
 </body>
+
 </html>
