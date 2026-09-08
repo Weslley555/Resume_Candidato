@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radar Eleitoral 2026</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Aplicar tema antes da renderização para evitar flash
+        (function() {
+            var tema = localStorage.getItem('tema-preferido');
+            if (tema !== 'light' && tema !== 'dark') {
+                tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', tema);
+        })();
+    </script>
 </head>
 <body>
     <div class="container-principal">
+        <!-- Logo -->
+        <div class="logo-header">
+            <a href="/">
+                <span class="icon-img logo-img">
+                    <img class="img-b" src="icons/logo_b.svg" alt="Radar Eleitoral 2026">
+                    <img class="img-p" src="icons/logo_p.svg" alt="Radar Eleitoral 2026">
+                </span>
+            </a>
+        </div>
+
         <!-- 1. Barra de Pesquisa Superior -->
         <header class="barra-pesquisa">
             <div class="filtro-grupo">
@@ -36,7 +56,17 @@
                 </select>
             </div>
 
-            <button id="btnPesquisar" class="btn-primary">🔎 Pesquisar</button>
+            <button id="btnPesquisar" class="btn-primary"><span class="icon-img-fixed"><img src="icons/pesquisa_b.svg" alt=""></span> Pesquisar</button>
+            <button id="btnTema" class="tema-toggle" aria-label="Alternar para tema claro">
+                <span class="icone-toggle icone-sol">
+                    <img class="img-b" src="icons/sol_b.svg" alt="">
+                    <img class="img-p" src="icons/sol_p.svg" alt="">
+                </span>
+                <span class="icone-toggle icone-lua">
+                    <img class="img-b" src="icons/lua_b.svg" alt="">
+                    <img class="img-p" src="icons/lua_p.svg" alt="">
+                </span>
+            </button>
         </header>
 
         <!-- 2. Lista de Resultados -->
@@ -49,19 +79,19 @@
 
         <!-- 3. Ficha Completa do Candidato (Dossiê) -->
         <div id="areaFicha" class="area-ficha hidden">
-            <button id="btnVoltar" class="btn-secundario">← Voltar para a busca</button>
+            <button id="btnVoltar" class="btn-secundario"><span class="icon-img"><img class="img-b" src="icons/seta_voltar_b.svg" alt=""><img class="img-p" src="icons/seta_voltar_p.svg" alt=""></span> Voltar para a busca</button>
 
             <div id="conteudoFicha">
                 <!-- Cabeçalho -->
                 <div class="ficha-header">
                     <h2 id="candNome">NOME DO CANDIDATO</h2>
-                    <p>📌 Cargo: <span id="candCargo"></span> | Partido: <span id="candPartido"></span></p>
-                    <p>📍 UF: <span id="candUF"></span> | ID: <span id="candID"></span></p>
+                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p" src="icons/mapa_p.svg" alt=""></span> Cargo: <span id="candCargo"></span> | Partido: <span id="candPartido"></span></p>
+                    <p><span class="icon-img"><img class="img-b" src="icons/mapa_b.svg" alt=""><img class="img-p" src="icons/mapa_p.svg" alt=""></span> UF: <span id="candUF"></span> | ID: <span id="candID"></span></p>
                 </div>
 
                 <!-- Perfil -->
                 <div class="ficha-secao">
-                    <h3>📋 PERFIL</h3>
+                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p" src="icons/doc_p.svg" alt=""></span> PERFIL</h3>
                     <p>• Ocupação: <span id="candOcupacao"></span></p>
                     <p>• Escolaridade: <span id="candEscolaridade"></span></p>
                     <p>• Gênero: <span id="candGenero"></span> | Cor/Raça: <span id="candRaca"></span></p>
@@ -69,7 +99,7 @@
 
                 <!-- Patrimônio -->
                 <div class="ficha-secao">
-                    <h3>💰 PATRIMÔNIO DECLARADO</h3>
+                    <h3><span class="icon-img"><img class="img-b" src="icons/money_b.svg" alt=""><img class="img-p" src="icons/money_p.svg" alt=""></span> PATRIMÔNIO DECLARADO</h3>
                     <p>Total Declarado: <strong id="candTotalBens">R$ 0,00</strong></p>
                     <table class="tabela-bens">
                         <thead>
@@ -87,9 +117,9 @@
 
                 <!-- Botão de IA -->
                 <div class="ficha-secao secao-ia">
-                    <h3>📄 PROPOSTA DE GOVERNO</h3>
-                    <button id="btnGerarResumo" class="btn-warning">✨ Gerar Resumo com IA</button>
-                    <div id="loadingIA" class="hidden">⏳ Analisando o plano de governo com Gemini...</div>
+                    <h3><span class="icon-img"><img class="img-b" src="icons/doc_b.svg" alt=""><img class="img-p" src="icons/doc_p.svg" alt=""></span> PROPOSTA DE GOVERNO</h3>
+                    <button id="btnGerarResumo" class="btn-warning"><span class="icon-img-fixed"><img src="icons/star_p.svg" alt=""></span> Gerar Resumo com IA</button>
+                    <div id="loadingIA" class="hidden"><span class="icon-img"><img class="img-b" src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg" alt=""></span> Analisando o plano de governo com Gemini...</div>
                     <div id="resultadoIA" class="resultado-ia hidden"></div>
                 </div>
             </div>
@@ -97,9 +127,36 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Alternância de tema com persistência
+        (function() {
+            var btn = document.getElementById('btnTema');
+            if (!btn) return;
+
+            function atualizarBotao() {
+                var tema = document.documentElement.getAttribute('data-theme') || 'dark';
+                if (tema === 'light') {
+                    btn.setAttribute('aria-label', 'Alternar para tema escuro');
+                } else {
+                    btn.setAttribute('aria-label', 'Alternar para tema claro');
+                }
+            }
+
+            atualizarBotao();
+
+            btn.addEventListener('click', function() {
+                var html = document.documentElement;
+                var atual = html.getAttribute('data-theme') || 'dark';
+                var novo = atual === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', novo);
+                localStorage.setItem('tema-preferido', novo);
+                atualizarBotao();
+            });
+        })();
+    </script>
 
     <footer class="site-footer">
-        <a href="/privacidade">🔒 Política de Privacidade</a>
+        <a href="/privacidade"><span class="icon-img"><img class="img-b" src="icons/cadeado_b.svg" alt=""><img class="img-p" src="icons/cadeado_p.svg" alt=""></span> Política de Privacidade</a>
         &nbsp;·&nbsp;
         Open source · GPL-3.0
         &nbsp;·&nbsp;

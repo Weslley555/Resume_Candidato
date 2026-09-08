@@ -1,18 +1,80 @@
+/* ==========================================
+   TEMA ESCURO (padrão) — identidade terminal
+   ========================================== */
 :root {
+    /* Fundos */
     --bg-body: #1e1e1e;
     --bg-panel: #2d2d2d;
     --bg-input: #121212;
 
+    /* Textos */
     --text-main: #e0e0e0;
     --text-muted: #aaaaaa;
+    --text-input: #ffffff;
+    --text-btn: #ffffff;
+    --text-btn-alt: #121212;
 
-    --btn-primary: #007bff; /* Azul Pesquisar */
-    --btn-info: #00bcd4;    /* Ciano Consultar */
-    --btn-warning: #f39c12; /* Laranja IA */
+    /* Botões */
+    --btn-primary: #007bff;
+    --btn-info: #00bcd4;
+    --btn-warning: #f39c12;
 
+    /* Bordas */
     --border-color: #444;
+
+    /* Cores semânticas */
+    --color-warning: #ffc107;
+    --color-error: #ff4c4c;
+
+    /* Overlays (usados na página de privacidade) */
+    --bg-overlay-subtle: rgba(255, 255, 255, 0.06);
+    --bg-overlay-warning: rgba(255, 193, 7, 0.08);
+    --bg-overlay-error: rgba(244, 67, 54, 0.15);
+    --bg-overlay-warning-secao: rgba(243, 156, 18, 0.05);
+
+    --border-subtle: rgba(255, 255, 255, 0.12);
+    --border-overlay: rgba(255, 255, 255, 0.15);
+    --border-btn: rgba(255, 255, 255, 0.2);
+    --border-btn-hover: rgba(255, 255, 255, 0.4);
 }
 
+/* ==========================================
+   TEMA CLARO
+   ========================================== */
+[data-theme="light"] {
+    --bg-body: #ffffff;
+    --bg-panel: #f0f2f5;
+    --bg-input: #ffffff;
+
+    --text-main: #101a2e;
+    --text-muted: #6e7681;
+    --text-input: #101a2e;
+    --text-btn: #ffffff;
+    --text-btn-alt: #121212;
+
+    --btn-primary: #007bff;
+    --btn-info: #00bcd4;
+    --btn-warning: #f39c12;
+
+    --border-color: #d0d7de;
+
+    --color-warning: #d49a00;
+    --color-error: #d32f2f;
+
+    --bg-overlay-subtle: rgba(0, 0, 0, 0.04);
+    --bg-overlay-warning: rgba(212, 154, 0, 0.08);
+    --bg-overlay-error: rgba(211, 47, 47, 0.12);
+    --bg-overlay-warning-secao: rgba(243, 156, 18, 0.05);
+
+    --border-subtle: rgba(0, 0, 0, 0.12);
+    --border-overlay: rgba(0, 0, 0, 0.15);
+    --border-btn: rgba(0, 0, 0, 0.2);
+    --border-btn-hover: rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   ESTILOS GLOBAIS
+   ========================================== */
 body {
     font-family: 'Consolas', 'Courier New', monospace;
     background-color: var(--bg-body);
@@ -54,7 +116,34 @@ body {
     max-width: 900px;
 }
 
-/* Barra de Pesquisa */
+/* Logo */
+.logo-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.logo-header a {
+    display: inline-block;
+}
+
+.logo-header .logo-img img {
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* Tema escuro (padrão): mostrar _b, esconder _p */
+.logo-header .logo-img .img-p { display: none; }
+
+/* Tema claro: mostrar _p, esconder _b */
+[data-theme="light"] .logo-header .logo-img .img-b { display: none; }
+[data-theme="light"] .logo-header .logo-img .img-p { display: inline-block; }
+
+/* ==========================================
+   BARRA DE PESQUISA
+   ========================================== */
 .barra-pesquisa {
     display: flex;
     gap: 15px;
@@ -77,7 +166,7 @@ body {
 input, select {
     padding: 10px;
     background-color: var(--bg-input);
-    color: white;
+    color: var(--text-input);
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
@@ -86,21 +175,107 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    color: white;
+    color: var(--text-btn);
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .btn-primary { background-color: var(--btn-primary); }
-.btn-info { background-color: var(--btn-info); color: #121212;}
-.btn-warning { background-color: var(--btn-warning); color: #121212; }
+.btn-info { background-color: var(--btn-info); color: var(--text-btn-alt); }
+.btn-warning { background-color: var(--btn-warning); color: var(--text-btn-alt); }
 .btn-secundario { background-color: transparent; border: 1px solid var(--text-muted); color: var(--text-muted); }
 
 button:hover { filter: brightness(1.1); }
 button:disabled { opacity: 0.5; cursor: not-allowed; }
 
-/* Listas e Cards */
+/* ==========================================
+   TOGGLE DE TEMA — deslizante com sol/lua
+   ========================================== */
+.tema-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    width: 52px;
+    height: 28px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    flex-shrink: 0;
+}
+
+.tema-toggle:hover {
+    border-color: var(--text-muted);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.tema-toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--btn-primary);
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+[data-theme="light"] .tema-toggle::after {
+    transform: translateX(24px);
+}
+
+.tema-toggle .icone-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.tema-toggle .icone-toggle img {
+    height: 12px;
+    width: auto;
+    display: block;
+}
+
+.tema-toggle .icone-sol {
+    left: 5px;
+    opacity: 1;
+}
+
+.tema-toggle .icone-lua {
+    right: 5px;
+    opacity: 0.4;
+}
+
+[data-theme="light"] .tema-toggle .icone-sol {
+    opacity: 0.4;
+}
+
+[data-theme="light"] .tema-toggle .icone-lua {
+    opacity: 1;
+}
+
+/* Padrão (tema escuro): mostrar _b, esconder _p */
+.tema-toggle .icone-toggle .img-p { display: none; }
+
+/* Tema claro: mostrar _p, esconder _b */
+[data-theme="light"] .tema-toggle .icone-toggle .img-b { display: none; }
+[data-theme="light"] .tema-toggle .icone-toggle .img-p { display: block; }
+
+/* ==========================================
+   LISTAS E CARDS
+   ========================================== */
 .area-resultados { margin-top: 20px; }
 .lista-cards { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
 
@@ -123,7 +298,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* Seção IA */
 .secao-ia {
-    background-color: rgba(243, 156, 18, 0.05);
+    background-color: var(--bg-overlay-warning-secao);
     border-left: 4px solid var(--btn-warning);
     padding: 15px;
 }
@@ -139,11 +314,48 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
     font-size: 0.78rem;
     font-style: italic;
     color: var(--text-muted);
-    background: rgba(255, 193, 7, 0.06);
-    border-left: 3px solid #ffc107;
+    background: var(--bg-overlay-warning);
+    border-left: 3px solid var(--color-warning);
     border-radius: 3px;
     line-height: 1.5;
 }
 
+/* ==========================================
+   ÍCONES COM DUPLA VERSÃO (_b / _p)
+   ========================================== */
+.icon-img {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.icon-img img {
+    height: 1em;
+    width: auto;
+    display: inline-block;
+}
+
+/* Padrão (tema escuro): mostrar _b (branco), esconder _p (preto) */
+.icon-img .img-p { display: none; }
+
+/* Tema claro: mostrar _p (preto), esconder _b (branco) */
+[data-theme="light"] .icon-img .img-b { display: none; }
+[data-theme="light"] .icon-img .img-p { display: inline-block; }
+
+/* Ícones em botões coloridos — usam versão fixa, não alternam com tema */
+.icon-img-fixed img {
+    height: 1em;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Ícone do botão de pesquisa — levemente maior */
+#btnPesquisar .icon-img-fixed img {
+    height: 1.4em;
+}
+
 .hidden { display: none !important; }
 .texto-mutado { color: var(--text-muted); }
+.texto-erro { color: var(--color-error); }

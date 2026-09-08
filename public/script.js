@@ -16,6 +16,16 @@ const btnGerarResumo = document.getElementById('btnGerarResumo');
 const loadingIA = document.getElementById('loadingIA');
 const resultadoIA = document.getElementById('resultadoIA');
 
+// Helper: retorna HTML do ícone com versão dupla (_b/_p) para alternar com tema
+function icon(nome) {
+    return '<span class="icon-img"><img class="img-b" src="icons/' + nome + '_b.svg" alt=""><img class="img-p" src="icons/' + nome + '_p.svg" alt=""></span>';
+}
+
+// Helper: retorna HTML do ícone com versão fixa (ex: em botões coloridos)
+function iconFixed(nome, versao) {
+    return '<span class="icon-img-fixed"><img src="icons/' + nome + '_' + versao + '.svg" alt=""></span>';
+}
+
 // Disclaimer de IA exibido junto a todo resumo
 const DISCLAIMER_IA = 'Resumo gerado por Inteligência Artificial a partir do texto oficial da proposta de governo — pode conter imprecisões.';
 
@@ -38,7 +48,7 @@ async function carregarListaBusca() {
         const response = await fetch('lista_busca.json');
         listaBusca = await response.json();
     } catch (error) {
-        msgResultados.innerText = "❌ Erro ao carregar o banco de dados principal.";
+        msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar o banco de dados principal.';
         console.error(error);
     }
 }
@@ -52,7 +62,7 @@ btnPesquisar.addEventListener('click', () => {
     const cargo = selectCargo.value;
 
     if (!termo && !uf && !cargo) {
-        msgResultados.innerText = "⚠️ Preencha pelo menos um campo (Nome, UF ou Cargo) para pesquisar.";
+        msgResultados.innerHTML = icon('warning') + ' Preencha pelo menos um campo (Nome, UF ou Cargo) para pesquisar.';
         listaCandidatos.innerHTML = '';
         return;
     }
@@ -82,11 +92,11 @@ function renderizarResultados(resultados) {
     let exibidos = resultados;
     let aviso = "";
     if (resultados.length > 50) {
-        exibidos = resultados.slice(0, 50); // Trava de desempenho igual a do Colab
-        aviso = " (⚠️ Exibindo apenas os 50 primeiros)";
+        exibidos = resultados.slice(0, 50);
+        aviso = ' ' + icon('warning') + ' Exibindo apenas os 50 primeiros';
     }
 
-    msgResultados.innerText = `🔎 ${resultados.length} candidato(s) encontrado(s).${aviso}`;
+    msgResultados.innerHTML = icon('pesquisa') + ' ' + resultados.length + ' candidato(s) encontrado(s).' + aviso;
 
     exibidos.forEach(cand => {
         const div = document.createElement('div');
@@ -123,13 +133,13 @@ function renderizarResultados(resultados) {
 async function abrirFicha(id, uf) {
     // Lazy Load: Baixa o JSON gigante apenas se ainda não tiver baixado
     if (!dadosCandidatos) {
-        msgResultados.innerText = "⏳ Baixando dossiês completos pela primeira vez...";
+        msgResultados.innerHTML = icon('ampulheta') + ' Baixando dossiês completos pela primeira vez...';
         try {
             const response = await fetch('dados_candidatos.json');
             dadosCandidatos = await response.json();
             msgResultados.innerText = "";
         } catch (error) {
-            msgResultados.innerText = "❌ Erro ao carregar dados detalhados.";
+            msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar dados detalhados.';
             return;
         }
     }
@@ -191,7 +201,7 @@ async function abrirFicha(id, uf) {
     // 4.3. Resetando a IA e verificando cache
     resultadoIA.classList.add('hidden');
     resultadoIA.innerHTML = '';
-    btnGerarResumo.innerText = '✨ Verificando...';
+    btnGerarResumo.innerHTML = iconFixed('star', 'p') + ' Verificando...';
     btnGerarResumo.disabled = true;
 
     // Se o candidato não tiver PDF de proposta, desativamos o botão
@@ -240,10 +250,10 @@ function configurarBotaoResumo(cached) {
     btnGerarResumo.disabled = false;
     btnGerarResumo.classList.remove('texto-mutado');
     if (cached) {
-        btnGerarResumo.innerText = '📄 Mostrar resumo';
+        btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
         btnGerarResumo.dataset.cached = 'true';
     } else {
-        btnGerarResumo.innerText = '✨ Gerar Resumo com IA';
+        btnGerarResumo.innerHTML = iconFixed('star', 'p') + ' Gerar Resumo com IA';
         btnGerarResumo.dataset.cached = 'false';
     }
 }
@@ -314,7 +324,7 @@ btnGerarResumo.addEventListener('click', async () => {
         }
 
         btnGerarResumo.disabled = false;
-        btnGerarResumo.innerText = '📄 Mostrar resumo';
+        btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
         return;
     }
 
@@ -348,7 +358,7 @@ btnGerarResumo.addEventListener('click', async () => {
         if (res.ok && data.resumo) {
             exibirResumo(data.resumo);
             // Após gerar com sucesso, atualiza o botão para "Mostrar resumo"
-            btnGerarResumo.innerText = '📄 Mostrar resumo';
+            btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
             btnGerarResumo.dataset.cached = 'true';
         } else {
             mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
@@ -367,7 +377,7 @@ function mostrarErroIA(mensagem) {
     resultadoIA.classList.remove('hidden');
     resultadoIA.innerHTML = '';
     const span = document.createElement('span');
-    span.style.color = '#ff4c4c';
+    span.className = 'texto-erro';
     span.textContent = mensagem;
     resultadoIA.appendChild(span);
 }

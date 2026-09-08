@@ -1,5 +1,7 @@
 {
+  "outputDirectory": "public",
   "rewrites": [
     { "source": "/privacidade", "destination": "/privacidade.html" }
   ]
 }
+
