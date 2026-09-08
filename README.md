@@ -14,7 +14,7 @@ artificial (Gemini).
 | Frontend          | HTML + CSS + JavaScript (estático em `/public`) |
 | Backend / API     | Node.js + Vercel Serverless Functions (`/api`)  |
 | Rate limiting     | Upstash Redis (sliding window, 20 req/min por IP) |
-| Geração de resumo | Google Gemini (`gemini-2.0-flash-lite`)          |
+| Geração de resumo | Google Gemini (`gemini-3.5-flash-lite`)          |
 | Processamento de dados | Python (Google Colab), scripts em `Tratamento_Dados/` |
 
 ## Estrutura de pastas
