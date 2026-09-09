@@ -780,6 +780,9 @@ button:disabled {
     font-weight: bold;
     font-size: 0.9em;
     text-align: right;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
 }
 
 /* Colorização semântica baseada no texto real do status */
