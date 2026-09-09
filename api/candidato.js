@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     const documentosDb  = lerJSON('documentos.json');
     const fotosDb       = lerJSON('fotos.json');
     const candidatosDb  = lerJSON('candidatos.json');
+    const juridicoDb    = lerJSON('juridico.json');
 
     // Busca direta por chave — sem percorrer arrays
     const patrimonio  = buscarPorChave(patrimonioDb,  id);
@@ -31,6 +32,7 @@ export default async function handler(req, res) {
     const documentos  = buscarPorChave(documentosDb,  id);
     const foto        = buscarPorChave(fotosDb,        id);
     const candidato   = buscarPorChave(candidatosDb,   id);
+    const juridico    = buscarPorChave(juridicoDb,      id);
 
     return res.status(200).json({
         id,
@@ -39,5 +41,6 @@ export default async function handler(req, res) {
         documentos:  documentos  ?? null,
         foto:        foto        ?? null,
         candidato:   candidato   ?? null,
+        juridico:    juridico    ?? null,
     });
 }

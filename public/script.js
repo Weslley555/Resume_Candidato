@@ -239,11 +239,14 @@ function renderizarDadosCandidato(cand, fallback) {
     const addExtra = (label, valor) => { if (valor !== null) extraItens.push({ label, valor }); };
 
     addExtra('Coligação',   v(cand?.coligacao));
+    addExtra('Federação',   v(cand?.federacao));
     addExtra('Gênero',      v(cand?.genero)    || v(fallback?.genero));
     addExtra('Idade',       (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
+    addExtra('Estado civil', v(cand?.estadoCivil));
     addExtra('Instrução',   v(cand?.instrucao) || v(fallback?.escolaridade));
     addExtra('Ocupação',    v(cand?.ocupacao)  || v(fallback?.ocupacao));
     addExtra('Cor / Raça',  v(cand?.corRaca)   || v(fallback?.raca));
+    addExtra('Nome social',  v(cand?.nomeSocial));
 
     if (extraItens.length > 0) {
         html += '<details class="cand-dados-extra"><summary>Mais informações</summary><dl class="cand-dados-dl">';
@@ -293,7 +296,7 @@ function renderizarPatrimonio(patrimonio) {
                     <span class="cand-patr-tipo">${escaparHTML(bem.tipo || 'Bem')}</span>
                     <span class="cand-patr-desc">${escaparHTML(bem.descricao || '-')}</span>
                 </div>
-                <span class="cand-patr-valor">${escaparHTML(String(bem.valor || 'R$ 0,00'))}</span>
+                <span class="cand-patr-valor">${fmt(bem.valor)}</span>
             </div>
         `;
 
@@ -338,7 +341,7 @@ function renderizarPatrimonio(patrimonio) {
 }
 
 // ── Card: Documentos e Situação Jurídica ───
-function renderizarDocumentosJuridicos(cand, docs, financeiro) {
+function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
     const el = document.getElementById('conteudoDocumentosJuridicos');
     if (!el) return;
 
@@ -369,7 +372,71 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro) {
         </div>`;
     }
 
-    // 3. Prestação de contas (Financeiro)
+    // 3. Situação da candidatura na urna
+    const situacaoUrna = v(cand?.situacaoUrna);
+    if (situacaoUrna) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação na urna</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoUrna)}</span>
+        </div>`;
+    }
+
+    // 4. Número do processo
+    const nrProcesso = v(cand?.nrProcesso);
+    if (nrProcesso) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">N.º do processo</span>
+            <span class="cand-juridico-status">${escaparHTML(nrProcesso)}</span>
+        </div>`;
+    }
+
+    // 5. Situação do diploma
+    const situacaoDiploma = v(cand?.situacaoDiploma);
+    if (situacaoDiploma) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação do diploma</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoDiploma)}</span>
+        </div>`;
+    }
+
+    // 6. Situação eleitoral relacionada
+    const situacaoEleitoral = v(cand?.situacaoEleitoral);
+    if (situacaoEleitoral) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação eleitoral relacionada</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoEleitoral)}</span>
+        </div>`;
+    }
+
+    // 7. Situação da cassação
+    const situacaoCassacao = v(cand?.situacaoCassacao);
+    if (situacaoCassacao) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item status-atencao">
+            <span class="cand-juridico-label">Situação da cassação</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoCassacao)}</span>
+        </div>`;
+    }
+
+    // 8. Motivo da cassação (registros oficiais)
+    const motivosCassacao = juridico?.motivoCassacao || [];
+    if (motivosCassacao.length > 0) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-subsecao">
+            <h4 class="cand-juridico-subtitulo">Registro(s) de cassação</h4>
+            <p class="texto-mutado" style="margin: 0 0 8px; font-size: 0.78em;">(registros constantes nas bases públicas — não implica condenação)</p>
+            <ul class="cand-docs-lista">`;
+        motivosCassacao.forEach(m => {
+            html += `<li>${escaparHTML(m)}</li>`;
+        });
+        html += `</ul></div>`;
+    }
+
+    // 9. Prestação de contas (Financeiro)
     if (financeiro) {
         temConteudo = true;
         html += `<div class="cand-juridico-subsecao">
@@ -378,8 +445,21 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro) {
         const totalC = financeiro.total_contratado || 0;
         const totalP = financeiro.total_pago || 0;
 
+        // Situação da prestação de contas (do TSE)
+        const sitPrestacao = v(cand?.situacaoPrestacaoContas);
+        if (sitPrestacao) {
+            html += `<div class="cand-juridico-item">
+                <span class="cand-juridico-label">Situação da prestação</span>
+                <span class="cand-juridico-status">${escaparHTML(sitPrestacao)}</span>
+            </div>`;
+        }
+
+        // Usa percentual_pago do JSON se disponível, senão calcula
         let percHTML = '';
-        if (totalC > 0) {
+        const percPago = financeiro.percentual_pago;
+        if (percPago != null) {
+            percHTML = `<span class="badge-percentual">${percPago}% pago</span>`;
+        } else if (totalC > 0) {
             const perc = ((totalP / totalC) * 100).toFixed(1);
             percHTML = `<span class="badge-percentual">${perc}% pago</span>`;
         }
@@ -506,7 +586,7 @@ async function abrirFicha(id, uf) {
     renderizarPatrimonio(dadosExtrasAtual?.patrimonio);
 
     // Card: Documentos e Situação Jurídica
-    renderizarDocumentosJuridicos(cand, dadosExtrasAtual?.documentos, dadosExtrasAtual?.financeiro);
+    renderizarDocumentosJuridicos(cand, dadosExtrasAtual?.documentos, dadosExtrasAtual?.financeiro, dadosExtrasAtual?.juridico);
 
     // 4.3. Resetando a IA e verificando cache
     resultadoIA.classList.add('hidden');
@@ -522,7 +602,7 @@ async function abrirFicha(id, uf) {
         btnGerarResumo.innerText = 'Sem proposta anexada';
     } else {
         // Verifica se já existe resumo em cache para este candidato
-        verificarCacheResumo(dados.id);
+        verificarCacheResumo(chaveCompleta);
     }
 
     // 4.6. Transição de Tela
@@ -617,11 +697,12 @@ btnGerarResumo.addEventListener('click', async () => {
             const res = await fetch('/api/resumo', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id_candidato: candidatoAtual.id }),
+                body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
             });
 
             loadingIA.classList.add('hidden');
 
+            // Verifica se a resposta é válida antes de tentar parsear JSON
             const contentType = res.headers.get('content-type') || '';
             if (!contentType.includes('application/json')) {
                 const text = await res.text();
@@ -663,7 +744,7 @@ btnGerarResumo.addEventListener('click', async () => {
         const res = await fetch('/api/resumo', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id_candidato: candidatoAtual.id }),
+            body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
         });
 
         loadingIA.classList.add('hidden');
