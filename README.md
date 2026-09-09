@@ -1,6 +1,6 @@
-# Radar Eleitoral 2026
+# Resume Candidato 2026
 
-🔗 **Acesse:** [Radar Eleitoral 2026](https://resume-candidato.vercel.app/)
+🔗 **Acesse:** [Resume Candidato 2026](https://resume-candidato.vercel.app/)
 
 Plataforma de transparência eleitoral que permite buscar candidatos das eleições
 de 2026 (Minas Gerais e Presidência do Brasil), consultar dossiês com perfil,
@@ -14,7 +14,8 @@ artificial (Gemini).
 | Frontend          | HTML + CSS + JavaScript (estático em `/public`) |
 | Backend / API     | Node.js + Vercel Serverless Functions (`/api`)  |
 | Rate limiting     | Upstash Redis (sliding window, 20 req/min por IP) |
-| Geração de resumo | Google Gemini (`gemini-2.0-flash-lite`)          |
+| Geração de resumo | Google Gemini (`gemini-3.5-flash`)          |
+| Cache de dados    | Módulo `lib/jsonCache.js` (Map em memória)       |
 | Processamento de dados | Python (Google Colab), scripts em `Tratamento_Dados/` |
 
 ## Estrutura de pastas
@@ -22,25 +23,57 @@ artificial (Gemini).
 ```
 /
 ├── api/
-│   └── resumo.js              # Função serverless — geração de resumo por IA
-│   └── textos_propostas.json  # Dados de propostas (acesso somente servidor)
+│   ├── candidato.js            # Função serverless — dados completos por ID
+│   └── resumo.js               # Função serverless — geração de resumo por IA
+├── data/                        # Bancos de dados JSON (acesso somente servidor)
+│   ├── candidatos.json
+│   ├── documentos.json
+│   ├── financeiro.json
+│   ├── fotos.json
+│   ├── patrimonio.json
+│   └── textos_propostas.json
+├── lib/
+│   └── jsonCache.js             # Cache em memória para leituras de /data
 ├── public/
-│   ├── index.html             # Interface principal de busca e dossiê
-│   ├── privacidade.html       # Política de privacidade
-│   ├── script.js              # Lógica do frontend (busca, ficha, chamada à API)
-│   ├── style.css              # Estilos (tema escuro estilo terminal)
-│   ├── lista_busca.json       # Índice leve para busca de candidatos
-│   └── dados_candidatos.json  # Dossiês completos (lazy load)
-├── Tratamento_Dados/          # Scripts Python/Colab de extração e tratamento do TSE
-├── middleware.js              # Rate limiting por IP (Upstash Redis)
-├── vercel.json                # Rewrites (ex: /privacidade → /privacidade.html)
+│   ├── index.html              # Interface principal de busca e dossiê
+│   ├── privacidade.html         # Política de privacidade
+│   ├── script.js               # Lógica do frontend (busca, ficha, chamada à API)
+│   ├── style.css                # Estilos (tema escuro estilo terminal)
+│   ├── lista_busca.json         # Índice leve para busca de candidatos
+│   └── dados_candidatos.json    # Dossiês completos (lazy load — legado)
+├── Tratamento_Dados/            # Scripts Python/Colab de extração e tratamento do TSE
+├── middleware.js.bak            # Rate limiting por IP (Upstash Redis — veja Problemas)
+├── vercel.json                  # Rewrites (ex: /privacidade → /privacidade.html)
 ├── package.json
-├── LICENSE                    # AGPL-3.0
+├── LICENSE                      # AGPL-3.0
 └── README.md
 ```
 
 > **Nota:** `Tratamento_Dados/` utiliza Python (Google Colab) e é a exceção à
 > stack principal do projeto, que é inteiramente Node.js + HTML/CSS/JS estático.
+
+## Segurança
+
+### XSS — Sanitização de dados
+
+Todos os dados de candidatos exibidos na interface (nome, partido, cargo, bens,
+certidões etc.) passam por sanitização via `textContent` antes de serem
+inseridos no DOM. A função `escaparHTML()` em `script.js` garante que nenhum
+dado externo — mesmo vindo de fontes oficiais como o TSE — possa ser
+interpretado como HTML malicioso.
+
+### Prompt Injection — Resumo por IA
+
+O texto das propostas de governo (conteúdo não confiável, enviado pelo próprio
+candidato ao TSE) é sanitizado antes de ser enviado ao Gemini: marcadores `###`
+são substituídos por `[DELIM]`, impedindo que o conteúdo quebre os
+delimitadores do prompt e injete instruções no modelo.
+
+### Rate limiting
+
+Todas as rotas `/api` são protegidas por rate limiting via Upstash Redis (20
+requisições por minuto por IP). Veja a seção **Problemas conhecidos** para
+detalhes sobre o middleware no ambiente local.
 
 ## Fontes de dados
 

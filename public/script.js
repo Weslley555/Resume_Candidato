@@ -1,7 +1,7 @@
 // ==========================================
 // 1. MAPEAMENTO DO DOM (Elementos da Tela)
 // ==========================================
-const inputNome = document.getElementById('inputNome');
+const inputBusca = document.getElementById('inputBusca');
 const selectUF = document.getElementById('selectUF');
 const selectCargo = document.getElementById('selectCargo');
 const btnPesquisar = document.getElementById('btnPesquisar');
@@ -35,6 +35,7 @@ const DISCLAIMER_IA = 'Resumo gerado por Inteligência Artificial a partir do te
 let listaBusca = [];
 let dadosCandidatos = null; // Só será carregado quando clicarem em Consultar
 let candidatoAtual = null;
+let dadosExtrasAtual = null; // Dados de api/candidato.js (foto, documentos, financeiro)
 
 // Normalizador de texto igual ao seu Python (remove acentos)
 function normalizarTexto(texto) {
@@ -57,12 +58,17 @@ async function carregarListaBusca() {
 // 3. LÓGICA DE PESQUISA E FILTRO
 // ==========================================
 btnPesquisar.addEventListener('click', () => {
-    const termo = normalizarTexto(inputNome.value);
+    const raw = inputBusca.value.trim();
     const uf = selectUF.value;
     const cargo = selectCargo.value;
 
-    if (!termo && !uf && !cargo) {
-        msgResultados.innerHTML = icon('warning') + ' Preencha pelo menos um campo (Nome, UF ou Cargo) para pesquisar.';
+    // Detecta se o input é número (apenas dígitos) ou nome
+    const ehNumero = /^\d+$/.test(raw);
+    const termo = ehNumero ? '' : normalizarTexto(raw);
+    const numero = ehNumero ? raw : '';
+
+    if (!raw && !uf && !cargo) {
+        msgResultados.innerHTML = icon('warning') + ' Preencha pelo menos um campo (Nome, N.º, UF ou Cargo) para pesquisar.';
         listaCandidatos.innerHTML = '';
         return;
     }
@@ -70,13 +76,25 @@ btnPesquisar.addEventListener('click', () => {
     const filtrados = listaBusca.filter(cand => {
         // Usa o nomeBusca que já limpamos no Python
         const matchNome = !termo || (cand.nomeBusca && cand.nomeBusca.includes(termo));
+        // Busca por número: compara o início do numeroUrna (permite digitar "13" e achar "130", "13", etc.)
+        const matchNumero = !numero || (cand.numeroUrna && String(cand.numeroUrna).startsWith(numero));
         const matchUF = !uf || cand.uf === uf;
         const matchCargo = !cargo || cand.cargo === cargo;
-        return matchNome && matchUF && matchCargo;
+        return matchNome && matchNumero && matchUF && matchCargo;
     });
 
-    // Ordena alfabeticamente
-    filtrados.sort((a, b) => (a.nome || "").localeCompare(b.nome || ""));
+    // Ordenação: se buscou por número, ordena numericamente crescente (13 → 130 → 131 …)
+    // caso contrário, ordena alfabeticamente por nome
+    if (numero) {
+        filtrados.sort((a, b) => {
+            const na = Number(a.numeroUrna) || 0;
+            const nb = Number(b.numeroUrna) || 0;
+            if (na !== nb) return na - nb;
+            return (a.nome || '').localeCompare(b.nome || '');
+        });
+    } else {
+        filtrados.sort((a, b) => (a.nome || '').localeCompare(b.nome || ''));
+    }
 
     renderizarResultados(filtrados);
 });
@@ -130,6 +148,384 @@ function renderizarResultados(resultados) {
 // ==========================================
 // 4. ABRIR FICHA DO CANDIDATO (O Dossiê)
 // ==========================================
+
+// Helpers compartilhados entre as funções de renderização
+
+// Escapa HTML para prevenir XSS — usar SEMPRE que interpolar dados externos em innerHTML
+function escaparHTML(texto) {
+    if (texto === null || texto === undefined) return '';
+    const div = document.createElement('div');
+    div.textContent = String(texto);
+    return div.innerHTML;
+}
+
+// Normaliza valor: retorna null para vazios / não-divulgáveis
+function normalizarValor(raw) {
+    if (raw === null || raw === undefined) return null;
+    const s = String(raw).trim();
+    if (!s || s === 'null' || s === 'undefined') return null;
+    const up = s.toUpperCase();
+    if (up === 'NÃO DIVULGÁVEL' || up === 'NAO DIVULGAVEL') return null;
+    return s;
+}
+
+// Mapeia "BR" para "Brasil", mantém outros valores como estão
+function formatarUF(uf) {
+    return uf === 'BR' ? 'Brasil' : uf;
+}
+
+// Converte indicador S/N em texto legível
+function simNao(raw) {
+    const s = normalizarValor(raw);
+    if (!s) return null;
+    const up = s.toUpperCase();
+    if (up === 'S' || up === 'SIM') return 'Sim';
+    if (up === 'N' || up === 'NÃO' || up === 'NAO') return 'Não';
+    return s;
+}
+
+// Formata valor monetário em R$
+function fmtMoeda(v) {
+    return Number(v).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+// ── Card: Dados do Candidato ──────────────
+function renderizarDadosCandidato(cand, fallback) {
+    const el = document.getElementById('conteudoDadosCandidato');
+    if (!el) return;
+
+    const v = normalizarValor;
+
+    // Fonte primária: data/candidatos.json (retornado pela API)
+    const nomeCompleto = v(cand?.nomeCompleto) || v(fallback?.nome);
+    const nomeUrna     = v(cand?.nomeUrna)     || v(fallback?.nomeUrna);
+    const numero       = v(cand?.numeroUrna);
+    const cargo        = v(cand?.cargo)        || v(fallback?.cargo);
+    const partido      = v(cand?.partido)      || v(fallback?.partido);
+    const ufVal        = v(cand?.uf);
+    const situacao     = v(cand?.situacao);
+
+    let html = '';
+
+    // Nome completo destacado
+    if (nomeCompleto) {
+        html += `<p class="cand-nome-completo">${escaparHTML(nomeCompleto)}</p>`;
+    }
+    if (nomeUrna && nomeUrna !== nomeCompleto) {
+        html += `<p class="cand-nome-urna">Urna: <strong>${escaparHTML(nomeUrna)}</strong></p>`;
+    }
+
+    // Grid de campos
+    const itens = [];
+    const add = (label, valor) => { if (valor !== null) itens.push({ label, valor }); };
+
+    add('N.º Candidatura', numero);
+    add('Partido',         partido);
+    add('Cargo',           cargo);
+    add('UF',              ufVal ? formatarUF(ufVal) : null);
+    add('Situação da candidatura', situacao);
+
+    if (itens.length > 0) {
+        html += '<dl class="cand-dados-dl">';
+        itens.forEach(({ label, valor }) => {
+            html += `<div class="cand-dados-item"><dt>${escaparHTML(label)}</dt><dd>${escaparHTML(valor)}</dd></div>`;
+        });
+        html += '</dl>';
+    }
+
+    // Campos adicionais de perfil que não estão no card principal
+    // Mas que são relevantes: coligação, gênero, idade, instrução, ocupação, raça
+    const extraItens = [];
+    const addExtra = (label, valor) => { if (valor !== null) extraItens.push({ label, valor }); };
+
+    addExtra('Coligação',   v(cand?.coligacao));
+    addExtra('Federação',   v(cand?.federacao));
+    addExtra('Gênero',      v(cand?.genero)    || v(fallback?.genero));
+    addExtra('Idade',       (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
+    addExtra('Estado civil', v(cand?.estadoCivil));
+    addExtra('Instrução',   v(cand?.instrucao) || v(fallback?.escolaridade));
+    addExtra('Ocupação',    v(cand?.ocupacao)  || v(fallback?.ocupacao));
+    addExtra('Cor / Raça',  v(cand?.corRaca)   || v(fallback?.raca));
+    addExtra('Nome social',  v(cand?.nomeSocial));
+
+    if (extraItens.length > 0) {
+        html += '<details class="cand-dados-extra"><summary>Mais informações</summary><dl class="cand-dados-dl">';
+        extraItens.forEach(({ label, valor }) => {
+            html += `<div class="cand-dados-item"><dt>${escaparHTML(label)}</dt><dd>${escaparHTML(valor)}</dd></div>`;
+        });
+        html += '</dl></details>';
+    }
+
+    el.innerHTML = html || '<p class="texto-mutado">Dados não disponíveis.</p>';
+}
+
+// ── Card: Patrimônio Declarado (formato lista) ─
+function renderizarPatrimonio(patrimonio) {
+    const contPatr = document.getElementById('conteudoPatrimonio');
+    if (!contPatr) return;
+
+    const fmt = fmtMoeda;
+
+    const bens = patrimonio?.bens || [];
+    let totalBens = patrimonio?.total != null ? Number(patrimonio.total) : 0;
+
+    if (totalBens === 0 && bens.length > 0) {
+        bens.forEach(bem => {
+            const valorNum = parseFloat(String(bem.valor).replace(',', '.'));
+            if (!isNaN(valorNum)) totalBens += valorNum;
+        });
+    }
+
+    if (bens.length > 0 || totalBens > 0) {
+        const bensOrdenados = [...bens].sort((a, b) => {
+            const valA = parseFloat(String(a.valor).replace(',', '.')) || 0;
+            const valB = parseFloat(String(b.valor).replace(',', '.')) || 0;
+            return valB - valA;
+        });
+
+        const mostrarTop = 5;
+        const bensIniciais = bensOrdenados.slice(0, mostrarTop);
+        const bensOcultos = bensOrdenados.slice(mostrarTop);
+
+        let html = `<p class="cand-patr-quantidade">${bens.length} bem(ns) declarado(s)</p>`;
+        html += '<div class="cand-patr-itens">';
+
+        const renderItem = (bem) => `
+            <div class="cand-patr-item">
+                <div class="cand-patr-item-desc">
+                    <span class="cand-patr-tipo">${escaparHTML(bem.tipo || 'Bem')}</span>
+                    <span class="cand-patr-desc">${escaparHTML(bem.descricao || '-')}</span>
+                </div>
+                <span class="cand-patr-valor">${fmt(bem.valor)}</span>
+            </div>
+        `;
+
+        bensIniciais.forEach(bem => { html += renderItem(bem); });
+
+        if (bensOcultos.length > 0) {
+            html += `<div id="bensOcultos" class="hidden">`;
+            bensOcultos.forEach(bem => { html += renderItem(bem); });
+            html += `</div>`;
+            html += `<button id="btnVerMaisBens" class="btn-secundario btn-sm">Ver todos os ${bens.length} bens</button>`;
+        }
+
+        html += `</div>`; // fecha cand-patr-itens
+
+        // Total em destaque
+        html += `<div class="cand-patr-total"><span>Valor total declarado</span><strong>${fmt(totalBens)}</strong></div>`;
+
+        contPatr.innerHTML = html;
+
+        // Listener do botão ver mais
+        if (bensOcultos.length > 0) {
+            setTimeout(() => {
+                const btn = document.getElementById('btnVerMaisBens');
+                const divOculta = document.getElementById('bensOcultos');
+                if (btn && divOculta) {
+                    btn.addEventListener('click', () => {
+                        const taEscondido = divOculta.classList.contains('hidden');
+                        if (taEscondido) {
+                            divOculta.classList.remove('hidden');
+                            btn.textContent = 'Ocultar bens menores';
+                        } else {
+                            divOculta.classList.add('hidden');
+                            btn.textContent = `Ver todos os ${bens.length} bens`;
+                        }
+                    });
+                }
+            }, 0);
+        }
+    } else {
+        contPatr.innerHTML = '<p class="texto-mutado">Nenhum bem declarado.</p>';
+    }
+}
+
+// ── Card: Documentos e Situação Jurídica ───
+function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
+    const el = document.getElementById('conteudoDocumentosJuridicos');
+    if (!el) return;
+
+    const v = normalizarValor;
+    const fmt = fmtMoeda;
+
+    let html = '';
+    let temConteudo = false;
+
+    // 1. Situação do julgamento
+    const julgamento = v(cand?.statusJulgamento);
+    if (julgamento) {
+        temConteudo = true;
+        const cls = julgamento === 'DEFERIDO' ? 'status-positivo' : 'status-atencao';
+        html += `<div class="cand-juridico-item ${cls}">
+            <span class="cand-juridico-label">Situação do julgamento</span>
+            <span class="cand-juridico-status">${escaparHTML(julgamento)}</span>
+        </div>`;
+    }
+
+    // 2. Candidatura à reeleição
+    const reeleicao = simNao(cand?.tentandoReeleicao);
+    if (reeleicao) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Candidatura à reeleição</span>
+            <span class="cand-juridico-status">${escaparHTML(reeleicao)}</span>
+        </div>`;
+    }
+
+    // 3. Situação da candidatura na urna
+    const situacaoUrna = v(cand?.situacaoUrna);
+    if (situacaoUrna) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação na urna</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoUrna)}</span>
+        </div>`;
+    }
+
+    // 4. Número do processo
+    const nrProcesso = v(cand?.nrProcesso);
+    if (nrProcesso) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">N.º do processo</span>
+            <span class="cand-juridico-status">${escaparHTML(nrProcesso)}</span>
+        </div>`;
+    }
+
+    // 5. Situação do diploma
+    const situacaoDiploma = v(cand?.situacaoDiploma);
+    if (situacaoDiploma) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação do diploma</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoDiploma)}</span>
+        </div>`;
+    }
+
+    // 6. Situação eleitoral relacionada
+    const situacaoEleitoral = v(cand?.situacaoEleitoral);
+    if (situacaoEleitoral) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação eleitoral relacionada</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoEleitoral)}</span>
+        </div>`;
+    }
+
+    // 7. Situação da cassação
+    const situacaoCassacao = v(cand?.situacaoCassacao);
+    if (situacaoCassacao) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-item status-atencao">
+            <span class="cand-juridico-label">Situação da cassação</span>
+            <span class="cand-juridico-status">${escaparHTML(situacaoCassacao)}</span>
+        </div>`;
+    }
+
+    // 8. Motivo da cassação (registros oficiais)
+    const motivosCassacao = juridico?.motivoCassacao || [];
+    if (motivosCassacao.length > 0) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-subsecao">
+            <h4 class="cand-juridico-subtitulo">Registro(s) de cassação</h4>
+            <p class="texto-mutado" style="margin: 0 0 8px; font-size: 0.78em;">(registros constantes nas bases públicas — não implica condenação)</p>
+            <ul class="cand-docs-lista">`;
+        motivosCassacao.forEach(m => {
+            html += `<li>${escaparHTML(m)}</li>`;
+        });
+        html += `</ul></div>`;
+    }
+
+    // 9. Prestação de contas (Financeiro)
+    if (financeiro) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-subsecao">
+            <h4 class="cand-juridico-subtitulo">Prestação de contas</h4>`;
+
+        const totalC = financeiro.total_contratado || 0;
+        const totalP = financeiro.total_pago || 0;
+
+        // Situação da prestação de contas (do TSE)
+        const sitPrestacao = v(cand?.situacaoPrestacaoContas);
+        if (sitPrestacao) {
+            html += `<div class="cand-juridico-item">
+                <span class="cand-juridico-label">Situação da prestação</span>
+                <span class="cand-juridico-status">${escaparHTML(sitPrestacao)}</span>
+            </div>`;
+        }
+
+        // Usa percentual_pago do JSON se disponível, senão calcula
+        let percHTML = '';
+        const percPago = financeiro.percentual_pago;
+        if (percPago != null) {
+            percHTML = `<span class="badge-percentual">${percPago}% pago</span>`;
+        } else if (totalC > 0) {
+            const perc = ((totalP / totalC) * 100).toFixed(1);
+            percHTML = `<span class="badge-percentual">${perc}% pago</span>`;
+        }
+
+        html += `<div class="cand-fin-item">
+            <span>Total Arrecadado</span>
+            <strong>${fmt(financeiro.total_arrecadado || 0)}</strong>
+        </div>`;
+        html += `<div class="cand-fin-item">
+            <span>Total Contratado</span>
+            <strong>${fmt(totalC)}</strong>
+        </div>`;
+        html += `<div class="cand-fin-item">
+            <span>Total Pago</span>
+            <strong>${fmt(totalP)} ${percHTML}</strong>
+        </div>`;
+        html += `<div class="cand-fin-quantidades texto-mutado">
+            Receitas: ${financeiro.quantidade_receitas || 0} |
+            Despesas contrato: ${financeiro.quantidade_despesas_contratadas || 0} |
+            Pagas: ${financeiro.quantidade_despesas_pagas || 0}
+        </div>`;
+        html += `</div>`;
+    }
+
+    // 4. Propostas de governo
+    if (docs?.propostas && docs.propostas.length > 0) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-subsecao">
+            <h4 class="cand-juridico-subtitulo">Proposta(s) de governo</h4>
+            <ul class="cand-docs-lista">`;
+        docs.propostas.forEach(p => {
+            const nome = nomeLegivelDocumento(p.nome || p.caminho);
+            html += `<li>${escaparHTML(nome)}</li>`;
+        });
+        html += `</ul></div>`;
+    }
+
+    // 5. Certidões
+    if (docs?.certidoes && docs.certidoes.length > 0) {
+        temConteudo = true;
+        html += `<div class="cand-juridico-subsecao">
+            <h4 class="cand-juridico-subtitulo">Certidões</h4>
+            <p class="texto-mutado" style="margin: 0 0 8px; font-size: 0.78em;">(registros oficiais disponíveis — não implica julgamento)</p>
+            <ul class="cand-docs-lista">`;
+        docs.certidoes.forEach(c => {
+            const nome = nomeLegivelDocumento(c.nome || c.caminho);
+            html += `<li>${escaparHTML(nome)}</li>`;
+        });
+        html += `</ul></div>`;
+    }
+
+    el.innerHTML = html || '<p class="texto-mutado">Nenhum registro disponível.</p>';
+}
+
+// Helper: extrai nome legível do documento
+function nomeLegivelDocumento(nomeArquivo) {
+    if (!nomeArquivo) return 'Documento';
+    let nome = String(nomeArquivo);
+    nome = nome.replace(/\.pdf$/i, '');
+    nome = nome.replace(/^[a-f0-9]{8,}_/i, '');
+    nome = nome.replace(/^[A-Z0-9]{6,}_/i, '');
+    nome = nome.replace(/[_\-]+/g, ' ');
+    nome = nome.replace(/\b(\w)/g, (c) => c.toUpperCase());
+    return nome.trim() || 'Documento';
+}
+
 async function abrirFicha(id, uf) {
     // Lazy Load: Baixa o JSON gigante apenas se ainda não tiver baixado
     if (!dadosCandidatos) {
@@ -144,10 +540,9 @@ async function abrirFicha(id, uf) {
         }
     }
 
-    // Tenta buscar a chave nos dois formatos possíveis
+    // Busca a chave no formato UF_SQ_CANDIDATO (único formato usado pelo índice)
     const chaveComUF = `${uf}_${id}`;
-    const chaveSemUF = id;
-    const dados = dadosCandidatos[chaveComUF] || dadosCandidatos[chaveSemUF];
+    const dados = dadosCandidatos[chaveComUF];
 
     if (!dados) {
         console.error("ID procurado:", id, "UF:", uf);
@@ -158,45 +553,40 @@ async function abrirFicha(id, uf) {
 
     candidatoAtual = dados;
 
-    // 4.1. Preenchendo o Cabeçalho e Perfil
-    const nomeOficial = dados.perfil?.nome || "Candidato";
-    const nomeUrna = dados.perfil?.nomeUrna || "Não informado";
-
-    document.getElementById('candNome').innerText = `${nomeOficial} (Urna: ${nomeUrna})`;
-    document.getElementById('candCargo').innerText = dados.perfil?.cargo || dados.cargo || "Não informado";
-    document.getElementById('candPartido').innerText = dados.perfil?.partido || "Não informado";
-    document.getElementById('candUF').innerText = dados.uf || uf || "Não informado";
-    document.getElementById('candID').innerText = dados.id || id || "Não informado";
-
-    document.getElementById('candOcupacao').innerText = dados.perfil?.ocupacao || "Não informado";
-    document.getElementById('candEscolaridade').innerText = dados.perfil?.escolaridade || "Não informado";
-    document.getElementById('candGenero').innerText = dados.perfil?.genero || "Não informado";
-    document.getElementById('candRaca').innerText = dados.perfil?.raca || "Não informado";
-
-    // 4.2. Preenchendo o Patrimônio
-    let totalBens = 0;
-    const tabelaCorpo = document.getElementById('tabelaBensCorpo');
-    tabelaCorpo.innerHTML = '';
-
-    if (dados.bens && dados.bens.length > 0) {
-        dados.bens.forEach(bem => {
-            const valorNum = parseFloat(String(bem.valor).replace(',', '.'));
-            if (!isNaN(valorNum)) totalBens += valorNum;
-
-            const tr = document.createElement('tr');
-            ['tipo', 'descricao', 'valor'].forEach(campo => {
-                const td = document.createElement('td');
-                td.textContent = campo === 'valor' ? `R$ ${bem.valor}` : bem[campo];
-                tr.appendChild(td);
-            });
-            tabelaCorpo.appendChild(tr);
-        });
-    } else {
-        tabelaCorpo.innerHTML = `<tr><td colspan="3" class="texto-mutado">Nenhum bem declarado.</td></tr>`;
+    // 4.0. Carrega dados extras (foto, documentos, financeiro) via API privada
+    const chaveCompleta = `${uf}_${id}`;
+    dadosExtrasAtual = null;
+    try {
+        const resExtra = await fetch(`/api/candidato?id=${encodeURIComponent(chaveCompleta)}`);
+        if (resExtra.ok) dadosExtrasAtual = await resExtra.json();
+    } catch (e) {
+        console.warn('Dados extras não carregados:', e);
     }
 
-    // Formata o total para R$ brasileiro
-    document.getElementById('candTotalBens').innerText = totalBens.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    // 4.0a. Foto — Seção 01
+    const imgFoto = document.getElementById('candFoto');
+    const caminhoFoto = dadosExtrasAtual?.foto?.arquivo;
+    if (caminhoFoto) {
+        imgFoto.src = caminhoFoto.startsWith('/') ? caminhoFoto : '/' + caminhoFoto;
+    } else {
+        // Placeholder SVG 120x120 quando não há foto disponível
+        imgFoto.src = 'data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 120 120%22%3E%3Crect width%3D%22120%22 height%3D%22120%22 fill%3D%22%23333%22%2F%3E%3Ccircle cx%3D%2260%22 cy%3D%2245%22 r%3D%2226%22 fill%3D%22%23666%22%2F%3E%3Cellipse cx%3D%2260%22 cy%3D%22108%22 rx%3D%2240%22 ry%3D%2228%22 fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E';
+    }
+
+    // 4.1. Header do Dossiê (SQ_CANDIDATO)
+    const cand = dadosExtrasAtual?.candidato;          // fonte primária: data/candidatos.json
+    const perfFallback = dados.perfil || {};            // fallback: dados_candidatos.json
+    const idExibido = cand?.id || dados.id || id;
+    document.getElementById('candIdHeader').innerText = idExibido;
+
+    // Card: Dados do Candidato
+    renderizarDadosCandidato(cand, perfFallback);
+
+    // Card: Patrimônio Declarado
+    renderizarPatrimonio(dadosExtrasAtual?.patrimonio);
+
+    // Card: Documentos e Situação Jurídica
+    renderizarDocumentosJuridicos(cand, dadosExtrasAtual?.documentos, dadosExtrasAtual?.financeiro, dadosExtrasAtual?.juridico);
 
     // 4.3. Resetando a IA e verificando cache
     resultadoIA.classList.add('hidden');
@@ -205,17 +595,17 @@ async function abrirFicha(id, uf) {
     btnGerarResumo.disabled = true;
 
     // Se o candidato não tiver PDF de proposta, desativamos o botão
-    const temProposta = dados.documentos && dados.documentos.propostas && dados.documentos.propostas.length > 0;
+    const temProposta = dadosExtrasAtual?.documentos?.propostas && dadosExtrasAtual.documentos.propostas.length > 0;
     if (!temProposta) {
         btnGerarResumo.disabled = true;
         btnGerarResumo.classList.add('texto-mutado');
         btnGerarResumo.innerText = 'Sem proposta anexada';
     } else {
         // Verifica se já existe resumo em cache para este candidato
-        verificarCacheResumo(dados.id);
+        verificarCacheResumo(chaveCompleta);
     }
 
-    // 4.4. Transição de Tela
+    // 4.6. Transição de Tela
     document.querySelector('.barra-pesquisa').classList.add('hidden');
     areaResultados.classList.add('hidden');
     areaFicha.classList.remove('hidden');
@@ -280,6 +670,16 @@ function exibirResumo(textoResumo) {
     disclaimer.textContent = DISCLAIMER_IA;
     resultadoIA.appendChild(disclaimer);
 }
+
+// Exibe uma mensagem informativa neutra (não é erro)
+function exibirInfoNeutra(mensagem) {
+    resultadoIA.classList.remove('hidden');
+    resultadoIA.innerHTML = '';
+    const span = document.createElement('span');
+    span.className = 'texto-info-neutra';
+    span.textContent = mensagem;
+    resultadoIA.appendChild(span);
+}
 // ==========================================
 // 7. COMUNICAÇÃO COM A VERCEL (Motor Gemini)
 // ==========================================
@@ -297,11 +697,12 @@ btnGerarResumo.addEventListener('click', async () => {
             const res = await fetch('/api/resumo', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id_candidato: candidatoAtual.id }),
+                body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
             });
 
             loadingIA.classList.add('hidden');
 
+            // Verifica se a resposta é válida antes de tentar parsear JSON
             const contentType = res.headers.get('content-type') || '';
             if (!contentType.includes('application/json')) {
                 const text = await res.text();
@@ -314,6 +715,10 @@ btnGerarResumo.addEventListener('click', async () => {
 
             if (res.ok && data.resumo) {
                 exibirResumo(data.resumo);
+            } else if (res.ok && data.semProposta) {
+                exibirInfoNeutra(data.mensagem);
+                btnGerarResumo.disabled = true;
+                btnGerarResumo.classList.add('texto-mutado');
             } else {
                 mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
             }
@@ -339,7 +744,7 @@ btnGerarResumo.addEventListener('click', async () => {
         const res = await fetch('/api/resumo', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id_candidato: candidatoAtual.id }),
+            body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
         });
 
         loadingIA.classList.add('hidden');
@@ -360,6 +765,11 @@ btnGerarResumo.addEventListener('click', async () => {
             // Após gerar com sucesso, atualiza o botão para "Mostrar resumo"
             btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
             btnGerarResumo.dataset.cached = 'true';
+        } else if (res.ok && data.semProposta) {
+            exibirInfoNeutra(data.mensagem);
+            btnGerarResumo.disabled = true;
+            btnGerarResumo.classList.add('texto-mutado');
+            btnGerarResumo.innerText = 'Sem proposta de governo';
         } else {
             mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
         }

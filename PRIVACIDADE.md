@@ -1,4 +1,4 @@
-﻿# Política de Privacidade — Radar Eleitoral 2026
+﻿# Política de Privacidade — Resume Candidato 2026
 
 > **Última atualização:** 04 de setembro de 2026
 
@@ -6,7 +6,7 @@
 
 ## 1. Visão Geral
 
-O **Radar Eleitoral 2026** é uma ferramenta de consulta pública de dados eleitorais.
+O **Resume Candidato 2026** é uma ferramenta de consulta pública de dados eleitorais.
 Esta política descreve de forma transparente quais dados são (e **não são**) coletados
 ou processados ao utilizar o site.
 
@@ -72,7 +72,7 @@ Este projeto respeita integralmente esse princípio.
 
 ## 6. Código Aberto
 
-O **Radar Eleitoral 2026** é um projeto de código aberto (*open source*) licenciado
+O **Resume Candidato 2026** é um projeto de código aberto (*open source*) licenciado
 sob a **GNU General Public License v3.0 (GPL-3.0)**.
 
 O código-fonte está disponível publicamente e pode ser auditado, reproduzido e
