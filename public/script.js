@@ -136,7 +136,7 @@ function renderizarResultados(resultados) {
         info.appendChild(document.createElement('br'));
         const span = document.createElement('span');
         span.className = 'texto-mutado';
-        span.textContent = `${cand.cargo || 'Cargo Indefinido'} • ${cand.uf} • ID: ${cand.id}`;
+        span.textContent = `${cand.cargo || 'Cargo Indefinido'} • ${cand.uf}${cand.numeroUrna ? ' • N.º ' + cand.numeroUrna : ''} • ID: ${cand.id}`;
         info.appendChild(span);
 
         div.appendChild(btn);
@@ -198,12 +198,12 @@ function renderizarDadosCandidato(cand, fallback) {
 
     // Fonte primária: data/candidatos.json (retornado pela API)
     const nomeCompleto = v(cand?.nomeCompleto) || v(fallback?.nome);
-    const nomeUrna     = v(cand?.nomeUrna)     || v(fallback?.nomeUrna);
-    const numero       = v(cand?.numeroUrna);
-    const cargo        = v(cand?.cargo)        || v(fallback?.cargo);
-    const partido      = v(cand?.partido)      || v(fallback?.partido);
-    const ufVal        = v(cand?.uf);
-    const situacao     = v(cand?.situacao);
+    const nomeUrna = v(cand?.nomeUrna) || v(fallback?.nomeUrna);
+    const numero = v(cand?.numeroUrna);
+    const cargo = v(cand?.cargo) || v(fallback?.cargo);
+    const partido = v(cand?.partido) || v(fallback?.partido);
+    const ufVal = v(cand?.uf);
+    const situacao = v(cand?.situacao);
 
     let html = '';
 
@@ -220,9 +220,9 @@ function renderizarDadosCandidato(cand, fallback) {
     const add = (label, valor) => { if (valor !== null) itens.push({ label, valor }); };
 
     add('N.º Candidatura', numero);
-    add('Partido',         partido);
-    add('Cargo',           cargo);
-    add('UF',              ufVal ? formatarUF(ufVal) : null);
+    add('Partido', partido);
+    add('Cargo', cargo);
+    add('UF', ufVal ? formatarUF(ufVal) : null);
     add('Situação da candidatura', situacao);
 
     if (itens.length > 0) {
@@ -238,15 +238,15 @@ function renderizarDadosCandidato(cand, fallback) {
     const extraItens = [];
     const addExtra = (label, valor) => { if (valor !== null) extraItens.push({ label, valor }); };
 
-    addExtra('Coligação',   v(cand?.coligacao));
-    addExtra('Federação',   v(cand?.federacao));
-    addExtra('Gênero',      v(cand?.genero)    || v(fallback?.genero));
-    addExtra('Idade',       (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
+    addExtra('Coligação', v(cand?.coligacao));
+    addExtra('Federação', v(cand?.federacao));
+    addExtra('Gênero', v(cand?.genero) || v(fallback?.genero));
+    addExtra('Idade', (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
     addExtra('Estado civil', v(cand?.estadoCivil));
-    addExtra('Instrução',   v(cand?.instrucao) || v(fallback?.escolaridade));
-    addExtra('Ocupação',    v(cand?.ocupacao)  || v(fallback?.ocupacao));
-    addExtra('Cor / Raça',  v(cand?.corRaca)   || v(fallback?.raca));
-    addExtra('Nome social',  v(cand?.nomeSocial));
+    addExtra('Instrução', v(cand?.instrucao) || v(fallback?.escolaridade));
+    addExtra('Ocupação', v(cand?.ocupacao) || v(fallback?.ocupacao));
+    addExtra('Cor / Raça', v(cand?.corRaca) || v(fallback?.raca));
+    addExtra('Nome social', v(cand?.nomeSocial));
 
     if (extraItens.length > 0) {
         html += '<details class="cand-dados-extra"><summary>Mais informações</summary><dl class="cand-dados-dl">';
@@ -474,7 +474,9 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         </div>`;
         html += `<div class="cand-fin-item">
             <span>Total Pago</span>
-            <strong>${fmt(totalP)} ${percHTML}</strong>
+            <strong>${totalP === 0
+                ? '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dados indisponíveis</span>'
+                : `${fmt(totalP)} ${percHTML}`}</strong>
         </div>`;
         html += `<div class="cand-fin-quantidades texto-mutado">
             Receitas: ${financeiro.quantidade_receitas || 0} |
