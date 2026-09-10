@@ -34,9 +34,9 @@
                 <strong>cargo</strong>.
             </p>
 
-            <p>Todas as informações têm como fonte o <strong>TSE</strong> (Tribunal Superior Eleitoral).</p>
-            <p> Informações disponíveis sobre as candidatos do Estado de Minas Gerais e a Presidência do Brasil.</p>
-             <p>⚠️Essa é uma versão beta de testes, <strong>pode haver alguns dados faltantes ou inconsistentes.</strong>⚠️</p>
+            <p>Todas as informações têm como fonte o <strong>TSE</strong> (Tribunal Superior Eleitoral). Os dados são extraídos automaticamente e podem estar desatualizados em relação à base do TSE, que passa por retenções e retificações contínuas.</p>
+            <p>Informações disponíveis sobre candidatos do Estado de Minas Gerais e a Presidência do Brasil.</p>
+            <p>⚠️Essa é uma versão beta de testes, <strong>pode haver alguns dados faltantes ou inconsistentes.</strong> Caso encontre alguma divergência, você pode <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" class="modal-link">reportar um erro aqui</a>.⚠️</p>
 
             <p>
                 Não salvamos nenhum dado de pesquisa nem de usuário — apenas o IP, por até 1&nbsp;minuto,
@@ -50,6 +50,7 @@
                 <p>
                     ⚠️ <strong>Este site não anexa, acusa ou atribui nenhum crime a candidato algum</strong>
                     — apenas exibe informações já disponíveis publicamente nas bases oficiais.
+                    Registros devem ser lidos como <em>"consta nas bases públicas"</em>, nunca como afirmação de culpa.
                 </p>
             </div>
 
@@ -57,6 +58,11 @@
                 Este projeto é open&nbsp;source. Você pode encontrá-lo em:
                 <a href="https://github.com/Weslley555/Resume_Candidato" target="_blank" rel="noopener noreferrer"
                     class="modal-link">github.com/Weslley555/Resume_Candidato</a>
+            </p>
+            <p style="font-size: 0.85em;">
+                <a href="/termos-de-uso" class="modal-link">Termos de Uso</a>
+                &nbsp;&middot;&nbsp;
+                <a href="/privacidade" class="modal-link">Política de Privacidade</a>
             </p>
 
             <div class="modal-rodape">
@@ -73,6 +79,18 @@
                     <img class="img-p" src="icons/logo_p.svg" alt="Resume Candidato 2026">
                 </span>
             </a>
+        </div>
+
+        <!-- Banner fixo de aviso de fonte — permanente, não dispensável -->
+        <div class="banner-fonte-fixo" id="bannerFonte" role="note" aria-label="Aviso sobre a fonte dos dados">
+            ⚠️ Agregador de dados públícos do TSE — não é fonte oficial. Dados sujeitos a retificação.
+            Atualizado em <span data-data-geracao>04/09/2026</span>
+            &nbsp;&middot;&nbsp;
+            <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026" target="_blank" rel="noopener noreferrer">Ver fonte oficial</a>
+            &nbsp;&middot;&nbsp;
+            <a href="/termos-de-uso">Termos de Uso</a>
+            &nbsp;&middot;&nbsp;
+            <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer">Reportar erro</a>
         </div>
 
         <!-- 1. Barra de Pesquisa Superior -->
@@ -136,7 +154,7 @@
     <!-- Dossier Header — identificador + última atualização -->
     <div class="dossier-header">
         <span class="dossier-id">SQ_CANDIDATO: <strong id="candIdHeader"></strong></span>
-        <span class="dossier-update">Última atualização: 04/09/2026</span>
+        <span class="dossier-update">Atualizado em: <span data-data-geracao>04/09/2026</span></span>
     </div>
 
     <!-- Grid 2 colunas -->
@@ -186,7 +204,7 @@
 
             <!-- Card: Documentos e Situação Jurídica -->
             <div class="dossier-card">
-                <h3 class="dossier-card-title">DOCUMENTOS E SITUAÇÃO JURÍDICA</h3>
+                <h3 class="dossier-card-title">REGISTROS PÚBLICOS DO TSE</h3>
                 <div id="conteudoDocumentosJuridicos"></div>
             </div>
 
@@ -295,13 +313,31 @@
     </script>
 
     <footer class="site-footer">
+        <div class="disclaimer-legal">
+            ⚖️ Resumos de propostas são gerados por <strong>I.A.</strong> e podem conter imprecisões ou omissões.
+            Registros de cassação ou certidões <strong>não representam condenações definitivas</strong>
+            nem implicam culpa — vigora a <strong>presunção de inocência</strong> (CF/88, art. 5.º, LVII).
+            Este projeto é independente, sem vínculo partidário ou governamental.
+            Consulte sempre os dados oficiais no
+            <a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noopener noreferrer">Portal DivulgaCand</a>.
+        </div>
         <a href="/privacidade"><span class="icon-img"><img class="img-b" src="icons/cadeado_b.svg" alt=""><img
                     class="img-p" src="icons/cadeado_p.svg" alt=""></span> Política de Privacidade</a>
-        &nbsp;·&nbsp;
-        Open source · GPL-3.0
-        &nbsp;·&nbsp;
-        Dados coletados em 04/09/2026
+        &nbsp;&middot;&nbsp;
+        <a href="/termos-de-uso">Termos de Uso</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer"><span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span> Reportar erro</a>
+        &nbsp;&middot;&nbsp;
+        Open source &middot; GPL-3.0
+        &nbsp;&middot;&nbsp;
+        Dados coletados em <span data-data-geracao>04/09/2026</span>
     </footer>
+
+    <!-- Botão Flutuante: Reportar Erro -->
+    <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" id="btnReportarErroFlutuante" class="btn-flutuante-erro" aria-label="Reportar erro no formulário" title="Reportar erro ou inconsistência">
+        <span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span>
+        <span class="btn-flutuante-texto">Reportar erro</span>
+    </a>
 </body>
 
 </html>

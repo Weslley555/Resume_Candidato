@@ -1,4 +1,13 @@
 {
+  "_meta": {
+    "geradoEm": "2026-09-04T00:00:00-03:00",
+    "fontes": [
+      "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
+      "https://dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026",
+      "https://dadosabertos.tse.jus.br/dataset/processual-2026"
+    ],
+    "nota": "Gerado automaticamente pelo script de processamento. Para dados atualizados, consulte os datasets oficiais do TSE."
+  },
   "BR_280002538811": {
     "id": "280002538811",
     "uf": "BR",

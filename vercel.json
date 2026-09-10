@@ -1,7 +1,8 @@
 {
   "outputDirectory": "public",
   "rewrites": [
-    { "source": "/privacidade", "destination": "/privacidade.html" }
+    { "source": "/privacidade", "destination": "/privacidade.html" },
+    { "source": "/termos-de-uso", "destination": "/termos-de-uso.html" }
   ]
 }
 

@@ -11,7 +11,7 @@ if (redisUrl && redisToken) {
   const redis = new Redis({ url: redisUrl, token: redisToken });
   ratelimit = new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(20, "60 s"),
+    limiter: Ratelimit.slidingWindow(2, "60 s"),
     analytics: false,
   });
 } else {

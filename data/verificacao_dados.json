@@ -1,0 +1,18 @@
+{
+  "status": "OK",
+  "amostra": null,
+  "base": "TSE",
+  "chaveAtribuicao": "UF + SQ_CANDIDATO",
+  "resumo": {
+    "candidatos_tse": 1855,
+    "candidatos_json": 1855,
+    "nao_encontrados_json": 0,
+    "campos_comparados": 44520,
+    "divergencias": 0,
+    "divergencias_atribuicao": 0,
+    "divergencias_id_uf": 0,
+    "divergencias_idade_temporal": 0
+  },
+  "problemasAtribuicao": [],
+  "divergencias": []
+}
