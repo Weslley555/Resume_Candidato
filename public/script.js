@@ -512,45 +512,57 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         html += `<div class="cand-juridico-subsecao">
             <h4 class="cand-juridico-subtitulo">Prestação de contas</h4>`;
 
-        const totalC = financeiro.total_contratado || 0;
-        const totalP = financeiro.total_pago || 0;
+        const totalA = financeiro.total_arrecadado;
+        const totalC = financeiro.total_contratado;
+        const totalP = financeiro.total_pago;
+
+        // Helper para valores monetários: se for 0, 0.00, nulo ou vazio -> "Dado não encontrado"
+        const fmtValor = (num, extra = '') => {
+            if (num == null || isNaN(num) || Number(num) === 0) {
+                return '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dado não encontrado</span>';
+            }
+            return `${fmt(num)}${extra}`;
+        };
 
         // Situação da prestação de contas (do TSE)
         const sitPrestacao = v(cand?.situacaoPrestacaoContas);
-        if (sitPrestacao) {
-            html += `<div class="cand-juridico-item">
-                <span class="cand-juridico-label">Situação da prestação</span>
-                <span class="cand-juridico-status">${escaparHTML(sitPrestacao)}</span>
-            </div>`;
-        }
+        const sitTexto = (!sitPrestacao || sitPrestacao === '0' || sitPrestacao === '0,00' || sitPrestacao === '0.00')
+            ? '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dado não encontrado</span>'
+            : escaparHTML(sitPrestacao);
 
-        // Usa percentual_pago do JSON se disponível, senão calcula
+        html += `<div class="cand-juridico-item">
+            <span class="cand-juridico-label">Situação da prestação</span>
+            <span class="cand-juridico-status">${sitTexto}</span>
+        </div>`;
+
+        // Usa percentual_pago do JSON se disponível, senão calcula (apenas se houver valor pago > 0)
         let percHTML = '';
         const percPago = financeiro.percentual_pago;
-        if (percPago != null) {
-            percHTML = `<span class="badge-percentual">${percPago}% pago</span>`;
-        } else if (totalC > 0) {
-            const perc = ((totalP / totalC) * 100).toFixed(1);
-            percHTML = `<span class="badge-percentual">${perc}% pago</span>`;
+        if (percPago != null && Number(percPago) > 0) {
+            percHTML = ` <span class="badge-percentual">${percPago}% pago</span>`;
+        } else if (Number(totalC) > 0 && Number(totalP) > 0) {
+            const perc = ((Number(totalP) / Number(totalC)) * 100).toFixed(1);
+            percHTML = ` <span class="badge-percentual">${perc}% pago</span>`;
         }
 
         html += `<div class="cand-fin-item">
             <span>Total Arrecadado</span>
-            <strong>${fmt(financeiro.total_arrecadado || 0)}</strong>
+            <strong>${fmtValor(totalA)}</strong>
         </div>`;
         html += `<div class="cand-fin-item">
             <span>Total Contratado</span>
-            <strong>${fmt(totalC)}</strong>
+            <strong>${fmtValor(totalC)}</strong>
         </div>`;
         html += `<div class="cand-fin-item">
             <span>Total Pago</span>
-            <strong>${totalP == null || isNaN(totalP)
-                ? '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dados indisponíveis</span>'
-                : `${fmt(totalP)} ${percHTML}`}</strong>
+            <strong>${fmtValor(totalP, percHTML)}</strong>
         </div>`;
-        // Quantidades — exibe "Não registrado" quando o valor for zero ou ausente
-        // para evitar interpretações equivocadas de "0 receitas"
-        const fmtQtd = (v) => (v != null && v !== 0) ? v : '<span class="texto-mutado" style="font-style:italic;font-size:0.95em;">Não registrado</span>';
+
+        // Quantidades — exibe "Dado não encontrado" quando o valor for 0 ou ausente
+        const fmtQtd = (num) => (num != null && !isNaN(num) && Number(num) !== 0)
+            ? num
+            : '<span class="texto-mutado" style="font-style:italic;font-size:0.95em;">Dado não encontrado</span>';
+
         html += `<div class="cand-fin-quantidades texto-mutado">
             Receitas: ${fmtQtd(financeiro.quantidade_receitas)} &nbsp;|
             Despesas contratadas: ${fmtQtd(financeiro.quantidade_despesas_contratadas)} &nbsp;|

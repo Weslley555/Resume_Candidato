@@ -128,16 +128,40 @@ export default async function handler(req, res) {
             ###
         `;
 
-        const response = await ai.models.generateContent({
-            model: 'gemini-3.5-flash',
-            contents: prompt,
-        });
+        // 6.1 Execução com fallback automático: tenta gemini-3.5-flash, se falhar vai para gemini-3.5-flash-lite
+        const MODELOS = ['gemini-3.5-flash', 'gemini-3.5-flash-lite'];
+        let textoResumo = null;
+        let ultimoErro = null;
 
-        // O SDK @google/genai retorna o texto em response.text (getter)
-        const textoResumo = response.text;
+        for (const model of MODELOS) {
+            try {
+                const response = await ai.models.generateContent({
+                    model,
+                    contents: prompt,
+                });
+                if (response && response.text) {
+                    textoResumo = response.text;
+                    break;
+                }
+            } catch (err) {
+                console.warn(`[Gemini] Falha no modelo ${model}: ${err.message || err}. Tentando próximo modelo...`);
+                ultimoErro = err;
+            }
+        }
+
         if (!textoResumo) {
-            console.error('Resposta do Gemini sem texto:', JSON.stringify(response));
-            return res.status(500).json({ erro: 'O Gemini não retornou texto no resumo.' });
+            console.error('Erro na API Gemini após esgotar fallbacks:', ultimoErro);
+            const isHighDemand = ultimoErro?.status === 503
+                || String(ultimoErro?.message).includes('503')
+                || String(ultimoErro?.message).includes('high demand')
+                || String(ultimoErro?.message).includes('UNAVAILABLE');
+
+            if (isHighDemand) {
+                return res.status(503).json({
+                    erro: 'O serviço de IA está com alta demanda momentânea na Google. Por favor, tente novamente em instantes.'
+                });
+            }
+            return res.status(500).json({ erro: 'Falha ao gerar o resumo com o serviço de IA.' });
         }
 
         // 7. Salva no cache Redis antes de retornar (apenas em caso de sucesso)
