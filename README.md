@@ -37,8 +37,9 @@ artificial (Gemini).
 ├── public/
 │   ├── index.html              # Interface principal de busca e dossiê
 │   ├── privacidade.html         # Política de privacidade
+│   ├── termos-de-uso.html       # Termos de uso e canal de correção
 │   ├── script.js               # Lógica do frontend (busca, ficha, chamada à API)
-│   ├── style.css                # Estilos (tema escuro estilo terminal)
+│   ├── style.css                # Estilos (tema escuro e claro responsivos)
 │   ├── lista_busca.json         # Índice leve para busca de candidatos
 │   └── dados_candidatos.json    # Dossiês completos (lazy load — legado)
 ├── Tratamento_Dados/            # Scripts Python/Colab de extração e tratamento do TSE
@@ -67,7 +68,9 @@ interpretado como HTML malicioso.
 O texto das propostas de governo (conteúdo não confiável, enviado pelo próprio
 candidato ao TSE) é sanitizado antes de ser enviado ao Gemini: marcadores `###`
 são substituídos por `[DELIM]`, impedindo que o conteúdo quebre os
-delimitadores do prompt e injete instruções no modelo.
+delimitadores do prompt e injete instruções no modelo. Além disso, o prompt
+orienta o modelo a atuar exclusivamente na extração objetiva de políticas públicas
+em tópicos essenciais (Saúde, Educação, Economia, Segurança).
 
 ### Rate limiting
 
@@ -90,6 +93,18 @@ coletados em **04 de setembro de 2026**:
 
 O projeto **não realiza atualização em tempo real** — os dados refletem o
 estado das bases públicas na data de coleta.
+
+### 📢 Canal de reporte e correção de erros
+
+Para assegurar a confiabilidade dos dados e transparência com a sociedade civil:
+- **Formulário oficial de reporte:** [Google Forms](https://forms.gle/TuFSsPBaY6XFYcrq7)
+- **Botão flutuante**: Acesso rápido fixo no canto inferior direito em todas as páginas (`#btnReportarErroFlutuante`).
+- **Botão dedicado na ficha**: Ao final do dossiê de cada candidato, há um botão em destaque para reportar inconsistências específicas daquele perfil.
+
+### 🛡️ Rastreabilidade e disclaimers colapsáveis
+
+- **Disclaimers colapsáveis de fonte**: Cada card exibe a identificação de extração do TSE (`04/09/2026`) em formato colapsável (`<details>/<summary>`), permitindo expandir a ressalva de retificação contínua e o link direto para a fonte oficial sem sobrecarregar a interface.
+- **Avisos permanentes**: O banner superior e o aviso legal de presunção de inocência no rodapé permanecem sempre visíveis e de alto contraste em ambos os temas (escuro e claro).
 
 ## 🐛 Problemas conhecidos
 
@@ -129,8 +144,11 @@ integralmente esse princípio.
    - Certidões e registros constantes nas bases públicas
 5. Clique em **"Resumir Plano de Governo"** para acionar a IA (Gemini) e obter
    um resumo automático das propostas do candidato.
+6. Caso identifique qualquer dado divergente ou desatualizado, utilize o botão
+   **"Reportar erro"** (flutuante no canto inferior ou no rodapé do dossiê)
+   para enviar um relato detalhado pelo formulário oficial.
 
-> **Observação:** O resumo por IA está sujeito ao rate limit de 20 requisições
+> **Observação:** O resumo por IA está sujeito ao rate limit de 02 requisições
 > por minuto por IP em produção.
 
 ---

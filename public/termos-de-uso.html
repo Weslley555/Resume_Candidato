@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso — Resume Candidato 2026</title>
+    <meta name="description"
+        content="Termos de uso do Resume Candidato 2026: isenção de responsabilidade sobre precisão e atualidade dos dados eleitorais exibidos, resumos por IA e registros de cassação.">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var tema = localStorage.getItem('tema-preferido');
+            if (tema !== 'light' && tema !== 'dark') {
+                tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', tema);
+        })();
+    </script>
+    <style>
+        .privacidade-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+            font-family: inherit;
+            color: inherit;
+        }
+
+        .privacidade-wrapper h1 {
+            font-size: 1.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .privacidade-wrapper .subtitulo {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            margin-bottom: 2rem;
+        }
+
+        .privacidade-wrapper hr {
+            border: none;
+            border-top: 1px solid var(--border-subtle);
+            margin: 2rem 0;
+        }
+
+        .privacidade-wrapper h2 {
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .privacidade-wrapper p,
+        .privacidade-wrapper li {
+            line-height: 1.75;
+            margin-bottom: 0.6rem;
+        }
+
+        .privacidade-wrapper ul {
+            padding-left: 1.4rem;
+        }
+
+        .aviso-box {
+            background: var(--bg-overlay-warning);
+            border-left: 4px solid var(--color-warning);
+            border-radius: 4px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .aviso-box strong {
+            color: var(--color-warning);
+        }
+
+        .rodape-priv {
+            margin-top: 3rem;
+            font-size: 0.82rem;
+            opacity: 0.5;
+            text-align: center;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.45rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border: 1px solid var(--border-btn);
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            background: var(--bg-overlay-subtle);
+            border-color: var(--border-btn-hover);
+        }
+
+        a {
+            color: var(--btn-info);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="privacidade-wrapper">
+
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <a href="/" class="btn-voltar" style="margin-bottom: 0;">
+                <span class="icon-img">
+                    <img class="img-b" src="icons/seta_voltar_b.svg" alt="">
+                    <img class="img-p" src="icons/seta_voltar_p.svg" alt="">
+                </span> Voltar para a busca
+            </a>
+            <button id="btnTema" class="tema-toggle" aria-label="Alternar para tema claro">
+                <span class="icone-toggle icone-sol">
+                    <img class="img-b" src="icons/sol_b.svg" alt=""><img class="img-p" src="icons/sol_p.svg" alt="">
+                </span>
+                <span class="icone-toggle icone-lua">
+                    <img class="img-b" src="icons/lua_b.svg" alt=""><img class="img-p" src="icons/lua_p.svg" alt="">
+                </span>
+            </button>
+        </div>
+
+        <h1>📋 Termos de Uso</h1>
+        <p class="subtitulo">Resume Candidato 2026 &middot; Última atualização: 04 de setembro de 2026</p>
+
+        <hr>
+
+        <h2>1. O que é este site</h2>
+        <p>
+            O <strong>Resume Candidato 2026</strong> é um <strong>agregador de dados públicos eleitorais</strong>
+            — uma ferramenta que facilita o acesso a informações já disponíveis nas bases oficiais do
+            <strong>TSE (Tribunal Superior Eleitoral)</strong>, organizando-as em formato mais acessível ao cidadão.
+        </p>
+        <p>
+            <strong>Este site não é e não pretende ser uma fonte oficial de dados eleitorais.</strong>
+            A fonte oficial e definitiva é sempre o TSE, acessível em
+            <a href="https://www.tse.jus.br" target="_blank" rel="noopener noreferrer">tse.jus.br</a> e no
+            <a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noopener noreferrer">Portal
+                DivulgaCand</a>.
+        </p>
+
+        <hr>
+
+        <h2>2. Precisão e Atualidade dos Dados</h2>
+        <p>
+            Os dados foram extraídos dos datasets públicos do TSE em <strong>04 de setembro de 2026</strong>
+            e processados de forma automatizada. O projeto <strong>não realiza atualização em tempo real</strong>.
+        </p>
+        <p>Por esse motivo, os dados podem:</p>
+        <ul>
+            <li>Estar <strong>desatualizados</strong> em relação à base do TSE, já que a prestação de contas
+                eleitoral é um processo contínuo, sujeito a retificações, prazos e recursos;</li>
+            <li>Conter <strong>imprecisões decorrentes do processamento automatizado</strong> (scripts Python)
+                — erros de parsing, codificação ou cruzamento de dados são possíveis;</li>
+            <li>Não refletir <strong>decisões judiciais ou administrativas recentes</strong> que alterem
+                a situação de um candidato após a data de coleta.</li>
+        </ul>
+        <div class="aviso-box">
+            <p>
+                <strong>Em caso de divergência</strong> entre qualquer informação exibida neste site e os
+                dados disponíveis na fonte oficial do TSE, <strong>a fonte oficial prevalece sempre</strong>.
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>3. Resumos Gerados por Inteligência Artificial</h2>
+        <p>
+            A funcionalidade "Gerar Resumo com IA" utiliza o modelo <strong>Google Gemini</strong> para sintetizar
+            o texto das propostas de governo registradas no TSE.
+        </p>
+        <ul>
+            <li>Os resumos são gerados a partir do <strong>texto literal do documento oficial</strong>
+                registrado pelo candidato no TSE — sem edição humana;</li>
+            <li>A IA pode cometer <strong>imprecisões, omissões, interpretações equivocadas ou viés
+                    involuntário</strong> na síntese do texto;</li>
+            <li>O resumo <strong>não representa posição ou análise do projeto</strong> sobre a proposta;</li>
+            <li>Recomenda-se sempre consultar o <strong>documento original da proposta</strong> para
+                compreensão completa e fiel.</li>
+        </ul>
+
+        <hr>
+
+        <h2>4. Registros de Cassação, Certidões e Situação Jurídica</h2>
+        <div class="aviso-box">
+            <p>
+                <strong>⚠️ Leia com atenção antes de interpretar qualquer registro.</strong>
+            </p>
+            <p>
+                Campos como <strong>"certidão criminal"</strong>, <strong>"motivo de cassação"</strong>
+                ou <strong>"situação da cassação"</strong> refletem <em>registros constantes nas
+                    bases de dados públicas do TSE</em> no momento da coleta. Eles <strong>não</strong>
+                representam condenações definitivas, nem implicam culpa.
+            </p>
+        </div>
+        <p>
+            <strong>A interpretação correta é sempre:</strong>
+            <em>"consta registro nas bases públicas"</em> — <strong>nunca</strong>
+            <em>"crime cometido"</em> ou <em>"culpado"</em>.
+        </p>
+        <p>
+            O Brasil adota o princípio constitucional da <strong>presunção de inocência</strong>
+            (art. 5.º, LVII, CF/88). Este projeto respeita integralmente esse princípio — o site
+            não acusa, não atribui nem afirma a prática de nenhum crime por parte de nenhum candidato.
+        </p>
+
+        <hr>
+
+        <h2>5. Rastreabilidade das Fontes</h2>
+        <p>Os dados exibidos são provenientes dos seguintes datasets públicos do TSE:</p>
+        <ul>
+            <li>
+                <strong>Candidatos, patrimônio, dados gerais e situação jurídica:</strong><br>
+                <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026" target="_blank"
+                    rel="noopener noreferrer">
+                    dadosabertos.tse.jus.br/dataset/candidatos-2026
+                </a>
+            </li>
+            <li>
+                <strong>Prestação de contas eleitorais (financeiro):</strong><br>
+                <a href="https://dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026" target="_blank"
+                    rel="noopener noreferrer">
+                    dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026
+                </a>
+            </li>
+            <li>
+                <strong>Processual (integração futura):</strong><br>
+                <a href="https://dadosabertos.tse.jus.br/dataset/processual-2026" target="_blank"
+                    rel="noopener noreferrer">
+                    dadosabertos.tse.jus.br/dataset/processual-2026
+                </a>
+            </li>
+        </ul>
+        <p>
+            Cada seção do dossiê exibe um aviso de fonte com link direto para o dataset correspondente,
+            permitindo verificação independente dos dados exibidos.
+        </p>
+
+        <hr>
+
+        <h2>6. Limitação de Responsabilidade</h2>
+        <p>O <strong>Resume Candidato 2026</strong> é disponibilizado <em>como está</em>, sem garantia
+            de completude, exatidão ou atualidade. O projeto e seus mantenedores:</p>
+        <ul>
+            <li><strong>Não se responsabilizam</strong> por decisões tomadas com base nos dados exibidos;</li>
+            <li><strong>Não se responsabilizam</strong> por imprecisões decorrentes do processamento
+                automatizado dos datasets do TSE;</li>
+            <li><strong>Não interferem</strong> no conteúdo das bases públicas — os dados são extraídos
+                e exibidos sem edição de mérito.</li>
+        </ul>
+        <p>
+            Para informações definitivas sobre candidatos, consulte o
+            <a href="https://divulgacandcontas.tse.jus.br" target="_blank" rel="noopener noreferrer">Portal
+                DivulgaCand</a>
+            ou os datasets oficiais do TSE.
+        </p>
+
+        <hr>
+
+        <h2>7. Canal de Correção de Erros</h2>
+        <p>
+            Identificou uma informação que parece incorreta, desatualizada ou inconsistente?
+            A responsividade a relatos de erro é parte da política de boa-fé deste projeto.
+            Você pode enviar seu relato diretamente pelo formulário de reporte de erros:
+        </p>
+        <p>
+            <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" id="linkReportarErroTermos" class="btn-link-form">
+                <span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span> Formulário de reporte de erros
+            </a>
+        </p>
+        <p>
+            Ao relatar, inclua: nome do candidato, campo com a informação suspeita e, se possível,
+            a referência à fonte oficial que apresenta o valor correto.
+        </p>
+
+
+        <hr>
+
+        <h2>8. Código Aberto e Licença</h2>
+        <p>
+            O <strong>Resume Candidato 2026</strong> é um projeto de código aberto (<em>open source</em>)
+            licenciado sob a <strong>GNU General Public License v3.0 (GPL-3.0)</strong>.
+        </p>
+        <p>
+            Código-fonte disponível publicamente e auditável em:
+            <a href="https://github.com/Weslley555/Resume_Candidato" target="_blank" rel="noopener noreferrer">
+                github.com/Weslley555/Resume_Candidato
+            </a>
+        </p>
+
+        <hr>
+
+        <h2>9. Alterações nestes Termos</h2>
+        <p>
+            Estes termos podem ser atualizados a qualquer momento. A data no topo do documento indica
+            a versão vigente.
+        </p>
+
+        <p class="rodape-priv">
+            Resume Candidato 2026 &middot; Open source &middot; GPL-3.0 &middot;
+            <a href="/privacidade">Política de Privacidade</a>
+        </p>
+
+    </div>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('btnTema');
+            if (!btn) return;
+            function atualizarBotao() {
+                var tema = document.documentElement.getAttribute('data-theme') || 'dark';
+                btn.setAttribute('aria-label', tema === 'light' ? 'Alternar para tema escuro' : 'Alternar para tema claro');
+            }
+            atualizarBotao();
+            btn.addEventListener('click', function () {
+                var html = document.documentElement;
+                var novo = (html.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', novo);
+                localStorage.setItem('tema-preferido', novo);
+                atualizarBotao();
+            });
+        })();
+    </script>
+
+    <footer class="site-footer">
+        <a href="/"><span class="icon-img"><img class="img-b" src="icons/seta_voltar_b.svg" alt=""><img class="img-p"
+                    src="icons/seta_voltar_p.svg" alt=""></span> Voltar</a>
+        &nbsp;&middot;&nbsp;
+        <a href="/privacidade">Política de Privacidade</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer"><span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span> Reportar erro</a>
+        &nbsp;&middot;&nbsp;
+        Open source &middot; GPL-3.0
+    </footer>
+
+    <!-- Botão Flutuante: Reportar Erro -->
+    <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" id="btnReportarErroFlutuante" class="btn-flutuante-erro" aria-label="Reportar erro no formulário" title="Reportar erro ou inconsistência">
+        <span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span>
+        <span class="btn-flutuante-texto">Reportar erro</span>
+    </a>
+</body>
+
+</html>

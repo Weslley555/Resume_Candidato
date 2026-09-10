@@ -96,7 +96,6 @@ body {
     text-align: center;
     font-size: 0.82rem;
     color: var(--text-muted);
-    opacity: 0.6;
     border-top: 1px solid var(--border-color);
 }
 
@@ -790,12 +789,20 @@ button:disabled {
     color: #2ecc71;
 }
 
+.status-neutro .cand-juridico-status {
+    color: var(--btn-info);
+}
+
 .status-atencao .cand-juridico-status {
     color: var(--btn-warning);
 }
 
 [data-theme="light"] .status-positivo .cand-juridico-status {
     color: #27ae60;
+}
+
+[data-theme="light"] .status-neutro .cand-juridico-status {
+    color: #0088aa;
 }
 
 .cand-juridico-subsecao {
@@ -875,6 +882,375 @@ button:disabled {
     border-radius: 3px;
     line-height: 1.5;
 }
+
+/* ===== DISCLAIMER DE FONTE (cards de dados sensíveis — agora colapsável) ===== */
+.disclaimer-fonte {
+    margin-top: 10px;
+    background: var(--bg-overlay-warning);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-left: 3px solid var(--color-warning);
+    border-radius: 4px;
+    font-size: 0.76em;
+    color: var(--text-muted);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.disclaimer-fonte[open] {
+    background: var(--bg-overlay-warning-secao);
+}
+
+.disclaimer-fonte-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.disclaimer-fonte-summary::-webkit-details-marker {
+    display: none;
+}
+
+.disclaimer-fonte-titulo {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.disclaimer-fonte-toggle {
+    color: var(--btn-info);
+    font-size: 0.92em;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+    opacity: 0.85;
+    transition: opacity 0.15s, color 0.15s;
+}
+
+.disclaimer-fonte-summary:hover .disclaimer-fonte-toggle {
+    opacity: 1;
+    filter: brightness(1.2);
+}
+
+/* Alternância pura em CSS dos botões "Ver ressalva" / "Ocultar" */
+.disclaimer-fonte .toggle-recolhido {
+    display: inline;
+}
+.disclaimer-fonte .toggle-expandido {
+    display: none;
+}
+
+.disclaimer-fonte[open] .toggle-recolhido {
+    display: none;
+}
+.disclaimer-fonte[open] .toggle-expandido {
+    display: inline;
+    color: var(--color-warning);
+}
+
+.disclaimer-fonte-corpo {
+    padding: 6px 10px 8px;
+    border-top: 1px dashed rgba(255, 193, 7, 0.2);
+    line-height: 1.55;
+    color: var(--text-main);
+    font-size: 0.95em;
+    animation: fadeInDisclaimer 0.2s ease;
+}
+
+@keyframes fadeInDisclaimer {
+    from { opacity: 0; transform: translateY(-3px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.disclaimer-fonte-link-box {
+    margin-top: 6px;
+}
+
+.disclaimer-fonte a {
+    color: var(--btn-info);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.15s;
+}
+
+.disclaimer-fonte a:hover {
+    opacity: 0.75;
+}
+
+/* ===== DISCLAIMER JURÍDICO DE ALERTA (dentro de cards — MAIS proeminente) ===== */
+.disclaimer-juridico-alerta {
+    margin: 4px 0 12px;
+    padding: 8px 10px;
+    font-size: 0.92em;
+    color: var(--text-muted);
+    background: var(--bg-overlay-warning-secao);
+    border-left: 3px solid var(--color-warning);
+    border-radius: 3px;
+    line-height: 1.6;
+}
+
+.disclaimer-juridico-alerta strong {
+    color: var(--color-warning);
+}
+
+/* ===== AVISO LEGAL DO RODAPE ===== */
+.disclaimer-legal {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto 1.2rem;
+    padding: 0.8rem 1.1rem;
+    font-size: 0.82em;
+    line-height: 1.65;
+    background: var(--bg-overlay-warning);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-left: 4px solid var(--color-warning);
+    border-radius: 6px;
+    color: var(--text-main);
+}
+
+.disclaimer-legal strong {
+    color: var(--color-warning);
+}
+
+.disclaimer-legal a {
+    color: var(--btn-info);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.disclaimer-legal a:hover {
+    filter: brightness(1.2);
+}
+
+/* Tema claro: forca contraste maximo no aviso do rodape e banner */
+[data-theme="light"] .disclaimer-legal,
+html[data-theme="light"] .disclaimer-legal {
+    color: #1a1a1a !important;
+    background: #fff9e6 !important;
+    border: 1px solid #eed699 !important;
+    border-left: 4px solid #b8860b !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .disclaimer-legal strong,
+html[data-theme="light"] .disclaimer-legal strong {
+    color: #7a4800 !important;
+    font-weight: 700;
+}
+[data-theme="light"] .disclaimer-legal a,
+html[data-theme="light"] .disclaimer-legal a {
+    color: #0066cc !important;
+    font-weight: 600;
+}
+[data-theme="light"] .banner-fonte-fixo,
+html[data-theme="light"] .banner-fonte-fixo {
+    color: #1a1a1a !important;
+    background: #fff9e6 !important;
+    border: 1px solid #eed699 !important;
+}
+[data-theme="light"] .banner-fonte-fixo a,
+html[data-theme="light"] .banner-fonte-fixo a {
+    color: #0066cc !important;
+    font-weight: 600;
+}
+
+/* Tema claro: aviso de fonte colapsável */
+[data-theme="light"] .disclaimer-fonte,
+html[data-theme="light"] .disclaimer-fonte {
+    background: #fff9e8 !important;
+    border: 1px solid #fae2ab !important;
+    border-left: 3px solid #b8860b !important;
+    color: #2b1d0a !important;
+}
+
+[data-theme="light"] .disclaimer-fonte .disclaimer-fonte-titulo,
+html[data-theme="light"] .disclaimer-fonte .disclaimer-fonte-titulo {
+    color: #4a3410 !important;
+}
+
+[data-theme="light"] .disclaimer-fonte .disclaimer-fonte-toggle,
+html[data-theme="light"] .disclaimer-fonte .disclaimer-fonte-toggle {
+    color: #0066cc !important;
+}
+
+[data-theme="light"] .disclaimer-fonte[open] .toggle-expandido,
+html[data-theme="light"] .disclaimer-fonte[open] .toggle-expandido {
+    color: #b8860b !important;
+}
+
+[data-theme="light"] .disclaimer-fonte-corpo,
+html[data-theme="light"] .disclaimer-fonte-corpo {
+    border-top: 1px dashed #eed699 !important;
+    color: #222222 !important;
+}
+
+[data-theme="light"] .disclaimer-fonte a,
+html[data-theme="light"] .disclaimer-fonte a {
+    color: #0066cc !important;
+    font-weight: 600;
+}
+
+/* Tema claro: demais avisos (dentro de cards) */
+html[data-theme="light"] .disclaimer-ia,
+html[data-theme="light"] .disclaimer-juridico-alerta {
+    color: #332211;
+    background: rgba(184, 134, 11, 0.18);
+    border-left-color: #b8860b;
+}
+html[data-theme="light"] .disclaimer-ia strong,
+html[data-theme="light"] .disclaimer-juridico-alerta strong {
+    color: #6b4f08;
+}
+html[data-theme="light"] .disclaimer-ia a,
+html[data-theme="light"] .disclaimer-juridico-alerta a {
+    color: #0077aa;
+}
+
+@media (max-width: 640px) {
+    .disclaimer-legal {
+        font-size: 0.70em;
+        padding: 0.5rem 0.7rem;
+    }
+}
+
+/* ===== BANNER FIXO DE FONTE (logo abaixo do logo-header) ===== */
+.banner-fonte-fixo {
+    width: 100%;
+    max-width: 900px;
+    padding: 6px 12px;
+    margin-bottom: 4px;
+    background: var(--bg-overlay-warning);
+    border: 1px solid rgba(255, 193, 7, 0.25);
+    border-radius: 4px;
+    font-size: 0.76em;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.banner-fonte-fixo a {
+    color: var(--btn-info);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.15s;
+}
+
+.banner-fonte-fixo a:hover {
+    opacity: 0.75;
+}
+
+/* ===== LINK / BOTÃO "REPORTAR ERRO" no rodapé da ficha ===== */
+.dossier-reportar-erro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 16px 14px;
+    border-top: 1px dashed var(--border-color);
+    background: var(--bg-overlay-subtle);
+    border-radius: 6px;
+    font-size: 0.85em;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.btn-reportar-erro {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-reportar-erro:hover {
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+    background-color: var(--bg-overlay-warning);
+    transform: translateY(-1px);
+}
+
+/* ===== BOTÃO FLUTUANTE — REPORTAR ERRO ===== */
+.btn-flutuante-erro {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-panel);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.btn-flutuante-erro:hover {
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+    background: var(--bg-body);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.btn-flutuante-erro .icon-img img {
+    height: 1.15em;
+    width: auto;
+}
+
+@media (max-width: 480px) {
+    .btn-flutuante-erro {
+        bottom: 16px;
+        right: 16px;
+        padding: 6px 12px;
+        font-size: 0.78rem;
+        gap: 6px;
+    }
+}
+
+/* Botão de formulário nos Termos de Uso / Páginas institucionais */
+.btn-link-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-overlay-warning);
+    border: 1px solid var(--color-warning);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-link-form:hover {
+    background: var(--color-warning);
+    color: var(--text-btn-alt);
+}
+
 
 .texto-info-neutra {
     color: var(--btn-info);

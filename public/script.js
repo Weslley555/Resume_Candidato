@@ -27,7 +27,7 @@ function iconFixed(nome, versao) {
 }
 
 // Disclaimer de IA exibido junto a todo resumo
-const DISCLAIMER_IA = 'Resumo gerado por Inteligência Artificial a partir do texto oficial da proposta de governo — pode conter imprecisões.';
+const DISCLAIMER_IA = '⚠️ Resumo gerado por Inteligência Artificial a partir do texto oficial da proposta de governo registrada no TSE. Pode conter imprecisões, omissões ou interpretações equivocadas. Consulte sempre o documento original para compreensão completa.';
 
 // ==========================================
 // 2. ESTADO DA APLICAÇÃO (Memória)
@@ -36,6 +36,74 @@ let listaBusca = [];
 let dadosCandidatos = null; // Só será carregado quando clicarem em Consultar
 let candidatoAtual = null;
 let dadosExtrasAtual = null; // Dados de api/candidato.js (foto, documentos, financeiro)
+
+// ==========================================
+// BLINDAGEM JURÍDICA — datas e rastreabilidade
+// ==========================================
+
+// URL do Google Forms para reporte de dados incorretos ou inconsistências
+const URL_FORMULARIO_ERRO = 'https://forms.gle/TuFSsPBaY6XFYcrq7';
+
+// Data de geração do JSON — atualizada ao carregar dados_candidatos.json
+let dataGeracaoJson = '04/09/2026'; // fallback hardcoded
+
+// Atualiza todos os elementos marcados com [data-data-geracao] na página
+function atualizarDatasInterface() {
+    document.querySelectorAll('[data-data-geracao]').forEach(el => {
+        el.textContent = dataGeracaoJson;
+    });
+}
+
+// Componente reutilizável: rodapé de rastreabilidade de fonte por tipo de dado
+// tipo: 'candidato' | 'patrimonio' | 'juridico' | 'financeiro'
+function criarDisclaimerFonte(tipo) {
+    const links = {
+        'financeiro': 'https://dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026',
+        'candidato':  'https://dadosabertos.tse.jus.br/dataset/candidatos-2026',
+        // 'juridico' aponta para candidatos-2026 pois os dados de situação/cassação
+        // atualmente exibidos vêm desse dataset (não do processual-2026, que ainda
+        // não foi integrado). Atualizar quando processual-2026 for integrado.
+        'juridico':   'https://dadosabertos.tse.jus.br/dataset/candidatos-2026',
+        'patrimonio': 'https://dadosabertos.tse.jus.br/dataset/candidatos-2026',
+    };
+    const link = links[tipo] || links['candidato'];
+    // Ícone de link externo — alterna com tema (link_b = branco / link_p = preto)
+    const iconeLink = '<span class="icon-img" style="margin-left:3px;vertical-align:middle;"><img class="img-b" src="icons/link_b.svg" alt=""><img class="img-p" src="icons/link_p.svg" alt=""></span>';
+    return `<details class="disclaimer-fonte">
+        <summary class="disclaimer-fonte-summary">
+            <span class="disclaimer-fonte-titulo">⚠️ Dados brutos do TSE (<span data-data-geracao>${escaparHTML(dataGeracaoJson)}</span>)</span>
+            <span class="disclaimer-fonte-toggle">
+                <span class="toggle-recolhido">Ver ressalva e fonte ▾</span>
+                <span class="toggle-expandido">Ocultar ▴</span>
+            </span>
+        </summary>
+        <div class="disclaimer-fonte-corpo">
+            Devido à rotina de prestação de contas governamental, valores e registros podem estar desatualizados ou em retificação contínua.
+            <div class="disclaimer-fonte-link-box">
+                <a href="${link}" target="_blank" rel="noopener noreferrer">Confira os dados oficiais no Portal DivulgaCand${iconeLink}</a>
+            </div>
+        </div>
+    </details>`;
+}
+
+// Classificação semântica de status jurídico — 3 níveis para evitar presunção de culpa
+// NUNCA usar binário (positivo vs atenção) — status pendentes NÃO são problemas
+function classificarStatusJuridico(status) {
+    if (!status) return 'status-neutro';
+    const s = status.toUpperCase();
+    // Status que indicam deferimento/aptidão
+    if (s === 'DEFERIDO' || s === 'APTO' || s === 'REGULAR' || s === 'APROVADO') {
+        return 'status-positivo';
+    }
+    // Status que indicam indeferimento/cassação — apenas estes recebem alerta
+    if (s === 'INDEFERIDO' || s === 'CASSADO' || s === 'CANCELADO' || s === 'RECUSADO'
+        || s.startsWith('CASSADO') || s.startsWith('INDEFERIDO')) {
+        return 'status-atencao';
+    }
+    // Todo o resto: SUB JUDICE, PENDENTE, DEFERIDO COM RECURSO, AGUARDANDO etc.
+    // são situações processuais normais — não indicam irregularidade
+    return 'status-neutro';
+}
 
 // Normalizador de texto igual ao seu Python (remove acentos)
 function normalizarTexto(texto) {
@@ -233,19 +301,16 @@ function renderizarDadosCandidato(cand, fallback) {
         html += '</dl>';
     }
 
-    // Campos adicionais de perfil que não estão no card principal
-    // Mas que são relevantes: coligação, gênero, idade, instrução, ocupação, raça
+    // Campos adicionais de perfil relevantes para contexto eleitoral
+    // Gênero, estado civil e cor/raça foram removidos por serem irrelevantes ao contexto político
     const extraItens = [];
     const addExtra = (label, valor) => { if (valor !== null) extraItens.push({ label, valor }); };
 
     addExtra('Coligação', v(cand?.coligacao));
     addExtra('Federação', v(cand?.federacao));
-    addExtra('Gênero', v(cand?.genero) || v(fallback?.genero));
     addExtra('Idade', (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
-    addExtra('Estado civil', v(cand?.estadoCivil));
     addExtra('Instrução', v(cand?.instrucao) || v(fallback?.escolaridade));
     addExtra('Ocupação', v(cand?.ocupacao) || v(fallback?.ocupacao));
-    addExtra('Cor / Raça', v(cand?.corRaca) || v(fallback?.raca));
     addExtra('Nome social', v(cand?.nomeSocial));
 
     if (extraItens.length > 0) {
@@ -256,6 +321,8 @@ function renderizarDadosCandidato(cand, fallback) {
         html += '</dl></details>';
     }
 
+    // Disclaimer de fonte — apenas se houver conteúdo para não poluir mensagem vazia
+    if (html) html += criarDisclaimerFonte('candidato');
     el.innerHTML = html || '<p class="texto-mutado">Dados não disponíveis.</p>';
 }
 
@@ -313,6 +380,8 @@ function renderizarPatrimonio(patrimonio) {
 
         // Total em destaque
         html += `<div class="cand-patr-total"><span>Valor total declarado</span><strong>${fmt(totalBens)}</strong></div>`;
+        // Disclaimer de fonte de dados patrimoniais
+        html += criarDisclaimerFonte('patrimonio');
 
         contPatr.innerHTML = html;
 
@@ -351,11 +420,11 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
     let html = '';
     let temConteudo = false;
 
-    // 1. Situação do julgamento
+    // 1. Situação do julgamento — classificação em 3 níveis (evita presunção de culpa)
     const julgamento = v(cand?.statusJulgamento);
     if (julgamento) {
         temConteudo = true;
-        const cls = julgamento === 'DEFERIDO' ? 'status-positivo' : 'status-atencao';
+        const cls = classificarStatusJuridico(julgamento);
         html += `<div class="cand-juridico-item ${cls}">
             <span class="cand-juridico-label">Situação do julgamento</span>
             <span class="cand-juridico-status">${escaparHTML(julgamento)}</span>
@@ -412,11 +481,12 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         </div>`;
     }
 
-    // 7. Situação da cassação
+    // 7. Situação da cassação — classificação em 3 níveis
     const situacaoCassacao = v(cand?.situacaoCassacao);
     if (situacaoCassacao) {
         temConteudo = true;
-        html += `<div class="cand-juridico-item status-atencao">
+        const cls = classificarStatusJuridico(situacaoCassacao);
+        html += `<div class="cand-juridico-item ${cls}">
             <span class="cand-juridico-label">Situação da cassação</span>
             <span class="cand-juridico-status">${escaparHTML(situacaoCassacao)}</span>
         </div>`;
@@ -428,7 +498,7 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         temConteudo = true;
         html += `<div class="cand-juridico-subsecao">
             <h4 class="cand-juridico-subtitulo">Registro(s) de cassação</h4>
-            <p class="texto-mutado" style="margin: 0 0 8px; font-size: 0.78em;">(registros constantes nas bases públicas — não implica condenação)</p>
+            <div class="disclaimer-juridico-alerta">⚠️ Registros constantes nas bases públicas do TSE no momento da coleta. <strong>Não representam condenações definitivas nem implicam culpa</strong> (CF/88, art. 5.º, LVII — presunção de inocência).</div>
             <ul class="cand-docs-lista">`;
         motivosCassacao.forEach(m => {
             html += `<li>${escaparHTML(m)}</li>`;
@@ -474,15 +544,20 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         </div>`;
         html += `<div class="cand-fin-item">
             <span>Total Pago</span>
-            <strong>${totalP === 0
+            <strong>${totalP == null || isNaN(totalP)
                 ? '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dados indisponíveis</span>'
                 : `${fmt(totalP)} ${percHTML}`}</strong>
         </div>`;
+        // Quantidades — exibe "Não registrado" quando o valor for zero ou ausente
+        // para evitar interpretações equivocadas de "0 receitas"
+        const fmtQtd = (v) => (v != null && v !== 0) ? v : '<span class="texto-mutado" style="font-style:italic;font-size:0.95em;">Não registrado</span>';
         html += `<div class="cand-fin-quantidades texto-mutado">
-            Receitas: ${financeiro.quantidade_receitas || 0} |
-            Despesas contrato: ${financeiro.quantidade_despesas_contratadas || 0} |
-            Pagas: ${financeiro.quantidade_despesas_pagas || 0}
+            Receitas: ${fmtQtd(financeiro.quantidade_receitas)} &nbsp;|
+            Despesas contratadas: ${fmtQtd(financeiro.quantidade_despesas_contratadas)} &nbsp;|
+            Despesas pagas: ${fmtQtd(financeiro.quantidade_despesas_pagas)}
         </div>`;
+        // Disclaimer de fonte — dados financeiros podem estar em retificação pelo TSE
+        html += criarDisclaimerFonte('financeiro');
         html += `</div>`;
     }
 
@@ -499,20 +574,19 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         html += `</ul></div>`;
     }
 
-    // 5. Certidões
+    // 5. Certidões — exibe apenas a contagem, sem listar nomes de arquivos
     if (docs?.certidoes && docs.certidoes.length > 0) {
         temConteudo = true;
+        const qtd = docs.certidoes.length;
         html += `<div class="cand-juridico-subsecao">
-            <h4 class="cand-juridico-subtitulo">Certidões</h4>
-            <p class="texto-mutado" style="margin: 0 0 8px; font-size: 0.78em;">(registros oficiais disponíveis — não implica julgamento)</p>
-            <ul class="cand-docs-lista">`;
-        docs.certidoes.forEach(c => {
-            const nome = nomeLegivelDocumento(c.nome || c.caminho);
-            html += `<li>${escaparHTML(nome)}</li>`;
-        });
-        html += `</ul></div>`;
+            <h4 class="cand-juridico-subtitulo">Certidões disponíveis</h4>
+            <div class="disclaimer-juridico-alerta">⚠️ ${qtd} certid${qtd > 1 ? 'ões' : 'ão'} de registro público disponível${qtd > 1 ? 'is' : ''} na base do TSE. A existência de uma certidão <strong>não implica julgamento, condenação ou irregularidade</strong>.</div>
+            </div>`;
     }
 
+    // Disclaimer de fonte jurídica (situação de candidatura, julgamento, cassação)
+    if (temConteudo) html += criarDisclaimerFonte('juridico');
+    // Link para reportar erro ao final do card
     el.innerHTML = html || '<p class="texto-mutado">Nenhum registro disponível.</p>';
 }
 
@@ -536,6 +610,14 @@ async function abrirFicha(id, uf) {
             const response = await fetch('dados_candidatos.json');
             dadosCandidatos = await response.json();
             msgResultados.innerText = "";
+            // Lê a data de geração do JSON e atualiza a interface
+            if (dadosCandidatos._meta?.geradoEm) {
+                try {
+                    const d = new Date(dadosCandidatos._meta.geradoEm);
+                    dataGeracaoJson = d.toLocaleDateString('pt-BR');
+                } catch (_) { /* mantém o fallback */ }
+                atualizarDatasInterface();
+            }
         } catch (error) {
             msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar dados detalhados.';
             return;
@@ -607,6 +689,23 @@ async function abrirFicha(id, uf) {
         verificarCacheResumo(chaveCompleta);
     }
 
+    // 4.5. Botão de reportar erro ao final do conteúdo da ficha
+    // Só renderiza quando URL_FORMULARIO_ERRO estiver preenchida — nunca exibe link vazio ou quebrado
+    const fichaConteudo = document.getElementById('conteudoFicha');
+    const reportarErroExistente = fichaConteudo.querySelector('.dossier-reportar-erro');
+    if (!reportarErroExistente && URL_FORMULARIO_ERRO) {
+        const reportarDiv = document.createElement('div');
+        reportarDiv.className = 'dossier-reportar-erro';
+        reportarDiv.innerHTML = `
+            <span>💬 Encontrou alguma inconsistência ou dado incorreto neste candidato?</span>
+            <a href="${URL_FORMULARIO_ERRO}" target="_blank" rel="noopener noreferrer" class="btn-reportar-erro">
+                <span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span>
+                Reportar erro
+            </a>
+        `;
+        fichaConteudo.appendChild(reportarDiv);
+    }
+
     // 4.6. Transição de Tela
     document.querySelector('.barra-pesquisa').classList.add('hidden');
     areaResultados.classList.add('hidden');
@@ -666,11 +765,17 @@ function exibirResumo(textoResumo) {
         }
     });
 
-    // Disclaimer de IA
+    // Disclaimer de IA (risco: IA pode interpretar errado o texto)
     const disclaimer = document.createElement('p');
     disclaimer.className = 'disclaimer-ia';
     disclaimer.textContent = DISCLAIMER_IA;
     resultadoIA.appendChild(disclaimer);
+
+    // Disclaimer de fonte (risco: dado pode estar desatualizado em relação ao TSE)
+    // Adicionado ABAIXO do aviso de IA — são riscos distintos, ambos devem ser visíveis
+    const disclaimerFonte = document.createElement('div');
+    disclaimerFonte.innerHTML = criarDisclaimerFonte('candidato');
+    resultadoIA.appendChild(disclaimerFonte.firstElementChild);
 }
 
 // Exibe uma mensagem informativa neutra (não é erro)
@@ -717,6 +822,10 @@ btnGerarResumo.addEventListener('click', async () => {
 
             if (res.ok && data.resumo) {
                 exibirResumo(data.resumo);
+            } else if (res.ok && data.bloqueado) {
+                exibirInfoNeutra(data.mensagem);
+                btnGerarResumo.disabled = true;
+                btnGerarResumo.classList.add('texto-mutado');
             } else if (res.ok && data.semProposta) {
                 exibirInfoNeutra(data.mensagem);
                 btnGerarResumo.disabled = true;
@@ -767,6 +876,11 @@ btnGerarResumo.addEventListener('click', async () => {
             // Após gerar com sucesso, atualiza o botão para "Mostrar resumo"
             btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
             btnGerarResumo.dataset.cached = 'true';
+        } else if (res.ok && data.bloqueado) {
+            exibirInfoNeutra(data.mensagem);
+            btnGerarResumo.disabled = true;
+            btnGerarResumo.classList.add('texto-mutado');
+            btnGerarResumo.innerText = 'Resumo bloqueado';
         } else if (res.ok && data.semProposta) {
             exibirInfoNeutra(data.mensagem);
             btnGerarResumo.disabled = true;
