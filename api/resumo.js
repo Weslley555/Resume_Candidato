@@ -1,9 +1,19 @@
+import crypto from 'crypto';
 import { GoogleGenAI } from '@google/genai';
 import { Redis } from '@upstash/redis';
-import { lerJSON } from '../lib/jsonCache.js';
+import {
+    lerJSON,
+    buscarPorChave,
+    ehChaveCanonica,
+    resolverAliasLegado,
+    verificarExportacao,
+} from '../lib/jsonCache.js';
 
-// Versão do prompt — incremente para forçar regeneração de todos os caches
-const CACHE_VERSION = 'v7';
+// ── Versão do prompt — incremente para forçar regeneração de todos os caches ─
+// v8: novo contrato de dados (propostas.json / textos_propostas.json com campos
+//     aptoParaRascunho, requerRevisaoOCR, statusExtracao, paginasPendentes).
+//     Chave de cache agora inclui sha256 dos PDFs e estado de extração.
+const CACHE_VERSION = 'v8';
 
 // Modelos tentados em ordem de preferência (fallback automático)
 const MODELOS = ['gemini-3.5-flash', 'gemini-3.5-flash-lite'];
@@ -22,7 +32,7 @@ const CARGOS_SEM_PROPOSTA = [
 ];
 
 // Instancia o Redis manualmente com as variáveis da integração Vercel Marketplace
-const redisUrl = process.env.KV_REST_API_URL;
+const redisUrl   = process.env.KV_REST_API_URL;
 const redisToken = process.env.KV_REST_API_TOKEN;
 const redis = (redisUrl && redisToken)
     ? new Redis({ url: redisUrl, token: redisToken })
@@ -46,9 +56,11 @@ FORMATO DA RESPOSTA (obrigatório):
 COMO ESCOLHER AS SEÇÕES:
 - Priorize, quando houver conteúdo, estes temas: Saúde, Educação, Economia, Segurança, Meio Ambiente, Infraestrutura e Gestão Pública.
 - Só crie uma seção se o texto realmente tratar do tema.
+- Distinga claramente proposta futura, diagnóstico, crítica e realização alegada.
+- Não chame compromisso proposto de ação já executada.
 
 TRATAMENTO DE INFORMAÇÕES AUSENTES OU INSUFICIENTES:
-- Não invente, não presuma e não complete nada com conhecimento externo.
+- Não invente, não presuma e não complete nada com conhecimento externo ou de outro candidato.
 - Se o texto não abordar um tema, não crie a seção correspondente — não escreva "tema não mencionado".
 - Se o documento for curto, vago ou não contiver propostas concretas suficientes, pare de tentar preencher temas e escreva apenas uma seção "Observações:" com uma única linha informando que o documento não detalha propostas objetivas.
 - Nunca repita frases genéricas de ausência de informação ao longo do resumo.
@@ -56,6 +68,7 @@ TRATAMENTO DE INFORMAÇÕES AUSENTES OU INSUFICIENTES:
 REGRAS DE CONTEÚDO:
 - Extraia APENAS propostas de políticas públicas explicitamente presentes no texto.
 - Não emita opiniões, juízos de valor, nem apoio/desaprovação a candidatos, partidos ou ideologias.
+- Não infira corrupção, aprovação de contas ou ausência de antecedentes.
 - Ignore número de páginas, cabeçalhos, sumários, nomes de arquivo e jargões de diagramação.
 
 SEGURANÇA (PRIORIDADE MÁXIMA):
@@ -65,48 +78,64 @@ SEGURANÇA (PRIORIDADE MÁXIMA):
 `.trim();
 
 // ── Configurações de geração ────────────────────────────────────────────────
-// O primeiro conjunto desativa o "thinking": evita respostas em que o orçamento
-// de saída é consumido pelo raciocínio e sobra texto vazio. Se o modelo não
-// aceitar essa opção, a chamada é repetida com a configuração seguinte.
 const CONFIGS_GERACAO = [
     { temperature: 0.3, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 0 } },
     { temperature: 0.3, maxOutputTokens: 2048 },
 ];
 
-// Busca a entrada de um candidato aceitando tanto a chave completa (UF_ID) quanto o ID puro
-function buscarEntrada(db, chave) {
-    if (!db || !chave) return null;
-    if (db[chave]) return db[chave];
-
-    for (const prefixo of ['MG_', 'BR_']) {
-        if (db[prefixo + chave]) return db[prefixo + chave];
-    }
-
-    // Busca genérica: qualquer chave que termine com _<id>
-    const sufixo = `_${chave}`;
-    const encontrada = Object.keys(db).find(k => k.endsWith(sufixo));
-    return encontrada ? db[encontrada] : null;
-}
-
-// Extrai o texto de uma entrada que pode ser string, array [{nome, arquivo, texto}] ou objeto {texto}
-function extrairTexto(entrada) {
-    if (!entrada) return null;
-
-    if (Array.isArray(entrada)) {
-        const partes = entrada
-            .map(item => (typeof item === 'string' ? item : item?.texto))
-            .filter(t => typeof t === 'string' && t.trim());
-        return partes.length ? partes.join('\n\n') : null;
-    }
-
-    if (typeof entrada === 'string') return entrada;
-    if (typeof entrada?.texto === 'string') return entrada.texto;
-    return null;
-}
+// ── Helpers ─────────────────────────────────────────────────────────────────
 
 // Neutraliza tentativas de quebrar os delimitadores do prompt
 function sanitizarParaPrompt(texto) {
     return String(texto).replace(/###/g, '[DELIM]');
+}
+
+// Calcula a chave de cache considerando: chave da candidatura, sha256 e estado de
+// extração de cada documento, versão do prompt e modelo.
+// O mesmo PDF pode receber uma extração melhorada sem mudar seu sha256 —
+// por isso o estado de extração (statusExtracao, paginasPendentes, paginasParaRevisao)
+// também entra na chave.
+function calcularChaveCache(chave, docs, modelo) {
+    const payload = [
+        chave,
+        docs.map(d => [
+            d.sha256 ?? '',
+            d.statusExtracao ?? '?',
+            Array.isArray(d.paginasPendentes) ? d.paginasPendentes.length : (d.paginasPendentes ?? 0),
+            d.paginasParaRevisao ?? 0,
+        ].join(':')).join('|'),
+        CACHE_VERSION,
+        modelo,
+    ].join('::');
+    const hash = crypto.createHash('sha256').update(payload).digest('hex').slice(0, 24);
+    return `resumo2:${hash}`;
+}
+
+// Resolve id_candidato para chave canônica (aceita canônica ou legado UF_SQ)
+function resolverChave(idCandidato) {
+    if (!idCandidato || typeof idCandidato !== 'string') return null;
+    if (ehChaveCanonica(idCandidato)) return idCandidato;
+    return resolverAliasLegado(idCandidato); // null se ausente ou ambíguo
+}
+
+// Carrega o banco de propostas: tenta propostas.json primeiro (nome canônico
+// do novo contrato); cai para textos_propostas.json se não existir.
+// textos_propostas.json já tem a estrutura do novo contrato nesta exportação.
+function carregarPropostasDB() {
+    const db = lerJSON('propostas.json');
+    if (db) return { db, fonte: 'propostas.json' };
+    const dbLegado = lerJSON('textos_propostas.json');
+    return { db: dbLegado, fonte: 'textos_propostas.json (legado — renomeie para propostas.json na próxima exportação)' };
+}
+
+// Extrai o texto selecionado de um documento.
+// Usa o campo 'texto' do documento (já selecionado pela extração por página).
+// NÃO concatena textoNativo e textoOCR — isso duplicaria páginas.
+function extrairTextoPDF(doc) {
+    if (!doc) return null;
+    const texto = doc.texto;
+    if (typeof texto === 'string' && texto.trim()) return texto.trim();
+    return null;
 }
 
 // Tenta gerar o resumo em um modelo, variando a configuração quando necessário
@@ -123,13 +152,12 @@ async function gerarResumoNoModelo(ai, model, conteudoUsuario) {
 
             const texto = response?.text;
             const finishReason = response?.candidates?.[0]?.finishReason;
-            const blockReason = response?.promptFeedback?.blockReason;
+            const blockReason  = response?.promptFeedback?.blockReason;
 
             if (texto && texto.trim()) {
                 return { ok: true, texto: texto.trim() };
             }
 
-            // Resposta sem texto: registra o motivo e tenta a próxima configuração
             const MOTIVOS_BLOQUEIO = ['SAFETY', 'PROHIBITED_CONTENT', 'BLOCKLIST', 'SPII', 'RECITATION'];
             const foiBloqueado = MOTIVOS_BLOQUEIO.includes(finishReason)
                 || (!!blockReason && blockReason !== 'BLOCKED_REASON_UNSPECIFIED');
@@ -138,13 +166,9 @@ async function gerarResumoNoModelo(ai, model, conteudoUsuario) {
             erro.finishReason = finishReason;
             if (foiBloqueado) erro.bloqueado = true;
             ultimoErro = erro;
-
-            // Conteúdo bloqueado não se resolve trocando a configuração do mesmo modelo
             if (erro.bloqueado) break;
         } catch (err) {
             ultimoErro = err;
-
-            // Só vale tentar a próxima configuração se o erro for de parâmetro inválido
             const status = err?.status || err?.code;
             const msg = String(err?.message || err);
             const erroDeConfig = status === 400 || /INVALID_ARGUMENT|invalid.*argument/i.test(msg);
@@ -155,8 +179,8 @@ async function gerarResumoNoModelo(ai, model, conteudoUsuario) {
     return { ok: false, erro: ultimoErro };
 }
 
+// ── Handler ──────────────────────────────────────────────────────────────────
 export default async function handler(req, res) {
-    // 1. Configuração de CORS (Essencial para a Vercel)
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS,GET,POST');
@@ -164,13 +188,24 @@ export default async function handler(req, res) {
 
     if (req.method === 'OPTIONS') return res.status(200).end();
 
-    // ── GET: verificação leve de cache (usada pelo frontend para decidir o texto do botão) ──
+    // Verificação do pacote de exportação
+    const exportacao = verificarExportacao();
+    if (!exportacao.ok) {
+        return res.status(503).json({ erro: exportacao.motivo });
+    }
+
+    // ── GET: verificação leve de cache ────────────────────────────────────────
     if (req.method === 'GET') {
         const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-        const id_candidato = url.searchParams.get('id_candidato');
+        const idCandidato = url.searchParams.get('id_candidato');
 
-        if (!id_candidato) {
+        if (!idCandidato) {
             return res.status(400).json({ erro: 'Parâmetro id_candidato é obrigatório.' });
+        }
+
+        const chave = resolverChave(idCandidato);
+        if (!chave) {
+            return res.status(400).json({ erro: 'Identificador inválido ou ambíguo.' });
         }
 
         if (!redis) {
@@ -178,8 +213,17 @@ export default async function handler(req, res) {
         }
 
         try {
-            const cacheKey = `resumo:${id_candidato}:${CACHE_VERSION}`;
-            const cached = await redis.get(cacheKey);
+            // Para verificar cache no GET também precisamos dos documentos (para recompor a chave)
+            const { db: propostasDB } = carregarPropostasDB();
+            const docs = buscarPorChave(propostasDB, chave) ?? [];
+            const docsAptos = Array.isArray(docs) ? docs.filter(d => d.aptoParaRascunho === true) : [];
+
+            if (docsAptos.length === 0) {
+                return res.status(200).json({ cached: false });
+            }
+
+            const cacheKey = calcularChaveCache(chave, docsAptos, MODELOS[0]);
+            const cached   = await redis.get(cacheKey);
             return res.status(200).json({ cached: !!cached });
         } catch (error) {
             console.error('Erro ao consultar cache Redis:', error.message);
@@ -187,73 +231,135 @@ export default async function handler(req, res) {
         }
     }
 
-    // ── POST: geração de resumo ──
+    // ── POST: geração de resumo ───────────────────────────────────────────────
     if (req.method !== 'POST') return res.status(405).json({ erro: 'Método não permitido.' });
 
     try {
-        // O corpo pode chegar como string caso o Content-Type não seja JSON
         let body = req.body;
         if (typeof body === 'string') {
             try { body = JSON.parse(body); } catch { body = {}; }
         }
-        const id_candidato = body?.id_candidato;
+        const idCandidato = body?.id_candidato;
 
-        if (!id_candidato) {
+        if (!idCandidato) {
             return res.status(400).json({ erro: 'ID do candidato é obrigatório.' });
         }
 
-        const cacheKey = `resumo:${id_candidato}:${CACHE_VERSION}`;
+        // Resolve para chave canônica — rejeita ambíguos e inválidos
+        const chave = resolverChave(idCandidato);
+        if (!chave) {
+            return res.status(400).json({
+                erro: 'Identificador inválido ou ambíguo. Use a chave canônica ANO_ELEICAO_CD_ELEICAO_SG_UF_SQ_CANDIDATO.',
+            });
+        }
 
-        // 2. Verifica cache antes de chamar o Gemini
+        // Carrega propostas (com fallback para textos_propostas.json)
+        const { db: propostasDB, fonte: fonteProposta } = carregarPropostasDB();
+        const docsEntry = propostasDB ? buscarPorChave(propostasDB, chave) : null;
+        const docs = Array.isArray(docsEntry) ? docsEntry : [];
+
+        // ── Sem proposta: verifica cargo antes de retornar 404 ────────────────
+        if (docs.length === 0) {
+            const candidatosDB  = lerJSON('candidatos.json');
+            const dadosCand     = buscarPorChave(candidatosDB, chave);
+            const cargo         = (dadosCand?.cargo || '').toUpperCase();
+
+            if (CARGOS_SEM_PROPOSTA.some(c => cargo.includes(c))) {
+                return res.status(200).json({
+                    estado: 'sem_proposta_cargo',
+                    semProposta: true,
+                    mensagem: 'Este cargo não possui proposta de governo — acompanhe o histórico de votações (em breve).',
+                });
+            }
+
+            return res.status(404).json({
+                estado: 'documento_indisponivel',
+                erro: `Proposta não encontrada para esta candidatura. Fonte consultada: ${fonteProposta}`,
+            });
+        }
+
+        // ── Classificação por estado de extração ──────────────────────────────
+        const docsAptos     = docs.filter(d => d.aptoParaRascunho === true);
+        const docsOCRPendente = docs.filter(d => d.requerRevisaoOCR === true && d.aptoParaRascunho !== true);
+        const docsPendentes = docs.filter(d => {
+            const p = d.paginasPendentes;
+            return (Array.isArray(p) ? p.length > 0 : (p ?? 0) > 0) && d.aptoParaRascunho !== true;
+        });
+
+        if (docsAptos.length === 0) {
+            // Múltiplos PDFs: pode ter combinação de estados — prioriza o mais informativo
+            if (docsPendentes.length > 0) {
+                return res.status(200).json({
+                    estado: 'extracao_pendente',
+                    mensagem: 'A extração de texto desta proposta ainda está incompleta. O resumo não pode ser gerado com cobertura parcial do documento. Tente novamente mais tarde.',
+                });
+            }
+            if (docsOCRPendente.length > 0) {
+                return res.status(200).json({
+                    estado: 'requer_revisao_ocr',
+                    mensagem: 'O texto extraído desta proposta requer revisão manual de OCR. O resumo não será gerado automaticamente para evitar afirmações sem suporte.',
+                });
+            }
+            return res.status(200).json({
+                estado: 'nao_apto',
+                mensagem: 'Nenhum documento desta candidatura está disponível para geração de resumo automático no momento.',
+            });
+        }
+
+        // ── Seleção do modelo e chave de cache ────────────────────────────────
+        const modeloUsado  = MODELOS[0];
+        const cacheKey     = calcularChaveCache(chave, docsAptos, modeloUsado);
+
+        // Verifica cache antes de chamar o modelo
         if (redis) {
             try {
                 const cached = await redis.get(cacheKey);
                 if (cached) {
-                    return res.status(200).json({ resumo: cached, cached: true });
+                    return res.status(200).json({
+                        estado: 'rascunho',
+                        resumo: cached,
+                        cached: true,
+                        avisoRevisao: docsAptos.some(d => d.requerRevisaoOCR),
+                    });
                 }
             } catch (error) {
                 console.error('Erro ao consultar cache Redis, prosseguindo sem cache:', error.message);
             }
         }
 
-        // 3. Verifica se a chave do Gemini está configurada
         if (!process.env.GEMINI_API_KEY) {
             return res.status(500).json({ erro: 'GEMINI_API_KEY não configurada no servidor.' });
         }
 
-        // 4. Inicializa o Gemini (dentro do handler, não no topo do módulo)
         const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-        // 5. Busca o texto no "banco" interno (o usuário nunca envia o texto)
-        const propostasDB = lerJSON('textos_propostas.json');
-        const entradaProposta = buscarEntrada(propostasDB, id_candidato);
-        let textoProposta = extrairTexto(entradaProposta);
+        // ── Montagem do texto para o modelo ───────────────────────────────────
+        // Usa apenas o campo 'texto' de cada PDF apto (já selecionado pela extração).
+        // Múltiplos PDFs são separados por marcador claro para preservar atribuição.
+        // NÃO concatena textoNativo e textoOCR — isso duplicaria páginas.
+        const partesPDF = docsAptos.map((doc, idx) => {
+            const textoBruto = extrairTextoPDF(doc);
+            if (!textoBruto) return null;
+            const cabecalho = docsAptos.length > 1
+                ? `[Documento ${idx + 1} de ${docsAptos.length}: ${doc.nome || doc.arquivo || 'sem nome'}]\n`
+                : '';
+            return cabecalho + sanitizarParaPrompt(textoBruto);
+        }).filter(Boolean);
 
-        if (!textoProposta || !textoProposta.trim()) {
-            // Cargos legislativos nunca têm proposta de governo — não é falha, é característica do cargo
-            const candidatosDB = lerJSON('candidatos.json');
-            const dadosCand = buscarEntrada(candidatosDB, id_candidato);
-            const cargo = (dadosCand?.cargo || '').toUpperCase();
-
-            if (CARGOS_SEM_PROPOSTA.some(c => cargo.includes(c))) {
-                return res.status(200).json({
-                    semProposta: true,
-                    mensagem: 'Este cargo não possui proposta de governo — acompanhe o histórico de votações (em breve).'
-                });
-            }
-
-            // Cargo executivo sem proposta = ausência genuína
-            return res.status(404).json({ erro: 'Proposta não encontrada para este candidato.' });
+        if (partesPDF.length === 0) {
+            return res.status(200).json({
+                estado: 'extracao_pendente',
+                mensagem: 'Os documentos desta candidatura não contêm texto extraído disponível para resumo.',
+            });
         }
 
-        // 6. Prompt blindado: conteúdo não confiável fica separado da instrução de sistema
-        const textoSanitizado = sanitizarParaPrompt(textoProposta)
-            .slice(0, MAX_CARACTERES_PROPOSTA);
-        const conteudoUsuario = `${DELIM}\n${textoSanitizado}\n${DELIM}`;
+        // Concatena e trunca para o limite de segurança
+        const textoCompleto = partesPDF.join('\n\n---\n\n').slice(0, MAX_CARACTERES_PROPOSTA);
+        const conteudoUsuario = `${DELIM}\n${textoCompleto}\n${DELIM}`;
 
-        // 7. Execução com fallback automático entre modelos
-        let textoResumo = null;
-        let ultimoErro = null;
+        // ── Geração com fallback automático entre modelos ─────────────────────
+        let textoResumo        = null;
+        let ultimoErro         = null;
         let bloqueadoPeloModelo = false;
 
         for (const model of MODELOS) {
@@ -264,52 +370,65 @@ export default async function handler(req, res) {
             }
             ultimoErro = resultado.erro;
             if (resultado.erro?.bloqueado) bloqueadoPeloModelo = true;
-            console.warn(`[Gemini] Falha no modelo ${model}: ${resultado.erro?.message || resultado.erro}. Tentando próximo modelo...`);
+            console.warn(`[Gemini] Falha no modelo ${model}: ${resultado.erro?.message || resultado.erro}. Tentando próximo...`);
         }
 
         if (!textoResumo) {
             console.error('Erro na API Gemini após esgotar fallbacks:', ultimoErro);
 
-            // Conteúdo recusado pelos filtros de segurança: mensagem neutra ao usuário
             if (bloqueadoPeloModelo) {
                 return res.status(200).json({
+                    estado: 'bloqueado',
                     bloqueado: true,
-                    mensagem: 'Não foi possível resumir este documento automaticamente. Consulte o arquivo original da proposta para os detalhes.'
+                    mensagem: 'Não foi possível resumir este documento automaticamente. Consulte o arquivo original da proposta para os detalhes.',
                 });
             }
 
             const status = ultimoErro?.status || ultimoErro?.code;
-            const msg = String(ultimoErro?.message || '');
+            const msg    = String(ultimoErro?.message || '');
 
             if (status === 503 || /503|high demand|UNAVAILABLE|overloaded/i.test(msg)) {
                 return res.status(503).json({
-                    erro: 'O serviço de IA está com alta demanda momentânea na Google. Por favor, tente novamente em instantes.'
+                    estado: 'erro_geracao',
+                    erro: 'O serviço de IA está com alta demanda momentânea. Tente novamente em instantes.',
                 });
             }
-
             if (status === 429 || /RESOURCE_EXHAUSTED|quota|rate limit/i.test(msg)) {
                 return res.status(429).json({
-                    erro: 'Limite de uso da IA atingido no momento. Por favor, tente novamente em alguns instantes.'
+                    estado: 'erro_geracao',
+                    erro: 'Limite de uso da IA atingido no momento. Tente novamente em alguns instantes.',
                 });
             }
 
-            return res.status(500).json({ erro: 'Falha ao gerar o resumo com o serviço de IA.' });
+            return res.status(500).json({
+                estado: 'erro_geracao',
+                erro: 'Falha ao gerar o resumo com o serviço de IA.',
+            });
         }
 
-        // 8. Salva no cache Redis antes de retornar (apenas em caso de sucesso)
+        // Salva no cache antes de retornar (apenas em caso de sucesso)
         if (redis) {
             try {
                 await redis.set(cacheKey, textoResumo);
             } catch (error) {
                 console.error('Erro ao salvar no cache Redis:', error.message);
-                // Não falha a requisição — o resumo ainda será retornado ao cliente
             }
         }
 
-        return res.status(200).json({ resumo: textoResumo, cached: false });
+        // 'rascunho': gerado pela IA, não revisado por humano
+        // avisoRevisao: pelo menos um PDF usou OCR e foi sinalizado para revisão
+        return res.status(200).json({
+            estado: 'rascunho',
+            resumo: textoResumo,
+            cached: false,
+            avisoRevisao: docsAptos.some(d => d.requerRevisaoOCR),
+        });
 
     } catch (error) {
-        console.error('Erro na API:', error);
-        return res.status(500).json({ erro: 'Falha interna ao gerar o resumo.' });
+        console.error('Erro na API de resumo:', error);
+        return res.status(500).json({
+            estado: 'erro_geracao',
+            erro: 'Falha interna ao gerar o resumo.',
+        });
     }
 }

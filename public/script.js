@@ -33,9 +33,11 @@ const DISCLAIMER_IA = '⚠️ Resumo gerado por Inteligência Artificial a parti
 // 2. ESTADO DA APLICAÇÃO (Memória)
 // ==========================================
 let listaBusca = [];
-let dadosCandidatos = null; // Só será carregado quando clicarem em Consultar
 let candidatoAtual = null;
 let dadosExtrasAtual = null; // Dados de api/candidato.js (foto, documentos, financeiro)
+
+// Prefixo do cache localStorage — v2 invalida entradas no formato antigo UF_SQ
+const LS_CACHE_PREFIX = 'cand_v2_';
 
 // ==========================================
 // BLINDAGEM JURÍDICA — datas e rastreabilidade
@@ -44,8 +46,8 @@ let dadosExtrasAtual = null; // Dados de api/candidato.js (foto, documentos, fin
 // URL do Google Forms para reporte de dados incorretos ou inconsistências
 const URL_FORMULARIO_ERRO = 'https://forms.gle/TuFSsPBaY6XFYcrq7';
 
-// Data de geração do JSON — atualizada ao carregar dados_candidatos.json
-let dataGeracaoJson = '04/09/2026'; // fallback hardcoded
+// Data de geração do JSON — lida do _meta retornado pela API (/api/candidato)
+let dataGeracaoJson = ''; // será preenchida na primeira abertura de ficha
 
 // Atualiza todos os elementos marcados com [data-data-geracao] na página
 function atualizarDatasInterface() {
@@ -195,7 +197,8 @@ function renderizarResultados(resultados) {
         const btn = document.createElement('button');
         btn.className = 'btn-info';
         btn.innerText = 'Consultar';
-        btn.onclick = () => abrirFicha(cand.id, cand.uf);
+        // Usa a chave canônica da lista_busca.json; cai para UF_SQ como último recurso
+        btn.onclick = () => abrirFicha(cand.chave || (cand.uf + '_' + cand.id));
 
         const info = document.createElement('div');
         const strong = document.createElement('strong');
@@ -252,24 +255,65 @@ function simNao(raw) {
     return s;
 }
 
+// Converte boolean ou indicador S/N em texto legível.
+// tentandoReeleicao é exportado como boolean ou null — não usar Boolean(string).
+function boolSimNao(raw) {
+    if (raw === null || raw === undefined) return null;
+    if (raw === true)  return 'Sim';
+    if (raw === false) return 'Não';
+    return simNao(raw); // fallback para strings legadas
+}
+
+// Formata valor monetário a partir de string de inteiro em centavos.
+// Usa BigInt para não perder precisão. Retorna string formatada ou null.
+function fmtCentavos(centavosStr) {
+    if (centavosStr == null) return null;
+    try {
+        const n   = BigInt(centavosStr);
+        const neg = n < 0n;
+        const abs = neg ? -n : n;
+        const reais = abs / 100n;
+        const cents = abs % 100n;
+        // Number(reais) é seguro para valores eleitorais típicos (< 2^53)
+        const reaisFormatado = Number(reais).toLocaleString('pt-BR');
+        return `${neg ? '-' : ''}R$\u00a0${reaisFormatado},${String(cents).padStart(2, '0')}`;
+    } catch (_) {
+        return null;
+    }
+}
+
+// Formata valor financeiro respeitando o status semântico do campo.
+// Não trata zero como ausência — zero explícito é dado válido.
+// status: 'ok' | 'sem_fonte' | 'sem_registros' | 'valor_nao_informado'
+function fmtValorFinanceiro(centavosStr, status) {
+    if (status === 'sem_fonte')           return '<span class="texto-mutado" style="font-size:0.88em;">Fonte não disponível</span>';
+    if (status === 'sem_registros')       return '<span class="texto-mutado" style="font-size:0.88em;">Sem registros</span>';
+    if (status === 'valor_nao_informado') return '<span class="texto-mutado" style="font-size:0.88em;">Valor não informado</span>';
+    // ok: exibe o valor (inclusive quando for zero)
+    const formatted = fmtCentavos(centavosStr);
+    return formatted
+        ? escaparHTML(formatted)
+        : '<span class="texto-mutado" style="font-size:0.88em;">Valor não informado</span>';
+}
+
 // Formata valor monetário em R$
 function fmtMoeda(v) {
     return Number(v).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
 // ── Card: Dados do Candidato ──────────────
-function renderizarDadosCandidato(cand, fallback) {
+function renderizarDadosCandidato(cand) {
     const el = document.getElementById('conteudoDadosCandidato');
     if (!el) return;
 
     const v = normalizarValor;
 
-    // Fonte primária: data/candidatos.json (retornado pela API)
-    const nomeCompleto = v(cand?.nomeCompleto) || v(fallback?.nome);
-    const nomeUrna = v(cand?.nomeUrna) || v(fallback?.nomeUrna);
+    // Fonte única: data/candidatos.json (retornado pela API)
+    const nomeCompleto = v(cand?.nomeCompleto);
+    const nomeUrna = v(cand?.nomeUrna);
     const numero = v(cand?.numeroUrna);
-    const cargo = v(cand?.cargo) || v(fallback?.cargo);
-    const partido = v(cand?.partido) || v(fallback?.partido);
+    const cargo = v(cand?.cargo);
+    const partido = v(cand?.partido);
     const ufVal = v(cand?.uf);
     const situacao = v(cand?.situacao);
 
@@ -309,8 +353,8 @@ function renderizarDadosCandidato(cand, fallback) {
     addExtra('Coligação', v(cand?.coligacao));
     addExtra('Federação', v(cand?.federacao));
     addExtra('Idade', (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
-    addExtra('Instrução', v(cand?.instrucao) || v(fallback?.escolaridade));
-    addExtra('Ocupação', v(cand?.ocupacao) || v(fallback?.ocupacao));
+    addExtra('Instrução', v(cand?.instrucao));
+    addExtra('Ocupação', v(cand?.ocupacao));
     addExtra('Nome social', v(cand?.nomeSocial));
 
     if (extraItens.length > 0) {
@@ -331,81 +375,82 @@ function renderizarPatrimonio(patrimonio) {
     const contPatr = document.getElementById('conteudoPatrimonio');
     if (!contPatr) return;
 
-    const fmt = fmtMoeda;
+    const status = patrimonio?.status;
 
-    const bens = patrimonio?.bens || [];
-    let totalBens = patrimonio?.total != null ? Number(patrimonio.total) : 0;
-
-    if (totalBens === 0 && bens.length > 0) {
-        bens.forEach(bem => {
-            const valorNum = parseFloat(String(bem.valor).replace(',', '.'));
-            if (!isNaN(valorNum)) totalBens += valorNum;
-        });
+    if (status === 'sem_fonte') {
+        contPatr.innerHTML = '<p class="texto-mutado">Fonte de patrimônio não disponível.</p>';
+        return;
     }
 
-    if (bens.length > 0 || totalBens > 0) {
-        const bensOrdenados = [...bens].sort((a, b) => {
-            const valA = parseFloat(String(a.valor).replace(',', '.')) || 0;
-            const valB = parseFloat(String(b.valor).replace(',', '.')) || 0;
-            return valB - valA;
-        });
+    const bens = patrimonio?.bens ?? [];
 
-        const mostrarTop = 5;
-        const bensIniciais = bensOrdenados.slice(0, mostrarTop);
-        const bensOcultos = bensOrdenados.slice(mostrarTop);
+    if (status === 'sem_registros' || bens.length === 0) {
+        contPatr.innerHTML = '<p class="texto-mutado">Nenhum bem declarado na fonte consultada.</p>';
+        return;
+    }
 
-        let html = `<p class="cand-patr-quantidade">${bens.length} bem(ns) declarado(s)</p>`;
-        html += '<div class="cand-patr-itens">';
+    // Ordenação por valorCentavos (autoritativo); sem conversão de moeda formatada
+    const bensOrdenados = [...bens].sort((a, b) => {
+        const valA = a.valorCentavos != null ? Number(BigInt(a.valorCentavos)) : 0;
+        const valB = b.valorCentavos != null ? Number(BigInt(b.valorCentavos)) : 0;
+        return valB - valA;
+    });
 
-        const renderItem = (bem) => `
-            <div class="cand-patr-item">
-                <div class="cand-patr-item-desc">
-                    <span class="cand-patr-tipo">${escaparHTML(bem.tipo || 'Bem')}</span>
-                    <span class="cand-patr-desc">${escaparHTML(bem.descricao || '-')}</span>
-                </div>
-                <span class="cand-patr-valor">${fmt(bem.valor)}</span>
+    // Total via totalCentavos (string de inteiro) — autoritativo
+    const totalDisplay = fmtCentavos(patrimonio?.totalCentavos) ?? 'Valor não informado';
+
+    const mostrarTop = 5;
+    const bensIniciais = bensOrdenados.slice(0, mostrarTop);
+    const bensOcultos  = bensOrdenados.slice(mostrarTop);
+
+    let html = `<p class="cand-patr-quantidade">${bens.length} bem(ns) declarado(s)</p>`;
+    html += '<div class="cand-patr-itens">';
+
+    // Campos novos do contrato: DS_TIPO_BEM_CANDIDATO, DS_BEM_CANDIDATO, valorCentavos
+    const renderItem = (bem) => `
+        <div class="cand-patr-item">
+            <div class="cand-patr-item-desc">
+                <span class="cand-patr-tipo">${escaparHTML(bem.DS_TIPO_BEM_CANDIDATO || 'Bem')}</span>
+                <span class="cand-patr-desc">${escaparHTML(bem.DS_BEM_CANDIDATO || '-')}</span>
             </div>
-        `;
+            <span class="cand-patr-valor">${escaparHTML(fmtCentavos(bem.valorCentavos) ?? 'Valor não informado')}</span>
+        </div>
+    `;
 
-        bensIniciais.forEach(bem => { html += renderItem(bem); });
+    bensIniciais.forEach(bem => { html += renderItem(bem); });
 
-        if (bensOcultos.length > 0) {
-            html += `<div id="bensOcultos" class="hidden">`;
-            bensOcultos.forEach(bem => { html += renderItem(bem); });
-            html += `</div>`;
-            html += `<button id="btnVerMaisBens" class="btn-secundario btn-sm">Ver todos os ${bens.length} bens</button>`;
-        }
+    if (bensOcultos.length > 0) {
+        html += `<div id="bensOcultos" class="hidden">`;
+        bensOcultos.forEach(bem => { html += renderItem(bem); });
+        html += `</div>`;
+        html += `<button id="btnVerMaisBens" class="btn-secundario btn-sm">Ver todos os ${bens.length} bens</button>`;
+    }
 
-        html += `</div>`; // fecha cand-patr-itens
+    html += `</div>`; // fecha cand-patr-itens
 
-        // Total em destaque
-        html += `<div class="cand-patr-total"><span>Valor total declarado</span><strong>${fmt(totalBens)}</strong></div>`;
-        // Disclaimer de fonte de dados patrimoniais
-        html += criarDisclaimerFonte('patrimonio');
+    // Total em destaque
+    html += `<div class="cand-patr-total"><span>Valor total declarado</span><strong>${escaparHTML(totalDisplay)}</strong></div>`;
+    html += criarDisclaimerFonte('patrimonio');
 
-        contPatr.innerHTML = html;
+    contPatr.innerHTML = html;
 
-        // Listener do botão ver mais
-        if (bensOcultos.length > 0) {
-            setTimeout(() => {
-                const btn = document.getElementById('btnVerMaisBens');
-                const divOculta = document.getElementById('bensOcultos');
-                if (btn && divOculta) {
-                    btn.addEventListener('click', () => {
-                        const taEscondido = divOculta.classList.contains('hidden');
-                        if (taEscondido) {
-                            divOculta.classList.remove('hidden');
-                            btn.textContent = 'Ocultar bens menores';
-                        } else {
-                            divOculta.classList.add('hidden');
-                            btn.textContent = `Ver todos os ${bens.length} bens`;
-                        }
-                    });
-                }
-            }, 0);
-        }
-    } else {
-        contPatr.innerHTML = '<p class="texto-mutado">Nenhum bem declarado.</p>';
+    if (bensOcultos.length > 0) {
+        setTimeout(() => {
+            const btn = document.getElementById('btnVerMaisBens');
+            const divOculta = document.getElementById('bensOcultos');
+            if (btn && divOculta) {
+                btn.addEventListener('click', () => {
+                    const taEscondido = divOculta.classList.contains('hidden');
+                    if (taEscondido) {
+                        divOculta.classList.remove('hidden');
+                        btn.textContent = 'Ocultar bens menores';
+                    } else {
+                        divOculta.classList.add('hidden');
+                        btn.textContent = `Ver todos os ${bens.length} bens`;
+                    }
+                });
+            }
+        }, 0);
     }
 }
 
@@ -431,8 +476,8 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         </div>`;
     }
 
-    // 2. Candidatura à reeleição
-    const reeleicao = simNao(cand?.tentandoReeleicao);
+    // 2. Candidatura à reeleição — campo boolean ou null, não string S/N
+    const reeleicao = boolSimNao(cand?.tentandoReeleicao);
     if (reeleicao) {
         temConteudo = true;
         html += `<div class="cand-juridico-item">
@@ -512,63 +557,63 @@ function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
         html += `<div class="cand-juridico-subsecao">
             <h4 class="cand-juridico-subtitulo">Prestação de contas</h4>`;
 
-        const totalA = financeiro.total_arrecadado;
-        const totalC = financeiro.total_contratado;
-        const totalP = financeiro.total_pago;
-
-        // Helper para valores monetários: se for 0, 0.00, nulo ou vazio -> "Dado não encontrado"
-        const fmtValor = (num, extra = '') => {
-            if (num == null || isNaN(num) || Number(num) === 0) {
-                return '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dado não encontrado</span>';
-            }
-            return `${fmt(num)}${extra}`;
-        };
-
-        // Situação da prestação de contas (do TSE)
+        // Situação da prestação de contas (ST_PREST_CONTAS do TSE — código bruto, não julgamento)
         const sitPrestacao = v(cand?.situacaoPrestacaoContas);
-        const sitTexto = (!sitPrestacao || sitPrestacao === '0' || sitPrestacao === '0,00' || sitPrestacao === '0.00')
-            ? '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dado não encontrado</span>'
-            : escaparHTML(sitPrestacao);
-
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">Situação da prestação</span>
-            <span class="cand-juridico-status">${sitTexto}</span>
-        </div>`;
-
-        // Usa percentual_pago do JSON se disponível, senão calcula (apenas se houver valor pago > 0)
-        let percHTML = '';
-        const percPago = financeiro.percentual_pago;
-        if (percPago != null && Number(percPago) > 0) {
-            percHTML = ` <span class="badge-percentual">${percPago}% pago</span>`;
-        } else if (Number(totalC) > 0 && Number(totalP) > 0) {
-            const perc = ((Number(totalP) / Number(totalC)) * 100).toFixed(1);
-            percHTML = ` <span class="badge-percentual">${perc}% pago</span>`;
+        if (sitPrestacao) {
+            html += `<div class="cand-juridico-item">
+                <span class="cand-juridico-label">Situação da prestação</span>
+                <span class="cand-juridico-status">${escaparHTML(sitPrestacao)}</span>
+            </div>`;
         }
 
+        // Limite de gastos — null exportado pelo notebook significa "não informado"
+        const limiteDisplay = financeiro.limite_gastos_centavos != null
+            ? fmtValorFinanceiro(financeiro.limite_gastos_centavos, 'ok')
+            : 'Não informado';
+        html += `<div class="cand-fin-item">
+            <span>Limite de gastos</span>
+            <strong>${limiteDisplay}</strong>
+        </div>`;
+
+        // Totais com status semântico — zero explícito é dado válido
         html += `<div class="cand-fin-item">
             <span>Total Arrecadado</span>
-            <strong>${fmtValor(totalA)}</strong>
+            <strong>${fmtValorFinanceiro(financeiro.total_arrecadado_centavos, financeiro.status_receitas)}</strong>
         </div>`;
         html += `<div class="cand-fin-item">
             <span>Total Contratado</span>
-            <strong>${fmtValor(totalC)}</strong>
+            <strong>${fmtValorFinanceiro(financeiro.total_contratado_centavos, financeiro.status_contratadas)}</strong>
         </div>`;
+
+        // Percentual pago — só exibe se existir valor e status ok
+        let percHTML = '';
+        if (financeiro.percentual_pago != null && financeiro.status_pagamento === 'ok') {
+            const percFormatado = Number(financeiro.percentual_pago).toFixed(2).replace('.', ',');
+            percHTML = ` <span class="badge-percentual">${escaparHTML(percFormatado)}% pago</span>`;
+        }
         html += `<div class="cand-fin-item">
             <span>Total Pago</span>
-            <strong>${fmtValor(totalP, percHTML)}</strong>
+            <strong>${fmtValorFinanceiro(financeiro.total_pago_centavos, financeiro.status_pagamento)}${percHTML}</strong>
         </div>`;
 
-        // Quantidades — exibe "Dado não encontrado" quando o valor for 0 ou ausente
-        const fmtQtd = (num) => (num != null && !isNaN(num) && Number(num) !== 0)
-            ? num
-            : '<span class="texto-mutado" style="font-style:italic;font-size:0.95em;">Dado não encontrado</span>';
+        // Quantidades — zero é dado válido quando status é 'ok' ou 'sem_registros'
+        const fmtQtdFin = (qtd, status) => {
+            if (status === 'sem_fonte') return '<span class="texto-mutado" style="font-style:italic;">Fonte não disponível</span>';
+            if (qtd == null)            return '<span class="texto-mutado" style="font-style:italic;">Não informado</span>';
+            return escaparHTML(String(qtd));
+        };
 
         html += `<div class="cand-fin-quantidades texto-mutado">
-            Receitas: ${fmtQtd(financeiro.quantidade_receitas)} &nbsp;|
-            Despesas contratadas: ${fmtQtd(financeiro.quantidade_despesas_contratadas)} &nbsp;|
-            Despesas pagas: ${fmtQtd(financeiro.quantidade_despesas_pagas)}
+            Receitas: ${fmtQtdFin(financeiro.quantidade_receitas, financeiro.status_receitas)} &nbsp;|
+            Contratadas: ${fmtQtdFin(financeiro.quantidade_despesas_contratadas, financeiro.status_contratadas)} &nbsp;|
+            Parcelas pagas: ${fmtQtdFin(financeiro.quantidade_despesas_pagas, financeiro.status_pagamento)}
         </div>`;
-        // Disclaimer de fonte — dados financeiros podem estar em retificação pelo TSE
+
+        // Nota do arquivo financeiro (inclui ressalva sobre receitas estimáveis etc.)
+        if (financeiro.nota) {
+            html += `<p class="texto-mutado" style="font-size:0.82em;margin-top:6px;">${escaparHTML(financeiro.nota)}</p>`;
+        }
+
         html += criarDisclaimerFonte('financeiro');
         html += `</div>`;
     }
@@ -614,49 +659,72 @@ function nomeLegivelDocumento(nomeArquivo) {
     return nome.trim() || 'Documento';
 }
 
-async function abrirFicha(id, uf) {
-    // Lazy Load: Baixa o JSON gigante apenas se ainda não tiver baixado
-    if (!dadosCandidatos) {
-        msgResultados.innerHTML = icon('ampulheta') + ' Baixando dossiês completos pela primeira vez...';
+// ── Busca com retry e fallback localStorage ────────────────────────────
+async function buscarDadosCandidatoAPI(chaveCompleta, tentativas = 2) {
+    for (let i = 0; i < tentativas; i++) {
         try {
-            const response = await fetch('dados_candidatos.json');
-            dadosCandidatos = await response.json();
-            msgResultados.innerText = "";
-            // Lê a data de geração do JSON e atualiza a interface
-            if (dadosCandidatos._meta?.geradoEm) {
+            const res = await fetch(`/api/candidato?id=${encodeURIComponent(chaveCompleta)}`);
+            if (res.ok) {
+                const dados = await res.json();
+                // Salva no localStorage para fallback futuro
                 try {
-                    const d = new Date(dadosCandidatos._meta.geradoEm);
-                    dataGeracaoJson = d.toLocaleDateString('pt-BR');
-                } catch (_) { /* mantém o fallback */ }
-                atualizarDatasInterface();
+                    localStorage.setItem(LS_CACHE_PREFIX + chaveCompleta, JSON.stringify(dados));
+                } catch (_) { /* ignora erros de cota */ }
+                return { dados, fromCache: false };
             }
-        } catch (error) {
-            msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar dados detalhados.';
-            return;
+        } catch (_) {
+            if (i < tentativas - 1) {
+                await new Promise(r => setTimeout(r, 800)); // aguarda 800ms antes do retry
+            }
         }
     }
 
-    // Busca a chave no formato UF_SQ_CANDIDATO (único formato usado pelo índice)
-    const chaveComUF = `${uf}_${id}`;
-    const dados = dadosCandidatos[chaveComUF];
+    // Todas as tentativas falharam — tenta localStorage
+    try {
+        const cached = localStorage.getItem(LS_CACHE_PREFIX + chaveCompleta);
+        if (cached) return { dados: JSON.parse(cached), fromCache: true };
+    } catch (_) { /* ignora erros de parse */ }
+
+    return { dados: null, fromCache: false };
+}
+
+// abrirFicha aceita a chave canônica (ANO_CD_UF_SQ) ou formato legado (UF_SQ).
+// Prefira sempre usar cand.chave da lista_busca.json.
+async function abrirFicha(chaveCompleta) {
+
+    // Exibe loading enquanto a API responde
+    msgResultados.innerHTML = icon('ampulheta') + ' Carregando dossiê...';
+
+    const { dados, fromCache } = await buscarDadosCandidatoAPI(chaveCompleta);
 
     if (!dados) {
-        console.error("ID procurado:", id, "UF:", uf);
-        console.error("Amostra das chaves no JSON:", Object.keys(dadosCandidatos).slice(0, 5));
-        alert("Erro: Dossiê não encontrado. Aperte F12 e veja o Console para mais detalhes.");
+        msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar dados do candidato. Verifique sua conexão e tente novamente.';
         return;
     }
 
-    candidatoAtual = dados;
+    dadosExtrasAtual = dados;
+    msgResultados.innerText = '';
 
-    // 4.0. Carrega dados extras (foto, documentos, financeiro) via API privada
-    const chaveCompleta = `${uf}_${id}`;
-    dadosExtrasAtual = null;
-    try {
-        const resExtra = await fetch(`/api/candidato?id=${encodeURIComponent(chaveCompleta)}`);
-        if (resExtra.ok) dadosExtrasAtual = await resExtra.json();
-    } catch (e) {
-        console.warn('Dados extras não carregados:', e);
+    // Avisa o usuário se estiver vendo dados do cache local (API indisponível)
+    if (fromCache) {
+        console.warn('[Offline] Usando dados em cache local para', chaveCompleta);
+    }
+
+    // Garante que o candidato exista na resposta
+    if (!dadosExtrasAtual.candidato) {
+        msgResultados.innerHTML = icon('cancel') + ' Candidato não encontrado na base de dados.';
+        return;
+    }
+
+    candidatoAtual = dadosExtrasAtual.candidato;
+
+    // Lê data de geração da exportação via metadados (substitui o _meta antigo)
+    if (dadosExtrasAtual.metadados?.geradoEm) {
+        try {
+            const d = new Date(dadosExtrasAtual.metadados.geradoEm);
+            dataGeracaoJson = d.toLocaleDateString('pt-BR');
+        } catch (_) { /* mantém valor anterior */ }
+        atualizarDatasInterface();
     }
 
     // 4.0a. Foto — Seção 01
@@ -670,13 +738,12 @@ async function abrirFicha(id, uf) {
     }
 
     // 4.1. Header do Dossiê (SQ_CANDIDATO)
-    const cand = dadosExtrasAtual?.candidato;          // fonte primária: data/candidatos.json
-    const perfFallback = dados.perfil || {};            // fallback: dados_candidatos.json
-    const idExibido = cand?.id || dados.id || id;
+    const cand = dadosExtrasAtual.candidato;
+    const idExibido = cand?.id || id;
     document.getElementById('candIdHeader').innerText = idExibido;
 
     // Card: Dados do Candidato
-    renderizarDadosCandidato(cand, perfFallback);
+    renderizarDadosCandidato(cand);
 
     // Card: Patrimônio Declarado
     renderizarPatrimonio(dadosExtrasAtual?.patrimonio);
@@ -697,8 +764,9 @@ async function abrirFicha(id, uf) {
         btnGerarResumo.classList.add('texto-mutado');
         btnGerarResumo.innerText = 'Sem proposta anexada';
     } else {
-        // Verifica se já existe resumo em cache para este candidato
-        verificarCacheResumo(chaveCompleta);
+        // Verifica se já existe resumo em cache usando a chave canônica
+        const chaveParaResumo = dadosExtrasAtual.chave || chaveCompleta;
+        verificarCacheResumo(chaveParaResumo);
     }
 
     // 4.5. Botão de reportar erro ao final do conteúdo da ficha
@@ -764,9 +832,19 @@ function configurarBotaoResumo(cached) {
 // ==========================================
 // 6. EXIBIÇÃO DE RESUMO (compartilhada)
 // ==========================================
-function exibirResumo(textoResumo) {
+// avisoRevisao: true quando pelo menos um PDF usou OCR sinalizado para revisão
+function exibirResumo(textoResumo, avisoRevisao) {
     resultadoIA.classList.remove('hidden');
     resultadoIA.innerHTML = '';
+
+    // Aviso de OCR quando aplicável — exibido antes do conteúdo
+    if (avisoRevisao) {
+        const avisoOCR = document.createElement('p');
+        avisoOCR.className = 'disclaimer-ia';
+        avisoOCR.style.marginBottom = '8px';
+        avisoOCR.textContent = '⚠️ Parte do texto desta proposta foi extraída por OCR e requer revisão. Números, tabelas e ordem de leitura podem conter erros.';
+        resultadoIA.appendChild(avisoOCR);
+    }
 
     // Renderiza o resumo de forma segura: textContent para evitar XSS, <br> explícitos para quebras de linha
     const linhas = textoResumo.split('\n');
@@ -777,7 +855,7 @@ function exibirResumo(textoResumo) {
         }
     });
 
-    // Disclaimer de IA (risco: IA pode interpretar errado o texto)
+    // Disclaimer de IA — este é um rascunho gerado automaticamente, não revisado
     const disclaimer = document.createElement('p');
     disclaimer.className = 'disclaimer-ia';
     disclaimer.textContent = DISCLAIMER_IA;
@@ -813,10 +891,12 @@ btnGerarResumo.addEventListener('click', async () => {
         resultadoIA.classList.add('hidden');
 
         try {
+            // Usa a chave canônica; candidatoAtual.chave vem de data/candidatos.json
+            const chaveResumo = candidatoAtual.chave || (candidatoAtual.uf + '_' + candidatoAtual.id);
             const res = await fetch('/api/resumo', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
+                body: JSON.stringify({ id_candidato: chaveResumo }),
             });
 
             loadingIA.classList.add('hidden');
@@ -832,16 +912,21 @@ btnGerarResumo.addEventListener('click', async () => {
 
             const data = await res.json();
 
+            // Lida com o campo 'estado' do novo contrato e mantém compatibilidade com flags legadas
+            const estado = data.estado;
             if (res.ok && data.resumo) {
-                exibirResumo(data.resumo);
-            } else if (res.ok && data.bloqueado) {
+                exibirResumo(data.resumo, data.avisoRevisao);
+            } else if (res.ok && (estado === 'bloqueado' || data.bloqueado)) {
                 exibirInfoNeutra(data.mensagem);
                 btnGerarResumo.disabled = true;
                 btnGerarResumo.classList.add('texto-mutado');
-            } else if (res.ok && data.semProposta) {
+            } else if (res.ok && (estado === 'sem_proposta_cargo' || estado === 'nao_apto' || data.semProposta)) {
                 exibirInfoNeutra(data.mensagem);
                 btnGerarResumo.disabled = true;
                 btnGerarResumo.classList.add('texto-mutado');
+            } else if (res.ok && (estado === 'extracao_pendente' || estado === 'requer_revisao_ocr')) {
+                exibirInfoNeutra(data.mensagem);
+                btnGerarResumo.disabled = false;
             } else {
                 mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
             }
@@ -863,11 +948,12 @@ btnGerarResumo.addEventListener('click', async () => {
     resultadoIA.classList.add('hidden');
 
     try {
-        // Envia o ID do candidato no corpo da requisição via POST
+        // Envia a chave canônica no corpo da requisição via POST
+        const chaveResumo = candidatoAtual.chave || (candidatoAtual.uf + '_' + candidatoAtual.id);
         const res = await fetch('/api/resumo', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
+            body: JSON.stringify({ id_candidato: chaveResumo }),
         });
 
         loadingIA.classList.add('hidden');
@@ -883,21 +969,25 @@ btnGerarResumo.addEventListener('click', async () => {
 
         const data = await res.json();
 
+        const estado = data.estado;
         if (res.ok && data.resumo) {
-            exibirResumo(data.resumo);
-            // Após gerar com sucesso, atualiza o botão para "Mostrar resumo"
+            exibirResumo(data.resumo, data.avisoRevisao);
             btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
             btnGerarResumo.dataset.cached = 'true';
-        } else if (res.ok && data.bloqueado) {
+        } else if (res.ok && (estado === 'bloqueado' || data.bloqueado)) {
             exibirInfoNeutra(data.mensagem);
             btnGerarResumo.disabled = true;
             btnGerarResumo.classList.add('texto-mutado');
             btnGerarResumo.innerText = 'Resumo bloqueado';
-        } else if (res.ok && data.semProposta) {
+        } else if (res.ok && (estado === 'sem_proposta_cargo' || estado === 'nao_apto' || data.semProposta)) {
             exibirInfoNeutra(data.mensagem);
             btnGerarResumo.disabled = true;
             btnGerarResumo.classList.add('texto-mutado');
             btnGerarResumo.innerText = 'Sem proposta de governo';
+        } else if (res.ok && (estado === 'extracao_pendente' || estado === 'requer_revisao_ocr')) {
+            exibirInfoNeutra(data.mensagem);
+            btnGerarResumo.disabled = false;
+            btnGerarResumo.innerHTML = iconFixed('star', 'p') + ' Tentar novamente';
         } else {
             mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
         }
