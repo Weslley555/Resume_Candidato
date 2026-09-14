@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Candidato 2026</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="public-base" content="/">
+    <link id="estiloPrincipal" rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var base = document.querySelector('meta[name="public-base"]').content;
+            if (!/^\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_-]*\/?$/.test(base)) base = '/';
+            window.publicAssetBase = base.endsWith('/') ? base : base + '/';
+            document.getElementById('estiloPrincipal').href = window.publicAssetBase + 'style.css';
+        })();
+    </script>
     <script>
         // Aplicar tema antes da renderização para evitar flash
         (function () {
@@ -39,8 +48,11 @@
             <p>⚠️Essa é uma versão beta de testes, <strong>pode haver alguns dados faltantes ou inconsistentes.</strong> Caso encontre alguma divergência, você pode <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" class="modal-link">reportar um erro aqui</a>.⚠️</p>
 
             <p>
-                Não salvamos nenhum dado de pesquisa nem de usuário — apenas o IP, por até 1&nbsp;minuto,
-                usado somente para controle de requisições (evitar abuso do serviço).
+                Os termos da busca são filtrados no navegador. A nova proteção de geração de resumos usa
+                quotas globais e lock no Redis, sem IP nesse controle da aplicação. As páginas selecionadas
+                são enviadas ao Google Gemini; o cache de rascunhos dura 7 dias, o lock 60 segundos e os
+                contadores até 24 horas. Provedores podem manter logs técnicos conforme suas políticas;
+                esses prazos não definem a retenção dos provedores nem garantem ausência de coleta de IP.
                 <a href="/privacidade" class="modal-link">Saiba mais na nossa Política de Privacidade.</a>
             </p>
 
@@ -84,7 +96,7 @@
         <!-- Banner fixo de aviso de fonte — permanente, não dispensável -->
         <div class="banner-fonte-fixo" id="bannerFonte" role="note" aria-label="Aviso sobre a fonte dos dados">
             ⚠️ Agregador de dados públícos do TSE — não é fonte oficial. Dados sujeitos a retificação.
-            Atualizado em <span data-data-geracao>04/09/2026</span>
+            Exportação gerada em <span data-data-geracao>Não informada</span> (não é a data de atualização das fontes TSE)
             &nbsp;&middot;&nbsp;
             <a href="https://dadosabertos.tse.jus.br/dataset/candidatos-2026" target="_blank" rel="noopener noreferrer">Ver fonte oficial</a>
             &nbsp;&middot;&nbsp;
@@ -105,7 +117,7 @@
                 <select id="selectUF">
                     <option value="">Todos</option>
                     <option value="MG">Minas Gerais</option>
-                    <option value="BR">Brasil</option>
+                    <option value="BR">Brasil (circunscrição nacional)</option>
                 </select>
             </div>
 
@@ -153,8 +165,11 @@
 
     <!-- Dossier Header — identificador + última atualização -->
     <div class="dossier-header">
-        <span class="dossier-id">SQ_CANDIDATO: <strong id="candIdHeader"></strong></span>
-        <span class="dossier-update">Atualizado em: <span data-data-geracao>04/09/2026</span></span>
+        <details class="dossier-id" style="overflow-wrap:anywhere">
+            <summary>Identificação técnica da ficha</summary>
+            Chave: <strong id="candIdHeader"></strong><br>Exportação (SHA-256): <span id="candExportacao"></span>
+        </details>
+        <span class="dossier-update">Exportação gerada em: <span data-data-geracao>Não informada</span></span>
     </div>
 
     <!-- Grid 2 colunas -->
@@ -166,23 +181,28 @@
             <!-- Card: Foto do Candidato -->
             <div class="dossier-card">
                 <div class="dossier-card-photo">
-                    <img id="candFoto" class="cand-foto-perfil" src="" alt="Foto do candidato"
-                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 120 120\'%3E%3Crect width=\'120\' height=\'120\' fill=\'%23333\'/%3E%3Ccircle cx=\'60\' cy=\'45\' r=\'26\' fill=\'%23666\'/%3E%3Cellipse cx=\'60\' cy=\'108\' rx=\'40\' ry=\'28\' fill=\'%23666\'/%3E%3C/svg%3E'">
+                    <img id="candFoto" class="cand-foto-perfil" src="icons/candidato-placeholder.svg" alt="Foto indisponível">
                 </div>
             </div>
 
             <!-- Card: Resumo da Proposta de Governo (IA) -->
             <div class="dossier-card card-proposal">
-                <h3 class="dossier-card-title">RESUMO DA PROPOSTA</h3>
-                <button id="btnGerarResumo" class="btn-warning btn-full-width">
+                <h3 class="dossier-card-title">PROPOSTAS POR TEMA</h3>
+                <fieldset id="selecaoDocumentos" class="cand-dados-extra" style="min-width:0">
+                    <legend>Documentos para o resumo</legend>
+                    <p class="texto-mutado">Selecione explicitamente os PDFs para consultar ou gerar seu resumo. Um subconjunto não representa todas as propostas. A geração envia os textos selecionados ao serviço de IA e pode estar sujeita a limites de uso. O resultado não é revisado automaticamente.</p>
+                    <div id="opcoesDocumentos"></div>
+                </fieldset>
+                <button id="btnConsultarResumo" class="btn-secundario btn-full-width" disabled>Consultar estado / resumo existente</button>
+                <button id="btnGerarResumo" class="btn-warning btn-full-width" disabled>
                     <span class="icon-img-fixed"><img src="icons/star_p.svg" alt=""></span>
-                    Gerar Resumo com IA
+                    Gerar rascunho com IA
                 </button>
-                <div id="loadingIA" class="hidden">
+                <div id="loadingIA" class="hidden" role="status" aria-live="polite">
                     <span class="icon-img"><img class="img-b" src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg" alt=""></span>
-                    Analisando o plano de governo com Gemini...
+                    Consultando o serviço de resumo...
                 </div>
-                <div id="resultadoIA" class="resultado-ia hidden"></div>
+                <div id="resultadoIA" class="resultado-ia hidden" role="status" aria-live="polite"></div>
             </div>
 
         </div>
@@ -194,6 +214,11 @@
             <div class="dossier-card">
                 <h3 class="dossier-card-title">DADOS DO CANDIDATO</h3>
                 <div id="conteudoDadosCandidato"></div>
+            </div>
+
+            <div class="dossier-card">
+                <h3 class="dossier-card-title">PRESTAÇÃO DE CONTAS</h3>
+                <div id="conteudoFinanceiro"></div>
             </div>
 
             <!-- Card: Patrimônio Declarado -->
@@ -212,11 +237,20 @@
 
     </div>
 
+    <div class="dossier-reportar-erro">
+        <span>Encontrou alguma inconsistência nos dados deste candidato?</span>
+        <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" class="btn-reportar-erro">Reportar erro</a>
+    </div>
 </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module">
+        document.querySelectorAll('img[src^="icons/"]').forEach(img => {
+            img.src = window.publicAssetBase + img.getAttribute('src');
+        });
+        import(window.publicAssetBase + 'script.js');
+    </script>
 
     <!-- Lógica do modal de boas-vindas -->
     <script>
@@ -330,7 +364,7 @@
         &nbsp;&middot;&nbsp;
         Open source &middot; GPL-3.0
         &nbsp;&middot;&nbsp;
-        Dados coletados em <span data-data-geracao>04/09/2026</span>
+        Exportação gerada em <span data-data-geracao>Não informada</span>; datas das fontes TSE nos metadados disponíveis
     </footer>
 
     <!-- Botão Flutuante: Reportar Erro -->

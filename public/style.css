@@ -9,6 +9,7 @@
 
     /* Textos */
     --text-main: #e0e0e0;
+    --link-color: #8ac7ff;
     --text-muted: #aaaaaa;
     --text-input: #ffffff;
     --text-btn: #ffffff;
@@ -47,6 +48,7 @@
     --bg-input: #ffffff;
 
     --text-main: #101a2e;
+    --link-color: #0056a6;
     --text-muted: #6e7681;
     --text-input: #101a2e;
     --text-btn: #ffffff;
@@ -594,7 +596,7 @@ button:disabled {
     margin: 0 0 12px;
     font-size: 0.82em;
     letter-spacing: 0.08em;
-    color: var(--btn-primary);
+    color: var(--text-main);
     text-transform: uppercase;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border-color);
@@ -670,7 +672,7 @@ button:disabled {
 
 .cand-dados-extra summary {
     cursor: pointer;
-    color: var(--btn-primary);
+    color: var(--text-main);
     font-size: 0.82em;
     padding: 4px 0;
     user-select: none;
@@ -865,6 +867,28 @@ button:disabled {
 }
 
 /* ===== SEÇÃO IA (preservada) ===== */
+.dossier-card a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.dossier-card a:focus-visible,
+.dossier-card summary:focus-visible {
+    outline: 2px solid var(--link-color);
+    outline-offset: 3px;
+}
+
+.resumo-tema {
+    margin-top: 1.2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.resumo-tema h4 { margin-bottom: 0.5rem; }
+.resumo-proposta { margin-bottom: 1rem; }
+#loadingIA { margin: 0.75rem 0; line-height: 1.5; }
+
 .resultado-ia {
     margin-top: 15px;
     font-family: 'Segoe UI', sans-serif;
@@ -873,13 +897,9 @@ button:disabled {
 
 .disclaimer-ia {
     margin-top: 1rem;
-    padding: 0.6rem 0.8rem;
-    font-size: 0.78rem;
-    font-style: italic;
-    color: var(--text-muted);
-    background: var(--bg-overlay-warning);
-    border-left: 3px solid var(--color-warning);
-    border-radius: 3px;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--text-main);
     line-height: 1.5;
 }
 
@@ -1096,7 +1116,6 @@ html[data-theme="light"] .disclaimer-fonte a {
 }
 
 /* Tema claro: demais avisos (dentro de cards) */
-html[data-theme="light"] .disclaimer-ia,
 html[data-theme="light"] .disclaimer-juridico-alerta {
     color: #332211;
     background: rgba(184, 134, 11, 0.18);

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "chave": "2026_6257_BR_280002540694",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "snapshotHash": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "fonteHash": "d0a5f071861b012e8644b69c044821e98b3d5a6d2437c6d0b907ef11ee002bf3",
+  "documentosSelecionados": [
+    "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a"
+  ],
+  "extracoesHash": [
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "hash": "1f93402cec049ea1d865e166e9a8e3f20e2167dc77bc4e7c23f8784892ebe20c"
+    }
+  ],
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "promptHash": "cdd10309f85680e9c2d1e42e50bc4882bd5bb3da73f7c847639e059f75087bbb",
+  "modelo": "gemini-3.5-flash",
+  "limiteBlocoBytes": 24000,
+  "totalBlocos": 8,
+  "blocosHash": [
+    "918cd00b410e2e22f6acc9abf5de419951c44cf82cecfaa5c6666b92e6b8373e",
+    "944cac5d08060d07e33855f788f33b9035d69907fc267659f2ba87e0aa4bb929",
+    "7180b3758481938d6f6a62e0cae7f3b502c9ae75f3bb5389c3b69029d6411014",
+    "a94a018eb315299df83a0ad762c90f86e2782c2ffb13c060ca0b5de19bdf4c05",
+    "fc65f3fac14fa04c34c34eecdc431e4501ad7b1297ee419b9c8f782102843b03",
+    "59f5c5b8cd58f0ddc5159c97aea34866a929464b9764f3e56eee04b30d9604cf",
+    "ddfe1898c8b489d97f9c51cacbbef5455460ebca0eb16240307e763422660ca6",
+    "5d25473eb2f2f8ec8951e10421a181d0ceadd37e287930a194f331a9d29f5ac1"
+  ]
+}

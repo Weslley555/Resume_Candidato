@@ -1,6 +1,6 @@
 ﻿# Política de Privacidade — Resume Candidato 2026
 
-> **Última atualização:** 04 de setembro de 2026
+> **Última atualização:** 14 de setembro de 2026
 
 ---
 
@@ -17,21 +17,32 @@ ou processados ao utilizar o site.
 - **Não cria contas de usuário** — nenhum cadastro, login ou perfil é necessário ou armazenado.
 - **Não utiliza cookies de rastreamento** — nenhum cookie analítico, publicitário ou de sessão
   é gravado no seu navegador.
-- **Não armazena histórico de buscas** — as pesquisas realizadas são processadas localmente
-  no seu navegador e não são enviadas, registradas ou associadas a qualquer identidade.
+- **Não armazena histórico de buscas na aplicação** — os termos digitados para filtrar a lista
+  são processados localmente no navegador. Consultas a fichas, documentos e resumos geram
+  requisições aos serviços; isso é distinto de manter um histórico de buscas.
 
 ---
 
-## 3. Endereço IP e Rate Limiting
+## 3. Proteção da geração, processamento e retenção
 
-As rotas `/api` do projeto utilizam **rate limiting** (limitação de requisições) para proteger
-o serviço contra abusos automatizados.
+A nova proteção de geração de resumos utiliza **quotas globais e lock no Redis**, sem
+usar ou armazenar o IP do visitante nesse controle da aplicação.
 
-- O endereço IP de cada requisição é processado **temporariamente** e de forma exclusiva
-  para fins de controle de taxa de acesso.
-- Esse dado é descartado automaticamente em **até 1 minuto**, sem nenhum tipo de persistência.
-- O IP **não é vinculado** a nenhuma busca realizada, candidato consultado ou qualquer outra
-  informação de uso.
+- As quotas permitem 20 tentativas por janela de 24 horas e 2 por janela de 60 segundos,
+  compartilhadas entre visitantes. Os contadores expiram em **24 horas** e **60 segundos**,
+  respectivamente; as janelas começam na primeira admissão.
+- O lock por candidatura e seleção de documentos expira em **60 segundos**. Tentativas
+  admitidas consomem quota mesmo se falharem; não há identificação por visitante nesses registros.
+- Para gerar um resumo, o texto das páginas selecionadas dos documentos públicos é enviado
+  ao **Google Gemini**. Os rascunhos e seus metadados são armazenados em cache no Redis
+  por **7 dias**. Esses prazos são os TTLs configurados na aplicação, não prazos de retenção
+  dos provedores.
+
+O repositório também contém um limitador separado por IP em `middleware.js`; sua presença
+não comprova que esteja ativo no ambiente publicado. Não se afirma ausência de processamento
+de IP em toda a aplicação ou infraestrutura. Provedores de hospedagem, Redis e IA podem
+manter logs técnicos, inclusive dados de conexão quando aplicável, conforme suas próprias
+políticas. Esta política não estabelece prazos de coleta ou retenção não verificados nesses serviços.
 
 ---
 

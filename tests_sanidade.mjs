@@ -1,80 +1,61 @@
-import { lerJSON, buscarPorChave, ehChaveCanonica, resolverAliasLegado, verificarExportacao, lerJSONPublico } from './lib/jsonCache.js';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { createHash } from 'node:crypto';
+import { lerJSON, obterFonteSnapshot, verificarExportacao } from './lib/jsonCache.js';
+import listaHandler from './api/lista.js';
+import candidatoHandler from './api/candidato.js';
+import resumoHandler from './api/resumo.js';
 
-let erros = 0;
-function ok(nome, cond, detalhe = '') {
-    if (cond) { console.log(`  ✅ ${nome}`); }
-    else       { console.error(`  ❌ ${nome}${detalhe ? ' — ' + detalhe : ''}`); erros++; }
+// Integração com o pacote real: sem nomes, datas, totais ou candidaturas de teste fixados.
+async function chamar(handler, url) {
+    const res = {
+        headers: {}, statusCode: 200,
+        setHeader(k, v) { this.headers[k] = v; },
+        status(n) { this.statusCode = n; return this; },
+        json(body) { this.body = body; return this; }, end() { return this; },
+    };
+    await handler({ method: 'GET', url, headers: {} }, res);
+    return res;
 }
-
-// 1. ehChaveCanonica
-ok('Canônica BR',   ehChaveCanonica('2026_6257_BR_280002538811'));
-ok('Canônica MG',   ehChaveCanonica('2026_6259_MG_130002539775'));
-ok('Legado BR=false', !ehChaveCanonica('BR_280002538811'));
-ok('null=false',      !ehChaveCanonica(null));
-
-// 2. resolverAliasLegado
-const chave = resolverAliasLegado('BR_280002538811');
-ok('Alias BR resolve', chave === '2026_6257_BR_280002538811', chave);
-ok('Inventado=null',  resolverAliasLegado('CHAVE_INVENTADA_999') === null);
-
-// 3. buscarPorChave — candidatos
-const candidatos = lerJSON('candidatos.json');
-const cand = buscarPorChave(candidatos, '2026_6257_BR_280002538811');
-ok('Candidato encontrado', cand !== null);
-ok('candidato.chave correto', cand?.chave === '2026_6257_BR_280002538811', cand?.chave);
-
-// 4. Patrimônio — campos novos
-const patrimonio = lerJSON('patrimonio.json');
-const patr = buscarPorChave(patrimonio, '2026_6257_BR_280002538811');
-ok('Patrimônio encontrado', patr !== null);
-ok('totalCentavos é string', typeof patr?.totalCentavos === 'string', typeof patr?.totalCentavos);
-ok('DS_TIPO_BEM_CANDIDATO existe', patr?.bens?.[0]?.DS_TIPO_BEM_CANDIDATO !== undefined);
-ok('valorCentavos existe',         patr?.bens?.[0]?.valorCentavos !== undefined);
-
-// 5. Financeiro — campos de status
-const financeiroDb = lerJSON('financeiro.json');
-const fin = buscarPorChave(financeiroDb, '2026_6257_BR_280002538811');
-ok('Financeiro encontrado', fin !== null);
-ok('status_receitas existe',            'status_receitas'            in (fin ?? {}));
-ok('total_arrecadado_centavos existe',  'total_arrecadado_centavos'  in (fin ?? {}));
-ok('limite_gastos_centavos existe',     'limite_gastos_centavos'     in (fin ?? {}));
-ok('status zero != sem_registros',      fin?.status_receitas === 'sem_registros' || fin?.total_arrecadado_centavos !== 0);
-
-// 6. Fotos — caminho relativo correto
-const fotos = lerJSON('fotos.json');
-const foto = buscarPorChave(fotos, '2026_6257_BR_280002538811');
-ok('Foto encontrada', foto !== null);
-ok('Foto começa com assets/', foto?.arquivo?.startsWith('assets/'), foto?.arquivo);
-
-// 7. Verificação do pacote exportado
-const exp = verificarExportacao();
-ok('Exportação OK', exp.ok === true, JSON.stringify(exp));
-
-// 8. Metadados sem _meta
-const meta = lerJSON('metadados.json');
-ok('geradoEm em metadados', meta?.geradoEm !== undefined);
-ok('schemaVersion 3.0',     meta?.schemaVersion === '3.0', meta?.schemaVersion);
-
-// 9. lista_busca.json em public tem campo 'chave'
-const lb = lerJSONPublico('../public/lista_busca.json');
-ok('lista_busca.json em public é array', Array.isArray(lb), typeof lb);
-ok('Entrada tem chave canônica', ehChaveCanonica(lb?.[0]?.chave), lb?.[0]?.chave);
-ok('Entrada tem nomeBusca',      typeof lb?.[0]?.nomeBusca === 'string');
-
-// 10. BigInt centavos (mock do frontend)
-const centavosStr = patr?.totalCentavos;
-try {
-    const n = BigInt(centavosStr);
-    const reais = n / 100n;
-    const cents = n % 100n;
-    ok('BigInt centavos parseia', true, `${reais},${String(cents).padStart(2,'0')}`);
-} catch(e) {
-    ok('BigInt centavos parseia', false, String(e));
+const exportacao = verificarExportacao();
+assert.equal(exportacao.ok, true, exportacao.motivo);
+const fonte = obterFonteSnapshot();
+const publico = JSON.parse(fs.readFileSync('dist/exportacao.json', 'utf8'));
+assert.equal(publico.versao, exportacao.versao);
+const indiceBytes = fs.readFileSync('dist/' + publico.indice.arquivo);
+const indiceBusca = JSON.parse(indiceBytes);
+const camposBusca = ['chave', 'nome', 'nomeBusca', 'uf', 'cargo', 'numeroUrna'];
+const listaCompactaEsperada = JSON.parse(fonte.lerBytes('lista_busca.json')).map(registro =>
+    Object.fromEntries(camposBusca.map(campo => [campo, registro[campo] ?? null])));
+assert.equal(createHash('sha256').update(indiceBytes).digest('hex'), publico.indice.sha256);
+assert.equal(indiceBusca.exportacao, publico.versao);
+assert.deepEqual(indiceBusca.lista, listaCompactaEsperada);
+for (const arquivo of ['dados_candidatos.json', 'verificacao_dados.json', 'manifesto_sha256.json', 'EXPORTACAO_VALIDADA.json']) {
+    assert.equal(fs.existsSync('dist/' + arquivo), false, arquivo + ' não deve estar na saída pública');
 }
-
-// 11. Mesmo SQ em eleições diferentes não confunde
-const ch1 = resolverAliasLegado('BR_280002538811');
-ok('Não retorna candidatura errada', ch1 === null || ch1.includes('BR_280002538811'));
-
-console.log(`\n${erros === 0 ? '✅ Todos os testes passaram' : `❌ ${erros} falha(s)`}`);
-process.exit(erros > 0 ? 1 : 0);
+const lista = await chamar(listaHandler, '/api/lista');
+assert.equal(lista.statusCode, 200);
+assert.equal(lista.body.exportacao, publico.versao);
+assert.deepEqual(lista.body.lista, lerJSON('lista_busca.json'));
+const chave = lista.body.lista[0]?.chave;
+assert.ok(chave, 'Pacote precisa conter candidaturas');
+const ficha = await chamar(candidatoHandler, '/api/candidato?' + new URLSearchParams({ id: chave, exportacao: publico.versao }));
+assert.equal(ficha.statusCode, 200);
+assert.equal(ficha.body.chave, chave);
+assert.equal(ficha.body.exportacao, publico.versao);
+for (const campo of ['candidato', 'patrimonio', 'financeiro', 'documentos', 'foto', 'juridico']) {
+    const arquivo = { candidato: 'candidatos', foto: 'fotos' }[campo] ?? campo;
+    assert.deepEqual(ficha.body[campo], lerJSON(arquivo + '.json')[chave]);
+}
+const divergente = await chamar(candidatoHandler, '/api/candidato?' + new URLSearchParams({ id: chave, exportacao: 'versao-antiga' }));
+assert.equal(divergente.statusCode, 409);
+// Candidatura sem PDF: GET não consulta Gemini nem Redis.
+const semPDF = Object.entries(lerJSON('textos_propostas.json')).find(([, docs]) => docs.length === 0)?.[0];
+if (semPDF) {
+    const resumo = await chamar(resumoHandler, '/api/resumo?' + new URLSearchParams({ id: semPDF, exportacao: publico.versao }));
+    assert.equal(resumo.statusCode, 200);
+    assert.equal(resumo.body.estado, 'documento_indisponivel');
+    assert.equal(resumo.body.chave, semPDF);
+    assert.equal(resumo.body.exportacao, publico.versao);
+}
+console.log('Sanidade integrada aprovada: pacote, build, busca, ficha e indisponibilidade de resumo coerentes.');
