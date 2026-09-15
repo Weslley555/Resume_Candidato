@@ -1,0 +1,2916 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002539826",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:1223d2ee4e4d936c78fb2a6fec9fcd6cf96a2b6ee4895835c30cbf311047c9a1",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-15T11:33:10.022Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Abrir novos mercados internacionais e remover barreiras às exportações do agronegócio, com reconhecimento de padrões sanitários e ambientais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Abrir o mercado à concorrência para facilitar importações de insumos agrícolas e destravar projetos minerais nacionais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Alinhar gradualmente as tarifas brasileiras de importação à média dos países em desenvolvimento conforme o Custo Brasil for reduzido, eliminando dupla tributação e barreiras não tarifárias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar o uso de métodos alternativos de resolução de conflitos, como mediação, conciliação e arbitragem, para destravar disputas tributárias, regulatórias e contratuais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aperfeiçoar mecanismos do mercado de capitais, como venture capital, estruturação de fundos e segurança jurídica para vesting e equity, para atrair capital nacional e estrangeiro.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aprimorar a regulação para alocar os custos da energia excedente não aproveitada aos próprios geradores, evitando que o consumidor arque com ineficiências.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aproveitar a abundância de energia limpa para acelerar a eletrificação e atrair indústrias intensivas em energia, inteligência artificial e data centers.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Assegurar implementação eficaz da Reforma Tributária, evitando burocracias, regimes especiais e exceções, e garantindo neutralidade da carga tributária.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Atrair investimentos internacionais em inovação e tecnologia, prioritariamente em data centers, por meio de ambiente regulatório estável, remoção de burocracias e oferta de mão de obra qualificada.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aumentar a concorrência no mercado e modernizar o sistema de garantias, alienação fiduciária e recuperação de crédito para reduzir riscos e os juros finais ao consumidor.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver o mercado de seguro rural com um fundo privado de aportes públicos e privados para cobrir perdas climáticas, pragas e oscilações de mercado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Destravar o aproveitamento econômico de rejeitos e estruturas existentes na mineração com regras claras de titularidade, descomissionando barragens antigas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desverticalizar a Petrobras, separando operações de produção, refino, transporte e logística para permitir novos concorrentes no setor.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Engajar com mercados internacionais para posicionar o Brasil no fornecimento de biocombustíveis avançados e na cadeia do hidrogênio verde.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Evitar regulação ampla e precoce da inteligência artificial, regulando pontualmente apenas onde surgirem danos concretos comprovados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir acordos comerciais, diversificar parcerias e integrar o país à OCDE.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Facilitar a atuação de empresas privadas na exploração sustentável de terras raras e outros minerais do subsolo.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Facilitar a entrada de capital privado e internacional para pesquisa e desenvolvimento no campo, expandir conectividade com banda larga e 5G e reorientar a Embrapa para inovação aplicada.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Facilitar a entrada de investimentos estrangeiros removendo barreiras e realizando road shows com parceiros privados para apresentar vantagens competitivas, como o setor aeroespacial.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Facilitar a portabilidade de crédito com o uso do Open Finance para comparar propostas e transferir dívidas para bancos com juros menores.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fixar metas progressivas de redução da carga tributária que imponham os cortes de gastos necessários.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Flexibilizar a estrutura do Mercosul para transformá-lo em zona de livre comércio, permitindo acordos bilaterais de comércio e investimentos com outros países e blocos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Garantir a queda da curva de juros por meio de choque fiscal para estabilizar a relação dívida/PIB, promovendo reformas e mantendo superávits primários.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Impedir o uso político dos preços dos combustíveis, assegurando que sigam referências de mercado livres de interferência governamental.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter um calendário regular e previsível de leilões de exploração e produção de petróleo e gás com análise ambiental prévia.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Mapear o patrimônio imobiliário federal e vender imóveis desocupados, subutilizados ou sem função pública por venda direta ou leilão, com metas anuais de arrecadação destinadas a investimentos públicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Modernizar as regras de formação de preços e contratação de energia elétrica para que o sistema escolha a fonte mais barata e segura sem privilégios setoriais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Privatizar todas as empresas estatais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover a venda de produtos brasileiros no exterior e cultivar parcerias comerciais sem critérios ideológicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover mesas executivas com o setor produtivo para eliminar barreiras, integrar municípios à REDESIM e incentivar estados e municípios a regulamentarem a Lei de Liberdade Econômica.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Racionalizar tarifas de transporte e eliminar o monopólio dos estados na distribuição de gás natural.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Redirecionar investimentos públicos em pesquisa e desenvolvimento para complementar investimentos privados e eliminar barreiras à biotecnologia agrícola, modernizando marcos regulatórios e simplificando procedimentos do SISGEN.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir a insegurança jurídica e regulatória uniformizando regras, prazos e procedimentos em decisões tributárias, administrativas, regulatórias e de licenciamento.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir barreiras à entrada e ampliar a inserção comercial em todos os setores para usar a concorrência como motor de inovação e eficiência.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir custos diretos das operações financeiras por meio da redução do IOF.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir gradualmente o imposto de renda das empresas para aproximá-lo do patamar de economias desenvolvidas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir gradualmente programas de crédito direcionado e linhas subsidiadas do BNDES para ampliar a concorrência entre bancos e baratear o crédito.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir o tempo de análise de pedidos de pesquisa e lavra na Agência Nacional de Mineração com prazos definidos, processo digital e decisão técnica.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reformar a Previdência de forma definitiva, envolvendo estados, municípios, previdência rural e militar, e criando mecanismo de reajuste automático da idade mínima com base na expectativa de vida e na sustentabilidade do sistema.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reformar o IRPJ para que a Receita Federal apure o imposto automaticamente a partir da nota fiscal eletrônica, eliminando anexos, faixas e obrigações acessórias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Retirar encargos e subsídios da conta de luz que são pagos pelos consumidores para beneficiar setores específicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Retomar o levantamento geológico do território nacional com dados abertos e padrão internacional para identificação de jazidas minerais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Retomar o processo de adesão do Brasil à OCDE por meio de reformas institucionais e econômicas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Simplificar processos de reconhecimento de qualificações e concessão de vistos para especialistas em setores de fronteira tecnológica, facilitando a entrada desses profissionais no mercado e universidades.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Substituir o modelo rígido de exigências de conteúdo local por incentivos baseados em desempenho para operadoras na exploração de petróleo e gás.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar vagas em programas de residência médica aproveitando a capacidade operacional de hospitais brasileiros.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Apoiar estados e municípios na implementação de políticas de saúde, atividades físicas e socialização voltadas à terceira idade.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aprimorar incentivos por resultados no financiamento da atenção primária a estados e municípios para reduzir doenças crônicas como diabetes, hipertensão e cardiovasculares.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Assegurar acesso a cuidados paliativos com alívio da dor, suporte emocional e presença familiar no fim da vida.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Assegurar acompanhamento pré-natal completo para todas as gestantes, reduzindo riscos maternos e infantis e prevenindo complicações.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Conectar startups e empresas inovadoras a hospitais universitários para desenvolver melhorias nos serviços de saúde.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Construir um registro nacional de saúde unificado e sob controle do cidadão por meio de prontuário eletrônico, liderado pelo Governo Federal.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar indicadores de saúde mental e capacitar profissionais de Caps, Cras, Creas e escolas para acolhimento e encaminhamento de casos, com financiamento compartilhado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Estabelecer critérios técnicos vinculantes com protocolos clínicos e listas de referência para decisões judiciais em saúde.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Expandir o credenciamento de clínicas e profissionais especializados no atendimento a pessoas com TEA com financiamento público.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Expandir o uso de parcerias público-privadas, concessões e organizações sociais para construir e gerir unidades de saúde.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Facilitar a conexão entre universidades e empresas dos setores médico e farmacêutico para fortalecer inovação e reduzir dependência externa de insumos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a Estratégia de Saúde da Família conectada à saúde digital como porta de entrada e ampliar cobertura de vacinação em todo o território nacional.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a saúde indígena com capacitação profissional culturalmente adequada, infraestrutura, conectividade para telemedicina, logística de medicamentos e transporte ágil de pacientes.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir a interoperabilidade dos dados de saúde entre sistemas público e privado, permitindo que médicos e unidades acessem o histórico completo mediante autorização.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir acesso a internet de qualidade em todas as unidades públicas de saúde para funcionamento de prontuários eletrônicos, telemedicina e gestão.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Investir em infraestrutura e capacitação de profissionais para expandir o atendimento por telemedicina, reduzindo escassez de especialistas e filas de espera.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Modernizar a regulação da ANS para permitir modelos diferenciados de planos de saúde, variações de cobertura e segmentação de serviços.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Organizar a rede de saúde de forma regionalizada com inteligência artificial para integrar unidades de urgência, clínicas especializadas e hospitais, otimizando filas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Otimizar recursos públicos do esporte em parcerias com clubes e universidades, priorizar projetos de formação de cidadãos e atletas, conectar o esporte a estratégias de saúde pública para prevenção de doenças crônicas e redução de custos, e aproximar o esporte da educação básica para reduzir evasão escolar e violência.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Promover hábitos saudáveis por meio de campanhas de conscientização e integração entre políticas de saúde, educação e assistência social.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Reduzir filas no SUS por meio de parcerias com clínicas e hospitais privados para consultas, exames e cirurgias, utilizando a capacidade ociosa.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Revisar obrigações regulatórias que oneram prestadores privados de saúde, inclusive sobre uso de IA, para garantir sustentabilidade e oferta de serviços.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar a presença estatal nos postos de fronteira e na Amazônia, integrando inteligência, vigilância e forças de segurança para combater o tráfico de drogas e armas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar a rede de delegacias da mulher para funcionamento 24 horas, com equipes preferencialmente femininas capacitadas, e apoiar sistemas integrados entre Saúde, Segurança Pública e delegacias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Aprimorar o monitoramento do território nacional e o combate à grilagem de terras por meio de sensoriamento remoto por satélite.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Classificar facções criminosas como organizações terroristas em âmbito nacional e internacional, enquadrando criminosos que usam táticas de guerra para permitir o uso da Força Nacional, das Forças Armadas e de órgãos de controle, além de garantir penas mais altas e impedir a progressão de regime.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Conceder autonomia aos estados para instituir novos crimes e agravar penas e regimes de cumprimento de pena em complementação às regras federais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Consolidar e ampliar o direito de porte de arma para produtores rurais em toda a extensão de sua propriedade para autodefesa e proteção contra invasões.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Construir presídios de segurança máxima em regiões remotas e isoladas, com regime diferenciado de detenção e estrutura para conter terroristas e isolar membros de facções.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Coordenar ações internacionais com os Estados Unidos, países sul-americanos e outros atores para o combate conjunto às redes financeiras e operacionais de facções criminosas como o PCC e o CV.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Empregar as Forças Armadas de forma integrada às polícias estaduais e à Polícia Federal em operações para retomar territórios dominados por facções criminosas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Enfrentar a mineração ilegal integrando forças policiais, órgãos de fiscalização e inteligência financeira com rastreabilidade da origem do ouro e responsabilização de compradores de minério criminoso.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Expandir as Patrulhas Maria da Penha e as Salas Lilás nas redes de segurança pública e saúde para monitorar medidas protetivas e acolher vítimas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer a atuação policial com proteção legal na legítima defesa contra criminosos armados, integração em tempo real de informações federais e estaduais, e ampliação de equipamentos e tecnologias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Integrar a atuação de Marinha, Exército e Aeronáutica por meio do Estado-Maior Conjunto, racionalizar o orçamento de defesa priorizando capacitação e desenvolvimento tecnológico, formar quadros civis para a administração da Defesa, modernizar o sistema de inteligência integrando órgãos e ministérios, e garantir segurança jurídica para agentes da Abin portarem armas e utilizarem identidades de cobertura.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 77
+        },
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Prever em lei a conversão da prisão em preventiva na audiência de custódia para criminosos pegos em flagrante pela terceira vez, vedando o relaxamento da prisão.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reduzir a maioridade penal para 16 anos, permitindo excepcionalmente a imputação penal de pessoas mais jovens em crimes graves como homicídio e estupro ou em caso de reincidência.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reformar o Código Penal para sistematizar penas duras e proporcionais a crimes violentos, hediondos e patrimoniais, corrigindo distorções punitivas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Substituir o modelo atual de progressão rápida de regime de pena pelo cumprimento de prisão efetiva seguido de liberdade condicional com monitoramento eletrônico.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Sufocar as fontes de renda das facções criminosas ampliando a fiscalização sobre empresas usadas para lavagem de dinheiro, combatendo o contrabando, o garimpo e o desmatamento ilegais, e a receptação de produtos roubados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Alinhar o país a exigências de certificação e sustentabilidade para destravar investimentos em reflorestamento, sequestro de carbono no solo, bioenergia com captura e biocarvão.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Apoiar estados e municípios na elaboração de planos diretores modernos, ampliando o adensamento urbano em áreas centrais, habitação em áreas seguras e investimentos em drenagem urbana para reduzir vulnerabilidade a enchentes e deslizamentos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Aproximar escolas, universidades, setor produtivo e pesquisa aplicada para formar profissionais capazes de atuar em bioeconomia, energias renováveis e produção sustentável.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Atrair investimento privado em infraestrutura de contenção e sistemas de monitoramento climático, prevenção e resposta rápida a desastres, integrando ciência, tecnologia e gestão territorial para reduzir riscos ambientais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 48
+        },
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Avançar na implementação do Novo Marco do Saneamento, atraindo investimentos nacionais e internacionais para universalizar o acesso à água potável, à coleta e ao tratamento de esgoto e viabilizar a eliminação de lixões.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Combater com rigor a grilagem e o desmatamento ilegal, integrando forças de segurança, órgãos ambientais e o sistema de justiça, com monitoramento por satélite, punição efetiva dos infratores e proteção às comunidades indígenas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Estabelecer um ambiente de negócios seguro e desburocratizado para a comercialização voluntária de créditos de carbono com o mercado internacional, garantindo que o patrimônio ambiental seja ativo lucrativo sem criar novos tributos ou custos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Estreitar a cooperação com os países da bacia amazônica para liderar as agendas de meio ambiente, segurança alimentar e transição energética.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Estruturar destinos de turismo sustentável, aproveitando a biodiversidade e os biomas brasileiros, concedendo parques nacionais, qualificando mão de obra local e garantindo infraestrutura e marco regulatório que preservem o patrimônio natural.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fazer valer a nova Lei Geral do Licenciamento Ambiental, garantindo o cumprimento de prazos e regras pelos órgãos ambientais federais, estaduais e municipais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Garantir a implementação efetiva da Nova Lei do Licenciamento Ambiental com prazos definidos, critérios técnicos e simplificação para atividades de baixo risco.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Garantir critérios técnicos, previsibilidade e segurança jurídica no licenciamento ambiental, assegurando o cumprimento do Código Florestal e a análise do CAR, sem penalizar quem produz e investe dentro da lei.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Garantir o cumprimento do Código Florestal sem imposição de novas restrições sem base técnica ou compensação econômica.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Posicionar o Brasil como protagonista na produção e exportação de biocombustíveis e promover internacionalmente os produtos agropecuários sustentáveis.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Promover a recuperação e o monitoramento de reservatórios e barragens para ampliar a segurança hídrica da população, da agricultura e da geração de energia, com participação do setor privado e avaliação técnica rigorosa dos projetos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Promover educação ambiental baseada em evidências e pensamento crítico, valorizando os avanços em tecnologia agroambiental e energia renovável como prova de compatibilidade entre crescimento e conservação.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Simplificar regras e remover empecilhos a indústrias e startups ligadas à biodiversidade e ao manejo sustentável de espécies nativas, como açaí, castanhas e fármacos vegetais, criando condições para que o setor privado lidere o desenvolvimento.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar a oferta de cursos técnicos e profissionalizantes alinhados às demandas da economia e vocações regionais, em parceria com setor produtivo, instituições privadas, Sistema S, institutos federais e redes estaduais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar a oferta de ensino integral por meio de financiamento ao Ensino Médio Integral e parcerias com organizações privadas condicionadas a critérios de qualidade e resultados educacionais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar acesso de estudantes com deficiência e TEA a atendimento adequado em ambientes inclusivos, com profissionais capacitados, plano educacional individualizado obrigatório e autorização de matrícula em escolas especializadas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar opções de modelos educacionais facilitando parcerias com instituições comunitárias, filantrópicas e confessionais, avançando com escolas conveniadas, escolas cívico-militares e regulamentando o homeschooling.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar vagas e financiamento de bolsas de pesquisa para ciências, tecnologia, engenharia e matemática, alinhando a oferta do ensino superior às demandas da economia e inovação.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Assegurar que todos os modelos educacionais adotem critérios claros de avaliação periódica da aprendizagem e mecanismos de proteção ao desenvolvimento educacional e social.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Aumentar o acesso à educação infantil para famílias mais vulneráveis por meio do fortalecimento das redes públicas e parcerias com entidades privadas e comunitárias, priorizando expansão com qualidade, transparência e metas claras.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Avançar na adoção de boas práticas de gestão educacional e formação de diretores escolares, condicionando parte dos repasses financeiros ao cumprimento de critérios técnicos para seleção e desenvolvimento de gestores.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Concentrar recursos de pesquisa, ciência e tecnologia em instituições com histórico comprovado de produção científica relevante, criando modelo de financiamento baseado em desempenho.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Coordenar estratégia nacional de integração de educação, saúde, assistência social e segurança pública pela primeira infância, apoiando estados e municípios com metas compartilhadas, integração de dados e acompanhamento de resultados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar ambiente regulatório que facilite a instalação de centros de pesquisa e desenvolvimento de empresas dentro das universidades públicas, aproximando produção científica e mercado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar diretrizes nacionais para carreiras docentes baseadas em desenvolvimento profissional, desempenho pedagógico e atuação em contextos vulneráveis, e não em tempo de serviço.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar incentivos financeiros para universidades e institutos federais com base em indicadores de qualidade de gestão e acadêmica, como exames padronizados, empregabilidade de egressos e produção científica.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar o programa Sócios do Brasil, depositando R$ 1.000 para cada brasileiro ao nascer, aplicados em fundos de ações com saque permitido aos 18 anos, para estimular a formação de patrimônio e educação financeira.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Elevar a exigência de frequência escolar do programa Pé-de-Meia, premiar estudantes de excelência com valor máximo ao fim do ensino médio e exigir nota mínima no Enem para recebimento da parcela.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Estruturar programas de formação técnica e superior em setores de fronteira tecnológica em parceria com o setor privado, aproximando currículos das demandas do mercado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a formação de professores na graduação para aproximá-la da prática em sala de aula e evidências científicas, ampliando residências pedagógicas e critérios de qualidade para licenciaturas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer o Sistema de Avaliação da Educação Básica com foco em competências analíticas, resolução de problemas e aplicação prática do conhecimento para orientar políticas educacionais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir que creches e pré-escolas sejam ambientes de desenvolvimento integral com parâmetros nacionais de qualidade, monitoramento contínuo, formação de profissionais e práticas educacionais baseadas em evidências.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar programas que conectem trabalhadores a cursos técnicos em áreas com vagas reais, usando vouchers e parcerias com o setor privado e o Sistema S, condicionados a metas de empregabilidade.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Melhorar a focalização do programa Pé-de-Meia para estudantes com maior propensão a deixar a escola, conciliando combate à evasão com necessidades de investimento na educação.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Permitir que universidades públicas federais tenham professores e pesquisadores de excelência dedicados unicamente ao ensino ou à pesquisa.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reformular critérios de bolsas (Capes e CNPq) para priorizar pesquisas com impacto científico mensurável ou solução para problemas do mercado, utilizando também bolsas dentro de empresas privadas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Revisar e aprimorar a Base Nacional Comum Curricular para torná-la focada em aprendizagens essenciais, com prioridade para alfabetização, raciocínio lógico, ciências e competências digitais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Transferir a gestão do ensino superior para o Ministério de Ciência e Tecnologia para integrar ensino superior, financiamento à pesquisa e desenvolvimento tecnológico.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Transferir as atribuições de ensino superior do Ministério da Educação para o Ministério de Ciência e Tecnologia, focado o MEC exclusivamente na aprendizagem, primeira infância, alfabetização, ensinos fundamental e médio e educação profissional.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Transformar o Pacto Nacional pela Recomposição das Aprendizagens em estratégia nacional clara, priorizando alfabetização na idade certa e apoio intensivo a estudantes com defasagens acumuladas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Acelerar a construção de barragens, reservatórios e estruturas de irrigação por meio de parcerias com o setor privado para pequenos e médios produtores.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar instrumentos de garantia, seguros e compartilhamento de riscos, fortalecendo os bancos públicos para reduzir o custo de capital e atrair investidores.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Aperfeiçoar contratos e gestão de rodovias com concessões, PPPs, contratos de longo prazo por desempenho, planejamento integrado e adoção de tecnologias inteligentes.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Atrair investimentos privados para a gestão de aeroportos, avaliando a integração dos projetos a outros modais de transporte.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Atualizar as Leis de Concessões e PPPs para viabilizar projetos integrados, permitindo reunir serviços públicos complementares em uma mesma concessão ou PPP.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Avançar na aprovação e implementação dos marcos legais inacabados de ferrovias e hidrovias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Conceder à iniciativa privada ativos de infraestrutura viáveis e realizar investimentos públicos preferencialmente por meio de parcerias público-privadas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Consolidar a Agência Nacional de Águas e Saneamento Básico (ANA) como coordenadora nacional da regulação do saneamento, condicionando o acesso a recursos federais à observância de suas diretrizes regulatórias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar um regime de Projetos de Interesse Nacional com tramitação prioritária, via rápida para obras estratégicas e rito simplificado de aprovações.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Dar destinação célere a trechos ferroviários ociosos ou devolvidos, estimulando autorizações ferroviárias, short lines, operadores independentes e novas concessões, priorizando projetos estruturantes como FICO, FIOL e Ferrogrão.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Elaborar um portfólio robusto de projetos de infraestrutura nos diferentes setores, com cronograma previsível, promovendo ativos com arranjos financeiros públicos, privados e internacionais, e apoiando estados e municípios.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estruturar a abertura de novas faixas de espectro para o 5G e usar parcerias privadas e incentivos econômicos para levar conectividade ao interior, campo, regiões isoladas, escolas e postos de saúde.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir a infraestrutura portuária por meio da modernização da gestão e processos operacionais, melhoria de acessos, integração logística e ampliação da participação privada.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir rodovias, ferrovias, hidrovias, portos e capacidade de armazenagem por meio de juros reduzidos e parcerias com o setor privado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fortalecer a regionalização do saneamento básico, ampliar concessões e PPPs e promover soluções para cumprir as metas do Novo Marco do Saneamento.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Integrar a mobilidade urbana ao Ministério da Infraestrutura e instituir política nacional de expansão de sistemas estruturantes de transporte coletivo de alta capacidade com cofinanciamento federal para metrôs, trens e VLTs.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Integrar hidrovias ao planejamento logístico nacional, estruturando projetos de expansão da navegação interior, modernização aquaviária e maior participação privada em obras como dragagem e sinalização.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Reconhecer o turismo como vetor de desenvolvimento econômico, aumentar a atratividade de parques e destinos turísticos por meio de concessões e parcerias privadas, desenvolver infraestrutura turística em aeroportos, portos e rodovias, garantir segurança nos destinos turísticos com policiamento integrado e monitoramento tecnológico, e expandir a formação profissional em turismo e hotelaria com o Sistema S.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Reduzir a dependência de bancos públicos federais e multilaterais, aprimorar mecanismos de project finance para ampliar a participação do mercado de capitais e fontes privadas, e criar um ambiente institucional para estruturação de projetos em todos os níveis.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Revisar marcos regulatórios da infraestrutura, especialmente em transportes e energia, para eliminar restrições, burocracias e exigências a investimentos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Ampliar projetos de moradia de interesse social baseados em aluguel social para ressocialização e qualificação para o mercado de trabalho de pessoas em situação de rua.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Apoiar municípios na revisão de Planos Diretores para remover restrições de zoneamento e expandir o adensamento urbano em áreas centrais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Estruturar programa federal de apoio técnico a estados e municípios para regularização fundiária urbana e rural com emissão de títulos de propriedade.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Priorizar a emissão ágil de títulos de propriedade rural para conferir segurança jurídica aos proprietários e clareza ao poder público.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Reformular o Minha Casa, Minha Vida para priorizar investimentos em áreas com infraestrutura e serviços públicos instalados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Conceder um prêmio de R$ 5 mil a famílias que superarem o limite de renda e deixarem o Bolsa Família após inserção na formalidade ou empreendedorismo.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Condicionar a permanência de adultos saudáveis no Bolsa Família à busca por emprego, estudo ou qualificação profissional, prevendo suspensão em caso de recusa injustificada de ofertas formais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Condicionar repasses federais a Instituições de Longa Permanência para Idosos (ILPIs) à fiscalização e capacitação de equipes.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o programa Casas da Cidadania para integrar capacitação, inclusão no mercado de trabalho, renda, moradia e serviços sociais com planos familiares individualizados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Estruturar programa nacional para apoiar estados e municípios na internação involuntária de dependentes químicos em situação de rua, com avaliação médica e encaminhamento a comunidades terapêuticas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Expandir casas-abrigo, centros de referência e serviços de acolhimento para vítimas de violência doméstica com atendimento especializado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer o Programa Criança Feliz com foco em resultados de desenvolvimento infantil, condicionando repasses de transferência de renda a visitas domiciliares e integração com saúde e educação.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Modernizar o CadÚnico integrando fontes alternativas de dados e cruzando informações federais para eliminar fraudes e identificar a real vulnerabilidade.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Proibir instalação de barracas e abrigos improvisados em espaços públicos, encaminhando as pessoas para abrigos e serviços de saúde e assistência.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Unificar os critérios de pobreza e concentrar recursos de transferência de renda no Bolsa Família, integrando programas federais com o mesmo público.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Unificar programas de transferência de renda e melhorar a qualidade do CadÚnico, integrando fontes alternativas de informação para evitar fraudes e duplicidade de benefícios.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Acabar com decisões monocráticas e estabelecer prazos limite para pedidos de vista no STF.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adotar o sistema distrital misto para eleições parlamentares, extinguir o Fundo Partidário e o Fundo Eleitoral substituindo-os por financiamento privado com doações de pessoas físicas e jurídicas, autorizar candidaturas independentes sem filiação partidária, limitar emendas parlamentares a um percentual do orçamento discricionário, restringir publicidade governamental a campanhas essenciais de interesse público, e reduzir gastos de pessoal e salários no Legislativo e Judiciário.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 75
+        },
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 76
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Ampliar o uso de contratos de desempenho com órgãos públicos em troca de autonomia de gestão, metas objetivas e prazos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aplicar avaliações de impacto ex-ante e ex-post em políticas públicas para condicionar o orçamento aos resultados e expandir, reformular ou encerrar programas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Assegurar indicações técnicas e comprometidas com o combate à corrupção para a Procuradoria-Geral da República e para o Supremo Tribunal Federal.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aumentar as penas para crimes de corrupção e condicionar a progressão de regime à devolução integral dos recursos desviados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar programa para estimular a união progressiva de municípios sem sustentação financeira, ampliar a autonomia de estados sobre receitas e competências legislativas, e atualizar a representação na Câmara dos Deputados conforme a população de cada estado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 74
+        },
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar uma corregedoria independente para o STF, composta por indicados de entidades independentes, com capacidade de investigar e responsabilizar administrativa e penalmente os ministros.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Descriminalizar a opinião transferindo injúria e difamação para a esfera cível, revogar o crime de desacato, tipificar como abuso de autoridade atos estatais de censura, proibir a moderação de opiniões ou exclusão de perfis por plataformas nas redes sociais, proibir censura prévia na imprensa e acabar com o uso da publicidade estatal para favorecimento político.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 74
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Deslocar para a primeira instância o julgamento de senadores da República para limitar o foro privilegiado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Digitalizar serviços públicos para eliminar burocracia, estabelecendo prazos máximos públicos para a entrega de cada serviço.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estabelecer sindicância patrimonial automática na Controladoria-Geral da União para variações patrimoniais incompatíveis com os rendimentos declarados por agentes públicos acima de determinado patamar.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Exigir idade mínima de 60 anos e mecanismos para evitar vinculação política para a indicação de ministros do STF.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Flexibilizar vínculos de trabalho no setor público, instituindo contratos por tempo determinado para projetos específicos e vínculos sem estabilidade ampla, além de definir cargos típicos de Estado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer a autonomia das agências reguladoras com critérios rígidos para seleção de dirigentes, transparência ativa e qualificação contínua das equipes técnicas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer o Programa de Parcerias de Investimentos (PPI) como estrutura permanente de coordenação da política nacional de infraestrutura para assegurar continuidade aos projetos entre governos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir transparência ativa divulgando o custo de cada serviço público prestado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Indicar para o STF e para o TCU profissionais com trajetória jurídica respeitada, sem militância partidária e comprometidos com a imparcialidade e a segurança jurídica.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Instituir o uso de mesas de conciliação, mediação, arbitragem e dispute boards para prevenção e resolução de controvérsias em contratos de infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Integrar o plano plurianual ao orçamento anual com metas claras e indicadores estáveis para cada órgão e servidor.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Limitar drasticamente o foro privilegiado, mantendo-o apenas para o Presidente da República.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Modernizar concursos públicos com provas de competências, habilidades e cursos ou programas de formação.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Modernizar os regimes jurídicos da administração pública indireta com simplificação de regras e inclusão de metas de desempenho e prazos de validade.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Padronizar sistemas e integrar bases de dados entre estados e municípios para atendimento unificado ao cidadão.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Permitir solicitações de informação anônimas e vedar o uso de proteção de dados pessoais ou justificativas genéricas para restringir o acesso a informações de interesse público sobre agentes públicos, contratos e convênios.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Priorizar resultados entregues ao cidadão e utilizar pesquisas de satisfação dos usuários para avaliar a qualidade dos serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Proibir a indicação de políticos, ministros, secretários de Estado, pessoas com vínculos partidários ou movimentos sociais e seus parentes para qualquer tribunal.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Proibir membros do Judiciário e de Tribunais de Contas de possuírem empresas, dirigirem institutos, darem entrevistas ou participarem de eventos patrocinados, restringindo atividades externas à área acadêmica.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Proibir o uso de recursos públicos para itens de luxo ou fins privados, reservando aviões e carros oficiais estritamente para deslocamentos oficiais ou de segurança, e vedar viagens sem finalidade justificada, cartões corporativos sem prestação de contas, reformas sem licitação em residências oficiais e custeio de refeições de luxo.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Proibir que escritórios de advocacia com parentes de até 3º grau de ministros de Tribunais Superiores atuem nesses tribunais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover a escolha de cargos de chefia por mérito e competência por meio de programas de seleção e desenvolvimento de lideranças.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover atuação integrada entre agências reguladoras, órgãos de controle e administração pública com foco em ações preventivas e uniformização de entendimentos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Publicar em formato aberto quem recebeu recursos de apoio público à inovação, permitindo fiscalização do gasto público.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar Reforma Administrativa para enxugar a estrutura do Governo Federal, reduzindo ministérios, cortando cargos comissionados e revisando autarquias e fundações.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reconstruir as agências reguladoras como instituições autônomas com dirigentes de reputação ilibada, mandatos independentes, quadros técnicos qualificados e autonomia administrativa, financeira e decisória.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reduzir o número de cargos, ministérios, secretarias e órgãos públicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Regulamentar verbas indenizatórias acima do teto constitucional, aplicar o limite remuneratório a todos os profissionais do setor público, reduzir férias anuais para 30 dias, extinguir auxílios e licenças não previstos no setor privado e acabar com a aposentadoria compulsória como punição.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Restringir as competências do STF à função constitucional, retirando matérias tributárias e penais e limitando a revisão de decisões do Congresso.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reunificar o Ministério da Infraestrutura, concentrando o planejamento e a execução da política nacional e dos diferentes modais em uma única pasta.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Revisar o crescimento automático de despesas obrigatórias e regras que expandem o gasto público sozinhos, incluindo emendas parlamentares, para ampliar o espaço orçamentário para investimentos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Substituir o modelo de eleição interna de reitores por processo de escolha técnico e transparente, com conselhos externos e critérios objetivos de capacidade de gestão.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 54
+        },
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Tornar a transparência regra por meio da digitalização do governo e divulgação de dados em formato aberto, eliminando sigilos de 100 anos e ampliando a publicação de despesas, notas fiscais, uso de imóveis e repasses a organizações conveniadas.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Tornar obrigatória a investigação e votação de impeachment de ministros do STF quando requerida pela maioria dos senadores ou por iniciativa popular, vedando o bloqueio pelo presidente do Senado.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Unificar carreiras, eliminar cargos obsoletos, adotar tabela remuneratória transparente e permitir a transição de servidores entre órgãos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Unificar e simplificar os modelos de avaliação de desempenho dos servidores, permitindo progressão na carreira para quem entrega resultados, planos de desenvolvimento para quem não evolui e desligamento por baixo desempenho.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Utilizar tecnologia, parcerias e soluções de mercado para acelerar a prestação de serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Ampliar a capacidade de confederações e federações esportivas de atrair investimentos privados e gerar empregos, reduzindo dependência de subsídios públicos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Ampliar parcerias público-privadas em todos os setores da administração pública, incluindo saúde e educação.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Apoiar estados e municípios na estruturação de rotas culturais, gastronômicas e patrimoniais, projetar internacionalmente elementos da cultura brasileira, e oferecer capacitação em gestão e finanças para empreendedores culturais em parceria com o setor privado e o Sistema S.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Concentrar financiamento cultural em produções regionais e artistas locais com critérios objetivos e limites de captação, fortalecer a autonomia de estados e municípios na gestão cultural, apoiar fundos patrimoniais e parcerias com o terceiro setor para museus, revisar o sistema de proteção do patrimônio histórico, e modernizar a gestão de instituições federais de cultura.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 69
+        },
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Desregulamentar profissões que não envolvam risco à saúde ou segurança para abrir o mercado de trabalho.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Eliminar contribuições sobre a folha sem relação com o trabalho, como repasses ao INCRA, e simplificar obrigações acessórias como exames ocupacionais, gestão de vales, eSocial e aviso prévio de férias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Encerrar o monopólio sindical, assegurando o direito de não filiação ou contribuição a sindicatos, e limitar o poder regulatório e disciplinar dos conselhos profissionais.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Expandir a oferta de assistência técnica qualificada e condicionar repasses às EMATERs ao cumprimento de metas de produtividade para pequenos e médios produtores.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer a promoção nacional e internacional de destinos turísticos com inteligência de mercado e apoiar estados e municípios na estruturação de planos de desenvolvimento e captação de eventos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Garantir às comunidades indígenas o direito à exploração econômica de suas terras, regulamentando agricultura, pecuária, extrativismo e turismo.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Isentar de visto turistas de países seguros e abrir caminhos legais à imigração de talentos e profissionais qualificados.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Oferecer regime alternativo à CLT com prevalência do negociado sobre o legislado, permitindo definir remuneração variável, periodicidade de pagamentos, jornada diária até o limite de 44 horas semanais e livre divisão de férias.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Orientar a política externa para servir ao desenvolvimento do país com foco em retorno de mercados, investimentos e tecnologia, trazendo o setor produtivo para o centro da atuação diplomática.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Resgatar a tradição diplomática independente para mediar disputas e conflitos internacionais, sobretudo no entorno regional.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Restabelecer parcerias estratégicas com os países do Mercosul, em especial a Argentina, e aproximar-se dos países da bacia do Pacífico e da Amazônia para promover comércio, integração de infraestrutura e segurança comum.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Retirar o Brasil do BRICS de forma diplomática, preservando relações comerciais e recusando direcionamentos que comprometam valores constitucionais e democráticos.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Retomar a participação do Brasil na Aliança Internacional para a Memória do Holocausto (IHRA) como parte do combate ao antissemitismo.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Tornar mais rigorosos os critérios de condicionalidade de repasses públicos a confederações e federações esportivas, vinculando governança, transparência e impacto social a resultados mensuráveis.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Zerar encargos sobre o equivalente a um salário mínimo na contratação de trabalhadores há mais de um ano na informalidade em empresas de todos os setores.",
+      "referencias": [
+        {
+          "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+          "pagina": 24
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 1
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 2
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 3
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 4
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 5
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 6
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 7
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 8
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 9
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 10
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 11
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 12
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 13
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 14
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 15
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 16
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 17
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 18
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 19
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 20
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 21
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 22
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 23
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 24
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 25
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 26
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 27
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 28
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 29
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 30
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 31
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 32
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 33
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 34
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 35
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 36
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 37
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 38
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 39
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 40
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 41
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 42
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 43
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 44
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 45
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 46
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 47
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 48
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 49
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 50
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 51
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 52
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 53
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 54
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 55
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 56
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 57
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 58
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 59
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 60
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 61
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 62
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 63
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 64
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 65
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 66
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 67
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 68
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 69
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 70
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 71
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 72
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 73
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 74
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 75
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 76
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 77
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 78
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 79
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 80
+    },
+    {
+      "sha256": "5a5804622017a8e9c123fb64540a5ee3d06009de681026b505bc2a152d5e646e",
+      "pagina": 81
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-15T11:33:10.039Z",
+    "conteudoHash": "c7fb4f94f3aeb7b267f709ad058bffbd6248ccebcb0eb54dead01225203cf8d7"
+  }
+}
