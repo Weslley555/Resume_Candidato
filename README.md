@@ -1,4 +1,4 @@
-# Resume Candidato 2026 — em desenvolvimento
+# Resume Candidato 2026 ( Em desenvolvimento )
 
 🔗 **Site:** [Resume Candidato](https://resume-candidato.vercel.app/)
 
