@@ -1,0 +1,1265 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002540694",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:69dc40fb842fb8bc6c169b725067024849a1d729645dad8827b3f7473c9cc089",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T22:18:45.507Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aprovar uma PEC de Transição baseada na PEC do Equilíbrio Fiscal para promover a desindexação de benefícios previdenciários e assistenciais do salário mínimo (corrigindo-os apenas pela inflação), a desvinculação dos pisos de saúde e educação da receita, a revisão do abono salarial e a redução de renúncias fiscais.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Celebração de acordos bilaterais com Estados Unidos e União Europeia para garantir compromissos de compra de longo prazo (off-take agreements) e transferência tecnológica em processamento de terras raras.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criação de mecanismo de risco compartilhado entre setor público e privado e estruturação de garantias e seguros contra retaliações e instabilidades.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criação de planta-piloto de separação e refino de terras raras e expansão de projetos voltados ao domínio da cadeia do minério aos ímãs permanentes.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar a Base Agro-Bio Nacional para unificação de acervo de dados agropecuários e viabilização de robótica e drones agrícolas movidos por inteligência artificial brasileira.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o Projeto Abaporu como laboratório nacional de inteligência artificial com capital privado majoritário e governança independente, além de instituir Zonas Econômicas de Alta Inteligência (ZEAIs).",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar Zonas Econômicas Especiais (ZEEs) com estímulos fiscais (suspensão de direitos aduaneiros e regime específico de IBS/CBS), agências administrativas ágeis (one-stop shops) com aprovação de licenças em até 15 dias, e infraestrutura de classe mundial dedicada para atrair indústrias.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desdolarizar a América do Sul com a criação de uma cesta de moedas sul-americana liderada pelo real brasileiro, linhas de swap entre bancos centrais e cooperação monetária regional, posicionando o real como reserva de valor.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver três polos industriais iniciais no Nordeste: o Polo Industrial de Suape em Pernambuco (focado em hidrogênio verde e petroquímica), o polo interestadual Pecém (Ceará) e Araripe (Pernambuco) (especializado em aço de baixo carbono, cadeia do gesso e fertilizantes), e Aratu-Camaçari na Bahia (direcionado à mobilidade elétrica, baterias e semicondutores).",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecimento de consórcio de financiamento liderado pelo BNDES, reunindo entes públicos e investidores privados, com uso de Parcerias Público-Privadas para infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecimento de fundo soberano ou instrumento de estabilização de preços para proteger a receita de flutuações no mercado internacional.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecimento de zonas econômicas especiais (ZEEs) dedicadas ao processamento e manufatura de componentes de terras raras, com incentivos fiscais e regulatórios para atrair investimento direto estrangeiro qualificado.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Executar e ampliar o Plano Nacional de Fertilizantes, regulamentar a Política Nacional de Minerais Críticos e Estratégicos com licenciamento acelerado para fosfato, potássio e nitrogênio, e construir marco de exploração mineral em terras indígenas.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Firmar acordos de cooperação técnica com o Japão para desenvolvimento de manufatura de ímãs permanentes e parcerias com Índia, Canadá, Vietnã e Taiwan para governança e integração tecnológica.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementação de cronograma faseado para marcos legais, mineração, planta-piloto, operação comercial e expansão na manufatura de ímãs e semicondutores.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar um arcabouço de Zonas Econômicas Especiais para levar desenvolvimento a regiões com vantagens comparativas locais, e explorar terras raras para integrar o Brasil a cadeias produtivas globais.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar um plano de ajuste fiscal ainda no período de transição entre governos.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 5
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar uma Zona Econômica Especial de Terras Raras para verticalizar a cadeia produtiva nacional por meio de regime tributário favorável, transferência de tecnologia por offset, condições de financiamento, centro de P&D e formação profissional.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Incentivar a agroindústria por meio de Zonas Econômicas Especiais, linhas de crédito do BNDES condicionadas a metas de exportação, acordos comerciais bilaterais e reorganização do Plano Safra.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integração do Brasil às cadeias americanas de semicondutores e defesa por meio de instrumentos de financiamento para minerais críticos e equivalentes europeus.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Mobilização de recursos financeiros via BNDES, agências americanas, fundos verdes europeus e capital privado para investimentos na área ao longo de uma década.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir impostos sobre empresas de tecnologia, facilitar distribuição de stock options e maximizar investimentos em venture capital.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Utilização do retorno financeiro da exploração de terras raras para financiar projetos de infraestrutura, segurança pública e saúde.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar a ENER (Escala Nacional de Estratificação de Risco) para organizar a fila do SUS com base em critérios de gravidade clínica, risco de progressão, impacto funcional, vulnerabilidade social e tempo de espera, em substituição à ordem cronológica.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar o PRONTO (Prontuário Eletrônico Nacional Interoperável), adotar o modelo Hub-and-Spoke para centros regionais de referência, criar o FNMA (Fundo Nacional de Modernização do Acesso) com repasses condicionados ao desempenho e elaborar plano de isenções fiscais vinculadas a atividades esportivas.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implementar um sistema digital de saúde inspirado no DoctorSV com telemedicina, diagnósticos por IA, monitoramento clínico, vigilância epidemiológica preditiva em tempo real, integração do projeto Genomas Brasil ao prontuário eletrônico e alcançar média de 80% de resolução na atenção primária.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Integrar inteligência artificial para melhorar e democratizar os serviços de saúde, substituir a fila cronológica por prioridade de risco e adotar um sistema tecnológico com interface de inteligência artificial similar ao DoctorSV de El Salvador.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "A Lei Antifacção determinará o poder da polícia de peticionar o banimento judicial de organizações criminosas, a proibição de símbolos e atuação coordenada de membros, a dissolução de entidades públicas ou privadas infiltradas, a retirada de direitos políticos e civis e restrição de liberdade de locomoção de associados, a concentração de competência em tribunais especializados e a inversão do ônus da prova no confisco de bens.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Adotar um desenho processual estratégico com recursos sem efeito suspensivo automático, prazos improrrogáveis de 30 dias em primeira instância e 60 em tribunais, criação de Comissão Nacional de Classificação, instituição de um GAECO colegiado no Ministério Público, proteção jurídica de agentes públicos, federalização de casos de facções, intervenção federal em estados com controle territorial faccional e emprego das Forças Armadas via GLO.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 12
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Aplicar o Direito Penal do Inimigo como arcabouço legal para o desmonte do crime organizado e o fim dos crimes de rua, além de decretar estado de defesa, aumentar penas, alterar o ciclo das polícias e modificar o ingresso na carreira policial.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Criar a Zona Econômica Especial de Defesa (ZEED) no eixo Vale do Paraíba (SP)-Itajubá (MG), focada em ciberdefesa, sistemas autônomos e tecnologia aeroespacial, com governança conjunta das Forças Armadas para reduzir a dependência de importações estratégicas.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Declarar no primeiro dia de mandato uma Guerra ao Crime com a adoção imediata do Direito Penal do Inimigo, por meio de sucessivos decretos de Estado de Defesa em áreas sob comando de facções e de uma Lei Antifacção.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fim das invasões de propriedade rural, revogação de norma ministerial sobre o tema, instrução às polícias para repressão de invasões e endurecimento da legislação penal sobre esbulho possessório.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer a Base Industrial de Defesa (BID) expandindo a capacidade produtiva e tecnológica, investindo em ciberdefesa e tecnologias emergentes, e criando modelos de financiamento sustentável.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Proteger as fronteiras integrando a expansão da tecnologia SISFRON de vigilância, presença estatal permanente, cooperação internacional com vizinhos, desenvolvimento sustentável e adaptação a riscos ambientais.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Realizar a retomada territorial das cidades dominadas pelo crime organizado por meio da institucionalização da segurança pública, modernização institucional e presença estatal.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reconquistar o controle de portos, aeroportos e fronteiras com scanners tridimensionais, inteligência integrada e sistemas de monitoramento aéreo, espacial e amazônico, além de transferir lideranças condenadas para superpresídios de segurança máxima em regiões remotas.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Redefinir o combate ao narcotráfico como questão de segurança nacional de nível militar, criando um Pacto Interamericano contra o crime organizado liderado pelo Brasil, com Centro de Operações Central na América Latina e tribunal internacional especializado.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Tipificar penalmente o crime de favelização direcionado a organizadores de ocupações ilegais, prevendo demolição administrativa em 48 horas de construções não habitadas em área pública ou de risco.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Utilizar drones, totens de denúncia, patrulhamento autônomo, reconhecimento facial e dados genéticos para combater a criminalidade urbana, e implementar leis específicas para aumentar penas contra reincidência e roubos de eletrônicos.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Racionalização e simplificação dos processos de licenciamento ambiental para exploração de minérios com base na legislação vigente.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Abolir o sistema de cotas na educação brasileira e em geral.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Adotar o sistema fônico de alfabetização de forma universal, fundamentado na BNCC e na Política Nacional de Alfabetização.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 31
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar a competência da União para adotar o modelo de escolas civis-militares em instituições localizadas em regiões com elevada criminalidade ou graves problemas disciplinares.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 31
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar um programa de retenção de talentos para mitigar a fuga de cérebros no país por meio da aliança entre produção, empreendedorismo e educação de ponta.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Estabelecer um ranking oficial de disciplina escolar para modular o Valor Aluno Ano Resultado (VAAR), destinando mais recursos e premiando gestores de escolas mais ordeiras.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar uma reforma na educação superior substituindo a autonomia universitária por uma perspectiva de alinhamento estratégico.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Impor um sistema de ranqueamento das escolas mais violentas e estabelecer um código de conduta disciplinar para estudantes, com previsões de sanções objetivas e punições para comportamentos inadequados.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 31
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Mitigar e adotar progressão continuada parcial até sua revogação, criando instrumentos alternativos para a retenção de alunos em sala de aula.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 31
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Priorizar o ensino básico em relação ao superior, ampliar vagas de STEM nas universidades, substituir cotas universitárias por bolsas por mérito, universalizar o modelo educacional do Ceará na educação básica e fundamental e restaurar a ordem nas salas de aula.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Realocar recursos atualmente investidos em cursos bacharelescos para a área de STEM, substituir o sistema de cotas por bolsas de mérito, criar faculdades alinhadas às necessidades de desenvolvimento industrial e estabelecer centros de pesquisa universitários voltados para terras raras e tecnologia.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 31
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reter, formar e repatriar jovens talentos para contribuir com o desenvolvimento tecnológico do país.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reunificar o Ministério da Cultura com o Ministério da Educação.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Submeter materiais didáticos do MEC a auditoria técnica com participação da Embrapa e universidades para garantir representação factual do agronegócio.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 42
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Aumentar o investimento estatal em infraestrutura condicionado à reforma administrativa e fiscal prévia, mobilizar capital privado por meio de concessões, PPPs e autorização ferroviária, e capacitar engenheiros e órgãos públicos municipais.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Favorecer políticas de incentivo para instalação de datacenters e arcabouço regulatório para exportação de inferência computacional.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Priorizar obras e modais específicos, estabelecendo meta mínima de 40 mil km de malha ferroviária, conclusão das ferrovias Alcântara-Açailândia e FIOL, início da Ferrogrão e Transoceânica, expansão de portos no Norte e Nordeste, conectividade aeroportuária regional e novo marco regulatório de transmissão de energia, retomada de Angra 3 e hidrogênio verde.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Renovar modais de transporte, expandir a malha ferroviária, retomar obras interrompidas em portos e aeroportos, aproveitar o potencial energético da matriz limpa e elevar os investimentos em infraestrutura de 2% para pelo menos 4% do PIB.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Adotar a Iniciativa Sentinela para monitoramento mensal por satélite de áreas urbanas e periurbanas, e reformar o Minha Casa Minha Vida para redirecionar recursos para aquisição de imóveis em áreas já estruturadas.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Emitir títulos de desfavelização na forma de mortgage de 50 anos com juros subsidiados e criar o Cadastro Fundiário Unificado Nacional integrando bases municipais, cartoriais e ambientais com georreferenciamento.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Implementar estratégias de ZEEs para reurbanização e desfavelização, combinando desenvolvimento vertical de uso misto, integração vertical de cadeias produtivas, governança com segurança integrada e fundos de retenção de riqueza, estruturadas em fases de segurança inicial, limpeza urbana, infraestrutura básica e implementação da ZEE.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Promover a desfavelização integral do Brasil em dez anos, transformando as 12.348 favelas em bairros formais por meio do Marco Nacional da Desfavelização.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Auditoria e produtivização dos hectares destinados à reforma agrária, condicionando novos assentamentos a níveis de produtividade e alterando critérios de seleção para priorizar o exercício de atividades agrárias.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Substituir o Bolsa Família por frentes de trabalho remuneradas para a população em idade economicamente ativa.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Substituir o programa Bolsa Família por um modelo de Frentes Cidadãs, no qual beneficiários participam de projetos para o bem público como forma de incentivar a inserção no mercado formal de trabalho.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 21
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adicionar medidas do caderno do CDPP à PEC de Transição, incluindo a racionalização do superávit financeiro, a reforma do funcionalismo público com fim dos supersalários, mudanças nas emendas parlamentares, redução de isenções fiscais e uma nova lei complementar das finanças públicas para substituir o arcabouço fiscal.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aplicar punições proporcionais e imediatas aos municípios com desempenho crítico, incluindo Tutela Gerencial com dupla assinatura para gastos, Inelegibilidade Superveniente e Cassação por Improbidade Gerencial para gestores reincidentes.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprovação de Proposta de Emenda à Constituição (PEC) que declare as terras raras questão de segurança nacional para blindar a política setorial.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar a Lei de Responsabilidade Gerencial para condicionar recursos partidários e elegibilidade de políticos a metas objetivas de desempenho em indicadores econômicos e sociais, como saneamento, saúde, educação e emprego.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar o Comissariado Federal de Gestão Pública, autarquia especial vinculada ao Ministério da Fazenda, para alocar Comissários Municipais no território com autonomia técnica e mandatos fixos para assessoria e fiscalização em tempo real de recursos federais.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estabelecer um novo contrato social e institucional para realinhar os incentivos do Estado em torno da projeção geopolítica, recuperação territorial e construção de capacidades estratégicas.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Instituir um Marco Gerencial Nacional com sistema de metas baseado em resultados setoriais, integridade de gestão e eficiência fiscal, permitindo intervenções graduais do poder federal em municípios inadimplentes.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Operar a governança dos polos industriais por meio de Parcerias Público-Privadas e Consórcios Públicos quando houver cruzamento de fronteiras estaduais.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Permitir ao STJ decretar a dissolução imediata de administrações capturadas pelo crime organizado ou milícias, extinguindo o mandato e colocando o município sob gestão de comissão extraordinária federal por até 24 meses.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover a Grande Consolidação Municipal, programa federal de fusão de municípios inviáveis em unidades administrativas com escala suficiente para serviços de qualidade, tomando como referência os amálgamas municipais da UFPB e critérios objetivos de viabilidade fiscal, geográfica, econômica e urbana.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover reforma nas licitações com fortalecimento dos Tribunais de Contas, profissionalização de quadros técnicos, consórcios entre pequenos municípios para PPPs, implementar a Lei Geral do Licenciamento Ambiental e integrar formalmente EVTEA e EIA desde a pré-viabilidade.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reduzir o número de municípios e reequilibrar o pacto federativo.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Retomar a discussão sobre a aplicação rigorosa da PEC 188/2019 com critérios de sustentabilidade financeira para a manutenção de municípios e criar um Marco Legal da Consolidação Municipal com limites de população, contiguidade geográfica, mesma unidade federativa e complementaridade econômica e fiscal.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Substituir a Lei Complementar 91/97 por uma nova lei disciplinando o Fundo de Participação dos Municipios (FPM), criar autoridades multimunicipais com base no Estatuto da Metrópole e integrar processos de emancipação e fusão às regras da Lei de Responsabilidade Gerencial.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Vincular o repasse do Fundo Partidário e do Fundo Eleitoral à qualidade gerencial dos mandatários, premiando legendas com gestores competentes e retendo recursos de partidos que sustentem prefeitos cassados ou com indicadores vermelhos.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Adotar o pragmatismo como princípio de política externa, rejeitando alinhamentos ideológicos automáticos e estabelecendo uma estratégia internacional institucionalizada.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Alcançar autonomia completa do ciclo de combustível nuclear, incluindo a capacidade de reprocessamento, para uso como ativo estratégico de deterrência e garantia de soberania.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Alterar a Lei Rouanet instituindo critérios objetivos de avaliação de projetos, publicação de pareceres técnicos, teto progressivo de captação para grandes faturamentos, editais para novos talentos e reserva percentual para primeira obra.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implementar uma doutrina de política externa com 13 propostas estratégicas, incluindo o posicionamento do Brasil como árbitro do Sul Global por meio de diplomacia ativa na África, Ásia e América Latina.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 44
+        },
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Liderar a América do Sul por meio de mecanismos de integração multilateral, mantendo autonomia estratégica frente a grandes potências.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Manter uma estratégia pragmática no BRICS+ para extrair benefícios de mercados, investimentos e cooperação tecnológica, preservando a autonomia decisória do Brasil.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Modernizar a legislação de tombamento e gestão do IPHAN, reformar o IBRAM com descontingenciamento de folha e parcerias com Organizações Sociais, e alterar editais do cinema nacional para priorizar a viabilidade comercial.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "opor-se a propostas de regulação da mídia e da internet que reduzam a liberdade de expressão e criar um Código Unificado de Imprensa para disciplinar o setor.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Promover a integração lusófona para transformar Portugal, Angola, Moçambique e outros países de língua portuguesa em parceiros estratégicos com cooperação econômica e defesa coordenada.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Revisar os critérios de fomento via Lei Rouanet e promover a fusão entre o Ministério da Educação e o Ministério da Cultura.",
+      "referencias": [
+        {
+          "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+          "pagina": 6
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 1
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 2
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 3
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 4
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 5
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 6
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 7
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 8
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 9
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 10
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 11
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 12
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 13
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 14
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 15
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 16
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 17
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 18
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 19
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 20
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 21
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 22
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 23
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 24
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 25
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 26
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 27
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 28
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 29
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 30
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 31
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 32
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 33
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 34
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 35
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 36
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 37
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 38
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 39
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 40
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 41
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 42
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 43
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 44
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 45
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 46
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 47
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 48
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 49
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 50
+    },
+    {
+      "sha256": "cdece60b71117c7820dbf90a7d795f76f3b1d1aaa5ebb8ce11f47e9ca6227b5a",
+      "pagina": 51
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T22:18:45.520Z",
+    "conteudoHash": "1aecb871a8ff2f530b56e1de6731f4022952dc5ef60aa299feddbdd1ae21b7b0"
+  }
+}

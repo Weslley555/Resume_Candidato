@@ -1,0 +1,1022 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002541457",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:0b9def2f6c33957e07c7b537d1c4b2c56a56d0e235223c49efac4a7da9fb3822",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:41:19.001Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aplicar taxação fortemente progressiva sobre os lucros de empresas bilionárias e controlar a conta de capitais e o sistema financeiro com os grandes bancos.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aplicar tributação fortemente progressiva sobre lucros empresariais e taxação ampliada sobre remessas de capital ao exterior; instituir imposto progressivo sobre grandes fortunas (a partir de R$ 1 bilhão); encerrar benefícios fiscais e tributários a grandes empresas; isentar o Imposto de Renda para quem recebe até dez salários mínimos, atualizando a tabela a partir de 1996 e aplicando alíquotas progressivas após esse limite; cobrar a dívida ativa de grandes empresas com a União sob pena de expropriação; proibir as Bets, expropriar seu capital e proprietários para direcionar a um fundo público de saúde para tratamento de ludopatia, proibindo bancos de realizar transações financeiras para essas empresas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 27
+        },
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criação de plataformas públicas nacionais de transporte, entrega, comércio eletrônico, microtarefas e freelancer, geridas por conselhos de trabalhadores e usuários, com garantia de ganhos superiores às privadas, contribuições públicas opcionais para previdência e direitos, condições preferenciais para pequenos empreendimentos e integração com os Correios.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 9
+        },
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criação de redes locais de produção, concessão de crédito público direcionado sem intermediação privada com juros baixos, subsídios ao pequeno produtor incluindo isenção de impostos, seguro agrícola e políticas contra endividamento, além de regulação e proteção do mercado interno com preços mínimos, estoques reguladores e compras públicas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Destinação de verbas do Banco do Brasil para a agricultura familiar, quilombola e indígena.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Direcionar investimentos para ampliar a base produtiva, articular produção e consumo, e converter ganhos tecnológicos em redução da jornada de trabalho.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expropriação das grandes propriedades rurais e empresas do agronegócio sem indenização aos grandes grupos e sob controle dos trabalhadores rurais, fim dos subsídios públicos bilionários ao grande agronegócio e redirecionamento de recursos para a soberania alimentar.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expropriação de bilionários herdeiros de famílias escravocratas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expropriar empresas estratégicas em setores dependentes de recursos naturais, como mineração, petróleo, energia, siderurgia e derivados de petróleo, além de controlar o topo da hierarquia do agronegócio.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fim da escala 6x1 e redução da jornada para 36 horas semanais, em escala 4x3, sem redução de salário.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fim da escala 6x1 sem redução de salários e direitos, sem pejotização e sem demissões; redução da jornada de trabalho para 36 horas sem redução salarial; aumento de 100% no salário mínimo rumo ao valor calculado pelo Dieese; bolsa equivalente a um salário mínimo para desempregados enquanto não houver pleno emprego; revogação da reforma trabalhista, da lei das terceirizações e da reforma da Previdência; correção anual e atualização integral da tabela do Imposto de Renda.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fim das terceirizações e garantia de salário igual para trabalho igual nos serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Garantia de salário igual para trabalho igual, combate à desigualdade salarial e proteção social e de direitos trabalhistas para todas as trabalhadoras, formais, informais e desempregadas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Limitar em 25% a distribuição de dividendos das grandes empresas privadas remanescentes, com reinvestimento obrigatório do excedente no território nacional; expropriar integralmente a produção nacional de ouro e metais preciosos estratégicos para incorporação às reservas cambiais públicas; criar fundos públicos de investimento produtivo abastecidos pelos excedentes das empresas expropriadas; tornar os bancos públicos 100% estatais e reestruturados para uma estratégia nacional de desenvolvimento.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Prioridade à produção de alimentos da cesta básica com apoio à diversificação agrícola para abastecimento interno sem transgênicos e agrotóxicos, incentivo à transição para agricultura popular e agroecológica, desenvolvimento de tecnologias públicas de defensivos e controle de pragas, produção nacional de maquinário agrícola e fortalecimento de cooperativas e associações.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Punição severa, com multas de caráter confiscatório ou expropriação, a empregadores que estimulem ou tolerem racismo nos locais de trabalho.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Realização de reforma agrária com transferência do controle das terras para os trabalhadores rurais, demarcação de terras indígenas e quilombolas, desapropriação de áreas utilizadas para especulação fundiária, latifúndios improdutivos, áreas griladas, monoculturas de exportação, propriedades subutilizadas e terras sob controle do capital financeiro.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Realizar a expropriação imediata de grandes empresas privadas dos setores de mineração, petróleo, energia, siderurgia, celulose e das grandes comercializadoras e centralizadoras do agronegócio, incorporando seus ativos ao patrimônio público nacional; proibir a privatização de empresas estratégicas e reverter as privatizações já realizadas; tornar a Petrobras 100% estatal e sob controle dos trabalhadores; destinar prioritariamente os excedentes dessas empresas à criação e expansão de setores de alta complexidade tecnológica, infraestrutura digital, química fina e defesa; criar uma empresa estatal de terras raras sob controle dos trabalhadores.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reconhecimento de vínculo empregatício e direitos para trabalhadores de aplicativos, com piso salarial para jornada de 36 horas ou remuneração mínima por entrega, fiscalização pública e transparência de algoritmos.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Responsabilização de bancos, fintechs e plataformas digitais por mecanismos de prevenção a fraudes e restituição imediata de valores desviados em fraudes eletrônicas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Assegurar assistência médica gratuita e de qualidade no SUS para pessoas com deficiência.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantia de educação sexual, contraceptivos e aborto legal, seguro e gratuito pelo SUS, além de licença parental compartilhada de um ano.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir investimento na saúde especializada para pessoas LGBTQIAPN+, incluindo direito à terapia hormonal e à cirurgia de redesignação pelo SUS com acompanhamento adequado, além de políticas de prevenção de ISTs e tratamento para pessoas com HIV, especialmente nas periferias.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir um SUS público, universal, gratuito e 100% estatal, com fim da gestão privada e de Parcerias Público-Privadas, proibição de transferência de leitos para planos privados, ampliação do investimento na atenção básica e em saúde mental, contratação por concurso público, produção pública de medicamentos e expansão da rede de hospitais, UPAs e UBS.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Combate a milícias e bandos paramilitares organizados por agentes do Estado, com expulsão de envolvidos, dissolução de batalhões milicianizados, punição de políticos envolvidos e proibição de retorno a cargos públicos.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Combate ao crime organizado, máfias, milícias e facções por meio de investigação, inteligência, desarticulação de negócios, atingindo patrimônio, fontes de financiamento e relações com agentes públicos, políticos, empresários e sistema financeiro.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Confisco de bens obtidos por atividades criminosas e por corrupção, punição de agentes públicos envolvidos com organizações criminosas e dissolução de grupos milicianizados no Estado.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Contrária à redução da maioridade penal.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Defesa da liberdade de organização e dos direitos econômicos e democráticos da base das polícias.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Defesa de mudanças para garantir direitos democráticos da população à segurança efetiva, incluindo medidas para coibir a violência policial e ampliar o controle social sobre as instituições.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Descriminalização das drogas e revogação da Lei Antidrogas, acompanhadas de políticas públicas de prevenção, tratamento e redução de danos.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Desmilitarização da Polícia Militar e reversão da militarização das demais polícias e guardas municipais.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Estímulo à auto-organização da população para garantir a própria segurança diante da criminalidade e da violência do Estado.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fim da Justiça Militar e punição exemplar para tortura, execuções, desaparecimentos forçados, chacinas e outros crimes praticados por agentes do Estado, responsabilizando comandantes.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fim da privatização dos presídios e promoção de desencarceramento em massa.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Garantia de direito de organização e sindicalização dos policiais, com controle popular sobre as instituições de segurança pública.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantação de câmeras corporais para todos os agentes de segurança pública com gravação ininterrupta e armazenamento sob controle civil.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Investigação e punição de corruptos e corruptores.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Unificação das polícias em uma única instituição de caráter civil, com eleição de comandantes e delegados pela população e mandatos revogáveis.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Desenvolvimento de planos de prevenção contra os efeitos do aquecimento global, incluindo prevenção contra enchentes e deslizamentos em áreas de risco, criação de planos de emergência e defesa civil com participação comunitária, impedimento da ocupação do solo pela especulação imobiliária, reflorestamento urbano e defesa de rios e recursos hídricos privatizados.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fim dos créditos públicos e subsídios estatais ao grande agronegócio, recuperação de áreas desmatadas e biomas devastados, reparação e demarcação imediata de terras indígenas, titulação de territórios quilombolas, proteção de comunidades tradicionais, reconhecimento e reparação de populações atingidas por crimes ambientais, garantia do direito à autodefesa de comunidades e militantes ambientalistas, oposição à exploração de petróleo da Margem Equatorial e rejeição à privatização dos rios da Amazônia e das hidrovias.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 15
+        },
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar oportunidades de emprego, estudo e cotas, garantir intérprete de Libras nas universidades e meios de comunicação, e instalar espaços que abafem ruídos para autistas com sensibilidade auditiva, em especial nas escolas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementação efetiva da lei sobre o ensino de história e cultura afro-brasileira e indígena na rede de ensino.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incentivo ao processamento da produção por famílias camponesas, promoção da educação no campo, combate ao analfabetismo e valorização dos saberes locais.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Manutenção e ampliação de cotas para negros nas universidades e serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Oferta de creches e escolas públicas, gratuitas e em tempo integral para todas as crianças.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover educação sexual nas escolas e implementar o fim do financiamento de comunidades terapêuticas e manicômios.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Zerar verbas públicas para empresários da educação, eliminar PPPs, terceirizações e aquisições de materiais privados, revogar a BNCC e o Novo Ensino Médio, rejeitar militarização e plataformização, valorizar profissionais com carreira e salários dignos, ampliar vagas em creches, escolas e universidades, garantir permanência estudantil e estabelecer um sistema único de educação.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fim dos subsídios públicos às empresas privadas de transporte, ampliação e integração da rede de ônibus, metrô e trem, garantia de qualidade, manutenção adequada, ampliação do número de linhas, redução do tempo de deslocamento da população trabalhadora, prioridade para o transporte coletivo sobre o individual e condições dignas de trabalho para os trabalhadores do setor.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Garantia de infraestrutura rural nos assentamentos, como moradia, água, energia e estradas, além de assistência técnica e garantia de comercialização para permanência no campo.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Garantir acessibilidade com rampas e elevadores para cadeirantes nos serviços públicos, bancos e supermercados.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implementar plano nacional de obras públicas para geração de empregos, universalização do saneamento, construção de escolas, hospitais, creches e infraestrutura ambiental.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Tarifa zero no transporte público, estabelecimento de transporte estatal sob controle público e dos trabalhadores, estatização dos sistemas de transporte urbano, reversão das concessões privadas e oposição à privatização de metrôs, estradas e ferrovias.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 13
+        },
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Expropriação dos imóveis urbanos abandonados, ociosos ou destinados à especulação imobiliária, implementação de plano diretor com garantia de acesso a serviços e direitos, IPTU progressivo com isenção para baixa renda e participação popular no planejamento urbano.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Fim dos despejos de famílias sem alternativa habitacional, construção massiva de moradias populares e infraestrutura por empresa pública de obras, urbanização das periferias e comunidades populares, universalização do saneamento básico, garantia de infraestrutura, transporte, educação e saúde nos bairros populares.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Combate à intolerância às religiões de matriz africana e contra a criminalização das culturas periféricas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criminalização da lgbtfobia, oferta de casas-abrigo e proteção para vítimas de violência, e garantia de direito ao nome social sem burocracia e sem taxas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Expropriação imediata e sem indenização de fazendas do agronegócio que atuem sobre territórios indígenas e quilombolas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantia de direitos às trabalhadoras domésticas e enfrentamento ao genocídio da população negra.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantia de direitos trabalhistas plenos aos assalariados do campo com equiparação aos direitos urbanos, combate efetivo ao trabalho análogo à escravidão com fiscalização rigorosa, punição exemplar e expropriação de empresas infratoras sob controle dos trabalhadores, fim da terceirização e da informalidade rural, e garantia de condições de trabalho seguras com equipamentos de proteção e políticas de saúde e segurança.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantia de proteção real para as mulheres, com delegacias especializadas abertas 24 horas, casas-abrigo e rede de atendimento sob controle da população.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implantação de restaurantes populares e lavanderias públicas em todos os bairros, bem como ampliação dos serviços públicos de cuidado para idosos e pessoas com necessidades especiais.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar cotas trans nas universidades e concursos públicos rumo ao pleno emprego, criar banheiros multigênero em órgãos públicos, garantir o direito de pessoas trans e não binárias ao uso de banheiros seguros, e oferecer emprego, qualificação profissional e políticas públicas para travestis e transexuais que queiram sair da prostituição.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Organização de comissões de mulheres nos locais de trabalho, estudo e moradia para prevenir e enfrentar a violência.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Prioridade de acesso ao emprego e a políticas públicas para mulheres trabalhadoras, em especial as mais precarizadas e mulheres negras.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promoção de emprego, renda e moradia para romper ciclos de violência e combate a ideologias misóginas com responsabilização de plataformas que lucram com o ódio contra as mulheres.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Punição efetiva aos agressores e garantia de proteção às vítimas de violência contra as mulheres.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Realização de campanhas massivas de combate à violência nas escolas, locais de trabalho e meios de comunicação.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Revogação da reforma da Previdência, defesa da previdência pública, solidária e universal, garantia de aposentadoria digna para todos os trabalhadores, redução da idade mínima para aposentadoria, valorização real dos benefícios, inclusão de trabalhadores informais e precarizados na proteção previdenciária e combate à privatização da previdência social.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Titulação imediata dos territórios quilombolas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Desenvolver tecnologias recentes, como inteligência artificial, sob controle do Estado, com participação de trabalhadores e pequenas empresas, e incorporá-las ao serviço público e às empresas estatais.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estabelecer gestão democrática da infraestrutura digital por conselhos de trabalhadores com poder de auditoria sobre algoritmos; reduzir automaticamente a jornada de trabalho sem redução salarial proporcionalmente aos ganhos de produtividade por IA; garantir direito à desconexão no trabalho remoto, proibindo disponibilidade permanente; proibir sistemas invasivos de vigilância digital e monitoramento opaco de desempenho.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Proibir a hospedagem de dados governamentais sensíveis em nuvens estrangeiras e vedar contratos que submetam dados nacionais a legislações externas; desenvolver inteligência artificial pública nacional financiada por excedentes de empresas expropriadas, com uso obrigatório na gestão e empresas públicas e opção subsidiada para trabalho por plataformas e consumidores; priorizar o desenvolvimento e uso de softwares livres e bens públicos digitais com universidades e institutos de pesquisa; garantir remuneração continuada a trabalhadores e produtores de conhecimento cujos dados treinem sistemas de IA estatais.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar a gestão dos serviços públicos pelos trabalhadores da área sob controle dos usuários nas comunidades, impedindo privatizações e terceirizações.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Suspender o pagamento da dívida pública aos grandes investidores e realizar auditoria; revogar a Lei de Responsabilidade Fiscal; estatizar o sistema financeiro e centralizar o crédito em um banco único.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Conceder direito imediato à nacionalidade e legalização de papéis para haitianos, bolivianos, venezuelanos, cubanos, angolanos e todos os africanos, garantindo direitos civis, trabalhistas e sociais.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Realizar a demarcação e regulamentação imediata de todas as terras indígenas e assegurar o direito a reparações aos povos indígenas.",
+      "referencias": [
+        {
+          "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+          "pagina": 25
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 1
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 2
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 3
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 4
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 5
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 6
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 7
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 8
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 9
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 10
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 11
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 12
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 13
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 14
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 15
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 16
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 17
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 18
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 19
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 20
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 21
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 22
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 23
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 24
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 25
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 26
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 27
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 28
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 29
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 30
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 31
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 32
+    },
+    {
+      "sha256": "1868565fb0d5de77d40a982a1be07dc7f44f7af7565ee3b40d93b31407d31468",
+      "pagina": 33
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:41:19.013Z",
+    "conteudoHash": "8db8d7eb8e1e6358d1caf0bba0138009fb9f2a3f064ee86a04ffbcec56314bf0"
+  }
+}

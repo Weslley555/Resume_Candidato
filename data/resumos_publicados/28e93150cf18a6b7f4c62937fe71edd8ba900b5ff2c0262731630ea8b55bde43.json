@@ -1,0 +1,861 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002546802",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:28e93150cf18a6b7f4c62937fe71edd8ba900b5ff2c0262731630ea8b55bde43",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:42:15.331Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Acabar com a Lei Kandir, controlar o comércio exterior, eliminar isenções fiscais para grandes empresas privadas e expropriar empresas com dívidas acumuladas em impostos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar empresas estatais de desenvolvimento e produção em alta tecnologia utilizando créditos de dividendos retidos pelo Estado.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Elevar a compensação financeira da mineração para 10% do lucro bruto, direcionar a riqueza mineral para pesquisa e desenvolvimento, e estatizar a mineração sob controle operário e popular.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estatizar as mineradoras, reestatizar a Vale e a CSN, reverter empresas privatizadas, confiscar contas bancárias e dividendos e abrir contas aos trabalhadores e à população.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estatizar o latifúndio, as multinacionais do agronegócio e as grandes redes varejistas, realizar reforma agrária sem indenização, e financiar a produção com assistência técnica aos pequenos produtores.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer bancos de fomento estaduais como o BDMG para oferecer crédito barato a pequenos e médios empresários, utilizando dividendos de empresas estatais para formar caixa e conceder crediário.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Prisão para responsáveis pelos crimes de mineração, indenização a famílias, reassentamento em Congonhas, tombamento da Serra do Curral, e redução da jornada na mineração para 30 horas semanais com aumento salarial.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar políticas de combate a doenças crônicas, atendimento à saúde dos idosos e estruturação da Rede Fhemig com concurso público, sendo contra sua privatização.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar unidades de urgência e emergência, assistência bucal, investir e valorizar a FUNED, e opor-se ao Regime de Recuperação Fiscal.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aplicar o piso da enfermagem para todos os profissionais da área.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar políticas de saúde para as mulheres abrangendo especificidades das mulheres negras, implementar Conselhos Populares para controle dos serviços, fim da terceirização e ampliação da assistência farmacêutica e da Farmácia de Minas.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar políticas específicas de saúde, emprego e renda para a juventude.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Disponibilizar contraceptivos gratuitos sem burocracia nas Unidades Básicas de Saúde, como DIU, pílula anticoncepcional, pílula do dia seguinte e preservativos feminino e masculino.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Encerrar a privatização continuada da saúde, eliminar a gestão privada por OSs e OSCIPs, estatizar hospitais filantrópicos, valorizar salários e plano de carreira e estabelecer carga horária de 30 horas semanais para profissionais da saúde.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Extinguir comunidades terapêuticas, ampliar estabelecimentos públicos de saúde mental (CAPS, CERSAMs, Residências Terapêuticas, Centros de Convivência) com base na reforma antimanicomial e ser contrário à internação compulsória.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Exigir que empresas privadas desenvolvam sistemas de recirculação e captação de água da chuva, e que obras públicas e privadas favoreçam a infiltração para recarga dos lençóis freáticos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Informar imediatamente a população sobre crises de abastecimento de água, cobrar medidas de racionamento, rodízio e tarifação de empresas privadas, e desenvolver programas de educação ambiental.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Manter a COPASA 100% estatal, desenvolver políticas públicas para abastecimento de água em estiagens, incentivar iniciativas populares de preservação de nascentes e captação de águas da chuva.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Proibir a mineração nas Serras que abastecem de água a população da Grande BH.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Utilizar os recursos naturais e a riqueza produzida para garantir a preservação do meio ambiente e vida digna.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Acabar com a terceirização na educação com transição para trabalhadores concursados, realizar concursos com provas práticas para cargos de baixa escolaridade e descentralizar a estrutura educacional fortalecendo conselhos escolares.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar universidades estaduais para formar profissionais em diversas áreas da engenharia.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Eleger o Secretário Estadual de Educação e os diretores das Superintendências Regionais pelos trabalhadores em educação, ampliar acesso a internet e instrumentos tecnológicos, e expandir bibliotecas públicas.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir merenda de qualidade, fim de sistemas de avaliação meritocráticos, integrar redes de proteção à criança e adolescente, aumentar investimentos na UEMG e Unimontes, e assegurar tempo de planejamento coletivo.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar plano de carreira único para professores, universalizar a educação pública, realizar levantamento de demanda para novas escolas, garantir matrícula para todas as crianças e realizar busca ativa das famílias.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incentivar o esporte amador, jogos escolares, ampliar vagas no Ensino Técnico, reduzir o número de alunos por turma, valorizar a cultura com teatros nos bairros e incluir escolas de música e artes no plano de obras.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incentivar pesquisas pedagógicas, promover formação continuada em práticas inclusivas, estruturar salas de tecnologia assistiva, oficializar a Libras e implementar educação bilíngue.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir 30% do total da arrecadação em educação, reverter imediatamente o leilão das 95 escolas e pagar o Piso Nacional do Magistério sem distinção para a jornada de 24 horas e 30 minutos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Oferecer educação sexual laica nas escolas para auxiliar mulheres e LGBTs a compreenderem seu corpo e sua sexualidade.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Realizar auditoria popular e independente para cancelar a privatização da educação, encerrar gestão privada por PPPs, OSs ou Fundações Privadas, destinando verbas públicas exclusivamente para a rede pública.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Realizar campanha educativa contra o machismo nas escolas, zerar o déficit de creches, contratar trabalhadores via concurso público, equalizar grades curriculares e garantir emprego para assistentes de educação básica (ASBs) com direitos de efetivos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar Polos e cidades tecnológicas em cidades minerárias para substituir o modelo primário-predatório por indústrias limpas e de alta tecnologia.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar uma empresa estatal metal-mecânica para produzir veículos de transporte coletivo, com foco em transporte ferroviário como metrô, trens de carga e passageiros.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estatizar as empresas de ônibus, criar uma empresa única de transportes urbanos integrando ônibus, trens e metrôs sob controle de funcionários e usuários, priorizar o transporte metroferroviário e subordinar o rodoviário a ele.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estatizar ou reestatizar empresas chaves de energia, saneamento, água e esgoto.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Apresentar alternativas de moradia para população em áreas de risco com tratamento de esgoto de qualidade, e dar função de moradia popular a prédios e edificações inutilizadas há mais de dois anos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Criar empresa estatal de obras para moradias populares a baixo custo, aplicar percentual fixo do orçamento estadual por 10 anos para zerar o déficit habitacional e controlar preços de aluguéis.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Destinar imóveis públicos recuperados para aluguel social a preço justo (máximo de 1/4 da renda ou sem custo para sem renda) e desapropriar terrenos abandonados há mais de 10 anos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Executar um grande plano de obras públicas para construir casas populares para suprir o déficit habitacional, além de saneamento, hospitais, escolas, creches, espaços culturais, estradas e metrôs.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Implementar banco de terras estatais para finalidade social, regularizar ocupações urbanas, criar moradias para mulheres vítimas de violência e ampliar abrigos com atendimento a pessoas em situação de rua.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Incluir recorte nas políticas habitacionais para garantir moradia em situação emergencial a mulheres vítimas de violência, incluindo mulheres trans.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Obrigar captação de água da chuva em projetos imobiliários, subsidiar placas solares, ampliar tarifas sociais de água e luz, realizar regularização fundiária e remoção emergencial de áreas de risco.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar casas abrigo para acolhimento de mulheres vítimas de violência, incluindo atendimento a mulheres trans.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Assegurar a demarcação, titulação e posse de terras para povos indígenas, comunidades quilombolas e populações tradicionais, respeitando sua cultura e modo de vida, além de combater discriminações como racismo, machismo, lgbtifobia, capacitismo e xenofobia.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar empregos na cidade considerando desigualdades de opressão e proibir desigualdade salarial entre homens e mulheres.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar empregos por meio de um plano de obras públicas para saneamento básico, postos de saúde e escolas, executado por uma estatal 100% pública controlada pelos trabalhadores.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar lavanderias e ampliar restaurantes públicos para garantir o trabalho doméstico pela cidade.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir auxílio emergencial de um salário mínimo para trabalhadores desempregados como medida transitória rumo ao pleno emprego.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Instituir jornada diária de 6 horas (30 horas semanais) para todos.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Proibir demissão imotivada, expropriar sem indenização fábricas e empresas que receberam isenções fiscais e demitirem, garantir estabilidade no emprego por lei e acabar com a precarização do trabalho.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar uma democracia operária através de conselhos populares e estabelecer que os representantes governamentais recebam o mesmo salário de um operário ou professor, com mandatos revogáveis a qualquer momento.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Instaurar Conselhos Populares compostos por eleição direta de operários das principais empresas estaduais para governar o Estado e as principais empresas.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reverter todas as privatizações de empresas ou infraestrutura realizadas pelo governo de Romeu Zema.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Suspender imediatamente o pagamento da dívida do Estado à União e aos banqueiros, e realizar auditoria para apontar desvios e corrupção.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Concentrar fomento cultural em periferias, apoiar artistas de rua, hip hop, cultura LGBTQI+, coletivos, blocos carnavalescos e manifestações populares tradicionais, além de realizar festivais.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Construir centros de referência em defesa de manifestações culturais tradicionais, encerrar a renúncia fiscal do Estado e ocupar espaços públicos para transformá-los em equipamentos culturais.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Construir escolas de artes e ofícios, manter centros históricos, ampliar bibliotecas e casas de cultura, expropriar prédios e coleções de arte particulares para socialização, e oferecer transporte gratuito e horários estendidos para equipamentos culturais.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Criar conselhos populares de cultura por região, aumentar recursos financeiros para a cultura via dívida pública e expropriação, e construir equipamentos e plano de carreira para profissionais da arte.",
+      "referencias": [
+        {
+          "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+          "pagina": 45
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 1
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 2
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 3
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 4
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 5
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 6
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 7
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 8
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 9
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 10
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 11
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 12
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 13
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 14
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 15
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 16
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 17
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 18
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 19
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 20
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 21
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 22
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 23
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 24
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 25
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 26
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 27
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 28
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 29
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 30
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 31
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 32
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 33
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 34
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 35
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 36
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 37
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 38
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 39
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 40
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 41
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 42
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 43
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 44
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 45
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 46
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 47
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 48
+    },
+    {
+      "sha256": "d42aaa94224f405697744b1381fa85ea74639ce46e432b9171514494928ac58b",
+      "pagina": 49
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:42:15.341Z",
+    "conteudoHash": "47ef3479e7c48d46d5d69621962af09a7da7276bc0858e34483fb367e13643c0"
+  }
+}

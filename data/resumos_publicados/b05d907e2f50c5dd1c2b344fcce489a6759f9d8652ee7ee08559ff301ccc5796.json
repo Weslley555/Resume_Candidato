@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002552484",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:b05d907e2f50c5dd1c2b344fcce489a6759f9d8652ee7ee08559ff301ccc5796",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T22:25:19.233Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Garantir segurança e confiabilidade energética, expansão de conectividade, ambiente para indústria, inovação e economia digital, revisão de gastos e subsídios, planejamento plurianual orientado a metas, e transparência de benefícios e avaliação de impacto.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 5
+        },
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover a qualificação e reinserção profissional, o empreendedorismo e o acesso a crédito responsável, além de rede de cuidado para ampliar a participação no trabalho.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover a simplificação regulatória, digitalização e abertura rápida de empresas, segurança jurídica e avaliação de normas, crédito produtivo e garantias, capacitação gerencial e digital, e compras públicas acessíveis a pequenos negócios.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir equipes completas e acesso territorial na atenção primária, coordenação do cuidado e prontuário interoperável, metas de acompanhamento de condições crônicas, vacinação e rastreamento baseado em evidências, saúde da mulher e da criança, promoção de alimentação, sono e hábitos saudáveis, via transparente de avaliação de novas tecnologias, pesquisa clínica e produção nacional, incorporação ao SUS baseada em segurança, eficácia e custo-efetividade, programas comunitários de movimento, uso ampliado de espaços escolares e públicos, prescrição e encaminhamento para atividade física, telemedicina integrada à rede, regulação inteligente de filas, e inteligência artificial como apoio clínico e administrativo com governança, auditoria e privacidade.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 11
+        },
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Promover pré-natal e cuidado materno-infantil, nutrição, vacinação e desenvolvimento infantil, e creches e apoio às famílias vulneráveis.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Atuar na prevenção de abuso e exploração, promover ambiente digital seguro e educação para riscos, e realizar busca ativa de crianças fora da escola.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar sensores, radares, monitoramento remoto, drones e análise de imagens dentro do marco legal, centros integrados de comando e compartilhamento de dados, inteligência sobre rotas e redes, cooperação interestadual e internacional, prioridade a grandes organizações e cadeias de abastecimento, inteligência financeira e patrimonial, rastreamento de lavagem de dinheiro, recuperação de ativos com devido processo, policiamento baseado em evidências, integração de informações e mapas de risco, proteção específica a mulheres, escolas e áreas vulneráveis, separação e gestão de lideranças criminosas, trabalho, educação e qualificação no sistema prisional, inteligência penitenciária e controle de comunicações ilícitas.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 9
+        },
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Assegurar qualidade pedagógica na educação infantil, apoio ao desenvolvimento e às famílias, transição estruturada para alfabetização, alfabetização na idade adequada, recomposição de aprendizagem e avaliação frequente com intervenção pedagógica.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Expandir a formação técnica conectada às vocações regionais, orientação de carreira e aprendizagem profissional, e estabelecer parcerias com o setor produtivo e ensino superior.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 7
+        },
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Valorizar e apoiar professores por meio de formação inicial e continuada baseada em evidências, carreira, liderança escolar, boas práticas, redução de burocracia e apoio pedagógico, além de promover tecnologia e inteligência artificial com uso responsável, pensamento crítico, ciência, resolução de problemas, educação financeira, cidadania e competências digitais nas escolas.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Desenvolver infraestrutura e logística com foco em rodovias e manutenção baseada em desempenho, ferrovias, hidrovias, portos e cabotagem, além de concessões, PPPs e planejamento de longo prazo.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar atendimento integrado e humanizado, promover a integração entre saúde, assistência, segurança e justiça, estabelecer protocolos de risco e acompanhamento de reincidência, além de orçamento orientado a resultados, painel público de indicadores e avaliação de impacto sobre mulheres e crianças.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 3
+        },
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar governo digital com identidade e serviços digitais integrados, princípio de pedir dados uma única vez, atendimento multicanal, gestão por metas e evidências com objetivos anuais públicos, painéis de desempenho, avaliação e encerramento ou reformulação de programas ineficazes, compras públicas rastreáveis, dados abertos em linguagem simples, gestão de riscos e prevenção de fraude, formação e liderança no serviço público, gestão de desempenho com critérios objetivos, mobilidade de talentos e equipes de missão, pactos com estados e municípios, transferências associadas a indicadores, e consórcios e compartilhamento de soluções.",
+      "referencias": [
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 13
+        },
+        {
+          "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+          "pagina": 14
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 1
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 2
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 3
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 4
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 5
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 6
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 7
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 8
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 9
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 10
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 11
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 12
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 13
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 14
+    },
+    {
+      "sha256": "6390152c66285558ecd5459f4f73f3f65650beb77022b14e7750190b1b536d68",
+      "pagina": 15
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T22:25:19.238Z",
+    "conteudoHash": "6ccb40eb6d186665fbb6be1b85f4f2f2df738d42214e7721eceef335aa72dada"
+  }
+}

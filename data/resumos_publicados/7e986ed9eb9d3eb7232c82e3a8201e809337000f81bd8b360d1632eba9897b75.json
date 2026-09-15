@@ -1,0 +1,2523 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002544411",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:7e986ed9eb9d3eb7232c82e3a8201e809337000f81bd8b360d1632eba9897b75",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:22:15.394Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Atrair empresas, realizar testes, metrologia, compras de inovação e proteção intelectual na área de ligas e materiais de desempenho.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Atrair investimentos para criar Zonas de Processamento de Exportação (ZPE) Privadas no entorno de portos secos e fluviais integrados a ferrovias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Condicionar apoios e incentivos públicos a critérios como adicionalidade, capital executado, transferência de tecnologia, metas de emprego, desenvolvimento local, mercado, padrões socioambientais e de integridade, com previsão de devolução de benefícios em caso de descumprimento.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 90
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Conectar a produção de motores elétricos ao Sul de Minas e Itajubá para mobilidade, indústria, defesa e testes de aplicação.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar um ecossistema de geociência digital, rede de laboratórios, plantas-piloto e cem demonstradores orientados às lacunas da cadeia mineral-industrial.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar uma plataforma de coordenação reunindo governo, universidades, centros tecnológicos, empresas, investidores e municípios, dotada de carteira de projetos, mapa de competências, agenda regulatória, infraestrutura crítica, desafios tecnológicos, qualificação e articulação internacional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver o núcleo mineiro do MagBras, P&D, prototipagem e qualificação de fornecedores para a produção de ímãs.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver polos de pesquisa em ciência dos materiais, robótica industrial e engenharia de materiais para transformar a matriz industrial para além do extrativismo de baixo valor agregado.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 93
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Diversificar parceiros, estabelecer seguros, PI e coordenação federal para mitigar riscos de retaliação ou dependência tecnológica, e aplicar metas, clawback, auditoria e divulgação para capturar incentivos na mineração.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 76
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Elevar a formalização, qualidade técnica, segurança e rastreabilidade da pequena mineração com assistência técnica regional, laboratórios compartilhados e rito proporcional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Elevar a renda e o emprego privado por meio de políticas de fornecedores, formalização, qualificação e produtividade, reduzindo a dependência de transferências e ciclos de obra.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Entregar carteira de projetos qualificados, dados interoperáveis, licenciamento por risco e combate à ilegalidade na extração de terras raras.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estruturar a Plataforma Mineira da Cadeia da Mina ao Ímã, apoiar a separação química, refino, ligas, ímãs, motores e aplicações, mobilizar universidades e empresas e preparar Minas Gerais para integrar a ZEE nacional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Financiar o Programa Vinhos Gerais com recursos do Fundo Estadual de Turismo, Fundo Estadual de Cultura, Lei Estadual de Incentivo à Cultura, ICMS Turismo, convênios federais e parcerias público-privadas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Formar um banco de projetos qualificados, caracterização mineralógica e metalúrgica, e dados de massa e impurezas até 2028.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implantar a Rede Mineira de Enoturismo, valorizar a enocultura mineira com eventos e festivais, capacitar profissionais do setor, fortalecer pequenos produtores, integrar vinho e gastronomia regional e impulsionar a economia local.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar medidas para dobrar o aproveitamento econômico de resíduos e estabelecer projetos compartilhados contratados até 2030.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 88
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar o Programa Vinhos Gerais para integrar enocultura, enoturismo e desenvolvimento regional, articulando produtores, municípios, ensino e iniciativa privada.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar projetos demonstradores com energia de baixo carbono, água, resíduos e controle de impurezas no refino.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instalar a Plataforma da Mina ao Ímã, mapear projetos, laboratórios e locais candidatos à planta-piloto, além de lançar dez desafios tecnológicos e política de dados e propriedade intelectual em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integrar a cadeia com o Vale do Lítio para processamento químico, circularidade e formação técnica em baterias e componentes.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integrar extração, separação química, refino, ligas, ímãs, motores, baterias e semicondutores, e apoiar o MagBras, a planta-piloto 2029-2030, o FGAM, o BNDES, off-take e transferência tecnológica sob liderança federal.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integrar sistemas da Receita Estadual com vigilâncias sanitárias para liberação automatizada de ICMS por inteligência artificial para empresas conformes integradas a shortlines, além de exigir check-in digital cruzado.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Mapear demanda, aplicações, potenciais compradores e padrões de qualidade até 2028.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Mapear territórios, selecionar os primeiros 100 atendimentos e realizar pilotos de rastreabilidade na pequena mineração em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "O agronegócio mineiro alinhará a tradição do campo às práticas de sustentabilidade e tecnologia de ponta, tornando o estado uma referência em eficiência agrícola e conservação ambiental.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 94
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Organizar carteira estadual de projetos e capacidades para parcerias federais com diversos países.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Posicionar Minas Gerais como um centro relevante no desenvolvimento e aplicação de tecnologias da informação e da comunicação no cenário internacional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 96
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Posicionar o Estado como plataforma da política nacional de terras raras e minerais críticos por meio da Plataforma Mineira da Mina ao Ímã, núcleo na Zona de Processamento de Exportação e planta-piloto de separação e refino.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 71
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Preparar áreas, licenças, infraestrutura, governança e incentivos estaduais compatíveis para Zonas Econômicas Especiais, atuando com a União sem criar ZEE estadual juridicamente fictícia.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Preparar materiais, sensores, motores e P&D para semicondutores e defesa sob governança federal competente.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Preparar o núcleo estadual da Zona de Processamento de Exportação (ZEE) federal de Terras Raras, abrangendo projetos, terrenos, infraestrutura, licenças, centros de P&D e formação.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Preparar projetos bancáveis para BNDES, FGAM, Finep, Embrapii e parceiros externos até 2028.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir retrabalho, padronizar exigências, facilitar investimento regular e combater privilégios sem desempenho.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Simplificar tecnicamente e digitalizar processos de licenciamento ambiental para obras de expansão viária por meio de um sistema Fast-Track.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Tratar fosfato, fertilizantes, inteligência artificial, dados geológicos, drones, robótica e energia limpa como pontes entre a política mineral, a soberania alimentar e a economia computacional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Atender casos específicos sem necessidade de internação em rede conveniada ambulatorial específica ou mediante compra de serviços, usando como referência valores da tabela da Unimed-BH.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar incentivos fiscais para empresas que concedam benefícios como o Gym Pass aos funcionários.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar protocolos estaduais baseados em consensos de especialistas das Sociedades Brasileiras de Especialidades para orientar decisões judiciais.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Encaminhar para a fila de regulação de internação hospitalar apenas os casos indicados por especialistas, exceto urgências.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Estimular polos de especialidades por meio de hospitais regionais ou particulares conveniados para resolver média e alta complexidade localmente, otimizar a Fhemig e construir hospitais regionais em vazios assistenciais como Norte, Nordeste e Jequitinhonha.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fornecer órteses e próteses (OPMEs) diretamente ao paciente conforme normas da ANS.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implantar prontuário integrado baseado no GOV.BR para acesso a dados clínicos e laboratoriais em todos os níveis de atenção.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implantar uma central de telemedicina de urgência on-line com médicos contratados via concurso público ou consórcio.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter a fila por risco/fila viva na CORE/MG e reforçar a Central Estadual de Regulação, implantando mesas de especialidades pendentes.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "O estado avançará nos indicadores de qualidade de vida e longevidade e, com o suporte de investimentos do Fundo Soberano Mineiro, apoiará tecnologias disruptivas voltadas a estender a fase adulta da vida e postergar o envelhecimento celular.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 95
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Permitir acesso a serviços secundários e terciários apenas mediante acompanhamento prévio na atenção primária ou em casos de urgência e emergência, notificando pacientes classificados como cor verde ou não vinculados.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Tornar interoperáveis os dados de risco mineral, defesa civil, emergência, saúde ocupacional e vigilância territorial para priorização por risco, sem criar política de saúde paralela.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Utilizar telemedicina para consultas com especialistas lotados nas CRASS de cada macrorregião, contratados por concurso ou consórcio.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Aprimorar a gestão da segurança pública por meio da integração de informações, controle de divisas e combate aos crimes patrimoniais e organizados.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 95
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 96
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Construir o complexo CECOT GERAIS para fortalecer o sistema prisional, modernizar a administração penitenciária com investimentos em tecnologia e inteligência, capacitar policiais penais, combater comunicações ilícitas nos estabelecimentos penais e integrar o sistema prisional aos órgãos de segurança pública.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Construir superpresídio em Minas Gerais para isolar lideranças em regiões remotas, no modelo CECOT de El Salvador.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Decretação da Guerra ao Crime.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Garantir fiscalização anual de estruturas críticas de mineração, integração com a defesa civil, testes de emergência e disponibilização de informação pública por meio de cadastro integrado de estruturas e plano de ação de emergência.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar um modelo permanente de governança da informação com integração entre as bases de dados da Segurança Pública, da Saúde e de outros órgãos de estatísticas criminais, utilizando sistemas interoperáveis, protocolos unificados e auditoria permanente para fortalecer a inteligência e orientar políticas públicas baseadas em evidências.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar uma Muralha Digital com integração de câmeras de leitura de placas (OCR) e inteligência artificial conectadas às polícias para o cerco a veículos roubados nas rodovias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar 14 Missões Estratégicas que incluem: criar o Centro Mineiro de Inteligência Contra o Crime Organizado integrado com a Polícia Federal, Polícia Rodoviária Federal e outras instituições; combater a estrutura financeira do crime com ampliação da recuperação de ativos; recuperar territórios vulneráveis a facções (Minas sem Domínio Criminoso); integrar a segurança das divisas com estados vizinhos; estabelecer política permanente de valorização de carreiras e qualificação; promover saúde integral e proteção institucional com programa de saúde mental e protocolos de mediação de conflitos; equipar forças de segurança com foco na perícia oficial; atualizar formação para a nova criminalidade; implantar o Sistema Estadual Integrado de Inteligência Criminal (Minas Inteligente); ampliar o videomonitoramento inteligente integrado com sistemas municipais; fortalecer drones e aeronaves para segurança pública e proteção ambiental; fortalecer a Polícia Civil e a perícia oficial com foco na cadeia de custódia da prova; promover a prevenção integrada da violência fortalecendo os Conselhos Comunitários de Segurança Pública; e realizar gestão por resultados e transparência.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 20
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 21
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Investir em formação continuada, tecnologia, equipamentos modernos, infraestrutura, proteção jurídica, assistência à saúde física e mental, prevenção ao adoecimento psicológico, desenvolvimento profissional e diálogo sobre a valorização das carreiras, observando as possibilidades fiscais e o equilíbrio das contas públicas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Mobilizar polícia, inteligência financeira e cooperação federal contra lavra clandestina, roubo de minério, fraude documental, receptação, invasão, lavagem de ativos, uso irregular de explosivos e controle territorial por organizações criminosas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Publicar lista única de estruturas críticas, calendário de inspeções e mapa de prontidão municipal em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reduzir a distância remuneratória entre a base e o topo da carreira da segurança pública para construir uma estrutura mais equilibrada, reduzindo distorções históricas e reconhecendo o mérito.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Tratar o enfrentamento ao crime organizado como prioridade absoluta desde o primeiro dia de governo, atuando em coordenação com as políticas nacionais de segurança pública e mobilizando a estrutura operacional estadual para ações extraordinárias da União.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Valorizar agentes de segurança pública por meio da revisão de políticas remuneratórias para reajuste salarial e fortalecimento dos planos de carreira.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Alinhar a produção mineral às demandas da sustentabilidade global, tornando o estado fornecedor de insumos estratégicos para a matriz energética do futuro.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 96
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 97
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Criar uma plataforma estadual de inteligência mineral-ambiental com centro de inteligência, mapa de risco operacional e alertas automáticos para priorizar equipes de campo e fiscalizar alterações, conflitos e descumprimentos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Dobrar o aproveitamento econômico de resíduos e reduzir intensidade hídrica e de carbono na mineração com balanço hídrico digital, atlas de rejeitos e chamadas de circularidade.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 73
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Exigir fechamento progressivo de minas, criação de garantia financeira ambiental proporcional à obrigação não executada e inventário de minas abandonadas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Publicar inventário preliminar de minas abandonadas e minuta de garantia financeira na frente de fechamento em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Publicar linha de base preliminar e carteira de dez demonstradores de água e circularidade em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Abrir a escola à comunidade, credenciar tutores voluntários, garantir ensino religioso facultativo e tornar público o que se ensina por meio do programa Aldeia Mineira.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 13
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Apoiar institucionalmente a regulamentação federal da educação domiciliar e garantir acesso desimpedido à certificação de conclusão por exame e vagas de EJA.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Conectar a expansão de STEM, mérito, disciplina, laboratórios, escolas técnicas e retenção de talentos às cadeias de química, metalurgia, geologia, automação, materiais e manufatura.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Consolidar consórcio entre UFOP, UFMG, UFVJM, CDTN, Senai e outras instituições para P&D, bolsas e laboratórios até 2028.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver rede de laboratórios, plantas-piloto e formação em química, metalurgia e segurança de processos para a separação química de terras raras.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Encerrar o professor designado como regra, criar residência docente e bonificar a progressão de aprendizagem por meio do programa Mestre de Minas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 13
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Expandir STEM, ensino técnico, mérito, engenharia, geologia, química, metalurgia, dados e manutenção industrial.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Financiar o Programa Florescer Cultural combinando recursos do Fundo Estadual de Cultura, Lei Estadual de Incentivo à Cultura, ICMS Patrimônio Cultural, convênios federais, emendas parlamentares, parcerias público-privadas e organismos internacionais.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Formalizar a abertura de quadras escolares nas noites de dias de semana e finais de semana por meio do programa Escola Aberta ao Esporte, permitindo o uso pelos alunos e pela comunidade com Termos de Uso Compartilhado, iluminação e monitoramento.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir alfabetização na idade certa, recuperação do tempo integral e painel público de monitoramento por meio do programa Minas Sabe.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 13
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar um cronograma explícito de formação motora por fase escolar, dividindo em alfabetização motora nos anos iniciais do ensino fundamental com rodízio pelas seis unidades temáticas da BNCC, exploração orientada nos anos finais do ensino fundamental pelas 19 modalidades do Aluno-Atleta e especialização por afinidade no ensino médio.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 27
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 28
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir em formação docente por meio de duas trilhas remuneradas por bolsa vinculada ao ICMS Esportivo: a Trilha do Professor Generalista, para qualificar profesores de educação física nas seis unidades temáticas da BNCC, e a Trilha do Treinador, para certificar professores e voluntários nas 19 modalidades do Aluno-Atleta e em esporte adaptado.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 29
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Manter o Pacto Mineiro pela Alfabetização, Compromisso Nacional Criança Alfabetizada, Busca Ativa Escolar, Trilhas de Futuro com oferta mínima de 50 mil vagas técnicas, Simave, Programa de Recomposição das Aprendizagens, rede Colégio Tiradentes, escolas cívico-militares e cronograma do concurso de 2025.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Minas Gerais construirá uma rede de ensino pautada pelo rigor acadêmico, preparando os estudantes para os desafios da economia do conhecimento em todas as macrorregiões.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 94
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ofertar atividades culturais permanentes no contraturno escolar, fortalecer a identidade cultural nas escolas, criar rede estadual de formação artística, incentivar o protagonismo juvenil e integrar cultura e comunidade utilizando espaços escolares.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Operar protocolo único de resposta a agressão e indisciplina grave com prazos para as Superintendências Regionais de Ensino e assistência jurídica pela Advocacia-Geral do Estado para servidores agredidos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Qualificar 15 mil pessoas, certificar 500 fornecedores e criar trilhas de alta complexidade para a cadeia mineral por meio da Academia Cum Mente et Malleo e bolsas por mérito.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 72
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 73
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reconhecer formalmente o status de aluno-atleta em nível estadual, garantindo abono de faltas para competições oficiais, adaptação de calendário de provas, acompanhamento pedagógico individualizado e recuperação de conteúdo perdido.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Vincular benefício habitacional estadual à frequência e progressão escolar dos filhos e à corresponsabilidade dos responsáveis por meio do programa Casa que Educa.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 13
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "A ampliar a rede de linhas de transmissão com novos circuitos de alta tensão dedicados ao escoamento dos parques eólicos de altitude, expandindo a capacidade eólica.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 94
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Apoiar a terceirização do Centro de Controle de Operações de trens, integrar portos fluviais e secos, mapear invasões residenciais com drones para reassentamento habitacional prioritário, exigir cancelas automáticas em passagens em nível e permitir a construção de contornos ferroviários em trechos urbanos bloqueados.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Atrair e autorizar pelo menos R$ 3 bilhões em investimentos privados para reconstrução e operação de linhas férreas regionais de curto percurso (shortlines) nos primeiros 3 anos, viabilizando o funcionamento de ao menos 5 novos ramais até o fim do mandato.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Automatizar passagens em nível críticas com cancelas inteligentes integradas ao trânsito local e firmar acordos para construir ao menos 3 contornos ferroviários privados em cidades com traçados bloqueando o centro urbano.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Conceder imediatamente, sem outorga, o Porto Fluvial de Pirapora e os terminais do Triângulo Mineiro na hidrovia Paraná-Tietê com foco no investimento privado em modernização.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar consórcios privados para que cooperativas e indústrias invistam na pavimentação de trechos estaduais em troca de isenções ou compensações de tributos estaduais.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar o Balcão Único Logístico por meio da unificação de órgãos estaduais para conferir celeridade aos licenciamentos e estabelecer licenciamento ambiental sumário, com prazo máximo de 60 dias, para projetos que utilizem faixas de domínio de ferrovias já existentes ou desativadas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar plano de contingência para rodovias, ferrovias e hidrovias menos lucrativas utilizando modelos de Parcerias Público-Privadas (PPPs) com fiscalização.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar Postos de Parada Segura para caminhoneiros por meio de incentivo fiscal e parcerias com concessionárias, contando com iluminação, monitoramento e presença policial.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Enviar à Assembleia Legislativa Projeto de Lei criando o Marco Legal Ferroviário de Minas Gerais com outorga por autorização direta por até 99 anos via contrato de direito privado e fim da outorga onerosa.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estruturar a logística do estado com foco em eixos ferroviários de carga e passageiros, modernizar hidrovias e portos, restabelecer concessões rodoviárias com exigência de investimentos em duplicação e desburocratizar a emissão de autorizações, alvarás e licenciamentos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estruturar e homologar os Centros de Controle Operacional (CCO) das ferrovias estaduais sob o modelo de segregação vertical e terceirização em até 24 meses.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Executar saneamento, mobilidade, saúde, defesa civil e infraestrutura que ultrapassem fronteiras municipais por meio de consórcios regionais.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 82
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Facilitar a abertura de Centros Logísticos e Industriais Aduaneiros (CLIAs) privados integrados a trilhos regionais e garantir por decreto estadual o direito de acesso ferroviário com pátios de transbordo rodoferroviário obrigatórios.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implementar transporte regional ferroviário de passageiros integrado com rodoviárias, aeroportos e portos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Intervir juridicamente para destravar o Direito de Passagem (Open Access) de shortlines autorizadas junto às malhas tronco federais no primeiro ano de operação de cada ramal.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Mapear a infraestrutura estadual prioritária para o primeiro lote de concessões e estruturar isenções fiscais para pavimentação de estradas rurais e adesão a ferrovias e portos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Mapear energia, água, acesso, efluentes, resíduos e logística para locais candidatos a projetos de terras raras até 2028.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Mapear vinte gargalos e dez projetos compartilhados de infraestrutura em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Permitir que empresas que investirem na reconstrução de vias operacionais desativadas deduzam até 50% do valor investido do ICMS a recolher, com carência de 3 anos, e criar uma câmara de mediação logística para assegurar o direito de passagem das shortlines.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Planejar corredores compartilhados que conectem minas, plantas de refino, polos industriais, ferrovias, portos e comunidades, mapeando gargalos e projetos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 73
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Planejar corredores minerais como infraestrutura multimodal e compartilhada, com benefício público, rateio transparente, segurança urbana e integração a ferrovias, rodovias, energia, água e conectividade.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Planejar corredores minerais-industriais e infraestrutura compartilhada com benefício público e rateio transparente.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Promover a transição de um modelo minerador para uma economia diversificada e de base tecnológica, consolidando uma rede urbana integrada para conectar a infraestrutura regional e nacional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 93
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Realizar concessões rodoviárias pelo modelo de menor tarifa, combinadas com gatilhos de investimentos rápidos como duplicação e terceira faixa obrigatórias antes do início da cobrança.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Realizar mapeamento por drones de trechos urbanos invadidos nos eixos das shortlines e reassentar famílias em situação de risco em parceria com os municípios em até 18 meses.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Reconverter academias ao ar livre em Centros de Calistenia equipados com barras de puxada, paralelas e estações com o peso do próprio corpo, dotados de iluminação e monitoramento por câmeras.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Redesenhar o ICMS Esportivo para priorizar a manutenção, iluminação de LED e monitoramento por câmeras das instalações já existentes em detrimento da construção de novas quadras.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Reduzir o tempo médio de liberação de licenças para obras de infraestrutura para o prazo máximo improrrogável de 90 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Reduzir o tempo médio de trâmite de cargas estaduais dentro dos portos secos para o teto máximo de 4 horas por meio de digitalização e auditoria eletrônica.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Retomar o escoamento comercial de cargas pelo Porto Fluvial de Pirapora, alimentado por nova linha férrea de grãos do noroeste mineiro, até o fim do mandato.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Substituir gradualmente praças de pedágio físicas por sistemas de cobrança eletrônica por quilômetro rodado (Free Flow Universal).",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Transferir à iniciativa privada 100% dos lotes rodoviários economicamente sustentáveis em Minas Gerais nos primeiros 24 meses.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Vedar o financiamento de folha permanente com renda mineral temporária e fasear o custo público incremental condicionado ao espaço fiscal.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Viabilizar a abertura de 3 novos terminais aduaneiros (CLIAs) intermodais integrados a ferrovias regionais em até 3 anos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Viabilizar a implantação de pelo menos 10 Polos Estratégicos de Descanso Seguro para caminhoneiros nas principais rotas de escoamento.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Priorizar saneamento, drenagem, urbanização, mobilidade e segurança em municípios mineradores através do Pacto CFEM Legado.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Apoiar municípios dependentes na criação de reserva, regra de saque e limite de despesa permanente.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 82
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Concluir o mapa inicial de competências e abrir trilhas prioritárias com parceiros na frente de pessoas em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o Programa Bolsa Vitalidade para subsidiar total ou parcialmente o acesso de idosos à rede de academias privadas credenciadas, com componente de indicação pela atenção básica de saúde.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 31
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar planos regionais em seis territórios e pactos integrados em 20 municípios-piloto, articulando mineração, indústria, serviços públicos e pós-mineração.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 73
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 74
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Desenvolver o aplicativo Vitalidade Ativa, contendo biblioteca de vídeos explicativos de exercícios de calistenia organizados por nível de dificuldade e com trilhas específicas para idosos e estudantes.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a rede de assistência social para garantir amparo aos cidadãos em situação de vulnerabilidade e assegurar a sustentabilidade dos fundos públicos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 97
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir paridade de gênero exigindo que escolas com equipe masculina em modalidade do Aluno-Atleta mantenham equipe feminina equivalente, e estabelecer continuidade paralímpica com ao menos uma equipe paralímpica ou de esporte adaptado por regional nas SREs.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 29
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Minas Gerais estruturará um ambiente social favorável às famílias e ao envelhecimento ativo, garantindo coesão social e qualidade de vida.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 95
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promover uma política social focada na cidadania, na dignidade e na emancipação das pessoas por meio de programas de assistência.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 97
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adotar diretrizes de governança que incluem exigência de base legal para condicionantes, inspeção em estruturas críticas, planejamento para fechamento de minas, acompanhamento de projetos com indicadores, metas e transparência em incentivos, além de apoio à mineração formal e combate à lavra clandestina.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 88
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 89
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adotar diretrizes transversais na gestão cultural para reduzir a burocracia, simplificar procedimentos para artistas e municípios, ampliar a transparência, integrar instrumentos estaduais e instituir avaliações periódicas de desempenho com indicadores públicos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adotar mecanismos de governança, integridade e anticaptura que incluem registro de reuniões, identificação de beneficiário final, declarações de conflito de interesse, cláusulas de clawback, auditoria externa anual e proteção ao parecer técnico.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 87
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aperfeiçoar o Fundo Estadual de Cultura (FEC) por meio da agilização de editais, descentralização regional de recursos, ampliação da previsibilidade orçamentária, alinhamento ao Plano Estadual de Cultura e avaliação periódica de projetos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aperfeiçoar o ICMS Patrimônio Cultural revisando critérios de pontuação, valorizando resultados na preservação de patrimônio material e imaterial, reduzindo exigências documentais, alinhando avaliações ao Plano Estadual de Cultura e estimulando boas práticas de gestão.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aplicar metas objetivas, contratos de gestão, painéis públicos, avaliação independente e consequência administrativa aos programas, parcerias e pactos de CFEM.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aplicar regras de priorização e corte que priorizam projetos de segurança e risco crítico, vinculam continuidade de programas à existência de linha de base e indicadores, reavaliam benefícios fiscais anualmente com cláusula de desempenho, e condicionam obras de infraestrutura à demanda e manutenção.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 86
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Atribuir peso adicional na pontuação do repasse do ICMS Esportivo para municípios do Norte de Minas, Jequitinhonha, Mucuri e Vale do Rio Doce, proporcional ao IDHM e à menor capacidade fiscal própria.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Auditar retrabalho e termos de referência, bem como publicar matriz provisória de risco e critérios de fila no licenciamento em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Avaliar projetos por entrega física e resultado social, instituindo auditoria de desempenho.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 82
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Consolidar dados de prazo, estoque de processos, estruturas, CFEM, passivos, inovação, pessoas e infraestrutura como linha de base nos primeiros 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar Contas Individuais Soberanas no Fundo Soberano Mineiro para todos os mineiros, oferecendo autonomia sobre rendimentos mensais para suplementar a renda do trabalho ou resgatar em períodos de transição ocupacional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 96
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar um Balcão Único Mineral-Ambiental com ID Único de Projeto Mineral, protocolo reaproveitável e agenda comum de análise para promover interoperabilidade, com investimento de R$ 60 a 110 milhões em quatro anos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 69
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Cumprir 14 metas para o primeiro mandato entre 2027 e 2030, incluindo a sanção da Lei do Aluno-Atleta, recadastramento de quadras e instalações esportivas, implantação de ligas amadoras, concessão de subsídios a idosos e conversão de academias ao ar livre.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 38
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 39
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Definir seis regiões operacionais preliminares e vinte municípios-piloto em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Desenvolver modelo de consórcio, propriedade intelectual, acesso a dados, integridade e segurança até 2028.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Desenvolver o Portal CFEM Legado, pacto municipal voluntário e fundo estadual de legado para induzir padrões na aplicação de royalties minerais em infraestrutura, saneamento, educação, segurança e diversificação fiscal.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estruturar a governança e implantação em fases dos programas Aluno-Atleta, ICMS Esportivo remodelado, Bolsa Vitalidade, Centros de Calistenia, Escola Aberta ao Esporte e Minas Ao Ar Livre ao longo de três fases temporais.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 35
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Executar a agenda mineral de forma territorial por meio de recortes operacionais preliminares sujeitos a validação técnica nos primeiros 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir transparência de ponta a ponta sobre entradas de recursos, projetos contemplados, fornecedores, entregas físicas e alteração de indicadores nos municípios mineradores.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 82
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar gestão por metas, indicadores, custos, prazos, auditoria e contratos de gestão para dirigentes e programas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar matriz estadual de risco, termos de referência padronizados e condicionantes com nexo para reduzir o tempo e o retrabalho em projetos de baixo e médio risco e elevar a qualidade técnica e a transparência em decisões de alto risco.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar roteiro crítico entre 2027 e 2030, estruturando governança, linha de base, pilotos e marcos legais em 2027; escalando ID único, matriz de risco e garantias em 2028; consolidando capacidade com planta-piloto e reprocessamento em 2029; e entregando sistemas permanentes e avaliação independente em 2030.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar um aplicativo de fiscalização cidadã para denúncias de problemas estruturais, aplicando multas automáticas às concessionárias caso os reparos não ocorram no prazo legal.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Instituir governança gerencial para transformar o plano em contrato operacional entre 2027 e 2030, por meio da criação da Unidade de Entrega Mineral, Matriz Cum Mente et Malleo e plano anual de execução, com investimento previsto de R$ 45 a 75 milhões em quatro anos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 69
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Lançar portal beta, termo de adesão municipal e dez pilotos para a CFEM Legado em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Mapear jornadas, selecionar cinco tipologias-piloto, definir padrão de ID e agenda de interoperabilidade para o Balcão Único em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Organizar a política mineral mineira em torno de regras de melhoria da extração, transformação, conhecimento, fiscalização e conversão de renda mineral em capacidade produtiva, capital humano, infraestrutura e legado territorial.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Priorizar reorganização, interoperabilidade e parcerias, abstendo-se de criar despesa permanente sustentada por receita mineral volátil.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover agenda legal e regulatória incluindo decretos de governo mineral e balcão único, revisão da matriz mineral pelo Copam, e leis na ALMG sobre garantia e fechamento, fundo estadual de legado e incentivo por desempenho.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 86
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Publicar em até 100 dias o decreto da Unidade de Entrega Mineral, competências, rotina de decisão e painel de metas, além de instituir a Matriz Cum Mente et Malleo para avaliar programas, incentivos e projetos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Publicar regras de conflito de interesse, registro de reuniões, beneficiários finais e cláusulas de clawback, e apresentar agenda formal de cooperação à União, ANM, BNDES e Finep em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 85
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar recadastramento estadual obrigatório de instalações esportivas municipais em parceria com prefeituras para criar um mapa atualizado de quadras e parques como pré-requisito de habilitação ao repasse do ICMS Esportivo.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reestruturar o DER-MG para transformá-lo em um órgão regulador e fiscalizador enxuto, com extinção de cargos políticos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Seguir cronograma de implantação entre 2027 e 2030 estruturando a política cultural e lançando o Plano Estadual de Cultura e o Programa Raízes de Minas em 2027, implantando o Florescer Cultural em 2028, expandindo em 2029 e consolidando os programas em 2030.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Selecionar 100 operações prioritárias para o Minas Monitor e contratar prova de conceito com protocolo de evidência em até 100 dias.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Adotar os princípios PAMP na política cultural, visando preservar o patrimônio histórico, artístico e cultural, aperfeiçoar mecanismos estaduais de promoção, manter programas eficientes e promover políticas livres de direcionamentos ideológicos.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Apoiar a União na preparação de projetos e missões técnicas com Estados Unidos, União Europeia, Japão, Índia, Canadá, Vietnã e Taiwan.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Contribuir para o desenvolvimento da engenharia e da exploração espacial brasileira, integrando o setor aeroespacial mineiro.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 97
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Criar o programa Minas Ao Ar Livre para promover o turismo de esporte ecológico associado à conservação ambiental, implementando o selo estadual homônimo para operadores credenciados com registro no CADASTUR e certificação na norma técnica NBR ISO 21101.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 33
+        },
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Elaborar um novo Plano Estadual de Cultura com metas objetivas, mensuráveis, indicadores de desempenho, mecanismos de revisão e foco na avaliação de políticas públicas.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Executar o eixo Raízes para preservar o patrimônio histórico e cultural, valorizar tradições populares, fortalecer a memória dos municípios e estimular a identidade regional.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implementar o Programa Raízes de Minas para reconhecer detentores de saberes tradicionais, instituir calendário estadual integrado de manifestações culturais, incentivar a preservação da memória local, premiar boas práticas municipais e realizar campanhas institucionais de valorização cultural.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Instituir o Programa Novo Ciclo – Raízes, Flores e Frutos, organizado nos eixos de preservação da identidade cultural, formação artística e desenvolvimento econômico por meio da cultura.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Manter em execução contínua o programa Mineirinhos (quadras cobertas em 191 municípios), o Minas Urbano (centros multiuso em 48 municípios), a Lei Estadual de Incentivo ao Esporte ampliada em 2024, os programas Bolsa Atleta e Bolsa Técnico, e os Jogos Escolares de Minas Gerais (JEMG) como espinha dorsal competitiva.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Modernizar instrumentos de promoção cultural por meio da simplificação de procedimentos, fortalecimento da integração e instituição de mecanismos permanentes de monitoramento e avaliação.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Organizar ligas municipais de adultos amadores nas quadras mantidas pelo novo ICMS Esportivo, com acesso e queda entre calendários municipal, regional e estadual.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Simplificar processos de governança do Sistema Estadual de Cultura, fortalecer a assistência técnica aos municípios e padronizar indicadores para monitoramento contínuo das políticas culturais.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Transformar o JEMG em um programa contínuo (Programa Aluno-Atleta) estruturado em temporada esportiva e intelectual, estabelecendo 19 modalidades obrigatórias para oferta com treino regular em escolas estaduais e municipais aderentes, incluindo esportes coletivos como handebol, vôlei e basquete.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Tratar o patrimônio geológico, a Escola de Minas, a engenharia e a memória industrial como elementos de cultura cívica e técnica.",
+      "referencias": [
+        {
+          "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+          "pagina": 78
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 1
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 2
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 3
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 4
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 5
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 6
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 7
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 8
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 9
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 10
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 11
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 12
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 13
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 14
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 15
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 16
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 17
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 18
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 19
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 20
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 21
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 22
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 23
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 24
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 25
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 26
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 27
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 28
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 29
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 30
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 31
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 32
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 33
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 34
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 35
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 36
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 37
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 38
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 39
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 40
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 41
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 42
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 43
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 44
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 45
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 46
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 47
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 48
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 49
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 50
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 51
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 52
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 53
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 54
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 55
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 56
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 57
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 58
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 59
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 60
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 61
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 62
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 63
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 64
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 65
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 66
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 67
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 68
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 69
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 70
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 71
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 72
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 73
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 74
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 75
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 76
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 77
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 78
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 79
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 80
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 81
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 82
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 83
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 84
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 85
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 86
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 87
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 88
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 89
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 90
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 91
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 92
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 93
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 94
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 95
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 96
+    },
+    {
+      "sha256": "277d3eee53e0b0428d11e54c6cfeef5190f97bd86ff07202f52033e788cc5fab",
+      "pagina": 97
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:22:15.417Z",
+    "conteudoHash": "ccf5e6958b842afcd58a4f851f38c2c8a84173bea772c579a6a6389436b0d511"
+  }
+}

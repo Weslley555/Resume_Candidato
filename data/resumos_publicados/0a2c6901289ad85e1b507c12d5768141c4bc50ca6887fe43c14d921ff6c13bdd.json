@@ -1,0 +1,1353 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002548139",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:0a2c6901289ad85e1b507c12d5768141c4bc50ca6887fe43c14d921ff6c13bdd",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T22:20:57.682Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Cumprir a etapa de 2026 de adequação e interoperabilidade dos sistemas estaduais de defesa sanitária com a base federal.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecer salvaguardas e regras de transição para a reforma tributária, incluindo cláusula de revisão automática em caso de frustração de arrecadação, restrições à circulação de dinheiro em espécie e repactuação de transferências constitucionais para estados e municípios.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 13
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 14
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fixar o limite de isenção do Imposto de Renda da Pessoa Física em cinco salários mínimos, com alíquotas progressivas aplicadas a partir desse patamar.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fornecer apoio de custo ao pequeno e médio produtor, priorizando a agricultura familiar de cria na implementação da rastreabilidade.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instalar grupo técnico da reforma tributária com prazo para estudo de impacto orçamentário e envio da PEC da reforma tributária ao Congresso entre sessenta e cem dias de mandato.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instituir o Imposto Único Federal (IUF) incidente sobre movimentações bancárias para substituir nove tributos federais e a contribuição patronal sobre a folha, além de criar mecanismos de devolução para exportações e tratamento específico para cadeias produtivas longas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 12
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 13
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 14
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 15
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 16
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 17
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instituir programa nacional de boas práticas de manejo, transporte e abate em conjunto com o setor produtivo, oferecendo assistência técnica e crédito diferenciado para quem adotar o padrão.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integrar processos de abertura, alteração e baixa de empresas em ambiente único e digital com prazos máximos, e exigir motivação específica para o afastamento de tratamento favorecido ao pequeno porte em compras públicas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Isentar do Imposto de Renda quem ganha até cinco salários mínimos e reduzir a alíquota da CSLL para empresas de pequeno porte.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 12
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 16
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter diplomacia sanitária ativa, com presença técnica permanente em foros internacionais e negociações de acesso a mercados.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter e ampliar status sanitários internacionais com vigilância permanente para febre aftosa, influenza aviária e peste suína clássica, além de adotar protocolo pré-acordado de comunicação rápida ao mercado importador em caso de foco sanitário.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter previsibilidade regulatória com leilões de energia de regras estáveis, utilizar a matriz renovável para atração industrial eletrointensiva, e reduzir encargos setoriais embutidos nas tarifas de energia com transparência.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Oferecer crédito simplificado com redução de exigências documentais, assistência técnica pública com metas de cobertura por região e prioridade em compras públicas de alimentação escolar com prazos curtos de pagamento para a agricultura familiar.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover a antecipação voluntária da rastreabilidade individual em corredores de exportação, com a União financiando parte do custo de brincos e leitores para os produtores.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Recompor o serviço veterinário oficial federal e estadual por meio de concurso público e plano de carreira.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 32
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir o Imposto de Renda da Pessoa Jurídica dos atuais 34% para 25% por meio da extinção da CSLL, cuja alíquota é de 9%.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Substituir os tributos federais que incidem sobre folha, faturamento e produção (contribuição previdenciária patronal sobre a folha, Cofins, CSLL, IOF, IPI, salário-educação, Cide sobre combustíveis e remessas, ITR e contribuições ao Sistema S) por um Imposto Único Federal cobrado automaticamente sobre a movimentação financeira, incidindo em cada lançamento a débito e a crédito em conta.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Utilizar os dados de rastreabilidade para combater o abigeato e a comercialização de produtos de origem ilegal, cruzando as bases com registros de ocorrências policiais.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Atrair profissionais para regiões de difícil fixação por meio de plano de carreira em vez de contratos precários.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Atualizar e testar por simulação o plano nacional de contingência zoossanitária, constituir estoque estratégico de insumos de diagnóstico e imunizantes veterinários, e estabelecer protocolo único de comunicação entre o serviço veterinário oficial, a vigilância em saúde e a defesa civil.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar uma fila nacional única e pública por procedimento cirúrgico e diagnóstico, com critérios clínicos transparentes de prioridade e consulta acessível ao paciente.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Disponibilizar no ar a fila nacional pública de procedimentos eletivos em versão inicial entre sessenta e cem dias de mandato.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Estabelecer obrigatoriedade progressiva de cadastro de animais começando por aqueles atendidos com dinheiro público e comercializados, instituir financiamento federal permanente por meta verificada de castração, integrar o SinPatinhas ao cadastro de infratores por maus-tratos e à vigilância epidemiológica, e criar política federal para o manejo de equídeos abandonados em área urbana.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 27
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Expandir a cobertura de equipes de saúde da família com metas por município e cofinanciamento federal estável e previsível.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a produção nacional de medicamentos, imunizantes estratégicos e insumos de uso veterinário por meio de políticas de compras.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implementar fila única e pública por procedimento com consulta de posição pelo próprio cidadão, além de incluir veterinários nas equipes de vigilância municipal com metas de castração e vacinação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implementar um programa nacional permanente de vigilância de zoonoses com financiamento federal pactuado e meta de cobertura por município, retomar e ampliar campanhas nacionais de vacinação antirrábica animal com cobertura publicada, e criar uma rede nacional de laboratórios de diagnóstico veterinário integrada à vigilância epidemiológica humana.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Induzir a presença de médicos veterinários nas equipes municipais de vigilância em saúde por meio de cofinanciamento e critério populacional, ofertar atendimento veterinário público para famílias de baixa renda, e integrar os registros de atendimento veterinário público à vigilância epidemiológica.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Integrar o prontuário eletrônico entre os níveis de atenção à saúde.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Realizar auditoria pública dos tempos de espera no SUS, publicando os dados em série histórica.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Realizar mutirões de diagnósticos e cirurgias de forma permanente, contratados por resultados entregues.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Revisar a lista de medicamentos gratuitos com base em critérios de evidência e prevenção de internações.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar a capacidade federal de custódia de lideranças criminosas com padrão construtivo único e regime rigoroso de contato, bloquear o sinal de telefonia nas unidades prisionais federais, realizar rodízio nacional de custodiados de alta periculosidade, aplicar regime disciplinar diferenciado com controle judicial e revisão periódica, e instituir concurso e carreira para o pessoal penal federal.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Apoiar a aprovação da PEC nº 18/2025 no Senado e regulamentá-la no primeiro ano, aplicar condicionalidade de perda de acesso a recursos federais discricionários para estados que não alimentarem o Sinesp, estabelecer padrão nacional único e obrigatório de registro de ocorrência com apoio técnico, realizar auditoria independente e anual da qualidade dos dados de segurança, e integrar a base de segurança com bases não policiais mediante lei, registro auditável e responsabilização.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 22
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Apoiar a aprovação da Proposta de Emenda à Constituição nº 55, de 2023, que destina no mínimo 2% do PIB à defesa e vincula ao menos 35% desse valor à modernização.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Articular no primeiro ano de mandato o projeto de decreto legislativo para a realização de consulta popular sobre o modelo penitenciário de segurança máxima, publicar caderno técnico prévio com custos, projeto, regime jurídico e parecer de compatibilidade, realizar a consulta em data que não coincida com eleições gerais, e acatar o resultado da votação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 23
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 24
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Determinar a interoperabilidade das bases federais de segurança pública e condicionar repasses federais de segurança à alimentação das bases nacionais.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Empregar de forma permanente as Forças Armadas na faixa de fronteira, com o poder de polícia da Lei Complementar nº 97/1999, para atuar contra o tráfico de armas, drogas e o contrabando.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Empregar operações de Garantia da Lei e da Ordem com missão, prazo e área delimitados em decreto, com envio de relatório de execução ao Congresso, além de integrar a capacidade militar de inteligência ao trabalho de asfixia financeira contra o crime organizado.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Estabelecer bases permanentes nos trechos críticos da fronteira, com efetivo fixo, concluir e ampliar o sistema integrado de monitoramento de fronteiras, realizar patrulhamento fluvial e aéreo permanente na Amazônia e na Amazônia Azul, e manter cooperação operacional com os países vizinhos.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 50
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fornecer apoio de inteligência, logística, transporte aéreo e sensoriamento às polícias estaduais e federal, sem substituí-las no policiamento ostensivo urbano.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar um cadastro nacional de infratores por maus-tratos a animais até o fim do primeiro ano de mandato integrado às bases de segurança e usado como alerta na avaliação de risco de violência doméstica, criar protocolo padronizado de comunicação entre serviços de proteção animal, conselhos tutelares e delegacias especializadas, e implementar programas territoriais para a juventude em áreas de maior incidência criminal com avaliação de impacto por terceiros.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Manter chefes de facção em presídios federais de segurança máxima sem comunicação, rastrear o dinheiro do crime, reforçar a fiscalização em fronteiras e portos e realizar plebiscito sobre o modelo de presídio de segurança máxima.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Promover a recomposição dos soldos militares concentrada na base da pirâmide, com piso do soldo não inferior ao salário mínimo nacional, recomposição escalonada com maior percentual para soldado, cabo e sargento, e revisão do escalonamento vertical.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 49
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 50
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Promover integração operacional permanente entre a unidade de inteligência financeira, a Receita Federal, a Polícia Federal e o Ministério Público, priorizar orçamento e pessoal para investigação patrimonial de organizações criminosas, utilizar instrumentos de sequestro, alienação antecipada e destinação de bens, e estabelecer cooperação internacional para rastrear ativos no exterior e operações com criptoativos.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 21
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Publicar o caderno técnico do modelo penitenciário de segurança máxima com custo, projeto de referência e parecer de constitucionalidade para instruir consulta popular.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Realizar vigilância eletrônica contínua em trechos críticos de fronteira com sensoriamento remoto e apoio logístico das Forças Armadas, promover escaneamento não invasivo de contêineres nos principais portos com meta pública de inspeção, e implementar controle rigoroso da cadeia de armas e munições legais com marcação e auditoria de estoque.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Utilizar contratos plurianuais de projetos estratégicos protegidos de contingenciamento, priorizar a manutenção e prontidão de equipamentos, exigir conteúdo nacional e meta de exportação na Base Industrial de Defesa, tratar a defesa cibernética como infraestrutura crítica e publicar relatório anual de prontidão por Força.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Combater o desmatamento ilegal com inteligência, rastreabilidade de cadeias produtivas e responsabilização patrimonial, definir prazos e análise técnica de qualidade para o licenciamento ambiental com responsabilização de agentes públicos, e promover ações de adaptação climática voltadas à defesa civil, incluindo a proteção de animais em desastres.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Enviar ao Congresso projeto para regulamentar a exploração mineral em terras indígenas, condicionando-a ao consentimento das comunidades afetadas por consulta prévia, participação econômica direta dos indígenas nos resultados e licenciamento ambiental pleno com proibição de mercúrio e garantia financeira para recuperação de áreas degradadas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 47
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar a rede federal de educação profissional com cursos orientados pela demanda produtiva regional e integrar o ensino médio e técnico a programas de qualificação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Assegurar financiamento estável e previsível à pesquisa com regras plurianuais e fomento direcionado à sanidade animal, zoonoses e imunizantes veterinários.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Enviar ao Congresso a PEC da Pesquisa e o projeto de regulamentação do art. 231, §3º, da Constituição.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Enviar ao Congresso uma Proposta de Emenda à Constituição (PEC) para transformar bolsistas de pesquisa que cumpram requisitos em servidores públicos com carreira, vínculo e salário compatível.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 36
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Estabelecer uma carreira federal de pesquisador com ingresso por processo seletivo público baseado em currículo e produção, requisitos objetivos de permanência, vinculação a instituições de pesquisa e universidades com permissão para lecionar, remuneração equivalente a carreiras federais de mesmo nível, fomento amplo sem exclusão da ciência básica e cláusula de permanência por prazo determinado para beneficiários de financiamento público de formação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Executar programas de qualificação profissional financiados pela União em parceria com o Sistema S e rede federal, com cursos definidos a partir da demanda regional de contratação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir alfabetização até o final do segundo ano com publicação dos resultados por escola, assegurar aulas de educação física estruturadas e disponibilizar bolsa federal direta para atletas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir transparência total dos dados educacionais por escola.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Manter a política federal de alfabetização na idade certa vinculando o apoio técnico e financeiro a resultados aferidos em avaliações externas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Cobrar metas de universalização do saneamento básico indicador a indicador por prestador, e fiscalizar rigorosamente contratos de concessão com aplicação de penalidades.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Executar o programa Brasil nos Trilhos para retomar e concluir corredores ferroviários de carga prioritários, utilizar o regime de autorização ferroviária para construção e operação pelo setor privado com licenciamento rápido, integrar ferrovias a portos, hidrovias e cabotagem, e priorizar investimentos com base no custo logístico por tonelada.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Aprovar regra de aproveitamento do histórico de aluguel como comprovação de capacidade de pagamento e colocar em operação o cadastro público de locação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Assegurar análise automatizada com prazo fixado para financiamentos, livre escolha de imóveis novos ou usados pelos beneficiários em qualquer município dentro de parâmetros de valor, e atendimento com negativa fundamentada e recorrível.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Conceder garantia pública parcial para financiamento de mutuários com histórico de aluguel sem entrada e incentivar a colocação de imóveis vazios, retomados, de estoque parado e da União no mercado.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Direcionar recursos do FGTS e do Sistema Brasileiro de Poupança e Empréstimo para faixas de renda sem acesso a financiamento, com subsídio explícito e orçado, além de reduzir custos de originação por automação, cartório eletrônico e eliminação de exigências documentais duplicadas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 41
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Garantir acesso automático a financiamento habitacional com parcela equivalente ao aluguel pago para quem comprovar capacidade de pagamento pelo histórico de locação, com validação bancária e por cadastro público de locação de adesão voluntária.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Oferecer financiamento habitacional com parcela equivalente ao valor comprovado do aluguel pago, permitindo a escolha de imóvel novo ou usado em qualquer cidade.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Realizar titulação em massa com procedimento simplificado em áreas consolidadas, priorizar a requalificação e ocupação de áreas urbanas com infraestrutura instalada, e prover assistência técnica pública gratuita para reforma e ampliação.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Auditar e publicar no primeiro ano o grau de cumprimento da legislação de unificação de cadastros por CPF em cada órgão federal, estabelecer prazos de regularização com responsabilização de dirigentes, e implementar registros auditáveis de consultas a dados pessoais.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Consolidar declarações trabalhistas e previdenciárias em envio único via eSocial, eliminar exigências duplicadas e estabelecer prazos legais com apuração automática de atrasos e responsabilização administrativa.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 19
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Cumprir efetivamente a legislação de proteção de dados na administração federal com encarregados em cada órgão, reforçar o orçamento e o pessoal da autoridade nacional de proteção de dados, eliminar exigências de documentos já possuídos pelo Estado por meio de fiscalização com cliente oculto, e instituir prazos legais de resposta com deferimento tácito para procedimentos de baixo risco.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 44
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Divulgar a agenda oficial completa do Presidente e do Vice com identificação dos participantes de cada reunião, anexar estimativa de impacto orçamentário e financeiro aos projetos enviados ao Congresso, e publicar currículos e vinculações de indicados a cargos de direção na administração federal.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Manter agenda legislativa pública e priorizada com no máximo cinco projetos por semestre, realizar composição ministerial por critérios técnicos e compromisso programático verificável com publicação de currículos, e vedar negociação de emendas orçamentárias fora de processos públicos e rastreáveis.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover revisão periódica e obrigatória do estoque regulatório com revogação de normas não revisadas, e publicar em formato aberto e em tempo real a execução orçamentária, contratos, metas e painéis públicos de acompanhamento.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Publicar painel aberto de acompanhamento do plano de governo com metas, indicadores e responsáveis nomeados nos primeiros trinta dias de mandato, além de revisar publicamente o plano todos os anos.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Respeitar decisões judiciais com uso de meios processuais e instituir um conselho permanente de articulação com governadores e entidades municipalistas para políticas de execução compartilhada em segurança, saúde, educação e defesa civil.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Revisar o estoque de exigências documentais federais com publicação de lista de eliminação, e colocar no ar painel público de prazos administrativos com responsável nomeado por processo e apuração automática de descumprimento.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Zerar o custo tributário de contratação formal para incentivar a migração da informalidade.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Abrir plataforma de inscrição individual de atletas e paratletas sem intermediação de entidades.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Apoiar a aprovação e o aperfeiçoamento de projeto em tramitação para criar um sistema nacional de proteção animal, incluindo cadastro nacional de animais, cadastro nacional de infratores e fundo próprio.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Condicionar acordos comerciais internacionais à abertura de mercado para produtos brasileiros, responder a barreiras sanitárias ou tarifárias com reciprocidade internacional, exigir contrapartidas em conteúdo nacional, transferência de tecnologia e emprego em investimentos estrangeiros estratégicos, definir posições em foros multilaterais caso a caso por conveniência nacional, e manter diplomacia sanitária e comercial com presença técnica permanente.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 51
+        },
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Consolidar e ampliar a estrutura federal de proteção e direitos animais, dotando-a de orçamento próprio e transparente.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Criar uma rede de centros de treinamento regionais compartilhados, implementar programas de qualificação e certificação de treinadores para regiões carentes, e apoiar a transição de carreira de atletas para a atuação como treinadores na rede pública.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Estabelecer padrão nacional mínimo de carga horária, espaço e material para a educação física escolar, condicionando o cofinanciamento federal ao cumprimento verificado, exigindo formação específica de professores em todas as etapas, avaliações periódicas de aptidão física e jogos escolares estruturados com etapa municipal obrigatória.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Estruturar a fiscalização federal para dar efetividade ao Decreto nº 12.877/2026, garantindo pessoal e equipamentos, integração entre órgãos ambientais, polícias e serviço veterinário oficial, além de inscrição em dívida ativa e cobrança executada de multas.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implementar a Lei nº 15.355/2026 (Amar) por meio do treinamento de equipes de resgate, credenciamento de profissionais habilitados, previsão de centros de triagem e execução prévia aos desastres.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implementar inscrição individual e direta de atletas e paratletas em plataforma federal, estabelecer contratos diretos com a União sem intermediação de federações ou confederações, criar metas objetivas de manutenção, instituir recursos administrativos com prazos e respostas fundamentadas, e publicar listas completas de contemplados.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Induzir, por meio de cofinanciamento, a criação de delegacias e núcleos especializados em crimes contra animais nas capitais e regiões metropolitanas, com protocolo veterinário-forense padronizado.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Revisar a estrutura de valores das bolsas esportivas com base no custo real de treinamento e calendário competitivo, adicionar componentes para equipe técnica, equipamentos e deslocamento, assegurar paridade entre atletas e paratletas, garantir cobertura previdenciária e seguro de acidentes para atletas bolsistas de alto rendimento, e priorizar modalidades não olímpicas e sem patrocínio privado.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Revisar o plano nacional de contingência zoossanitária e submetê-lo a simulação, e criar programa federal de estruturação da fiscalização de maus-tratos com integração entre órgãos ambientais, polícias e serviço veterinário.",
+      "referencias": [
+        {
+          "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+          "pagina": 54
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 1
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 2
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 3
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 4
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 5
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 6
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 7
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 8
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 9
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 10
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 11
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 12
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 13
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 14
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 15
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 16
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 17
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 18
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 19
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 20
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 21
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 22
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 23
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 24
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 25
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 26
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 27
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 28
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 29
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 30
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 31
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 32
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 33
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 34
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 35
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 36
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 37
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 38
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 39
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 40
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 41
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 42
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 43
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 44
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 45
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 46
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 47
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 48
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 49
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 50
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 51
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 52
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 53
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 54
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 55
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 56
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 57
+    },
+    {
+      "sha256": "df2acdb7a6d8b080d6d8a235b8fe8f0d987bf0f24be4f4aa9abc80e4ebb24904",
+      "pagina": 58
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T22:20:57.694Z",
+    "conteudoHash": "3e41dede25263e84f3a34c0bc5a2bb340319afe151879c2c7124871e0b8626a8"
+  }
+}

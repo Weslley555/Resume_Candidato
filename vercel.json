@@ -1,8 +1,37 @@
 {
-  "outputDirectory": "public",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/resumo.js": {
+      "maxDuration": 30,
+      "includeFiles": "{runtime/**,data/resumos_publicados/**}",
+      "excludeFiles": "{snapshots/**,public/**,dist/**,.build-*/**,data/*.json}"
+    },
+    "api/**/*.js": {
+      "includeFiles": "{runtime/**,data/resumos_publicados/**}",
+      "excludeFiles": "{snapshots/**,public/**,dist/**,.build-*/**,data/*.json}"
+    }
+  },
+  "headers": [
+    {
+      "source": "/busca/:arquivo*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/:arquivo*",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/exportacao.json",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    },
+    {
+      "source": "/:arquivo*.html",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
+  ],
   "rewrites": [
     { "source": "/privacidade", "destination": "/privacidade.html" },
     { "source": "/termos-de-uso", "destination": "/termos-de-uso.html" }
   ]
 }
-

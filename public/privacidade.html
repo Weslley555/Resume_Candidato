@@ -150,7 +150,7 @@
         </div>
 
         <h1><span class="icon-img"><img class="img-b" src="icons/cadeado_b.svg" alt=""><img class="img-p" src="icons/cadeado_p.svg" alt=""></span> Política de Privacidade</h1>
-        <p class="subtitulo">Resume Candidato 2026 · Última atualização: 04 de setembro de 2026</p>
+        <p class="subtitulo">Resume Candidato 2026 · Última atualização: 14 de setembro de 2026</p>
 
         <hr>
 
@@ -179,32 +179,39 @@
             </li>
             <li>
                 <span class="tag-nao">NÃO</span>
-                <strong>Armazena histórico de buscas</strong> — as pesquisas são processadas
-                localmente no seu navegador e não são enviadas, registradas ou associadas
-                a qualquer identidade.
+                <strong>Armazena histórico de buscas na aplicação</strong> — os termos digitados para
+                filtrar a lista são processados localmente no navegador. Consultas a fichas,
+                documentos e resumos geram requisições aos serviços; isso é distinto de manter
+                um histórico de buscas.
             </li>
         </ul>
 
         <hr>
 
-        <!-- 3. IP e Rate Limiting -->
-        <h2>3. Endereço IP e Rate Limiting</h2>
+        <!-- 3. Proteção da geração, processamento e retenção -->
+        <h2>3. Proteção da geração, processamento e retenção</h2>
         <p>
-            As rotas <code>/api</code> do projeto utilizam <strong>rate limiting</strong> (limitação de
-            requisições) para proteger o serviço contra abusos automatizados.
+            A nova proteção de geração de resumos utiliza <strong>quotas globais e lock no Redis</strong>,
+            sem usar ou armazenar o IP do visitante nesse controle da aplicação.
         </p>
         <ul>
             <li>
-                O endereço IP de cada requisição é processado <strong>temporariamente</strong> e
-                de forma exclusiva para fins de controle de taxa de acesso.
+                As quotas permitem 20 tentativas por janela de 24 horas e 2 por janela de 60 segundos,
+                compartilhadas entre visitantes. Os contadores expiram em <strong>24 horas</strong> e
+                <strong>60 segundos</strong>, respectivamente; as janelas começam na primeira admissão.
             </li>
             <li>
-                Esse dado é descartado automaticamente em <strong>até 1 minuto</strong>, sem
-                nenhum tipo de persistência em banco de dados ou log permanente.
+                O lock por candidatura e seleção de documentos expira em <strong>60 segundos</strong>.
+                Tentativas admitidas consomem quota mesmo se falharem; não há identificação
+                por visitante nesses registros.
             </li>
             <li>
-                O IP <strong>não é vinculado</strong> a nenhuma busca realizada, candidato
-                consultado ou qualquer outra informação de uso.
+                O repositório também contém um limitador separado por IP em <code>middleware.js</code>;
+                sua presença não comprova que esteja ativo no ambiente publicado. Não se afirma ausência
+                de processamento de IP em toda a aplicação ou infraestrutura. Provedores de hospedagem,
+                Redis e IA podem manter logs técnicos, inclusive dados de conexão quando aplicável,
+                conforme suas próprias políticas. Não estabelecemos prazos de coleta ou retenção
+                não verificados nesses serviços.
             </li>
         </ul>
 
@@ -288,13 +295,15 @@
                 Os resumos são gerados exclusivamente a partir de
                 <strong>documentos públicos oficiais</strong> — as propostas de governo
                 registradas no <strong>TSE</strong> (Tribunal Superior Eleitoral),
-                conforme exigido pela legislação eleitoral.
+                conforme exigido pela legislação eleitoral. Para gerar o resumo, o texto das
+                páginas selecionadas é enviado ao <strong>Google Gemini</strong>.
             </li>
             <li>
-                Os resumos são <strong>armazenados em cache</strong> (Redis, via
-                integração Vercel/Upstash) para evitar reprocessamento desnecessário
-                e reduzir custos de API. Nenhum dado pessoal do usuário é armazenado
-                nesse processo.
+                Os rascunhos e seus metadados são <strong>armazenados em cache por 7 dias</strong>
+                (Redis, via integração Vercel/Upstash) para evitar reprocessamento desnecessário
+                e reduzir custos de API. O cache e a nova proteção de geração não usam IP do visitante.
+                Os prazos de cache, lock e contadores são os TTLs configurados na aplicação,
+                não prazos de retenção dos provedores.
             </li>
             <li>
                 O conteúdo resumido refere-se a <strong>figuras públicas no exercício

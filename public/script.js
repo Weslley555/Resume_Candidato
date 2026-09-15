@@ -1,924 +1,616 @@
-// ==========================================
-// 1. MAPEAMENTO DO DOM (Elementos da Tela)
-// ==========================================
-const inputBusca = document.getElementById('inputBusca');
-const selectUF = document.getElementById('selectUF');
-const selectCargo = document.getElementById('selectCargo');
-const btnPesquisar = document.getElementById('btnPesquisar');
-const areaResultados = document.getElementById('areaResultados');
-const msgResultados = document.getElementById('msgResultados');
-const listaCandidatos = document.getElementById('listaCandidatos');
+import {
+    chaveCanonica, identificadorAPI, hashValido, fmtCentavos, compararBens, estadosDados,
+    valorFinanceiro, publicBase, assetURL, filtrarLista, estadosResumo,
+    selecaoDocumentos, criarControleRequisicao, agruparPropostas, comPrazo,
+    descritorIndice, criarCacheLimitado,
+} from './frontend-helpers.mjs';
 
-// Elementos da Ficha (Dossiê)
-const areaFicha = document.getElementById('areaFicha');
-const btnVoltar = document.getElementById('btnVoltar');
-const btnGerarResumo = document.getElementById('btnGerarResumo');
-const loadingIA = document.getElementById('loadingIA');
-const resultadoIA = document.getElementById('resultadoIA');
+const $ = id => document.getElementById(id);
+const base = publicBase(document.querySelector('meta[name="public-base"]')?.content);
+const placeholder = base + 'icons/candidato-placeholder.svg';
+const fichaControle = criarControleRequisicao();
+const resumoControle = criarControleRequisicao();
+const cacheFichas = criarCacheLimitado(12);
+const cacheDetalhes = criarCacheLimitado(48);
+let listaBusca = [], exportacao = null, metadados = null, ficha = null;
+let documentosResumo = [], resumoOcupado = false, resumoEstado = null;
+let resumoDisponivel = null, resumoVisivel = false;
 
-// Helper: retorna HTML do ícone com versão dupla (_b/_p) para alternar com tema
-function icon(nome) {
-    return '<span class="icon-img"><img class="img-b" src="icons/' + nome + '_b.svg" alt=""><img class="img-p" src="icons/' + nome + '_p.svg" alt=""></span>';
+function elemento(tag, texto, classe) {
+    const el = document.createElement(tag);
+    if (texto != null) el.textContent = String(texto);
+    if (classe) el.className = classe;
+    return el;
 }
-
-// Helper: retorna HTML do ícone com versão fixa (ex: em botões coloridos)
-function iconFixed(nome, versao) {
-    return '<span class="icon-img-fixed"><img src="icons/' + nome + '_' + versao + '.svg" alt=""></span>';
+function texto(value) {
+    if (value == null || value === '') return 'Não informado';
+    if (value === true) return 'Sim';
+    if (value === false) return 'Não';
+    return String(value);
 }
-
-// Disclaimer de IA exibido junto a todo resumo
-const DISCLAIMER_IA = '⚠️ Resumo gerado por Inteligência Artificial a partir do texto oficial da proposta de governo registrada no TSE. Pode conter imprecisões, omissões ou interpretações equivocadas. Consulte sempre o documento original para compreensão completa.';
-
-// ==========================================
-// 2. ESTADO DA APLICAÇÃO (Memória)
-// ==========================================
-let listaBusca = [];
-let dadosCandidatos = null; // Só será carregado quando clicarem em Consultar
-let candidatoAtual = null;
-let dadosExtrasAtual = null; // Dados de api/candidato.js (foto, documentos, financeiro)
-
-// ==========================================
-// BLINDAGEM JURÍDICA — datas e rastreabilidade
-// ==========================================
-
-// URL do Google Forms para reporte de dados incorretos ou inconsistências
-const URL_FORMULARIO_ERRO = 'https://forms.gle/TuFSsPBaY6XFYcrq7';
-
-// Data de geração do JSON — atualizada ao carregar dados_candidatos.json
-let dataGeracaoJson = '04/09/2026'; // fallback hardcoded
-
-// Atualiza todos os elementos marcados com [data-data-geracao] na página
-function atualizarDatasInterface() {
-    document.querySelectorAll('[data-data-geracao]').forEach(el => {
-        el.textContent = dataGeracaoJson;
+function campo(container, label, value) {
+    const item = elemento('div', null, 'cand-dados-item');
+    item.append(elemento('dt', label), elemento('dd', texto(value)));
+    container.append(item);
+}
+function campos(container, pares) {
+    const dl = elemento('dl', null, 'cand-dados-dl');
+    pares.forEach(([label, value]) => campo(dl, label, value));
+    container.append(dl);
+}
+function montarDetalhe(box, value) {
+    if (value == null) box.append(elemento('p', 'Não informado', 'texto-mutado'));
+    else if (Array.isArray(value)) {
+        box.append(elemento('p', `${value.length} registro(s) recebido(s).`));
+        value.forEach((registro, i) => detalhes(box, `Registro ${i + 1}`, registro));
+    } else if (typeof value === 'object') {
+        const dl = elemento('dl', null, 'cand-dados-dl');
+        Object.entries(value).forEach(([key, val]) => {
+            if (val !== null && typeof val === 'object') detalhes(box, key, val);
+            else campo(dl, key, /centavos/i.test(key) ? fmtCentavos(val) ?? 'Valor não informado' : val);
+        });
+        box.append(dl);
+    } else box.append(elemento('p', texto(value)));
+}
+// Cria somente o cabeçalho; a árvore interna nasce uma vez na primeira abertura.
+function detalhes(container, titulo, value) {
+    const box = elemento('details', null, 'cand-dados-extra');
+    box.append(elemento('summary', titulo));
+    let montado = false;
+    box.addEventListener('toggle', () => {
+        if (box.open && !montado) { montado = true; montarDetalhe(box, value); }
     });
+    container.append(box);
+    return box;
 }
-
-// Componente reutilizável: rodapé de rastreabilidade de fonte por tipo de dado
-// tipo: 'candidato' | 'patrimonio' | 'juridico' | 'financeiro'
-function criarDisclaimerFonte(tipo) {
-    const links = {
-        'financeiro': 'https://dadosabertos.tse.jus.br/dataset/prestacao-de-contas-eleitorais-2026',
-        'candidato':  'https://dadosabertos.tse.jus.br/dataset/candidatos-2026',
-        // 'juridico' aponta para candidatos-2026 pois os dados de situação/cassação
-        // atualmente exibidos vêm desse dataset (não do processual-2026, que ainda
-        // não foi integrado). Atualizar quando processual-2026 for integrado.
-        'juridico':   'https://dadosabertos.tse.jus.br/dataset/candidatos-2026',
-        'patrimonio': 'https://dadosabertos.tse.jus.br/dataset/candidatos-2026',
-    };
-    const link = links[tipo] || links['candidato'];
-    // Ícone de link externo — alterna com tema (link_b = branco / link_p = preto)
-    const iconeLink = '<span class="icon-img" style="margin-left:3px;vertical-align:middle;"><img class="img-b" src="icons/link_b.svg" alt=""><img class="img-p" src="icons/link_p.svg" alt=""></span>';
-    return `<details class="disclaimer-fonte">
-        <summary class="disclaimer-fonte-summary">
-            <span class="disclaimer-fonte-titulo">⚠️ Dados brutos do TSE (<span data-data-geracao>${escaparHTML(dataGeracaoJson)}</span>)</span>
-            <span class="disclaimer-fonte-toggle">
-                <span class="toggle-recolhido">Ver ressalva e fonte ▾</span>
-                <span class="toggle-expandido">Ocultar ▴</span>
-            </span>
-        </summary>
-        <div class="disclaimer-fonte-corpo">
-            Devido à rotina de prestação de contas governamental, valores e registros podem estar desatualizados ou em retificação contínua.
-            <div class="disclaimer-fonte-link-box">
-                <a href="${link}" target="_blank" rel="noopener noreferrer">Confira os dados oficiais no Portal DivulgaCand${iconeLink}</a>
-            </div>
-        </div>
-    </details>`;
+function grupoComplementar(container, titulo = 'Ver informações complementares e fontes') {
+    const box = elemento('details', null, 'cand-dados-extra grupo-complementar');
+    box.append(elemento('summary', titulo));
+    container.append(box);
+    return box;
 }
-
-// Classificação semântica de status jurídico — 3 níveis para evitar presunção de culpa
-// NUNCA usar binário (positivo vs atenção) — status pendentes NÃO são problemas
-function classificarStatusJuridico(status) {
-    if (!status) return 'status-neutro';
-    const s = status.toUpperCase();
-    // Status que indicam deferimento/aptidão
-    if (s === 'DEFERIDO' || s === 'APTO' || s === 'REGULAR' || s === 'APROVADO') {
-        return 'status-positivo';
+function detalhesRemotos(container, titulo, carregar) {
+    const box = elemento('details', null, 'cand-dados-extra');
+    box.append(elemento('summary', titulo));
+    let iniciado = false;
+    box.addEventListener('toggle', async () => {
+        if (!box.open || iniciado) return;
+        iniciado = true; const contexto = ficha;
+        const status = elemento('p', 'Carregando detalhes…', 'texto-mutado'); box.append(status);
+        try {
+            const valor = await carregar();
+            if (ficha !== contexto) return;
+            status.remove?.(); montarDetalhe(box, valor);
+        } catch (erro) {
+            if (ficha === contexto) status.textContent = `Detalhes indisponíveis: ${erro.message}`;
+        }
+    });
+    container.append(box); return box;
+}
+function detalhesPaginados(container, titulo, carregarPagina) {
+    const box = elemento('details', null, 'cand-dados-extra');
+    box.append(elemento('summary', titulo));
+    let pagina = 0, carregando = false, finalizado = false;
+    const botao = elemento('button', 'Carregar primeiros 100 registros', 'btn-secundario');
+    botao.type = 'button';
+    async function carregar() {
+        if (carregando || finalizado || !ficha) return;
+        carregando = true; botao.disabled = true; botao.textContent = 'Carregando…';
+        const contexto = ficha;
+        try {
+            const data = await carregarPagina(pagina + 1);
+            if (ficha !== contexto) return;
+            pagina = data.pagina;
+            data.itens.forEach((registro, i) => detalhes(box, `Registro ${(pagina - 1) * data.limite + i + 1}`, registro));
+            finalizado = !data.temMais;
+            botao.textContent = finalizado ? `${data.total} registro(s) carregado(s)` : 'Carregar próximos 100 registros';
+            botao.disabled = finalizado;
+        } catch (erro) { botao.textContent = `Tentar novamente — ${erro.message}`; }
+        finally { carregando = false; if (!finalizado) botao.disabled = false; }
     }
-    // Status que indicam indeferimento/cassação — apenas estes recebem alerta
-    if (s === 'INDEFERIDO' || s === 'CASSADO' || s === 'CANCELADO' || s === 'RECUSADO'
-        || s.startsWith('CASSADO') || s.startsWith('INDEFERIDO')) {
-        return 'status-atencao';
+    box.addEventListener('toggle', () => { if (box.open && pagina === 0) void carregar(); });
+    botao.addEventListener('click', () => void carregar()); box.append(botao); container.append(box);
+    return box;
+}
+function fonte(container, metadata = metadados) {
+    container.append(elemento('p', 'A geração da exportação não é a data de coleta ou atualização das fontes TSE. Dados sujeitos a retificação.', 'texto-mutado'));
+    detalhes(container, 'Metadados públicos da exportação e das fontes', metadata);
+    const link = elemento('a', 'Consultar dados oficiais no Portal DivulgaCand');
+    link.href = 'https://divulgacandcontas.tse.jus.br';
+    link.target = '_blank'; link.rel = 'noopener noreferrer'; container.append(link);
+}
+function atualizarDatas() {
+    const raw = metadados?.geradoEm;
+    const date = raw ? new Date(raw) : null;
+    const value = date && !Number.isNaN(date.getTime()) ? date.toLocaleString('pt-BR') : 'Não informada';
+    document.querySelectorAll('[data-data-geracao]').forEach(el => { el.textContent = value; });
+}
+async function jsonAPI(url, options = {}) {
+    const response = await fetch(url, { cache: 'no-store', ...options });
+    let data;
+    try { data = await response.json(); } catch { throw new Error(`Resposta inválida da API (HTTP ${response.status}).`); }
+    if (!response.ok) {
+        const retryAfter = parseInt(response.headers?.get?.('Retry-After') ?? data?.retryAfter ?? '0', 10);
+        const espera = retryAfter >= 86400 ? `${Math.ceil(retryAfter / 86400)} dia(s)` : retryAfter >= 3600
+            ? `${Math.ceil(retryAfter / 3600)} hora(s)` : retryAfter >= 60 ? `${Math.ceil(retryAfter / 60)} minuto(s)`
+                : retryAfter > 0 ? `${retryAfter}s` : null;
+        const motivo = [data?.erro, data?.mensagem, data?.motivo].filter(Boolean).map(texto).join(' — ');
+        throw new Error(`${motivo || `Falha HTTP ${response.status}`}${espera ? ` Tente novamente após ${espera}.` : ''}`);
     }
-    // Todo o resto: SUB JUDICE, PENDENTE, DEFERIDO COM RECURSO, AGUARDANDO etc.
-    // são situações processuais normais — não indicam irregularidade
-    return 'status-neutro';
+    if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Formato inválido da API.');
+    return data;
 }
-
-// Normalizador de texto igual ao seu Python (remove acentos)
-function normalizarTexto(texto) {
-    if (!texto) return "";
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+function validarVersao(data, esperada) {
+    if (!hashValido(data.exportacao) || data.exportacao !== esperada) {
+        throw new Error('Exportação ausente ou divergente. Recarregue a página para consultar a versão atual.');
+    }
 }
-
-// Inicialização: Busca a lista leve ao abrir o site
 async function carregarListaBusca() {
+    $('btnPesquisar').disabled = true;
+    $('msgResultados').textContent = 'Verificando versão dos assets e carregando índice de busca...';
+    listaBusca = []; exportacao = null;
     try {
-        const response = await fetch('lista_busca.json');
-        listaBusca = await response.json();
-    } catch (error) {
-        msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar o banco de dados principal.';
-        console.error(error);
-    }
-}
-
-// ==========================================
-// 3. LÓGICA DE PESQUISA E FILTRO
-// ==========================================
-btnPesquisar.addEventListener('click', () => {
-    const raw = inputBusca.value.trim();
-    const uf = selectUF.value;
-    const cargo = selectCargo.value;
-
-    // Detecta se o input é número (apenas dígitos) ou nome
-    const ehNumero = /^\d+$/.test(raw);
-    const termo = ehNumero ? '' : normalizarTexto(raw);
-    const numero = ehNumero ? raw : '';
-
-    if (!raw && !uf && !cargo) {
-        msgResultados.innerHTML = icon('warning') + ' Preencha pelo menos um campo (Nome, N.º, UF ou Cargo) para pesquisar.';
-        listaCandidatos.innerHTML = '';
-        return;
-    }
-
-    const filtrados = listaBusca.filter(cand => {
-        // Usa o nomeBusca que já limpamos no Python
-        const matchNome = !termo || (cand.nomeBusca && cand.nomeBusca.includes(termo));
-        // Busca por número: compara o início do numeroUrna (permite digitar "13" e achar "130", "13", etc.)
-        const matchNumero = !numero || (cand.numeroUrna && String(cand.numeroUrna).startsWith(numero));
-        const matchUF = !uf || cand.uf === uf;
-        const matchCargo = !cargo || cand.cargo === cargo;
-        return matchNome && matchNumero && matchUF && matchCargo;
-    });
-
-    // Ordenação: se buscou por número, ordena numericamente crescente (13 → 130 → 131 …)
-    // caso contrário, ordena alfabeticamente por nome
-    if (numero) {
-        filtrados.sort((a, b) => {
-            const na = Number(a.numeroUrna) || 0;
-            const nb = Number(b.numeroUrna) || 0;
-            if (na !== nb) return na - nb;
-            return (a.nome || '').localeCompare(b.nome || '');
-        });
-    } else {
-        filtrados.sort((a, b) => (a.nome || '').localeCompare(b.nome || ''));
-    }
-
-    renderizarResultados(filtrados);
-});
-
-function renderizarResultados(resultados) {
-    listaCandidatos.innerHTML = '';
-
-    if (resultados.length === 0) {
-        msgResultados.innerText = "Nenhum candidato encontrado com esses filtros.";
-        return;
-    }
-
-    let exibidos = resultados;
-    let aviso = "";
-    if (resultados.length > 50) {
-        exibidos = resultados.slice(0, 50);
-        aviso = ' ' + icon('warning') + ' Exibindo apenas os 50 primeiros';
-    }
-
-    msgResultados.innerHTML = icon('pesquisa') + ' ' + resultados.length + ' candidato(s) encontrado(s).' + aviso;
-
-    exibidos.forEach(cand => {
-        const div = document.createElement('div');
-        div.style.display = 'flex';
-        div.style.alignItems = 'center';
-        div.style.gap = '15px';
-        div.style.padding = '12px';
-        div.style.borderBottom = '1px solid var(--border-color)';
-
-        const btn = document.createElement('button');
-        btn.className = 'btn-info';
-        btn.innerText = 'Consultar';
-        btn.onclick = () => abrirFicha(cand.id, cand.uf);
-
-        const info = document.createElement('div');
-        const strong = document.createElement('strong');
-        strong.textContent = cand.nome;
-        info.appendChild(strong);
-        info.appendChild(document.createElement('br'));
-        const span = document.createElement('span');
-        span.className = 'texto-mutado';
-        span.textContent = `${cand.cargo || 'Cargo Indefinido'} • ${cand.uf}${cand.numeroUrna ? ' • N.º ' + cand.numeroUrna : ''} • ID: ${cand.id}`;
-        info.appendChild(span);
-
-        div.appendChild(btn);
-        div.appendChild(info);
-        listaCandidatos.appendChild(div);
-    });
-}
-
-// ==========================================
-// 4. ABRIR FICHA DO CANDIDATO (O Dossiê)
-// ==========================================
-
-// Helpers compartilhados entre as funções de renderização
-
-// Escapa HTML para prevenir XSS — usar SEMPRE que interpolar dados externos em innerHTML
-function escaparHTML(texto) {
-    if (texto === null || texto === undefined) return '';
-    const div = document.createElement('div');
-    div.textContent = String(texto);
-    return div.innerHTML;
-}
-
-// Normaliza valor: retorna null para vazios / não-divulgáveis
-function normalizarValor(raw) {
-    if (raw === null || raw === undefined) return null;
-    const s = String(raw).trim();
-    if (!s || s === 'null' || s === 'undefined') return null;
-    const up = s.toUpperCase();
-    if (up === 'NÃO DIVULGÁVEL' || up === 'NAO DIVULGAVEL') return null;
-    return s;
-}
-
-// Mapeia "BR" para "Brasil", mantém outros valores como estão
-function formatarUF(uf) {
-    return uf === 'BR' ? 'Brasil' : uf;
-}
-
-// Converte indicador S/N em texto legível
-function simNao(raw) {
-    const s = normalizarValor(raw);
-    if (!s) return null;
-    const up = s.toUpperCase();
-    if (up === 'S' || up === 'SIM') return 'Sim';
-    if (up === 'N' || up === 'NÃO' || up === 'NAO') return 'Não';
-    return s;
-}
-
-// Formata valor monetário em R$
-function fmtMoeda(v) {
-    return Number(v).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-}
-
-// ── Card: Dados do Candidato ──────────────
-function renderizarDadosCandidato(cand, fallback) {
-    const el = document.getElementById('conteudoDadosCandidato');
-    if (!el) return;
-
-    const v = normalizarValor;
-
-    // Fonte primária: data/candidatos.json (retornado pela API)
-    const nomeCompleto = v(cand?.nomeCompleto) || v(fallback?.nome);
-    const nomeUrna = v(cand?.nomeUrna) || v(fallback?.nomeUrna);
-    const numero = v(cand?.numeroUrna);
-    const cargo = v(cand?.cargo) || v(fallback?.cargo);
-    const partido = v(cand?.partido) || v(fallback?.partido);
-    const ufVal = v(cand?.uf);
-    const situacao = v(cand?.situacao);
-
-    let html = '';
-
-    // Nome completo destacado
-    if (nomeCompleto) {
-        html += `<p class="cand-nome-completo">${escaparHTML(nomeCompleto)}</p>`;
-    }
-    if (nomeUrna && nomeUrna !== nomeCompleto) {
-        html += `<p class="cand-nome-urna">Urna: <strong>${escaparHTML(nomeUrna)}</strong></p>`;
-    }
-
-    // Grid de campos
-    const itens = [];
-    const add = (label, valor) => { if (valor !== null) itens.push({ label, valor }); };
-
-    add('N.º Candidatura', numero);
-    add('Partido', partido);
-    add('Cargo', cargo);
-    add('UF', ufVal ? formatarUF(ufVal) : null);
-    add('Situação da candidatura', situacao);
-
-    if (itens.length > 0) {
-        html += '<dl class="cand-dados-dl">';
-        itens.forEach(({ label, valor }) => {
-            html += `<div class="cand-dados-item"><dt>${escaparHTML(label)}</dt><dd>${escaparHTML(valor)}</dd></div>`;
-        });
-        html += '</dl>';
-    }
-
-    // Campos adicionais de perfil relevantes para contexto eleitoral
-    // Gênero, estado civil e cor/raça foram removidos por serem irrelevantes ao contexto político
-    const extraItens = [];
-    const addExtra = (label, valor) => { if (valor !== null) extraItens.push({ label, valor }); };
-
-    addExtra('Coligação', v(cand?.coligacao));
-    addExtra('Federação', v(cand?.federacao));
-    addExtra('Idade', (cand?.idade != null && !isNaN(cand.idade)) ? `${cand.idade} anos` : null);
-    addExtra('Instrução', v(cand?.instrucao) || v(fallback?.escolaridade));
-    addExtra('Ocupação', v(cand?.ocupacao) || v(fallback?.ocupacao));
-    addExtra('Nome social', v(cand?.nomeSocial));
-
-    if (extraItens.length > 0) {
-        html += '<details class="cand-dados-extra"><summary>Mais informações</summary><dl class="cand-dados-dl">';
-        extraItens.forEach(({ label, valor }) => {
-            html += `<div class="cand-dados-item"><dt>${escaparHTML(label)}</dt><dd>${escaparHTML(valor)}</dd></div>`;
-        });
-        html += '</dl></details>';
-    }
-
-    // Disclaimer de fonte — apenas se houver conteúdo para não poluir mensagem vazia
-    if (html) html += criarDisclaimerFonte('candidato');
-    el.innerHTML = html || '<p class="texto-mutado">Dados não disponíveis.</p>';
-}
-
-// ── Card: Patrimônio Declarado (formato lista) ─
-function renderizarPatrimonio(patrimonio) {
-    const contPatr = document.getElementById('conteudoPatrimonio');
-    if (!contPatr) return;
-
-    const fmt = fmtMoeda;
-
-    const bens = patrimonio?.bens || [];
-    let totalBens = patrimonio?.total != null ? Number(patrimonio.total) : 0;
-
-    if (totalBens === 0 && bens.length > 0) {
-        bens.forEach(bem => {
-            const valorNum = parseFloat(String(bem.valor).replace(',', '.'));
-            if (!isNaN(valorNum)) totalBens += valorNum;
-        });
-    }
-
-    if (bens.length > 0 || totalBens > 0) {
-        const bensOrdenados = [...bens].sort((a, b) => {
-            const valA = parseFloat(String(a.valor).replace(',', '.')) || 0;
-            const valB = parseFloat(String(b.valor).replace(',', '.')) || 0;
-            return valB - valA;
-        });
-
-        const mostrarTop = 5;
-        const bensIniciais = bensOrdenados.slice(0, mostrarTop);
-        const bensOcultos = bensOrdenados.slice(mostrarTop);
-
-        let html = `<p class="cand-patr-quantidade">${bens.length} bem(ns) declarado(s)</p>`;
-        html += '<div class="cand-patr-itens">';
-
-        const renderItem = (bem) => `
-            <div class="cand-patr-item">
-                <div class="cand-patr-item-desc">
-                    <span class="cand-patr-tipo">${escaparHTML(bem.tipo || 'Bem')}</span>
-                    <span class="cand-patr-desc">${escaparHTML(bem.descricao || '-')}</span>
-                </div>
-                <span class="cand-patr-valor">${fmt(bem.valor)}</span>
-            </div>
-        `;
-
-        bensIniciais.forEach(bem => { html += renderItem(bem); });
-
-        if (bensOcultos.length > 0) {
-            html += `<div id="bensOcultos" class="hidden">`;
-            bensOcultos.forEach(bem => { html += renderItem(bem); });
-            html += `</div>`;
-            html += `<button id="btnVerMaisBens" class="btn-secundario btn-sm">Ver todos os ${bens.length} bens</button>`;
-        }
-
-        html += `</div>`; // fecha cand-patr-itens
-
-        // Total em destaque
-        html += `<div class="cand-patr-total"><span>Valor total declarado</span><strong>${fmt(totalBens)}</strong></div>`;
-        // Disclaimer de fonte de dados patrimoniais
-        html += criarDisclaimerFonte('patrimonio');
-
-        contPatr.innerHTML = html;
-
-        // Listener do botão ver mais
-        if (bensOcultos.length > 0) {
-            setTimeout(() => {
-                const btn = document.getElementById('btnVerMaisBens');
-                const divOculta = document.getElementById('bensOcultos');
-                if (btn && divOculta) {
-                    btn.addEventListener('click', () => {
-                        const taEscondido = divOculta.classList.contains('hidden');
-                        if (taEscondido) {
-                            divOculta.classList.remove('hidden');
-                            btn.textContent = 'Ocultar bens menores';
-                        } else {
-                            divOculta.classList.add('hidden');
-                            btn.textContent = `Ver todos os ${bens.length} bens`;
-                        }
-                    });
-                }
-            }, 0);
-        }
-    } else {
-        contPatr.innerHTML = '<p class="texto-mutado">Nenhum bem declarado.</p>';
-    }
-}
-
-// ── Card: Documentos e Situação Jurídica ───
-function renderizarDocumentosJuridicos(cand, docs, financeiro, juridico) {
-    const el = document.getElementById('conteudoDocumentosJuridicos');
-    if (!el) return;
-
-    const v = normalizarValor;
-    const fmt = fmtMoeda;
-
-    let html = '';
-    let temConteudo = false;
-
-    // 1. Situação do julgamento — classificação em 3 níveis (evita presunção de culpa)
-    const julgamento = v(cand?.statusJulgamento);
-    if (julgamento) {
-        temConteudo = true;
-        const cls = classificarStatusJuridico(julgamento);
-        html += `<div class="cand-juridico-item ${cls}">
-            <span class="cand-juridico-label">Situação do julgamento</span>
-            <span class="cand-juridico-status">${escaparHTML(julgamento)}</span>
-        </div>`;
-    }
-
-    // 2. Candidatura à reeleição
-    const reeleicao = simNao(cand?.tentandoReeleicao);
-    if (reeleicao) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">Candidatura à reeleição</span>
-            <span class="cand-juridico-status">${escaparHTML(reeleicao)}</span>
-        </div>`;
-    }
-
-    // 3. Situação da candidatura na urna
-    const situacaoUrna = v(cand?.situacaoUrna);
-    if (situacaoUrna) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">Situação na urna</span>
-            <span class="cand-juridico-status">${escaparHTML(situacaoUrna)}</span>
-        </div>`;
-    }
-
-    // 4. Número do processo
-    const nrProcesso = v(cand?.nrProcesso);
-    if (nrProcesso) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">N.º do processo</span>
-            <span class="cand-juridico-status">${escaparHTML(nrProcesso)}</span>
-        </div>`;
-    }
-
-    // 5. Situação do diploma
-    const situacaoDiploma = v(cand?.situacaoDiploma);
-    if (situacaoDiploma) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">Situação do diploma</span>
-            <span class="cand-juridico-status">${escaparHTML(situacaoDiploma)}</span>
-        </div>`;
-    }
-
-    // 6. Situação eleitoral relacionada
-    const situacaoEleitoral = v(cand?.situacaoEleitoral);
-    if (situacaoEleitoral) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">Situação eleitoral relacionada</span>
-            <span class="cand-juridico-status">${escaparHTML(situacaoEleitoral)}</span>
-        </div>`;
-    }
-
-    // 7. Situação da cassação — classificação em 3 níveis
-    const situacaoCassacao = v(cand?.situacaoCassacao);
-    if (situacaoCassacao) {
-        temConteudo = true;
-        const cls = classificarStatusJuridico(situacaoCassacao);
-        html += `<div class="cand-juridico-item ${cls}">
-            <span class="cand-juridico-label">Situação da cassação</span>
-            <span class="cand-juridico-status">${escaparHTML(situacaoCassacao)}</span>
-        </div>`;
-    }
-
-    // 8. Motivo da cassação (registros oficiais)
-    const motivosCassacao = juridico?.motivoCassacao || [];
-    if (motivosCassacao.length > 0) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-subsecao">
-            <h4 class="cand-juridico-subtitulo">Registro(s) de cassação</h4>
-            <div class="disclaimer-juridico-alerta">⚠️ Registros constantes nas bases públicas do TSE no momento da coleta. <strong>Não representam condenações definitivas nem implicam culpa</strong> (CF/88, art. 5.º, LVII — presunção de inocência).</div>
-            <ul class="cand-docs-lista">`;
-        motivosCassacao.forEach(m => {
-            html += `<li>${escaparHTML(m)}</li>`;
-        });
-        html += `</ul></div>`;
-    }
-
-    // 9. Prestação de contas (Financeiro)
-    if (financeiro) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-subsecao">
-            <h4 class="cand-juridico-subtitulo">Prestação de contas</h4>`;
-
-        const totalA = financeiro.total_arrecadado;
-        const totalC = financeiro.total_contratado;
-        const totalP = financeiro.total_pago;
-
-        // Helper para valores monetários: se for 0, 0.00, nulo ou vazio -> "Dado não encontrado"
-        const fmtValor = (num, extra = '') => {
-            if (num == null || isNaN(num) || Number(num) === 0) {
-                return '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dado não encontrado</span>';
-            }
-            return `${fmt(num)}${extra}`;
-        };
-
-        // Situação da prestação de contas (do TSE)
-        const sitPrestacao = v(cand?.situacaoPrestacaoContas);
-        const sitTexto = (!sitPrestacao || sitPrestacao === '0' || sitPrestacao === '0,00' || sitPrestacao === '0.00')
-            ? '<span class="texto-mutado" style="font-weight:400;font-size:0.88em;">Dado não encontrado</span>'
-            : escaparHTML(sitPrestacao);
-
-        html += `<div class="cand-juridico-item">
-            <span class="cand-juridico-label">Situação da prestação</span>
-            <span class="cand-juridico-status">${sitTexto}</span>
-        </div>`;
-
-        // Usa percentual_pago do JSON se disponível, senão calcula (apenas se houver valor pago > 0)
-        let percHTML = '';
-        const percPago = financeiro.percentual_pago;
-        if (percPago != null && Number(percPago) > 0) {
-            percHTML = ` <span class="badge-percentual">${percPago}% pago</span>`;
-        } else if (Number(totalC) > 0 && Number(totalP) > 0) {
-            const perc = ((Number(totalP) / Number(totalC)) * 100).toFixed(1);
-            percHTML = ` <span class="badge-percentual">${perc}% pago</span>`;
-        }
-
-        html += `<div class="cand-fin-item">
-            <span>Total Arrecadado</span>
-            <strong>${fmtValor(totalA)}</strong>
-        </div>`;
-        html += `<div class="cand-fin-item">
-            <span>Total Contratado</span>
-            <strong>${fmtValor(totalC)}</strong>
-        </div>`;
-        html += `<div class="cand-fin-item">
-            <span>Total Pago</span>
-            <strong>${fmtValor(totalP, percHTML)}</strong>
-        </div>`;
-
-        // Quantidades — exibe "Dado não encontrado" quando o valor for 0 ou ausente
-        const fmtQtd = (num) => (num != null && !isNaN(num) && Number(num) !== 0)
-            ? num
-            : '<span class="texto-mutado" style="font-style:italic;font-size:0.95em;">Dado não encontrado</span>';
-
-        html += `<div class="cand-fin-quantidades texto-mutado">
-            Receitas: ${fmtQtd(financeiro.quantidade_receitas)} &nbsp;|
-            Despesas contratadas: ${fmtQtd(financeiro.quantidade_despesas_contratadas)} &nbsp;|
-            Despesas pagas: ${fmtQtd(financeiro.quantidade_despesas_pagas)}
-        </div>`;
-        // Disclaimer de fonte — dados financeiros podem estar em retificação pelo TSE
-        html += criarDisclaimerFonte('financeiro');
-        html += `</div>`;
-    }
-
-    // 4. Propostas de governo
-    if (docs?.propostas && docs.propostas.length > 0) {
-        temConteudo = true;
-        html += `<div class="cand-juridico-subsecao">
-            <h4 class="cand-juridico-subtitulo">Proposta(s) de governo</h4>
-            <ul class="cand-docs-lista">`;
-        docs.propostas.forEach(p => {
-            const nome = nomeLegivelDocumento(p.nome || p.caminho);
-            html += `<li>${escaparHTML(nome)}</li>`;
-        });
-        html += `</ul></div>`;
-    }
-
-    // 5. Certidões — exibe apenas a contagem, sem listar nomes de arquivos
-    if (docs?.certidoes && docs.certidoes.length > 0) {
-        temConteudo = true;
-        const qtd = docs.certidoes.length;
-        html += `<div class="cand-juridico-subsecao">
-            <h4 class="cand-juridico-subtitulo">Certidões disponíveis</h4>
-            <div class="disclaimer-juridico-alerta">⚠️ ${qtd} certid${qtd > 1 ? 'ões' : 'ão'} de registro público disponível${qtd > 1 ? 'is' : ''} na base do TSE. A existência de uma certidão <strong>não implica julgamento, condenação ou irregularidade</strong>.</div>
-            </div>`;
-    }
-
-    // Disclaimer de fonte jurídica (situação de candidatura, julgamento, cassação)
-    if (temConteudo) html += criarDisclaimerFonte('juridico');
-    // Link para reportar erro ao final do card
-    el.innerHTML = html || '<p class="texto-mutado">Nenhum registro disponível.</p>';
-}
-
-// Helper: extrai nome legível do documento
-function nomeLegivelDocumento(nomeArquivo) {
-    if (!nomeArquivo) return 'Documento';
-    let nome = String(nomeArquivo);
-    nome = nome.replace(/\.pdf$/i, '');
-    nome = nome.replace(/^[a-f0-9]{8,}_/i, '');
-    nome = nome.replace(/^[A-Z0-9]{6,}_/i, '');
-    nome = nome.replace(/[_\-]+/g, ' ');
-    nome = nome.replace(/\b(\w)/g, (c) => c.toUpperCase());
-    return nome.trim() || 'Documento';
-}
-
-async function abrirFicha(id, uf) {
-    // Lazy Load: Baixa o JSON gigante apenas se ainda não tiver baixado
-    if (!dadosCandidatos) {
-        msgResultados.innerHTML = icon('ampulheta') + ' Baixando dossiês completos pela primeira vez...';
+        let assets, descritor;
         try {
-            const response = await fetch('dados_candidatos.json');
-            dadosCandidatos = await response.json();
-            msgResultados.innerText = "";
-            // Lê a data de geração do JSON e atualiza a interface
-            if (dadosCandidatos._meta?.geradoEm) {
-                try {
-                    const d = new Date(dadosCandidatos._meta.geradoEm);
-                    dataGeracaoJson = d.toLocaleDateString('pt-BR');
-                } catch (_) { /* mantém o fallback */ }
-                atualizarDatasInterface();
-            }
+            assets = await jsonAPI(base + 'exportacao.json', { cache: 'no-cache' });
+            descritor = descritorIndice(assets);
+            if (!descritor) throw new Error('Descritor do índice ausente ou inválido.');
         } catch (error) {
-            msgResultados.innerHTML = icon('cancel') + ' Erro ao carregar dados detalhados.';
-            return;
+            throw new Error(`exportacao.json do build é obrigatório, inclusive em desenvolvimento. ${error.message}`);
         }
+        const data = await jsonAPI(base + descritor.arquivo, { cache: 'force-cache' });
+        if (data.exportacao !== assets.versao) throw new Error('Versão do índice estático divergente do ponteiro público. Recarregue a página.');
+        if (!hashValido(data.exportacao) || !Array.isArray(data.lista) || !data.metadados ||
+            data.lista.some(c => !c || !chaveCanonica(c.chave))) throw new Error('Índice de busca inválido ou sem versão.');
+        listaBusca = data.lista;
+        exportacao = data.exportacao;
+        metadados = data.metadados;
+        atualizarDatas();
+        $('btnPesquisar').disabled = false;
+        $('msgResultados').textContent = 'Digite um nome ou selecione os filtros para pesquisar.';
+        const id = new URL(location.href).searchParams.get('id');
+        if (id) await abrirFicha(id);
+    } catch (error) {
+        $('msgResultados').textContent = `Busca indisponível: ${error.message} Nenhum dado offline será utilizado.`;
+    }
+}
+function pesquisar() {
+    if (!exportacao) return;
+    const busca = $('inputBusca').value.trim(), uf = $('selectUF').value, cargo = $('selectCargo').value;
+    $('listaCandidatos').replaceChildren();
+    if (!busca && !uf && !cargo) {
+        $('msgResultados').textContent = 'Preencha pelo menos um campo de busca.';
+        return;
+    }
+    const resultados = filtrarLista(listaBusca, busca, uf, cargo);
+    $('msgResultados').textContent = `${resultados.length} candidato(s) encontrado(s).${resultados.length > 50 ? ' Exibindo os primeiros 50; refine os filtros.' : ''}`;
+    resultados.slice(0, 50).forEach(cand => {
+        const row = elemento('div');
+        Object.assign(row.style, { display: 'flex', alignItems: 'center', gap: '15px', padding: '12px', borderBottom: '1px solid var(--border-color)' });
+        const btn = elemento('button', 'Consultar', 'btn-info');
+        btn.addEventListener('click', () => abrirFicha(cand.chave));
+        const info = elemento('div');
+        info.append(elemento('strong', cand.nome), elemento('br'), elemento('span', `${texto(cand.cargo)} • ${cand.uf === 'BR' ? 'Brasil (circunscrição nacional)' : texto(cand.uf)} • N.º ${texto(cand.numeroUrna)} • ${cand.chave}`, 'texto-mutado'));
+        row.append(btn, info); $('listaCandidatos').append(row);
+    });
+}
+function renderizarCadastro(cand, metadata = metadados) {
+    const el = $('conteudoDadosCandidato'); el.replaceChildren();
+    el.append(elemento('p', texto(cand.nomeCompleto ?? cand.nomeUrna), 'cand-nome-completo'));
+    campos(el, [
+        ['Nome de urna', cand.nomeUrna], ['N.º Candidatura', cand.numeroUrna], ['Partido', cand.partido],
+        ['Cargo', cand.cargo], ['UF', cand.uf === 'BR' ? 'Brasil (circunscrição nacional)' : cand.uf],
+        ['Situação da candidatura', cand.situacaoCandidatura],
+        ['Instrução', cand.instrucao], ['Ocupação', cand.ocupacao],
+        ['Candidatura à reeleição', cand.tentandoReeleicao],
+    ]);
+    const complementares = grupoComplementar(el);
+    detalhes(complementares, 'Unidade eleitoral', cand.unidadeEleitoral);
+    detalhes(complementares, 'Resultados por turno', cand.resultadosPorTurno);
+    detalhes(complementares, 'Campos cadastrais recebidos do TSE', Object.fromEntries(Object.entries(cand).filter(([key]) => !/genero|corRaca/i.test(key))));
+    detalhes(complementares, 'Metadados públicos da ficha', metadata);
+    fonte(complementares, metadata);
+}
+function renderizarPatrimonio(patrimonio) {
+    const el = $('conteudoPatrimonio'); el.replaceChildren();
+    el.append(elemento('p', estadosDados[patrimonio?.status] ?? `Estado não informado ou não reconhecido: ${texto(patrimonio?.status)}`, 'texto-mutado'));
+    if (patrimonio?.status === 'ok' || patrimonio?.status === 'parcial') {
+        const bens = Array.isArray(patrimonio.topBens) ? [...patrimonio.topBens] :
+            Array.isArray(patrimonio.bens) ? [...patrimonio.bens].sort(compararBens) : [];
+        el.append(elemento('p', `${bens.length} bem(ns) na resposta`, 'cand-patr-quantidade'));
+        const lista = elemento('div', null, 'cand-patr-itens');
+        const renderizarBens = () => {
+            lista.replaceChildren();
+            bens.slice(0, 5).forEach(bem => {
+                const item = elemento('div', null, 'cand-patr-item');
+                const desc = elemento('div', null, 'cand-patr-item-desc');
+                desc.append(elemento('span', texto(bem.DS_TIPO_BEM_CANDIDATO), 'cand-patr-tipo'), elemento('span', texto(bem.DS_BEM_CANDIDATO), 'cand-patr-desc'));
+                item.append(desc, elemento('span', fmtCentavos(bem.valorCentavos) ?? 'Valor não informado', 'cand-patr-valor'));
+                lista.append(item);
+            });
+        };
+        renderizarBens();
+        el.append(lista);
+        const totalBens = patrimonio.quantidade ?? bens.length;
+        if (totalBens > 5) detalhesPaginados(el, `Consultar todos os ${totalBens} bens`, pagina =>
+            carregarDetalhe('patrimonio', { pagina, limite: 100 }));
+        const total = elemento('div', null, 'cand-patr-total');
+        total.append(elemento('span', 'Total declarado na exportação'), elemento('strong', fmtCentavos(patrimonio.totalCentavos) ?? 'Valor não informado'));
+        el.append(total);
+    }
+    const complementares = grupoComplementar(el, 'Ver detalhes e fontes do patrimônio');
+    detalhes(complementares, 'Dados completos do patrimônio', patrimonio);
+    fonte(complementares);
+}
+function renderizarFinanceiro(fin, cand) {
+    const el = $('conteudoFinanceiro'); el.replaceChildren();
+    el.append(elemento('p', 'Receitas, despesas contratadas, pagamentos e doadores originários são conjuntos distintos. Não são deduplicados nem somados entre si. Valores estimáveis e retificações exigem consulta à fonte.', 'texto-mutado'));
+    campos(el, [['Prestação de contas — código informado (não é julgamento)', cand.situacaoPrestacaoContas]]);
+    if (!fin) {
+        el.append(elemento('p', 'Dados financeiros não disponíveis.'));
+        const complementares = grupoComplementar(el);
+        fonte(complementares);
+    } else {
+        [
+            ['Limite de gastos', 'limite_gastos_centavos', null],
+            ['Total arrecadado', 'total_arrecadado_centavos', 'status_receitas'],
+            ['Total contratado', 'total_contratado_centavos', 'status_contratadas'],
+            ['Total pago', 'total_pago_centavos', 'status_pagamento'],
+        ].forEach(([label, key, status]) => {
+            const item = elemento('div', null, 'cand-fin-item');
+            item.append(elemento('span', label), elemento('strong', status ? valorFinanceiro(fin[key], fin[status]) : fmtCentavos(fin[key]) ?? 'Não informado'));
+            el.append(item);
+        });
+        campos(el, [
+            ['Receitas — registros', fin.quantidade_receitas],
+            ['Despesas contratadas — itens contratados', fin.quantidade_despesas_contratadas],
+            ['Pagamentos — parcelas pagas', fin.quantidade_despesas_pagas],
+            ['Originários — registros, não doadores únicos', Array.isArray(fin.doadoresOriginarios) ? fin.doadoresOriginarios.length : null],
+        ]);
+        const complementares = grupoComplementar(el, 'Ver movimentações, dados completos e fontes');
+        for (const [key, label] of [['receitas', 'Receitas'], ['despesasContratadas', 'Despesas contratadas'], ['pagamentos', 'Pagamentos'], ['doadoresOriginarios', 'Originários — registros, não doadores únicos']]) {
+            if (Array.isArray(fin[key])) detalhes(complementares, `${label} — detalhes e campos TSE`, fin[key]);
+            else detalhesPaginados(complementares, `${label} — detalhes e campos TSE`, pagina =>
+                carregarDetalhe('financeiro', { conjunto: key, pagina, limite: 100 }));
+        }
+        if (Array.isArray(fin.prestadores)) {
+            const prestacoes = elemento('details', null, 'cand-dados-extra');
+            prestacoes.append(elemento('summary', 'Prestações: tipo, data e turno (não é julgamento de regularidade)'));
+            let montado = false;
+            prestacoes.addEventListener('toggle', () => {
+                if (!prestacoes.open || montado) return;
+                montado = true;
+                fin.prestadores.forEach(prestador => campos(prestacoes, [
+                    ['Tipo de prestação (TSE)', prestador.TP_PRESTACAO_CONTAS],
+                    ['Data de prestação (TSE)', prestador.DT_PRESTACAO_CONTAS],
+                    ['Turno (TSE)', prestador.NR_TURNO],
+                ]));
+            });
+            complementares.append(prestacoes);
+        } else detalhesPaginados(complementares, 'Prestações: tipo, data e turno (não é julgamento de regularidade)', pagina =>
+            carregarDetalhe('financeiro', { conjunto: 'prestadores', pagina, limite: 100 }));
+        detalhes(complementares, 'Demais campos financeiros recebidos', Object.fromEntries(Object.entries(fin).filter(([, valor]) => !Array.isArray(valor))));
+        fonte(complementares);
+    }
+}
+function urlDocumento(doc, tipo) {
+    if (!hashValido(doc?.sha256)) return null;
+    return assetURL(doc.arquivo ?? doc.caminho, { base, tipo, chave: ficha.chave, sha256: doc.sha256 });
+}
+function documento(container, doc, tipo, metadadosContainer) {
+    const box = elemento('div', null, 'cand-juridico-subsecao');
+    const href = urlDocumento(doc, tipo);
+    if (href) {
+        const link = elemento('a', doc.nome ?? 'Abrir documento original');
+        link.href = href; link.target = '_blank'; link.rel = 'noopener noreferrer'; box.append(link);
+    } else box.append(elemento('p', 'Documento indisponível ou caminho/hash inválido.'));
+
+    detalhes(metadadosContainer ?? box, `Metadados: ${doc.nome ?? 'documento original'}`, doc);
+    container.append(box);
+}
+function renderizarJuridico(cand, docs, juridico) {
+    const el = $('conteudoDocumentosJuridicos'); el.replaceChildren();
+    el.append(elemento('p', 'Escopo: registros cadastrais e documentos disponibilizados pelo TSE, não uma consulta abrangente a tribunais. Ausência de registros ou certidões não significa “nada consta”. Certidões não implicam condenação ou irregularidade.', 'disclaimer-juridico-alerta'));
+    campos(el, [
+        ['Situação do julgamento', cand.statusJulgamento], ['Situação na urna', cand.situacaoUrna],
+        ['N.º do processo', cand.nrProcesso], ['Situação do diploma', cand.situacaoDiploma],
+        ['Situação eleitoral relacionada', cand.situacaoEleitoral], ['Situação da cassação', cand.situacaoCassacao],
+    ]);
+    const complementares = grupoComplementar(el, 'Ver dados jurídicos completos, metadados e fontes');
+    detalhes(complementares, 'Registros jurídicos e escopo informado', juridico);
+    for (const [key, tipo, label] of [['propostas', 'proposta', 'Propostas de governo'], ['certidoes', 'certidao', 'Certidões']]) {
+        const items = Array.isArray(docs?.[key]) ? docs[key] : [];
+        const secao = tipo === 'certidao' ? elemento('details', null, 'cand-dados-extra') : elemento('div');
+        secao.append(elemento(tipo === 'certidao' ? 'summary' : 'h4', `${label} (${items.length})`, 'cand-juridico-subtitulo'));
+        const montar = () => {
+            if (secao._montado) return;
+            secao._montado = true;
+            if (!items.length) secao.append(elemento('p', 'Nenhum documento disponível na resposta.', 'texto-mutado'));
+            items.forEach(doc => documento(secao, doc, tipo, complementares));
+        };
+        if (tipo === 'certidao') secao.addEventListener('toggle', () => { if (secao.open) montar(); });
+        else montar();
+        el.append(secao);
+    }
+    fonte(complementares);
+}
+function atualizarBotaoResumo() {
+    const selecionados = documentosSelecionados();
+    const bloqueado = ['documento_indisponivel', 'extracao_pendente',
+        'processamento_offline_necessario', 'bloqueio_quota', 'bloqueio_configuracao'].includes(resumoEstado);
+    const botao = $('btnGerarResumo');
+    if (resumoOcupado) botao.textContent = resumoEstado === null ? 'Consultando resumo...' : 'Gerando resumo...';
+    else if (resumoDisponivel) botao.textContent = resumoVisivel ? 'Ocultar resumo' : 'Mostrar resumo';
+    else if (bloqueado) botao.textContent = resumoEstado === 'processamento_offline_necessario' ? 'Resumo em preparação' : 'Resumo indisponível';
+    else if (documentosResumo.length > 1 && selecionados.length === 0) botao.textContent = 'Selecione os documentos para gerar';
+    else botao.textContent = 'Gerar resumo com IA';
+    botao.disabled = !ficha || resumoOcupado || (!resumoDisponivel && (bloqueado || selecionados.length === 0));
+    $('selecaoDocumentos').disabled = resumoOcupado;
+}
+function documentosSelecionados() {
+    return selecaoDocumentos(documentosResumo, [...$('selecaoDocumentos').querySelectorAll('input:checked')].map(input => input.value));
+}
+function renderizarSelecao(docs) {
+    const selecionados = new Set(documentosSelecionados());
+    documentosResumo = Array.isArray(docs) ? docs.filter(d => d && hashValido(d.sha256)) : [];
+    const el = $('opcoesDocumentos'); el.replaceChildren();
+    documentosResumo.forEach((doc, i) => {
+        const label = elemento('label');
+        label.style.display = 'block'; label.style.overflowWrap = 'anywhere';
+        const input = elemento('input'); input.type = 'checkbox'; input.value = doc.sha256;
+        // Um documento único não exige uma decisão do usuário. Com vários PDFs,
+        // escolhas continuam sempre explícitas para não alterar o escopo do resumo.
+        input.checked = selecionados.has(doc.sha256) || (documentosResumo.length === 1 && selecionados.size === 0);
+        input.addEventListener('change', () => {
+            resumoEstado = null; resumoDisponivel = null; resumoVisivel = false;
+            $('resultadoIA').replaceChildren(); $('resultadoIA').classList.add('hidden');
+            atualizarBotaoResumo();
+        });
+        label.append(input, document.createTextNode(` ${i + 1}. ${doc.nome ?? 'Proposta de governo (PDF)'}`));
+        el.append(label);
+        detalhes(el, `Detalhes técnicos do PDF ${i + 1}`, { sha256: doc.sha256 });
+    });
+    if (!documentosResumo.length) el.append(elemento('p', 'Nenhum documento com hash válido disponível para seleção.'));
+    atualizarBotaoResumo();
+}
+function exibirResumo(data, selecaoSolicitada = []) {
+    const el = $('resultadoIA'); el.replaceChildren(); el.classList.remove('hidden');
+    resumoEstado = Object.hasOwn(estadosResumo, data.estado) ? data.estado : null;
+    const estadoTexto = resumoEstado ? estadosResumo[resumoEstado] : 'Estado de resumo não reconhecido; conteúdo não exibido.';
+    const selecionados = Array.isArray(data.documentosSelecionados) ? data.documentosSelecionados.filter(hashValido) : selecaoSolicitada;
+    const total = new Set(documentosResumo.map(doc => doc.sha256)).size;
+    const escopoTexto = selecionados.length
+        ? `Escopo: ${selecionados.length} de ${total} PDF(s) disponíveis. ${selecionados.length < total ? 'Seleção de subconjunto: não representa todas as propostas.' : 'O resumo se limita aos documentos indicados; não garante cobertura integral do conteúdo.'}`
+        : 'Escopo documental não confirmado. Não interprete este resultado como resumo completo de todos os PDFs.';
+    const alertaOCR = data.avisoRevisaoOCR === true || documentosResumo.some(doc => selecionados.includes(doc.sha256) &&
+        (doc.requerRevisaoOCR === true || (Array.isArray(doc.paginasParaRevisao) ? doc.paginasParaRevisao.length > 0 : doc.paginasParaRevisao > 0)));
+    const grupos = ['rascunho_gerado', 'resumo_publicado'].includes(resumoEstado) ? agruparPropostas(data.afirmacoes) : [];
+    const temResumo = grupos.length > 0 || resumoEstado === 'resumo_publicado';
+
+    function adicionarDetalhesResumo(container) {
+        container.append(elemento('p', estadoTexto));
+        if (data.mensagem) container.append(elemento('p', data.mensagem));
+        if (data.motivo) {
+            if (typeof data.motivo === 'object') detalhes(container, 'Motivo informado pela API', data.motivo);
+            else container.append(elemento('p', `Motivo: ${data.motivo}`));
+        }
+        container.append(elemento('p', escopoTexto));
+        if (selecionados.length) detalhes(container, 'Hashes dos documentos abrangidos nesta consulta', selecionados);
+        if (data.alertas) detalhes(container, 'Alertas informados pela API', data.alertas);
+        if (data.documentos) detalhes(container, 'Documentos e rastreabilidade do resumo', data.documentos);
     }
 
-    // Busca a chave no formato UF_SQ_CANDIDATO (único formato usado pelo índice)
-    const chaveComUF = `${uf}_${id}`;
-    const dados = dadosCandidatos[chaveComUF];
-
-    if (!dados) {
-        console.error("ID procurado:", id, "UF:", uf);
-        console.error("Amostra das chaves no JSON:", Object.keys(dadosCandidatos).slice(0, 5));
-        alert("Erro: Dossiê não encontrado. Aperte F12 e veja o Console para mais detalhes.");
+    if (!temResumo) {
+        el.append(elemento('p', estadoTexto, 'disclaimer-ia'));
+        if (data.mensagem) el.append(elemento('p', data.mensagem));
+        if (data.motivo) {
+            if (typeof data.motivo === 'object') detalhes(el, 'Motivo informado pela API', data.motivo);
+            else el.append(elemento('p', `Motivo: ${data.motivo}`));
+        }
+        const consulta = grupoComplementar(el, 'Ver escopo e detalhes da consulta');
+        consulta.append(elemento('p', escopoTexto));
+        if (selecionados.length) detalhes(consulta, 'Hashes dos documentos abrangidos nesta consulta', selecionados);
+        if (data.alertas) detalhes(consulta, 'Alertas informados pela API', data.alertas);
+        if (data.documentos) detalhes(consulta, 'Documentos e rastreabilidade do resumo', data.documentos);
+        if (alertaOCR) el.append(elemento('p', 'Alerta OCR: há extração óptica sinalizada para revisão. Números, tabelas e ordem de leitura podem conter erros; confira o PDF original.', 'disclaimer-ia'));
         return;
     }
 
-    candidatoAtual = dados;
-
-    // 4.0. Carrega dados extras (foto, documentos, financeiro) via API privada
-    const chaveCompleta = `${uf}_${id}`;
-    dadosExtrasAtual = null;
-    try {
-        const resExtra = await fetch(`/api/candidato?id=${encodeURIComponent(chaveCompleta)}`);
-        if (resExtra.ok) dadosExtrasAtual = await resExtra.json();
-    } catch (e) {
-        console.warn('Dados extras não carregados:', e);
-    }
-
-    // 4.0a. Foto — Seção 01
-    const imgFoto = document.getElementById('candFoto');
-    const caminhoFoto = dadosExtrasAtual?.foto?.arquivo;
-    if (caminhoFoto) {
-        imgFoto.src = caminhoFoto.startsWith('/') ? caminhoFoto : '/' + caminhoFoto;
-    } else {
-        // Placeholder SVG 120x120 quando não há foto disponível
-        imgFoto.src = 'data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 120 120%22%3E%3Crect width%3D%22120%22 height%3D%22120%22 fill%3D%22%23333%22%2F%3E%3Ccircle cx%3D%2260%22 cy%3D%2245%22 r%3D%2226%22 fill%3D%22%23666%22%2F%3E%3Cellipse cx%3D%2260%22 cy%3D%22108%22 rx%3D%2240%22 ry%3D%2228%22 fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E';
-    }
-
-    // 4.1. Header do Dossiê (SQ_CANDIDATO)
-    const cand = dadosExtrasAtual?.candidato;          // fonte primária: data/candidatos.json
-    const perfFallback = dados.perfil || {};            // fallback: dados_candidatos.json
-    const idExibido = cand?.id || dados.id || id;
-    document.getElementById('candIdHeader').innerText = idExibido;
-
-    // Card: Dados do Candidato
-    renderizarDadosCandidato(cand, perfFallback);
-
-    // Card: Patrimônio Declarado
-    renderizarPatrimonio(dadosExtrasAtual?.patrimonio);
-
-    // Card: Documentos e Situação Jurídica
-    renderizarDocumentosJuridicos(cand, dadosExtrasAtual?.documentos, dadosExtrasAtual?.financeiro, dadosExtrasAtual?.juridico);
-
-    // 4.3. Resetando a IA e verificando cache
-    resultadoIA.classList.add('hidden');
-    resultadoIA.innerHTML = '';
-    btnGerarResumo.innerHTML = iconFixed('star', 'p') + ' Verificando...';
-    btnGerarResumo.disabled = true;
-
-    // Se o candidato não tiver PDF de proposta, desativamos o botão
-    const temProposta = dadosExtrasAtual?.documentos?.propostas && dadosExtrasAtual.documentos.propostas.length > 0;
-    if (!temProposta) {
-        btnGerarResumo.disabled = true;
-        btnGerarResumo.classList.add('texto-mutado');
-        btnGerarResumo.innerText = 'Sem proposta anexada';
-    } else {
-        // Verifica se já existe resumo em cache para este candidato
-        verificarCacheResumo(chaveCompleta);
-    }
-
-    // 4.5. Botão de reportar erro ao final do conteúdo da ficha
-    // Só renderiza quando URL_FORMULARIO_ERRO estiver preenchida — nunca exibe link vazio ou quebrado
-    const fichaConteudo = document.getElementById('conteudoFicha');
-    const reportarErroExistente = fichaConteudo.querySelector('.dossier-reportar-erro');
-    if (!reportarErroExistente && URL_FORMULARIO_ERRO) {
-        const reportarDiv = document.createElement('div');
-        reportarDiv.className = 'dossier-reportar-erro';
-        reportarDiv.innerHTML = `
-            <span>💬 Encontrou alguma inconsistência ou dado incorreto neste candidato?</span>
-            <a href="${URL_FORMULARIO_ERRO}" target="_blank" rel="noopener noreferrer" class="btn-reportar-erro">
-                <span class="icon-img"><img class="img-b" src="icons/warning_b.svg" alt=""><img class="img-p" src="icons/warning_p.svg" alt=""></span>
-                Reportar erro
-            </a>
-        `;
-        fichaConteudo.appendChild(reportarDiv);
-    }
-
-    // 4.6. Transição de Tela
-    document.querySelector('.barra-pesquisa').classList.add('hidden');
-    areaResultados.classList.add('hidden');
-    areaFicha.classList.remove('hidden');
-}
-
-// Botão de Voltar
-btnVoltar.addEventListener('click', () => {
-    areaFicha.classList.add('hidden');
-    document.querySelector('.barra-pesquisa').classList.remove('hidden');
-    areaResultados.classList.remove('hidden');
-});
-
-// ==========================================
-// 5. VERIFICAÇÃO DE CACHE (endpoint leve)
-// ==========================================
-async function verificarCacheResumo(idCandidato) {
-    try {
-        const res = await fetch(`/api/resumo?id_candidato=${encodeURIComponent(idCandidato)}`);
-        if (!res.ok) {
-            configurarBotaoResumo(false);
-            return;
-        }
-        const data = await res.json();
-        configurarBotaoResumo(data.cached === true);
-    } catch (error) {
-        console.error('Erro ao verificar cache de resumo:', error);
-        configurarBotaoResumo(false);
-    }
-}
-
-function configurarBotaoResumo(cached) {
-    btnGerarResumo.disabled = false;
-    btnGerarResumo.classList.remove('texto-mutado');
-    if (cached) {
-        btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
-        btnGerarResumo.dataset.cached = 'true';
-    } else {
-        btnGerarResumo.innerHTML = iconFixed('star', 'p') + ' Gerar Resumo com IA';
-        btnGerarResumo.dataset.cached = 'false';
-    }
-}
-
-// ==========================================
-// 6. EXIBIÇÃO DE RESUMO (compartilhada)
-// ==========================================
-function exibirResumo(textoResumo) {
-    resultadoIA.classList.remove('hidden');
-    resultadoIA.innerHTML = '';
-
-    // Renderiza o resumo de forma segura: textContent para evitar XSS, <br> explícitos para quebras de linha
-    const linhas = textoResumo.split('\n');
-    linhas.forEach((linha, i) => {
-        resultadoIA.appendChild(document.createTextNode(linha));
-        if (i < linhas.length - 1) {
-            resultadoIA.appendChild(document.createElement('br'));
-        }
+    const referencias = new Map();
+    grupos.forEach(grupo => {
+        const secao = elemento('details', null, 'resumo-tema');
+        const cabecalho = elemento('summary');
+        cabecalho.append(
+            elemento('span', grupo.tema, 'resumo-tema-titulo'),
+            elemento('span', `${grupo.propostas.length} proposta(s)`, 'resumo-tema-contagem'),
+        );
+        secao.append(cabecalho);
+        grupo.propostas.forEach(afirmacao => {
+            const item = elemento('div', null, 'resumo-proposta');
+            const paragrafo = elemento('p', null, 'resumo-proposta-texto');
+            paragrafo.append(document.createTextNode(afirmacao.texto));
+            const refs = Array.isArray(afirmacao.referencias) ? afirmacao.referencias : [];
+            refs.forEach(ref => {
+                const pagina = Number.isSafeInteger(ref.pagina) && ref.pagina > 0 ? ref.pagina : null;
+                if (!hashValido(ref.sha256) || !pagina) return;
+                const chaveRef = `${ref.sha256}:${pagina}`;
+                const doc = documentosResumo.find(d => d.sha256 === ref.sha256);
+                const href = doc && urlDocumento(doc, 'proposta');
+                if (!referencias.has(chaveRef)) referencias.set(chaveRef, {
+                    numero: referencias.size + 1, pagina, doc, href,
+                });
+                const referencia = referencias.get(chaveRef);
+                const marcador = elemento(href ? 'a' : 'span', `[${referencia.numero}]`, 'resumo-citacao');
+                marcador.title = `${doc?.nome ?? 'PDF original'}, página ${pagina}`;
+                marcador.setAttribute('aria-label', `Fonte ${referencia.numero}: ${doc?.nome ?? 'PDF original'}, página ${pagina}`);
+                if (href) { marcador.href = `${href}#page=${pagina}`; marcador.target = '_blank'; marcador.rel = 'noopener noreferrer'; }
+                paragrafo.append(document.createTextNode(' '), marcador);
+            });
+            item.append(paragrafo); secao.append(item);
+        });
+        el.append(secao);
     });
 
-    // Disclaimer de IA (risco: IA pode interpretar errado o texto)
-    const disclaimer = document.createElement('p');
-    disclaimer.className = 'disclaimer-ia';
-    disclaimer.textContent = DISCLAIMER_IA;
-    resultadoIA.appendChild(disclaimer);
-
-    // Disclaimer de fonte (risco: dado pode estar desatualizado em relação ao TSE)
-    // Adicionado ABAIXO do aviso de IA — são riscos distintos, ambos devem ser visíveis
-    const disclaimerFonte = document.createElement('div');
-    disclaimerFonte.innerHTML = criarDisclaimerFonte('candidato');
-    resultadoIA.appendChild(disclaimerFonte.firstElementChild);
-}
-
-// Exibe uma mensagem informativa neutra (não é erro)
-function exibirInfoNeutra(mensagem) {
-    resultadoIA.classList.remove('hidden');
-    resultadoIA.innerHTML = '';
-    const span = document.createElement('span');
-    span.className = 'texto-info-neutra';
-    span.textContent = mensagem;
-    resultadoIA.appendChild(span);
-}
-// ==========================================
-// 7. COMUNICAÇÃO COM A VERCEL (Motor Gemini)
-// ==========================================
-btnGerarResumo.addEventListener('click', async () => {
-    if (!candidatoAtual) return;
-
-    // Se já existe em cache, busca via GET e exibe sem chamar Gemini
-    if (btnGerarResumo.dataset.cached === 'true') {
-        btnGerarResumo.disabled = true;
-        btnGerarResumo.innerText = 'Carregando...';
-        loadingIA.classList.remove('hidden');
-        resultadoIA.classList.add('hidden');
-
-        try {
-            const res = await fetch('/api/resumo', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
-            });
-
-            loadingIA.classList.add('hidden');
-
-            // Verifica se a resposta é válida antes de tentar parsear JSON
-            const contentType = res.headers.get('content-type') || '';
-            if (!contentType.includes('application/json')) {
-                const text = await res.text();
-                console.error('Resposta não-JSON:', res.status, text.substring(0, 200));
-                mostrarErroIA(`Erro ${res.status}: O servidor retornou uma resposta inesperada.`);
-                return;
+    if (!grupos.length) el.append(elemento('p', 'Nenhuma proposta estruturada disponível. Consulte os PDFs originais.'));
+    if (referencias.size) {
+        const box = elemento('details', null, 'cand-dados-extra resumo-referencias');
+        box.append(elemento('summary', `Referências do resumo (${referencias.size} página(s))`));
+        let montado = false;
+        box.addEventListener('toggle', () => {
+            if (!box.open || montado) return;
+            montado = true;
+            const lista = elemento('ol', null, 'resumo-referencias-lista');
+            for (const referencia of referencias.values()) {
+                const item = elemento('li');
+                const label = `${referencia.doc?.nome ?? 'PDF original'} — página ${referencia.pagina}`;
+                const node = elemento(referencia.href ? 'a' : 'span', label);
+                if (referencia.href) { node.href = `${referencia.href}#page=${referencia.pagina}`; node.target = '_blank'; node.rel = 'noopener noreferrer'; }
+                item.append(node); lista.append(item);
             }
-
-            const data = await res.json();
-
-            if (res.ok && data.resumo) {
-                exibirResumo(data.resumo);
-            } else if (res.ok && data.bloqueado) {
-                exibirInfoNeutra(data.mensagem);
-                btnGerarResumo.disabled = true;
-                btnGerarResumo.classList.add('texto-mutado');
-            } else if (res.ok && data.semProposta) {
-                exibirInfoNeutra(data.mensagem);
-                btnGerarResumo.disabled = true;
-                btnGerarResumo.classList.add('texto-mutado');
-            } else {
-                mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
+            box.append(lista);
+        });
+        el.append(box);
+    }
+    el.append(elemento('p', 'Conteúdo gerado por IA, sujeito a erros e omissões. Confira as afirmações nos documentos originais.', 'disclaimer-ia'));
+    if (alertaOCR) el.append(elemento('p', 'Alerta OCR: há extração óptica sinalizada para revisão. Números, tabelas e ordem de leitura podem conter erros; confira o PDF original.', 'disclaimer-ia'));
+    const sobre = grupoComplementar(el, 'Sobre este resumo');
+    adicionarDetalhesResumo(sobre);
+}
+async function solicitarResumo(gerar = false) {
+    if (!ficha || resumoOcupado) return;
+    const documentos = documentosSelecionados();
+    if (gerar && documentos.length === 0) return;
+    const contexto = ficha;
+    const request = resumoControle.iniciar();
+    resumoOcupado = true; atualizarBotaoResumo();
+    $('loadingIA').textContent = gerar ? 'Gerando propostas por tema… Isso pode levar até 30 segundos. Não é necessário clicar novamente.' : 'Consultando o estado do resumo…';
+    $('loadingIA').classList.remove('hidden');
+    $('resultadoIA').replaceChildren(); $('resultadoIA').classList.add('hidden');
+    try {
+        const params = new URLSearchParams({ id: contexto.chave, exportacao: contexto.exportacao });
+        documentos.forEach(hash => params.append('documentos', hash));
+        const data = await comPrazo(signal => jsonAPI(gerar ? '/api/resumo' : `/api/resumo?${params}`, gerar ? {
+            method: 'POST', signal, headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id_candidato: contexto.chave, exportacao: contexto.exportacao, documentos }),
+        } : { signal }), request.signal);
+        if (!request.vigente() || ficha !== contexto) return;
+        validarVersao(data, contexto.exportacao);
+        if (!chaveCanonica(data.chave) || data.chave !== contexto.chave) throw new Error('Chave do resumo ausente ou divergente.');
+        if (Array.isArray(data.documentos) && !gerar) {
+            // O resumo pode listar só os PDFs usados nele; mantenha as outras propostas
+            // e os caminhos originais quando a API retornar apenas hashes/metadados.
+            const porHash = new Map(documentosResumo.map(doc => [doc.sha256, doc]));
+            for (const raw of data.documentos) {
+                const doc = typeof raw === 'string' ? { sha256: raw } : raw;
+                if (hashValido(doc?.sha256)) {
+                    const anterior = porHash.get(doc.sha256);
+                    porHash.set(doc.sha256, { ...anterior, ...doc,
+                        arquivo: doc.arquivo ?? anterior?.arquivo, caminho: doc.caminho ?? anterior?.caminho });
+                }
             }
-        } catch (e) {
-            console.error(e);
-            loadingIA.classList.add('hidden');
-            mostrarErroIA('Erro de comunicação com o servidor. Verifique o console (F12).');
+            renderizarSelecao([...porHash.values()]);
         }
+        exibirResumo(data, documentos);
+        if (['rascunho_gerado', 'resumo_publicado'].includes(data.estado)) {
+            resumoDisponivel = data; resumoVisivel = true;
+        } else { resumoDisponivel = null; resumoVisivel = false; }
+    } catch (error) {
+        if (!request.vigente() || ficha !== contexto) return;
+        exibirResumo({ estado: 'erro_geracao', mensagem: error.message });
+    } finally {
+        if (request.vigente() && ficha === contexto) {
+            resumoOcupado = false; $('loadingIA').classList.add('hidden'); atualizarBotaoResumo();
+        }
+    }
+}
+function carregarDetalhe(secao, extras = {}) {
+    if (!ficha) return Promise.reject(new Error('Ficha não está aberta.'));
+    const contexto = ficha;
+    const params = new URLSearchParams({ id: contexto.chave, exportacao: contexto.exportacao, secao,
+        ...Object.fromEntries(Object.entries(extras).map(([k, v]) => [k, String(v)])) });
+    const chaveCache = `${contexto.exportacao}:${contexto.chave}:${params}`;
+    return cacheDetalhes.obter(chaveCache, async () => {
+        const data = await jsonAPI(`/api/candidato?${params}`);
+        validarVersao(data, contexto.exportacao);
+        if (data.chave !== contexto.chave || data.secao !== secao) throw new Error('Detalhe pertence a outra candidatura ou seção.');
+        return data;
+    });
+}
 
-        btnGerarResumo.disabled = false;
-        btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
+function resetarFicha() {
+    resumoControle.cancelar(); ficha = null; resumoOcupado = false; resumoEstado = null;
+    resumoDisponivel = null; resumoVisivel = false;
+    documentosResumo = []; $('opcoesDocumentos').replaceChildren();
+    $('resultadoIA').replaceChildren(); $('resultadoIA').classList.add('hidden');
+    $('loadingIA').classList.add('hidden'); atualizarBotaoResumo();
+    $('areaFicha').classList.add('hidden');
+    document.querySelector('.barra-pesquisa').classList.remove('hidden');
+    $('areaResultados').classList.remove('hidden');
+}
+async function abrirFicha(id) {
+    const request = fichaControle.iniciar();
+    resetarFicha();
+    if (!identificadorAPI(id)) {
+        $('msgResultados').textContent = 'Identificador inválido. Use uma chave canônica ou um link legado UF_SQ; nome, número e SQ isolado não identificam candidaturas.';
         return;
     }
-
-    // Cache não existe — chama o Gemini normalmente
-    btnGerarResumo.disabled = true;
-    btnGerarResumo.innerText = 'Processando...';
-    loadingIA.classList.remove('hidden');
-    resultadoIA.classList.add('hidden');
-
+    const versao = exportacao;
+    $('msgResultados').textContent = 'Carregando dossiê...';
     try {
-        // Envia o ID do candidato no corpo da requisição via POST
-        const res = await fetch('/api/resumo', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id_candidato: candidatoAtual.uf + '_' + candidatoAtual.id }),
-        });
-
-        loadingIA.classList.add('hidden');
-
-        // Verifica se a resposta é válida antes de tentar parsear JSON
-        const contentType = res.headers.get('content-type') || '';
-        if (!contentType.includes('application/json')) {
-            const text = await res.text();
-            console.error('Resposta não-JSON:', res.status, text.substring(0, 200));
-            mostrarErroIA(`Erro ${res.status}: O servidor retornou uma resposta inesperada. Verifique se as variáveis de ambiente estão configuradas.`);
-            return;
+        const chaveCache = `${versao}:${id}`;
+        const data = await cacheFichas.obter(chaveCache, () => jsonAPI(`/api/candidato?${new URLSearchParams({ id, exportacao: versao, modo: 'compacto' })}`, { signal: request.signal }));
+        if (!request.vigente()) return;
+        validarVersao(data, versao);
+        if (!chaveCanonica(data.chave) || !data.candidato || (chaveCanonica(id) && data.chave !== id) ||
+            (data.candidato.chave != null && data.candidato.chave !== data.chave)) throw new Error('Identidade da candidatura divergente.');
+        ficha = data;
+        const foto = $('candFoto');
+        foto.onerror = () => { foto.onerror = null; foto.src = placeholder; foto.alt = 'Foto indisponível'; };
+        foto.src = assetURL(data.foto?.arquivo, { base, tipo: 'foto', chave: data.chave, sha256: data.foto?.sha256 }) ?? placeholder;
+        foto.alt = foto.src.endsWith('candidato-placeholder.svg') ? 'Foto indisponível' : `Foto de ${texto(data.candidato.nomeUrna)}`;
+        $('candIdHeader').textContent = data.chave;
+        $('candExportacao').textContent = data.exportacao;
+        renderizarCadastro(data.candidato, data.metadados); renderizarPatrimonio(data.patrimonio);
+        renderizarFinanceiro(data.financeiro, data.candidato);
+        renderizarJuridico(data.candidato, data.documentos, data.juridico);
+        renderizarSelecao(data.documentos?.propostas);
+        const url = new URL(location.href); url.searchParams.set('id', data.chave);
+        history.replaceState(null, '', url);
+        $('msgResultados').textContent = '';
+        document.querySelector('.barra-pesquisa').classList.add('hidden');
+        $('areaResultados').classList.add('hidden'); $('areaFicha').classList.remove('hidden');
+        if (Array.isArray(data.documentos?.propostas) && data.documentos.propostas.some(doc => hashValido(doc?.sha256))) {
+            void solicitarResumo();
         }
-
-        const data = await res.json();
-
-        if (res.ok && data.resumo) {
-            exibirResumo(data.resumo);
-            // Após gerar com sucesso, atualiza o botão para "Mostrar resumo"
-            btnGerarResumo.innerHTML = iconFixed('doc', 'p') + ' Mostrar resumo';
-            btnGerarResumo.dataset.cached = 'true';
-        } else if (res.ok && data.bloqueado) {
-            exibirInfoNeutra(data.mensagem);
-            btnGerarResumo.disabled = true;
-            btnGerarResumo.classList.add('texto-mutado');
-            btnGerarResumo.innerText = 'Resumo bloqueado';
-        } else if (res.ok && data.semProposta) {
-            exibirInfoNeutra(data.mensagem);
-            btnGerarResumo.disabled = true;
-            btnGerarResumo.classList.add('texto-mutado');
-            btnGerarResumo.innerText = 'Sem proposta de governo';
-        } else {
-            mostrarErroIA(`Erro: ${data.erro || 'Falha desconhecida'}`);
-        }
-
-    } catch (e) {
-        console.error(e);
-        loadingIA.classList.add('hidden');
-        mostrarErroIA('Erro de comunicação com o servidor. Verifique o console (F12).');
+    } catch (error) {
+        if (request.vigente()) { resetarFicha(); $('msgResultados').textContent = `Ficha indisponível: ${error.message} Nenhum dado offline será utilizado.`; }
     }
-
-    btnGerarResumo.disabled = false;
-});
-
-function mostrarErroIA(mensagem) {
-    resultadoIA.classList.remove('hidden');
-    resultadoIA.innerHTML = '';
-    const span = document.createElement('span');
-    span.className = 'texto-erro';
-    span.textContent = mensagem;
-    resultadoIA.appendChild(span);
 }
-
-// Dá o pontapé inicial!
-carregarListaBusca();
+$('btnPesquisar').addEventListener('click', pesquisar);
+$('inputBusca').addEventListener('keydown', event => { if (event.key === 'Enter') pesquisar(); });
+$('btnVoltar').addEventListener('click', () => {
+    fichaControle.cancelar(); resetarFicha();
+    const url = new URL(location.href); url.searchParams.delete('id'); history.replaceState(null, '', url);
+    pesquisar();
+});
+window.addEventListener('popstate', () => {
+    const id = new URL(location.href).searchParams.get('id');
+    if (id && exportacao) void abrirFicha(id);
+    else { fichaControle.cancelar(); resetarFicha(); }
+});
+$('btnGerarResumo').addEventListener('click', () => {
+    if (resumoDisponivel) {
+        if (resumoVisivel) {
+            $('resultadoIA').classList.add('hidden'); resumoVisivel = false;
+        } else {
+            exibirResumo(resumoDisponivel, resumoDisponivel.documentosSelecionados ?? documentosSelecionados());
+            resumoVisivel = true;
+        }
+        atualizarBotaoResumo();
+        return;
+    }
+    return solicitarResumo(true);
+});
+// Não lê nem migra caches de fichas/favoritos por heurística. Links legados são resolvidos apenas pela API.
+atualizarDatas();
+void carregarListaBusca();

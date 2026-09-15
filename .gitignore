@@ -1,3 +1,12 @@
 node_modules/
 .env
 .vercel
+/dist/
+/runtime/
+/.build.lock
+/.build-publicacao.lock
+/.build-*/
+/snapshots/.importacao-*/
+/snapshots/.importacao.lock
+/snapshots/.ativo-*.json
+/checkpoints/rascunhos/
