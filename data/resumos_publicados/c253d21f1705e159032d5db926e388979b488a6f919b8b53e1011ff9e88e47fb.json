@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002547874",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:c253d21f1705e159032d5db926e388979b488a6f919b8b53e1011ff9e88e47fb",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:53:10.806Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a CFEM para minas com grande lucro, desapropriar ativos de grandes empresas mineradoras para administração dos trabalhadores e do estado, mapear e fortalecer iniciativas comunitárias de comércio e renda com acesso a conhecimento técnico e bases materiais, e auxiliar a coletivização e industrialización do campo com automação e tecnologia da informação.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 11
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Assegurar a estatização da cadeia extrativista em Minas Gerais (como lítio e terras raras) por meio de empresa pública e lutar pela reestatização da Vale sob controle de trabalhadores e comunidades.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar e fortalecer indústrias de energias renováveis, semicondutores, catálise e fármacos.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar um programa de incentivo a hortas populares, agroecologia e agricultura familiar urbana e periurbana, com infraestrutura estadual para escoamento e feiras populares permanentes.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lutar junto ao povo pelo aumento de 100% do salário mínimo.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lutar junto ao povo pelo fim da escala 6x1, com redução da jornada de trabalho para 6 horas diárias para todos os trabalhadores.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lutar pelo fim da Lei Kandir, com compensação de perdas para o orçamento estadual mediante suspensão de pagamento e amortização retroativa da suposta dívida pública com a União.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Regulamentar os trabalhadores de aplicativo com leis que garantam vínculo empregatício, trabalhando pela revogação das leis da Reforma Trabalhista e da Terceirização.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Taxar grandes empresas estrangeiras para impedir a remessa de lucros para o exterior e realizar reforma tributária com taxação de grandes fortunas e impostos progressivos.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aumentar repasses à saúde, criar Conselho de fiscalização de saúde e segurança dos trabalhadores da mineração vinculado ao SUS, fortalecer o Sistema Único de Saúde com investimentos, promover a saúde da população negra, encerrar Parcerias Público-Privadas (PPPs) na saúde incluindo fundações e organizações sociais, fortalecer a atenção primária, realizar concursos públicos para profissionais da saúde, garantir funcionamento da saúde pública em todo o estado para populações diversas, criar ambulatórios especializados para LGBTQIA+ e fortalecer a Fundação Ezequiel Dias.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 11
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Defender o parto humanizado, as maternidades públicas, o aumento da licença-maternidade e paternidade, e criar o Programa Gestação Digna com assistência psicossocial, acesso a direitos e renda.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Aumentar o número de delegacias especializadas no atendimento à mulher vítima de violência.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Combater firmemente o trabalho escravo com atuação conjunta entre governos federal, estadual e municipal.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Expandir canais públicos de denúncia e encaminhamento e ampliar a Rede Estadual de Enfrentamento à Violência contra a Mulher, incluindo mais casas-abrigo, transferência de renda, auxílio jurídico, atendimento multidisciplinar e aluguel social.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Tornar o policial um servidor civil sem subordinação militar, retirar a polícia ostensiva do regime administrativo militar alterando a Constituição para subordiná-la unicamente ao governo estadual sem vínculo com o Exército, e tratar o uso de drogas como questão de saúde pública com formação para a Polícia Militar.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 12
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Criar Conselhos Populares da Mineração deliberativos nos territórios mineradores, fundos de incentivo à diversificação econômica regional e aumentar a arrecadação da CFEM com conselhos de fiscalização municipal.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Garantir o cumprimento da Convenção 169 da OIT sobre consulta prévia a comunidades indígenas e tradicionais.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 9
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Revogar a Lei estadual nº 21.972 e decretos, criar leis de monitoramento e fiscalização de barragens sem automonitoramento, tornar obrigatório o uso de tecnologias eficientes na extração, proibir barragens por alteamento e fortalecer órgãos ambientais e comitês de bacia.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Suspender toda a mineração no estado, rever contratos, punir mineradoras responsáveis por crimes nas bacias dos rios Doce e Paraopeba, garantir reparação integral, reassentamento e Assessorias Técnicas Independentes.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar a rede de escolas estaduais com foco em áreas rurais, terras indígenas e quilombolas; recompor e ampliar o orçamento da FAPEMIG com recursos para UEMG e Unimontes; monitorar o Plano Estadual de Educação; elaborar Plano Estadual de Assistência Estudantil; reverter a privatização e reestatizar escolas estaduais; cumprir a Lei do Piso Nacional da Educação; realizar concurso público imediato para a educação; desenvolver canais de diálogo com universidades federais para ciência e projetos; implementar o passe livre estudantil; criar programa de ensino técnico integrado a empresas públicas; fortalecer UEMG, Unimontes e UTRAMIG com concursos e expansão; encerrar a militarização e municipalização de escolas; revogar o Novo Ensino Médio; promover campanhas de inclusão e diversidade; e implementar cotas para pessoas trans e travestis na graduação da Unimontes.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 13
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a educação básica infantil com aumento de creches públicas em periferias e cobrança de cumprimento da legislação de creches em empresas privadas.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar empresa pública estadual de transporte rodoviário e ferroviário utilizando linhas existentes e prevendo expansão, fortalecer o Departamento de Estrada e Rodagem de Minas Gerais com mais funcionários e investimentos, revisar concessões de estradas privadas com redução e congelamento de pedágios e maior destinação para manutenção, promover estudo logístico de conexões, retornar o trem urbano de passageiros na Região Metropolitana de Belo Horizonte e estatizar o transporte urbano coletivo.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 12
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Garantir a geração de emprego a partir de frentes emergenciais de trabalho em obras de infraestrutura nas periferias, saneamento, calçamento de ruas, construção de postos de saúde, escolas, espaços de lazer, esporte e praças, por meio de mutirões remunerados e trabalho comunitário.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Realizar Reforma Urbana e Agrária em caráter imediato, aumentar repasses para moradia, reconhecer e urbanizar ocupações urbanas, reconhecer e titular ocupações rurais e assentamentos, e promover reformulação arquitetônica e de saneamento dos aglomerados e cidades.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 11
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Combater a pobreza menstrual com distribuição gratuita de absorventes em escolas, centros de saúde, Cras e presídios.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o Programa Bora Juventude para centros de convivência em áreas pobres com cursos, cultura, esporte e fortalecimento do Fica Vivo; criar o Programa Emprego Jovem para formação profissional e orientação de carreira; reestruturar o Programa Transformar via Emater-MG para jovens rurais; promover campanhas anuais de prevenção ao suicídio e ISTs; e valorizar o esporte para a saúde mental.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 14
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar políticas contra a transfobia, incluindo mais abrigos para a população trans, garantia de uso do nome social e retificação de documentos, tratamento humanizado em saúde, erradicação do analfabetismo feminino, políticas de geração de renda para mulheres negras, quilombolas, PCDs e indígenas, e rede de referência LGBTQIA+.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Desenvolver, em articulação com o Governo Federal, estoques de alimentos por meio da CeasaMinas e da Conab para regulação de preços e abastecimento de populações vulneráveis ou atingidas por desastres ambientais.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Estimular a construção de casas populares pelos próprios moradores e atender as reivindicações dos trabalhadores.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 1
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Assegurar participação popular no orçamento por meio de conselhos deliberativos sobre prioridades de investimento e defender o fim do arcabouço fiscal.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Cobrar rigorosamente as dívidas ativas de impostos de grandes bancos e empresas, elaborando projeto de lei para retirar o alvará de sonegadores.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Desenvolver campanhas de combate à violência e ao assédio nas escolas com contratação de profissionais e capacitação de trabalhadores, manter o Memorial dos Direitos Humanos sob controle e gestão popular com investimento público, promover editais culturais para jovens, desenvolver eventos culturais regionais para a juventude, criar política estadual de incentivo ao acesso à cultura com redução de preços, garantir escolas públicas de artes e orçamento para cultura, e preservar patrimônios históricos e culturais.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 14
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 15
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer as estatais mineiras (Cemig, Codemig, Prodemge, MGS, entre outras) e o serviço público, realizando a reestatização imediata da Copasa.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir aprovação de lei que destine 30% das vagas em concursos públicos para negros, indígenas, pessoas com deficiência e pessoas trans.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir o pagamento do piso salarial e do plano de carreiras de todas as categorias de funcionários do estado, ativos e aposentados.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar auditoria cidadã das dívidas públicas, revogar o acordo do Propag, paralisar pagamentos e lutar pela anulação da dívida do estado com a União.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Retomar terras por povos indígenas, quilombolas e comunidades tradicionais com garantia de controle e expulsão de invasores, reconhecer a natureza como ser de direito, combater a intolerância religiosa e o racismo por meio da Secretaria de Direitos Humanos, e investir em Ciência e Tecnologia Popular.",
+      "referencias": [
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 11
+        },
+        {
+          "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+          "pagina": 12
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 1
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 2
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 3
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 4
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 5
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 6
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 7
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 8
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 9
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 10
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 11
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 12
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 13
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 14
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 15
+    },
+    {
+      "sha256": "acda21b3e76cdda7b09d20f8dd37a3ad595f155757003a89327a0617c17c57dd",
+      "pagina": 16
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:53:10.811Z",
+    "conteudoHash": "003776f034adcf354563ae2b6ba6e3a68a6b8fe2a28fd77fa078160ee256e19b"
+  }
+}

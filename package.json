@@ -9,6 +9,7 @@
     "test:sanidade": "node tests_sanidade.mjs",
     "importar-exportacao": "node scripts/importar-exportacao.mjs",
     "gerar-rascunhos": "node scripts/gerar-rascunhos.mjs",
+    "gerar-rascunhos:fila": "node scripts/gerar-rascunhos.mjs --modelo=gemini-3.5-flash-lite --intervalo=20000 --pausa=4000 --max-chamadas=200 --max-tentativas=4 --publicar",
     "revisar-resumo": "node scripts/revisar-resumo.mjs",
     "build": "node scripts/build.mjs"
   },

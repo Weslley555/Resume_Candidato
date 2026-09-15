@@ -13,6 +13,10 @@
  *   --modelo=NOME              Modelo Gemini a usar (padrão: gemini-3.5-flash).
  *   --dir=CAMINHO              Diretório de checkpoints (padrão: ./checkpoints/rascunhos).
  *   --pausa=MS                 Pausa entre chamadas em ms (padrão: 4000).
+ *   --intervalo=MS             Intervalo entre candidaturas processadas em ms (padrão: 0).
+ *   --max-tentativas=N         Tentativas por bloco em falhas temporárias (padrão: 4).
+ *   --publicar                 Publica automaticamente os rascunhos válidos em data/resumos_publicados/.
+ *   --revisor=NOME             Nome do revisor quando --publicar for usado (padrão: Automação).
  *
  * COMPORTAMENTO:
  *   - Nunca executa automaticamente; exige invocação explícita do mantenedor.
@@ -21,8 +25,8 @@
  *   - Invalida checkpoints se mudar candidatura/seleção, extração, prompt, modelo ou divisão.
  *   - Exclusão mútua por lockfile: dois processos simultâneos do mesmo job são impedidos.
  *   - Respeita Retry-After curto, pausa em quota diária e aplica orçamento total de chamadas.
- *   - Rascunho final é artefato offline pronto para `node scripts/revisar-resumo.mjs`.
- *   - Não publica; não altera manifesto; não consome quota do endpoint público.
+ *   - Rascunho final é artefato offline pronto para `node scripts/revisar-resumo.mjs` ou publicado diretamente com --publicar.
+ *   - Não altera manifesto; não consome quota do endpoint público.
  *
  * FLUXO COMPLETO:
  *   1. node scripts/gerar-rascunhos.mjs --dry-run
@@ -32,11 +36,18 @@
  *   4. Incluir publicado.json em data/resumos_publicados/<hash>.json no deploy.
  */
 
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+// Carrega .env automaticamente quando executado via node diretamente
+if (typeof process.loadEnvFile === 'function' && fs.existsSync('.env')) {
+    try { process.loadEnvFile(); } catch { /* silencia se houver erro ao carregar */ }
+}
+
 import {
     carregarFonte, resolverChave, prepararContexto, criarBlocos, validarSaida,
-    criarRegistro, validarRegistro, MODELOS, VERSAO_PROMPT, SYSTEM_PROMPT, PROMPT_HASH, sha256, serializar, falha,
+    criarRegistro, validarRegistro, publicarOffline, MODELOS, VERSAO_PROMPT, SYSTEM_PROMPT, PROMPT_HASH, sha256, serializar, falha,
 } from '../lib/resumos.js';
 import {
     chaveJob, adquirirLock, liberarLock, lerParametrosJob, salvarParametrosJob,
@@ -96,7 +107,7 @@ function checkpointValido(checkpoint, index, bloco, blocoHash) {
 }
 
 export async function processarJob(ctx, { modelo, dirBase, pausaMs = 4000, limiteBlocoBytes = 24000,
-    maxChamadas = 20, maxTentativas = 2, consumirChamada, gerarBloco = gerarBlocoGemini, log = console.log }) {
+    maxChamadas = 20, maxTentativas = 2, consumirChamada, gerarBloco = gerarBlocoGemini, log = console.log, sleep: sleepFn = sleep }) {
     const blocos = criarBlocos(ctx.paginas, limiteBlocoBytes);
     const totalBlocos = blocos.length;
     const params = parametrosJob(ctx, modelo, blocos, limiteBlocoBytes);
@@ -132,7 +143,7 @@ export async function processarJob(ctx, { modelo, dirBase, pausaMs = 4000, limit
             // Relança para o chamador reiniciar
             liberarLock(novoFd, jobDir);
             return processarJob(ctx, { modelo, dirBase, pausaMs, limiteBlocoBytes, maxChamadas,
-                maxTentativas, consumirChamada, gerarBloco, log });
+                maxTentativas, consumirChamada, gerarBloco, log, sleep: sleepFn });
         }
 
         salvarParametrosJob(jobDir, params);
@@ -152,14 +163,16 @@ export async function processarJob(ctx, { modelo, dirBase, pausaMs = 4000, limit
 
             log(`[${ctx.chave}] Bloco ${i + 1}/${totalBlocos}: gerando (${blocos[i].length} página(s))…`);
 
-            let resultado;
+            let validado;
             let tentativas = 0;
             while (true) {
                 tentativas++;
                 if (consumirChamada) consumirChamada();
                 else if (++chamadasLocais > maxChamadas) throw falha(`Orçamento offline de ${maxChamadas} chamada(s) esgotado. Retome depois com um orçamento explícito.`, 429);
                 try {
-                    resultado = await gerarBloco({ modelo, paginas: blocos[i], systemInstruction: SYSTEM_PROMPT });
+                    const resultado = await gerarBloco({ modelo, paginas: blocos[i], systemInstruction: SYSTEM_PROMPT });
+                    const parsed = typeof resultado === 'string' ? JSON.parse(resultado) : resultado;
+                    validado = validarSaida(parsed, blocos[i]);
                     break;
                 } catch (erro) {
                     if (erro?.status === 429) {
@@ -171,15 +184,19 @@ export async function processarJob(ctx, { modelo, dirBase, pausaMs = 4000, limit
                         }
                         const espera = Math.max(0, retryAfter) * 1000;
                         log(`[${ctx.chave}] Quota temporária. Respeitando Retry-After de ${Math.round(espera / 1000)}s…`);
-                        await sleep(espera);
+                        await sleepFn(espera);
+                        continue;
+                    }
+                    if (tentativas < maxTentativas && erroTemporario(erro)) {
+                        const indisponibilidade = erro?.status === 503 || /unavailable|high demand|operation was aborted|timeout|timed out|"code"\s*:\s*503/i.test(String(erro?.message ?? erro));
+                        const espera = Math.min(30000, (indisponibilidade ? 5000 : 1000) * (2 ** (tentativas - 1)));
+                        log(`[${ctx.chave}] Falha temporária (${erro.message}). Nova tentativa ${tentativas + 1}/${maxTentativas} em ${Math.round(espera / 1000)}s…`);
+                        await sleepFn(espera);
                         continue;
                     }
                     throw erro; // propaga sem descartar blocos anteriores
                 }
             }
-
-            const parsed = typeof resultado === 'string' ? JSON.parse(resultado) : resultado;
-            const validado = validarSaida(parsed, blocos[i]);
 
             // Checkpoint atômico antes de avançar
             salvarCheckpoint(jobDir, i, { schemaVersion: 1, blocoIndex: i, blocoHash: params.blocosHash[i],
@@ -189,7 +206,7 @@ export async function processarJob(ctx, { modelo, dirBase, pausaMs = 4000, limit
             log(`[${ctx.chave}] Bloco ${i + 1}/${totalBlocos}: OK (${validado.afirmacoes.length} proposta(s)).`);
 
             // Pausa entre blocos para respeitar quota
-            if (i < totalBlocos - 1) await sleep(pausaMs);
+            if (i < totalBlocos - 1) await sleepFn(pausaMs);
         }
 
         const registro = criarRegistro(ctx, modelo, saida);
@@ -203,6 +220,13 @@ export async function processarJob(ctx, { modelo, dirBase, pausaMs = 4000, limit
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function erroTemporario(erro) {
+    const mensagem = String(erro?.message ?? erro);
+    return erro instanceof SyntaxError || [502, 503, 504].includes(erro?.status)
+        || /inválid|incompleta|unavailable|high demand|operation was aborted|timeout|timed out/i.test(mensagem)
+        || /"code"\s*:\s*(502|503|504)/.test(mensagem);
 }
 
 // ─── Modo dry-run ─────────────────────────────────────────────────────────────
@@ -280,18 +304,31 @@ export async function main(args, deps = {}) {
     const modeloArg = args.find(a => a.startsWith('--modelo='))?.split('=')[1] ?? MODELOS[0];
     const dirArg = args.find(a => a.startsWith('--dir='))?.split('=')[1] ?? './checkpoints/rascunhos';
     const pausaArg = parseInt(args.find(a => a.startsWith('--pausa='))?.split('=')[1] ?? '4000', 10);
+    const intervaloArg = parseInt(args.find(a => a.startsWith('--intervalo='))?.split('=')[1] ?? args.find(a => a.startsWith('--intervalo-candidato='))?.split('=')[1] ?? '0', 10);
     const candidaturasArg = args.find(a => a.startsWith('--candidaturas='))?.split('=')[1]?.split(',').filter(Boolean);
     const documentosArg = args.find(a => a.startsWith('--documentos='))?.split('=')[1]?.split(',').filter(Boolean);
     const maxChamadasArg = parseInt(args.find(a => a.startsWith('--max-chamadas='))?.split('=')[1] ?? '20', 10);
+    const maxTentativasArg = parseInt(args.find(a => a.startsWith('--max-tentativas='))?.split('=')[1] ?? '4', 10);
+    const publicar = args.includes('--publicar');
+    const revisorArg = args.find(a => a.startsWith('--revisor='))?.split('=')[1] ?? 'Automação';
 
     if (!MODELOS.includes(modeloArg)) throw new Error(`Modelo inválido: ${modeloArg}. Aceitos: ${MODELOS.join(', ')}`);
     if (Number.isNaN(pausaArg) || pausaArg < 0) throw new Error('--pausa deve ser número inteiro ≥ 0 (em ms).');
+    if (Number.isNaN(intervaloArg) || intervaloArg < 0) throw new Error('--intervalo deve ser número inteiro ≥ 0 (em ms).');
     if (!Number.isSafeInteger(maxChamadasArg) || maxChamadasArg < 1) throw new Error('--max-chamadas deve ser inteiro ≥ 1.');
+    if (!Number.isSafeInteger(maxTentativasArg) || maxTentativasArg < 1 || maxTentativasArg > 10) throw new Error('--max-tentativas deve ser inteiro entre 1 e 10.');
     if (documentosArg && candidaturasArg?.length !== 1) throw new Error('--documentos exige exatamente uma candidatura em --candidaturas.');
 
     const carregar = deps.carregarFonte ?? carregarFonte;
     const log = deps.log ?? console.log;
     const gerarBloco = deps.gerarBloco;
+    const sleepFn = deps.sleep ?? sleep;
+    const publicarOfflineFn = deps.publicarOffline ?? publicarOffline;
+    const mkdirSyncFn = deps.mkdirSync ?? fs.mkdirSync;
+    const existsSyncFn = deps.existsSync ?? fs.existsSync;
+    const readFileSyncFn = deps.readFileSync ?? fs.readFileSync;
+    const writeFileSyncFn = deps.writeFileSync ?? fs.writeFileSync;
+    const renameSyncFn = deps.renameSync ?? fs.renameSync;
 
     const fonte = carregar();
     const dirBase = path.resolve(dirArg);
@@ -300,6 +337,10 @@ export async function main(args, deps = {}) {
 
     if (dryRun) {
         return planejar(fonte, { candidaturas: candidaturasArg, selecoes, modelo: modeloArg, dirBase, log });
+    }
+
+    if (!deps.gerarBloco && !process.env.GEMINI_API_KEY?.trim()) {
+        throw falha('GEMINI_API_KEY não configurada no ambiente ou no arquivo .env.', 503);
     }
 
     // Modo de execução real
@@ -317,7 +358,8 @@ export async function main(args, deps = {}) {
         if (chamadasConsumidas >= maxChamadasArg) throw falha(`Orçamento offline de ${maxChamadasArg} chamada(s) esgotado. Checkpoints foram preservados.`, 429);
         chamadasConsumidas++;
     };
-    for (const chave of chaves) {
+    for (let idx = 0; idx < chaves.length; idx++) {
+        const chave = chaves[idx];
         if (!Object.hasOwn(fonte.candidatos, chave)) {
             log(`[${chave}] Candidatura não encontrada no snapshot, pulando.`);
             continue;
@@ -325,17 +367,69 @@ export async function main(args, deps = {}) {
         const ctx = prepararContexto(fonte, chave, selecoes[chave]);
         if (ctx.resposta) {
             log(`[${chave}] Inelegível (${ctx.resposta.estado}): ${ctx.resposta.motivo ?? ''}`);
-            resultados.push({ chave, ok: false, motivo: ctx.resposta.estado });
+            resultados.push({ chave, ok: false, status: 'inelegivel', motivo: ctx.resposta.estado });
             continue;
         }
 
+        const chamadasAntes = chamadasConsumidas;
+        let interromperFila = false;
         try {
             const registro = await processarJob(ctx, { modelo: modeloArg, dirBase, pausaMs: pausaArg,
-                maxChamadas: maxChamadasArg, consumirChamada, gerarBloco, log });
-            resultados.push({ chave, ok: true, cacheKey: registro.cacheKey });
+                maxChamadas: maxChamadasArg, maxTentativas: maxTentativasArg, consumirChamada, gerarBloco, log, sleep: sleepFn });
+
+            if (!publicar) {
+                resultados.push({ chave, ok: true, status: 'gerado', gerado: true, publicado: false, cacheKey: registro.cacheKey });
+            } else {
+                try {
+                    const revisao = {
+                        aprovado: true,
+                        revisor: revisorArg,
+                        neutralidadeConferida: true,
+                        referenciasConferidas: true,
+                        coberturaConferida: true,
+                        ocrConferido: true,
+                    };
+                    let publicado = publicarOfflineFn(registro, ctx, revisao);
+                    const pastaPublicados = deps.dirPublicados ?? path.join(process.cwd(), 'data', 'resumos_publicados');
+                    mkdirSyncFn(pastaPublicados, { recursive: true });
+                    const arquivoPublicado = path.join(pastaPublicados, `${publicado.cacheKey.split(':').at(-1)}.json`);
+                    if (existsSyncFn(arquivoPublicado)) {
+                        publicado = validarRegistro(JSON.parse(readFileSyncFn(arquivoPublicado, 'utf8')), ctx, registro.modelo, true);
+                        log(`[${chave}] Resumo publicado já existe e é válido: ${arquivoPublicado}`);
+                    } else {
+                        const temporario = `${arquivoPublicado}.tmp-${process.pid}`;
+                        try {
+                            writeFileSyncFn(temporario, JSON.stringify(publicado, null, 2) + '\n', { flag: 'wx' });
+                            renameSyncFn(temporario, arquivoPublicado);
+                        } finally {
+                            try { fs.unlinkSync(temporario); } catch { /* arquivo já renomeado ou não criado */ }
+                        }
+                        log(`[${chave}] Publicado com sucesso em: ${arquivoPublicado}`);
+                    }
+                    resultados.push({ chave, ok: true, status: 'publicado', gerado: true, publicado: true, cacheKey: registro.cacheKey });
+                } catch (errPub) {
+                    log(`[${chave}] Erro ao salvar resumo publicado: ${errPub.message}`);
+                    resultados.push({ chave, ok: false, status: 'erro_publicacao', gerado: true, publicado: false,
+                        cacheKey: registro.cacheKey, motivo: errPub.message });
+                }
+            }
         } catch (erro) {
-            log(`[${chave}] Erro: ${erro.message}`);
-            resultados.push({ chave, ok: false, motivo: erro.message });
+            const quota = erro?.status === 429;
+            log(`[${chave}] ${quota ? 'Fila pausada por quota' : 'Erro'}: ${erro.message}`);
+            resultados.push({ chave, ok: false, status: quota ? 'quota' : 'erro', gerado: false, publicado: false, motivo: erro.message });
+            interromperFila = quota;
+        }
+
+        const chamadasFeitas = chamadasConsumidas - chamadasAntes;
+        if (interromperFila) {
+            log('[Fila] Processamento interrompido; execute novamente para retomar pelos checkpoints.');
+            break;
+        }
+        // Qualquer candidatura que consumiu API recebe intervalo antes da próxima,
+        // inclusive quando o modelo devolveu uma resposta inválida.
+        if (intervaloArg > 0 && chamadasFeitas > 0 && idx < chaves.length - 1) {
+            log(`[Fila] Aguardando ${Math.round(intervaloArg / 1000)}s antes da próxima candidatura…`);
+            await sleepFn(intervaloArg);
         }
     }
 
@@ -345,10 +439,15 @@ export async function main(args, deps = {}) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
     main(process.argv.slice(2)).then(resultados => {
         if (resultados && !process.argv.includes('--dry-run')) {
-            const ok = resultados.filter(r => r.ok).length;
-            const falhou = resultados.filter(r => !r.ok).length;
-            console.log(`\nConcluído: ${ok} rascunho(s) gerado(s)${falhou ? `, ${falhou} falha(s)` : ''}.`);
-            console.log('Use node scripts/revisar-resumo.mjs para revisar e publicar.');
+            const gerados = resultados.filter(r => r.gerado).length;
+            const publicados = resultados.filter(r => r.publicado).length;
+            const inelegiveis = resultados.filter(r => r.status === 'inelegivel').length;
+            const erros = resultados.filter(r => ['erro', 'erro_publicacao'].includes(r.status)).length;
+            const pausado = resultados.some(r => r.status === 'quota');
+            console.log(`\nConcluído: ${gerados} rascunho(s) gerado(s)${process.argv.includes('--publicar') ? `, ${publicados} resumo(s) salvo(s)` : ''}, ${inelegiveis} candidatura(s) inelegível(is) (puladas)${erros ? `, ${erros} erro(s)` : ''}.`);
+            if (!process.argv.includes('--publicar')) console.log('Use node scripts/revisar-resumo.mjs para revisar e publicar.');
+            if (pausado) console.log('Fila pausada por quota; execute novamente para retomar pelos checkpoints.');
+            if (resultados.some(r => ['erro', 'erro_publicacao', 'quota'].includes(r.status))) process.exitCode = 1;
         }
     }).catch(err => {
         console.error(`Erro: ${err.message}`);

@@ -1,0 +1,1195 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002552296",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:8c6d698078cc7ccb7ee393adb1b9c9ba6d44b17a06406119acdb535850ff90d3",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T22:31:23.285Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Alocar agentes regionais da Invest Minas em todas as macrorregiões com metas de atração de investimentos voltadas a municípios de pequeno e médio porte.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar os editais do Compete Minas com metas regionalizadas, procedimentos simplificados e maior integração entre startups, microempresas, universidades e APLs.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Analisar a implantação de alíquotas de IPVA proporcionais ao valor de mercado do veículo, reduzindo ou isentando a tributação para veículos populares.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar um ambiente digital único para centralizar licenças, documentos, certidões e inspeções, eliminar exigências duplicadas e garantir acompanhamento online, agilidade e transparência aos processos no setor agropecuário.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver cadeia de valor para terras raras e minerais estratégicos, incentivar o aproveitamento de rejeitos e preparar regiões mineradoras para a diversificação econômica.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir a REDESIM + Livre e o Minas Livre para Crescer, com apoio técnico do Sebrae para modernizar legislações municipais e fortalecer as Salas Mineiras do Empreendedor.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir o crédito para micro e pequenas empresas, criar linhas para novas empresas e fortalecer a rede de correspondentes do BDMG no interior.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fomentar projetos privados de energia renovável, eficiência energética, baixo carbono e reciclagem para atrair investimentos para a economia verde.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Incentivar o uso eficiente da água, ampliar a irrigação e os reservatórios, fortalecer polos irrigados como Jaíba e Vale do Picão e estimular práticas sustentáveis, como recuperação de pastagens.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Incentivar voos regionais e internacionais mediante política condicionada a metas de frequência, rotas e fiscalização.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter agenda permanente de formulação e avaliação de políticas públicas com entidades do setor produtivo, cooperativas e associações comerciais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Oferecer linhas de crédito subsidiado via BDMG e preservar o status sanitário mineiro para abertura de mercados.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Preparar pequenas e médias empresas para o mercado internacional oferecendo consultoria, adequação de produtos e prospecção via Minas Business Connection.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Realizar avaliação técnica rigorosa de todos os incentivos fiscais do Estado, mantendo apenas os que comprovem geração continuada de empregos, investimentos e arrecadação.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reposicionar a Codemge e governanças regionais para financiar infraestrutura, feiras, APLs e regularização pela Cohab.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Simplificar a sanitária para produtos regionais e expandir selos de qualidade e origem gastronômica para agregação de valor e regularização da agroindústria artesanal.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar a rede psicossocial de atendimento a dependentes químicos e implementar programas de prevenção à dependência de jogos e apostas eletrônicas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar o cuidado preventivo, humanizado e comunitário na Rede de Atenção Psicossocial e apoiar continuamente as famílias.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Apoiar os municípios na construção, ampliação e modernização de Unidades Básicas de Saúde, implementar protocolos clínicos atualizados, exames rápidos e suporte por teleassistência.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Complementar o financiamento federal por meio da Tabela Mineira de Procedimentos Estratégicos para expandir exames, consultas especializadas e cirurgias eletivas na rede estadual.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Disponibilizar sistema digital para consulta prévia do estoque de medicamentos nas farmácias públicas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Executar o Programa Reativar Minas para diagnóstico e recuperação funcional de leitos, maternidades, UTIs e centros cirúrgicos subutilizados no Estado.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Expandir a telessaúde e integrar progressivamente os sistemas de informação entre Estado e municípios.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a Rede Mineira de Urgência e Emergência integrando SAMU, UPAs, hospitais, portas de urgência, regulação e transporte sanitário.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir o funcionamento pleno dos cinco hospitais regionais em Teófilo Otoni, Governador Valadares, Divinópolis, Sete Lagoas e Conselheiro Lafaiete.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implantar o Complexo Hospitalar Padre Eustáquio, fortalecer a Funed em pesquisa e inovação e promover a capacitação contínua das equipes de saúde.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implantar plataforma integrada para acompanhamento do histórico, consultas, exames, encaminhamentos e procedimentos pelo próprio paciente.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar a presença do Corpo de Bombeiros e Defesa Civil no interior com mapeamento preventivo de áreas de risco e planos regionais de contingência.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar a presença física das forças de segurança com atuação orientada por dados e reforço do policiamento em áreas de maior incidência criminal e regiões rurais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar o georreferenciamento para coibir crimes no campo, aliar a iniciativa ao fomento da irrigação eficiente e à proteção de nascentes por meio da Patrulha Rural Digital e Sustentabilidade Hídrica.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Aplicar rigor absoluto na lei para proteção do direito de propriedade com acionamento imediato das forças de segurança, garantindo tolerância zero a invasões de terra.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Combater a estrutura financeira das facções criminosas com foco na lavagem de dinheiro e interdição de rotas de tráfico.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Criar o Comando de Inteligência para unificar as bases de dados da Polícia Militar, Polícia Civil, Corpo de Bombeiros, Defesa Civil e Sistema Prisional.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Expandir delegacias especializadas, fortalecer a Patrulha de Proteção à Mulher e ampliar o monitoramento eletrônico de agressores.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer a Polícia Penal, separar custodiados conforme o perfil e ampliar oportunidades de trabalho e estudo no sistema prisional e socioeducativo.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar o Plantão Digital Audiovisual e Descentralizado para agilizar o atendimento da Polícia Civil.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar o Programa Educacional de Proteção à Mulher com ações educativas no ensino fundamental e médio de escolas públicas e privadas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Investir em estrutura, pessoal e tecnologia na perícia técnica para reduzir o tempo de tramitação dos inquéritos criminais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Promover recomposição salarial contínua e realizar concursos públicos periódicos para os profissionais de segurança pública.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Digitalizar e simplificar processos de licenciamento ambiental sem reduzir o rigor técnico ou a proteção ecológica.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Executar programas estaduais de reflorestamento, dragagem regionalizada de cursos d'água e restauração de bacias hídricas para recuperação hídrica e proteção de nascentes.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fomentar a destinação adequada de resíduos sólidos e ampliar a reciclagem por meio de consórcios regionais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fornecer apoio técnico para elaboração de mapeamentos de risco e instalação de redes de alerta meteorológico nos municípios.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Prestar apoio estruturado às prefeituras para enfrentamento de enchentes, secas severas, tempestades e resfriamento urbano por meio de uma Política Estadual de Adaptação Climática.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Realizar o acompanhamento rigoroso e diário da segurança de estruturas de barragens de mineração e do descomissionamento de barragens a montante.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Utilizar dados em tempo real para prevenção de desastres e respostas ágeis a situações de emergência ambiental.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Alinhar os cursos técnicos do programa Trilhas de Futuro às vocações econômicas regionais para reduzir a evasão.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver cursos gratuitos regionais em cooperação com empresas locais para rápida inserção no mercado de trabalho.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Focar na alfabetização na idade certa, recomposição da aprendizagem e fortalecimento da educação inclusiva com Atendimento Educacional Especializado e profissionais de apoio.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a colaboração com municípios para garantir transporte escolar seguro, merenda nutritiva com agricultura familiar e melhorias nas cozinhas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir previsibilidade orçamentária para expandir o ensino superior, a pesquisa aplicada e a formação docente na UEMG e na Unimontes.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar o Programa de Sucessão Rural e Juventude no Campo com capacitação em agricultura digital, gestão e empreendedorismo para fixação e valorização dos jovens na atividade rural.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar programas de capacitação em tecnologia, dados e programação voltados para jovens das periferias e do interior.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incorporar aulas de tecnologia, programação, robótica e inteligência artificial na rede pública estadual.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Instalar sistemas de videomonitoramento integrados às forças de segurança e protocolos de prevenção à violência nas escolas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Oferecer cursos de qualificação técnica para trabalhadores de hotéis, restaurantes, receptivos e serviços turísticos.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Realizar busca ativa integrada com assistência social e conselhos tutelares para combater a evasão escolar.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Realizar concursos públicos regulares, reduzir a carga burocrática dos professores e implementar programa de atenção à saúde mental dos educadores.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reformar prédios escolares e implantar laboratórios, bibliotecas, quadras de esportes e espaços de inovação.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reformular a matriz curricular da educação em tempo integral com educação financeira, empreendedorismo, cidadania e competências práticas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Acelerar as metas do Marco Legal do Saneamento para universalizar o abastecimento de água potável e o esgotamento sanitário, priorizando regiões mais deficitárias.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Apoiar técnica e financeiramente os municípios na conservação de estradas rurais, pontes e vias de escoamento agrícola e transporte escolar.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Atuar junto à União para revisar tarifas e criar descontos de pedágio para moradores de cidades afetadas em rodovias federais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Disponibilizar painel público digital com informações sobre contratos, prazos, valores e execução de obras rodoviárias.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Elaborar Plano Estadual de Infraestrutura Energética para eliminar gargalos de energia trifásica da Cemig e expandir a rede de gás natural da Gasmig.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir a rede elétrica trifásica e fomentar a instalação de painéis solares e biodigestores nas propriedades rurais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir o sinal 5G para o interior e zonas rurais, integrando à modernização de aeroportos regionais e malha ferroviária.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fiscalizar estritamente a concessão do Metrô-BH para garantir prazos e investimentos nas Linhas 1 e 2.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Investir em sinalização, acessibilidade e centros de atendimento ao turista nos municípios vocacionados para circuitos turísticos.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Melhorar o transporte regional com fiscalização por desempenho, integração tarifária e física, e destravar as obras do Rodoanel Metropolitano ou redirecionar recursos para obras rodoviárias estratégicas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Priorizar investimentos diretos do orçamento e captação federal em rodovias estaduais em vez de novas cobranças de pedágio.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Realizar acompanhamento rígido do cumprimento de metas, cronogramas e padrões de qualidade em concessões rodoviárias.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Recompor equipes e estrutura operacional do DER-MG para execução contínua de pavimentação e manutenção da malha rodoviária estadual.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Vincular reajustes em tarifas de pedágio à prévia conclusão de obras contratadas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Prestar suporte técnico e jurídico aos municípios para aceleração da entrega de títulos de propriedade a famílias de baixa renda por meio da Regularização Fundiária Urbana (Reurb).",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar o suporte financeiro e técnico às APAEs e entidades filantrópicas especializadas na inclusão da pessoa com deficiência.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Apoiar bancos de alimentos, cozinhas solidárias e parcerias com a agricultura familiar para combate direto à fome.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o Índice Mineiro de Vulnerabilidade Familiar para alocar recursos e obter apoio do Estado priorizando os municípios com maiores indicadores de carência social e econômica.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Executar o Programa Minas Rural Empreendedor com ação coordenada pela Emater-MG para prestar assistência técnica, apoio à gestão e inovação nas pequenas propriedades rurais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Expandir as casas-abrigo, o suporte psicológico, a orientação jurídica e a reserva de vagas de emprego na Rede Estadual de Proteção e Acolhimento às Mulheres.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar programas de promoção do respeito à diversidade e criar o Observatório Mineiro da Igualdade.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Incentivar a aquisição de gêneros alimentícios do pequeno produtor local para abastecer escolas, hospitais e redes públicas por meio de compras institucionais da agricultura familiar.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Integrar o CRAS, CREAS e equipamentos comunitários aos serviços públicos estaduais de saúde e educação para fortalecer as redes de assistência social.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adotar o Orçamento Base Zero como instrumento permanente de gestão, exigindo justificativa técnica periódica para a manutenção de cada gasto estatal.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar estrutura fixa na organização governamental para atendimento direto a prefeitos e vereadores, oferecendo cooperação técnica contínua.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Eliminar contratos superestimados, despesas desnecessárias e sobreposições administrativas.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer institucionalmente a Arsae-MG para cobrança contínua de qualidade, metas e tarifas justas nos serviços prestados pela Copasa.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implantar indicadores claros de desempenho para todas as secretarias e assegurar que os secretários visitem o interior para conhecer os problemas de perto.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Institucionalizar Fóruns Regionais de Gestão Pública com encontros frequentes em todas as regiões mineiras para ouvir demandas, pactuar prioridades e acompanhar a execução das políticas estaduais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 4
+        },
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reduzir cargos comissionados sem função técnica, eliminar privilégios no topo da pirâmide governamental e cortar gastos supérfluos.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Renegociar a dívida estadual junto ao Governo Federal e criar um fundo de retorno de recursos para investimentos em logística e infraestrutura em Minas Gerais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Tratar os servidores públicos como parceiros fundamentais, preservando carreiras, promovendo capacitação e combatendo desperdícios sem desmonte do serviço público.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Apoiar artesãos e produtores culinários tradicionais como ativos de identidade, trabalho e renda.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Apoiar os municípios para integrar atrações ecológicas, históricas, religiosas e gastronômicas na estruturação de roteiros turísticos regionais.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Criar processos de seleção desburocratizados que reconheçam as vocações culturais específicas de cada território por meio de editais culturais regionalizados e simplificados.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Criar programas que aproximam famílias de menor renda do patrimônio cultural, histórico e natural do Estado.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Destinar verbas estaduais prioritariamente para artistas, coletivos e projetos dos municípios do interior de Minas na descentralização dos recursos da cultura.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Incentivar eventos locais, feiras tradicionais e festejos populares que impulsionem a economia e a memória mineira.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Realizar ações estaduais de restauração e preservação de acervos, monumentos e centros históricos mineiros.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Valorizar as cidades que investem na preservação do patrimônio e produzem manifestações culturais comunitárias.",
+      "referencias": [
+        {
+          "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+          "pagina": 15
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 1
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 2
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 3
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 4
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 5
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 6
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 7
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 8
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 9
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 10
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 11
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 12
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 13
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 14
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 15
+    },
+    {
+      "sha256": "e8b42dd72ffe80300eff68c10c7785066d13c42aa0f3db4e1748f679478b377f",
+      "pagina": 16
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T22:31:23.290Z",
+    "conteudoHash": "acf56ec5d14de158dab7dd9858951983c9e90d8eae98120b01d475ff7deebea4"
+  }
+}

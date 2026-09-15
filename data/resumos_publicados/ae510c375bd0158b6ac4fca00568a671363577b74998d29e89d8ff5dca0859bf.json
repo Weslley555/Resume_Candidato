@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002541911",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:ae510c375bd0158b6ac4fca00568a671363577b74998d29e89d8ff5dca0859bf",
+  "modelo": "gemini-3.6-flash",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-15T01:13:20.799Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Consolidar segurança jurídica, posicionar o estado no beneficiamento de minerais estratégicos, aplicar estratégias regionalizadas, desburocratizar negócios, atrair investimentos em energia verde, além de apoiar a agroindustrialização, rastreabilidade e crédito rural.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 3
+        },
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a atenção primária, expandir telessaúde e integração de sistemas, aprimorar acesso a medicamentos, qualificar atendimento a pessoas com deficiência ou doenças raras, reduzir tempo de espera por exames/cirurgias e estruturar saúde do idoso.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 1
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Enfrentar organizações criminosas e crimes cibernéticos, controlar fluxos ilícitos nas divisas, ampliar tecnologia e inteligência policial, proteger mulheres em situação de violência, valorizar profissionais de segurança e focar na ressocialização no sistema prisional.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Combater o desmatamento ilegal, atuar no mercado de carbono, modernizar o licenciamento com rigor técnico, apoiar municípios na adaptação climática, fiscalizar barragens e capacitar o Corpo de Bombeiros contra queimadas.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Avançar na modernização pedagógica e conectividade escolar, expandir o ensino em tempo integral, aprofundar a educação profissional, fortalecer a inclusão de estudantes neurodivergentes e preservar a diversidade de modelos pedagógicos.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir o metrô da RMBH, aprimorar a malha rodoviária estadual por parcerias e concessões, garantir segurança hídrica e avançar na universalização do saneamento e resíduos sólidos.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 4
+        },
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Ampliar as alternativas de acesso à moradia e promover a regularização fundiária urbana e rural em parceria com o setor privado.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 3
+        },
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Adotar a família e a primeira infância como eixos centrais, estruturar atenção à pessoa idosa, promover coordenação com setor privado e terceiro setor, e tratar o uso problemático de drogas de forma integrada.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Preservar o equilíbrio fiscal, buscar solução federativa para o endividamento, ampliar serviços digitais e uso de inteligência artificial na gestão, expandir conectividade e conduzir a transição tributária.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Desconcentrar o fomento cultural para o interior, articular cultura e turismo como eixo econômico, captar eventos e descentralizar a prática do esporte escolar e social.",
+      "referencias": [
+        {
+          "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+          "pagina": 5
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+      "pagina": 1
+    },
+    {
+      "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+      "pagina": 2
+    },
+    {
+      "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+      "pagina": 3
+    },
+    {
+      "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+      "pagina": 4
+    },
+    {
+      "sha256": "60794fb74dd02e57426130c1250102ccbb11b6f6ad8362059bd3c2a34a16bb74",
+      "pagina": 5
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-15T01:13:20.805Z",
+    "conteudoHash": "28dd0d69aa8550b7a227df80b80fbf3284f4f9ad2bcd34d974931e9d39934985"
+  }
+}

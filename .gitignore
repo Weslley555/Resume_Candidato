@@ -9,3 +9,4 @@ node_modules/
 /snapshots/.importacao-*/
 /snapshots/.importacao.lock
 /snapshots/.ativo-*.json
+/checkpoints/rascunhos/

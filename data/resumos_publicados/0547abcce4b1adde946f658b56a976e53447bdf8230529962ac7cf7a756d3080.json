@@ -1,0 +1,585 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002550834",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:0547abcce4b1adde946f658b56a976e53447bdf8230529962ac7cf7a756d3080",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T22:43:11.416Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar o limite mensal de transferência de crédito acumulado de ICMS, dispensar a exigência de CND para essa finalidade e agilizar a análise de projetos de expansão de empreendimentos.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Condicionar benefícios tributários à geração ou manutenção comprovada de emprego formal e revisar o regime de substituição tributária com um grupo de trabalho.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Consolidar Minas como polo de inovação no interior e criar núcleos regionais do San Pedro Valley em pelo menos três polos industriais do interior para conectar startups locais às indústrias instaladas.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar a Política Estadual de Incentivo à Cadeia Produtiva de Minerais Críticos e Estratégicos com linha de crédito, modernização logística e apoio regulatório.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar selo estadual de empresa cumpridora para dar acesso facilitado a crédito de ICMS e regimes especiais a empresas com regularidade fiscal e manutenção de emprego.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Diversificar os mercados de destino das exportações mineiras para reduzir a exposição a decisões unilaterais de parceiros comerciais.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instituir força-tarefa permanente de fiscalização de CFEM, com prioridade para os R$ 6,25 bilhões já reconhecidos em dívida ativa e ainda não cobrados.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Tornar regra geral o diferimento do ICMS na importação de matéria-prima e ativo imobilizado independentemente do estado do desembaraço, com liberação automática da carga.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar a cobertura de atenção primária no Norte, no Jequitinhonha e no Mucuri.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar um painel público único, acessível pelo aplicativo do estado, para consulta da fila de cirurgia eletiva do hospital de referência em tempo real.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter a trajetória de queda da mortalidade materna, com meta explícita de levar o indicador abaixo de 25 óbitos por 100 mil nascidos vivos até o final do mandato.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Publicar, por macrorregião de saúde, o tempo médio de espera por cirurgia eletiva e por exame de diagnóstico.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Criar, dentro da Polícia Civil, um protocolo de reavaliação obrigatória de risco a cada 30 dias para vítimas com medida protetiva ativa, priorizando casos de risco extremo.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar plano de emergência para o déficit prisional, combinando ampliação de vagas com parcerias público-privadas de gestão.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 10
+        },
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reduzir o número de feminicídios com foco no acompanhamento de casos classificados como risco extremo, além de expandir delegacias especializadas.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reverter a alta específica de homicídios e tráfico em Belo Horizonte, com policiamento orientado por dados e integração entre as polícias Civil e Militar na capital.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Adequar a legislação estadual de licenciamento ambiental ao novo marco federal, prevendo manifestação não vinculante dos municípios, licença por adesão e compromisso para empreendimentos menores, exigência de nexo de causalidade e redução de prazos.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Consolidar e revisar os atos normativos do Sisema e criar termos de referência específicos por atividade produtiva.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Instituir cadastro público único de condicionantes ambientais por bacia hidrográfica para acompanhamento de compensações ambientais.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar um índice mineiro de continuidade da aprendizagem, medido a cada dois anos, para acompanhar a mesma coorte de estudantes da alfabetização ao nono ano.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar um programa de transporte escolar específico para crianças de 0 a 3 anos em municípios pequenos para permitir que uma creche regional atenda vários municípios vizinhos.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a educação em tempo integral, a educação inclusiva para estudantes com deficiência e necessidades específicas, e ampliar a rede de ensino profissionalizante com trilhas formativas flexíveis em parceria com sindicatos patronais e arranjos produtivos locais.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar assistência técnica permanente, formação continuada, compartilhamento de boas práticas e apoio direto à gestão educacional municipal, incluindo programa de cooperação técnica para inserir municípios nos sistemas de avaliação e gestão do estado e continuidade do apoio ao Compromisso Nacional Criança Alfabetizada.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Melhorar a aprendizagem com equidade em todas as etapas, priorizando o Ensino Fundamental 2 e o Ensino Médio, fortalecendo a orientação para o projeto de vida e ampliando a educação empreendedora e em tempo integral.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Priorizar a expansão de vagas de creche nos 55 municípios que não possuem unidades públicas antes de ampliar a oferta onde já existe rede instalada.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover a formação continuada de docentes pela Academia Cide, ampliar programas de liderança escolar, expandir a formação de mestres e doutores na rede, atualizar o plano de carreira docente, fortalecer o processo de seleção de diretores com base em competência de gestão e implementar programas de saúde e bem-estar para profissionais da educação.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Universalizar o acesso à internet de alta velocidade nas escolas estaduais, ampliar o uso de plataformas digitais, disponibilizar recursos tecnológicos e formar profissionais da rede em metodologias ativas e tecnologias educacionais por meio da Academia Cide.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 12
+        },
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 13
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Utilizar a Gestão para Resultados Pedagógicos para identificar e atacar causas de problemas de aprendizagem, com foco na redução de desigualdades e no fortalecimento de Língua Portuguesa e Matemática no Ensino Fundamental 2.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Continuar ampliando a malha rodoviária e avançar na expansão ferroviária e dutoviária para reduzir custos logísticos e perdas de mercadorias.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Destinar fração da arrecadação adicional de CFEM a um fundo estadual de royalties mineral vinculado a infraestrutura nos municípios produtores, com prestação de contas trimestral.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implementar política estadual de incentivo a sistemas de armazenamento de energia em baterias para segurança energética e fomento à indústria de baterias e reciclagem.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Priorizar, dentro do orçamento de infraestrutura, uma cota mínima anual vinculada às regiões de menor renda per capita do estado, como Norte, Jequitinhonha e Mucuri, para obras rodoviárias e combate ao déficit habitacional.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Simplificar o licenciamento de novas usinas hidrelétricas e regularizar a situação fundiária de unidades de conservação, regulamentando a participação do empreendedor como interveniente pagador em desapropriações.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 14
+        },
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar a rede de proteção à mulher com foco no ciclo avançado de violência que antecede a maioria dos feminicídios.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar crédito e capacitação para o empreendedorismo feminino no interior.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar o cadastro 50+ e o Banco de Trabalhadores com Deficiência para incluir mães solo em retorno ao mercado de trabalho após licença-maternidade estendida ou período de cuidado infantil.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar um Banco de Trabalhadores com Deficiência vinculado ao SINE para ajudar as empresas a cumprir a cota legal de contratação com informação organizada.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar um Cadastro Estadual de Profissionais 50+ integrado ao SINE estadual e a bases federais para aproximar oferta e demanda e enfrentar a escassez de mão de obra qualificada.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar na Secretaria de Estado de Desenvolvimento Econômico uma estrutura permanente de monitoramento de risco comercial internacional com relatório trimestral público sobre a exposição dos setores exportadores.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 17
+        },
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar um comitê fiscal independente, com participação de universidades mineiras e do Tribunal de Contas, para auditar trimestralmente a execução orçamentária e publicar parecer técnico acessível ao cidadão.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Publicar mensalmente a posição de caixa do Tesouro estadual, separada do resultado orçamentário.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Trazer a despesa com pessoal de volta ao limite prudencial de 46,55% da Receita Corrente Líquida.",
+      "referencias": [
+        {
+          "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+          "pagina": 10
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 1
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 2
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 3
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 4
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 5
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 6
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 7
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 8
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 9
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 10
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 11
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 12
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 13
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 14
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 15
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 16
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 17
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 18
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 19
+    },
+    {
+      "sha256": "931269924b24f7f287a72c433f80fbb0a126d09fd6dab3d24d74047272b49548",
+      "pagina": 20
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T22:43:11.422Z",
+    "conteudoHash": "3786ff703db12ea12eb6ed78ea101b5df840a60a3bac17bbad4b99f059a1fb53"
+  }
+}

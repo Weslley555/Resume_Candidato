@@ -1,0 +1,810 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002553884",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:dd50a152873c368b948d097d287c6dcc08f99b486d6e6a4f0e5b95ecb098d6cd",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:09:39.844Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Alcançar liderança global em segurança alimentar, integrar o agronegócio à cadeia logística nacional, executar o Plano Nacional de Irrigação, instituir seguro rural universal, expandir a armazenagem agrícola e promover o desenvolvimento tecnológico das cadeias produtivas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Construir centros regionais para transformação da criatividade em valor, criar o Polo Nacional de Economia Criativa e incentivar empresas prestadoras de serviços de e-commerce.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar Fundos de Venture Capital com recursos públicos como contrapartida a investimentos privados em startups com isenção tributária escalonada, intensificar a digitalização e desburocratização bancária, acelerar o Open Banking e criar novas modalidades de empréstimo e garantias entre pessoas físicas e jurídicas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o Ministério da Empresariação, lançar o Programa Nacional de Empresariação da Periferia, viabilizar a abertura automática de empresas pelo CPF Digital em 24 horas, criar o Código de Defesa do Empreendedor e ampliar o programa Brasil Mais para aumentar a produtividade das empresas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar regime simplificado nacional, assegurar isenção tributária progressiva para novos negócios, lançar o programa Renegocia Brasil para renegociação de dívidas e abrir automaticamente empresas de baixo risco.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar um novo eixo geopolítico Sul-Sul e implementar novo modelo estratégico de integração Brasil-África.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Definir e manter o valor do salário mínimo como o melhor da América do Sul.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Destravar o potencial do Acordo Comercial Mercosul-União Europeia e estabelecer parcerias industriais avançadas e cooperação em hidrogênio verde.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Diversificar mercados asiáticos, desenhar estratégia Brasil-Índia, atrair cadeias produtivas deslocadas da China e atualizar o modelo de relacionamento diplomático e comercial com a China, com foco em minerais raros, energia limpa, tecnologia e agronegócio.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Dobrar o fluxo turístico internacional, posicionar o Brasil como destino preferencial, conceder isenção de visto para mercados estratégicos, lançar o Programa Nacional de Aviação Regional e dobrar a conectividade internacional.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Elaborar modelo de exploração da Margem Equatorial, criar novo marco de minerais críticos, lançar o Programa Nacional de Terras Raras, implementar o Programa Brasil Mobilidade 2035 e a política nacional para híbridos flex.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Encerrar subsídios e incentivos fiscais sem retorno econômico ou social comprovado.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular a formação de poupança, o investimento produtivo e a redução do endividamento das famílias.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer âncora fiscal baseada na redução gradual da relação dívida/PIB.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Garantir simplificação do modelo tributário, redução da carga tributária, manutenção do tripé econômico com câmbio flutuante, responsabilidade fiscal e metas para conter a inflação.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar foco comercial no papel do Itamaraty, dobrar as exportações brasileiras, ampliar o comércio com a ASEAN, atrair investimentos, ampliar a atuação da APEX Brasil, desenvolver agenda estratégica para minerais raros, energia limpa, tecnologia e agronegócio, e apoiar a cadeia do turismo.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instituir o Marco Nacional das Empresas Inovadoras, criar fundo de coinvestimento público-privado, estruturar o Fundo Nacional de Inovação Tecnológica e lançar o Marco Legal da Economia de Plataformas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lançar a Estratégia Nacional de Inteligência Artificial, criar o Laboratório Nacional de IA, incentivar parcerias com centros globais e aplicar IA no SUS, na educação pública, nas favelas e na indústria.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lançar a Nova Política Industrial Brasileira, adensar a cadeia de suprimento de partes, peças e componentes, apoiar a competitividade de indústrias de forte capital e de mão de obra intensiva, revogar normas complexas e estabelecer parcerias internacionais para transferência tecnológica em microeletrônica.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lançar estratégia de Vocação, Educação e Treinamento (Programa V.E.T.), promover capacitação em escala nacional, incentivar a produção de jogos digitais e desenvolver polo nacional de produção de games e política nacional de computação em nuvem.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Lançar o Programa Nacional de Cooperativas Produtivas e o Programa Nacional de Produtividade para pequenas empresas, reduzindo barreiras regulatórias ao e-commerce.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover redução progressiva da carga tributária sobre a produção, o investimento e a geração de empregos.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ressignificar o relacionamento do Brasil com os vizinhos latino-americanos, dobrando o fluxo comercial na região, promovendo harmonização regulatória, reconhecimento mútuo de certificações, integração logística e industrial, além de trocas culturais e diplomáticas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Retomar o convívio diplomático e a colaboração com os Estados Unidos, com cooperação em inteligência artificial, semicondutores, atração de cadeias produtivas e expansão de pesquisa e desenvolvimento em conjunto.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Reduzir filas, ampliar acesso à atenção básica, implantar telemedicina nacional integrada ao SUS, garantir prontuário único nacional, implementar programa para prevenção de doenças e incentivo a hábitos saudáveis, criar o programa Pró-Saúde para eficiência da rede e atendimento respeitoso, e promover a criação de polos tecnológicos de saúde com infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Controlar as fronteiras utilizando drones, satélites de monitoramento e controle inteligente de cargas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Executar programa de treinamento e educação em segurança com inteligência analítica e comunicação virtual integrada entre órgãos, além de promover a reabilitação e readaptação de policiais.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar a Rede Nacional de Proteção e Defesa da Mulher.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar um Plano Nacional de Combate às Facções, com integração de inteligência financeira e confisco ampliado de patrimônio criminoso.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Modernizar as leis penais contra organizações criminosas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Promover a modernização tecnológica das Forças Armadas e definir seu papel no desenvolvimento e proteção da nação.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Proteger a infraestrutura nacional de cibersegurança, instituir o Comando Nacional de Defesa Digital, mapear talentos para direcionamento de capital humano e implementar política de atração de investimentos globais com regime tributário competitivo e energia dedicada para grandes datacenters.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Proteger a propriedade produtiva e combater o furto e roubo de veículos e celulares por meio do Programa Nacional de Combate ao Furto e ao Roubo de Veículos e Celulares e do Sistema Integrado de Vigilância MBVES.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Transformar presídios em centros de ressocialização por meio de capacitação profissional obrigatória, ensino técnico, trabalho remunerado, parcerias público-privadas para gestão prisional e expansão da recuperação e reinserção social.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Criar política de remuneração para serviços ambientais prestados por florestas em pé, implementar políticas de combate ao comércio ilegal e proteger o direito dos animais.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Lançar o Programa Nacional de Bioeconomia, implantar programa nacional de recuperação de áreas degradadas e recomposição de nascentes, regulamentar o mercado brasileiro de carbono e combater o desmatamento ilegal.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implantar educação sobre vida, trabalho e empreendedorismo, garantir educação financeira desde o ensino fundamental, fortalecer o ensino de computação e inteligência artificial nas escolas, garantir alfabetização plena até o segundo ano, inaugurar programa nacional para bolsas de estudo em engenharia, ciências, matemática e TIC, criar programa de formação para superdotados, valorizar professores, implementar alfabetização precoce, criar o Crédito Mirim com bonificação para alunos da rede pública, letrar empreendedorismo, criar a Universidade Federal Digital e programas de graduação, virtualização e empresarização, além de fomentar a troca de conhecimento entre empresas e academia, a virtualização da interface cidadão-Estado e programas comunitários de mudança de mentalidade na periferia.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Oferecer graduação tecnológica online, certificações profissionais rápidas, plataforma de educação continuada e reorientar a formação profissional do Sistema S para a indústria do futuro.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Disponibilizar internet de alta velocidade e cobertura 5G em todos os municípios, levar internet a 100% das escolas públicas, expandir o Programa Amazônia Conectada e criar a Universidade Federal Digital.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Garantir segurança energética de longo prazo, incentivar a produção de energia a partir de resíduos (waste to energy), universalizar o acesso a água e esgoto e executar projetos de infraestrutura hídrica estratégica.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implantar janela única portuária e promover a modernização dos corredores de exportação.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Lançar o Plano Nacional de Infraestrutura Integrada, modernizar o modelo de concessão de infraestrutura e promover a finalização de mais de 20 mil obras públicas federais inacabadas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Priorizar investimentos públicos em infraestrutura, educação, segurança e tecnologia.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Promover a integração ferroviária nacional, completar o Corredor Norte-Sul, realizar concessão e duplicação de eixos rodoviários estratégicos, integrar ferrovias à agroindústria e ampliar a conectividade regional de aeroportos.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Implementar o Programa de Liberdade para Adquirir Residência (LAR) para adequar e corrigir imperfeições dos programas habitacionais.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar oportunidades de educação, qualificação profissional e geração de renda para populações vulneráveis.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Expandir comunidades terapêuticas, promover reinserção produtiva pós-tratamento e realizar atendimento integrado entre saúde e assistência social para dependência química.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a família como núcleo central da sociedade, lançar o Programa Nacional de Combate à Violência Doméstica, ampliar a mediação familiar pré-judicial e desenvolver ações sobre paternidade responsável e primeira infância, incluindo universalização de creches para famílias vulneráveis, monitoramento do desenvolvimento infantil e expansão de visitação domiciliar.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir presença efetiva do Estado em regiões historicamente menos assistidas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Manter o Programa Bolsa Família e promover proteção integral à vida e à dignidade da pessoa humana.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Preservar a cultura de comunidades tradicionais, lançar programa de integração dessas comunidades, promover regularização fundiária de territórios reconhecidos, implementar programa de bioeconomia e levar conectividade digital para áreas remotas.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar a Escola Nacional de Liderança Pública, estabelecer contratos de desempenho ministerial e centralizar a coordenação na Casa Civil.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar marketplace nacional de compras governamentais, utilizar inteligência artificial para combate a fraudes em licitações e implementar o programa Governo Itinerante com administração federal em todas as regiões.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar o Aplicativo Brasil como canal de comunicação do governo federal e estruturar um Banco de Dados Nacional para redimensionar a oferta de serviços públicos com base em Big Data.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Digitalizar 100% dos serviços federais, implementar Imposto de Renda eletrônico automático e criar o Sistema Único de Informação.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir transparência total dos gastos públicos e utilizar inteligência artificial para identificar casos de corrupção.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implantar gestão por resultados, agenda de governo unificada, planejamento estratégico centralizado, painel de controle de gestãode KPIs em todos os órgãos e adotar governança PDCA em toda a administração pública.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Lançar o Programa de Desestatização Prioritária, profissionalizar a gestão de estatais para abertura de capital, contratar executivos de mercado e assegurar conselhos com maioria independente.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar mutirão anual de revogação de normas obsoletas, adotar a regra One in, one out para novas normas, estabelecer aprovação tácita para processos sem manifestação do Estado e criar o Portal Único de Licenças.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar revisão permanente das despesas públicas para eliminar desperdícios e aumentar a eficiência do Estado.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Massificar o esporte de base, fortalecer apoio aos esportistas profissionais, fortalecer traços culturais regionais e fomentar o apoio ao nascimento e crescimento de novos talentos.",
+      "referencias": [
+        {
+          "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+          "pagina": 18
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 1
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 2
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 3
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 4
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 5
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 6
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 7
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 8
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 9
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 10
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 11
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 12
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 13
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 14
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 15
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 16
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 17
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 18
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 19
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 20
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 21
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 22
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 23
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 24
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 25
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 26
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 27
+    },
+    {
+      "sha256": "0159b1f854deec5ec1fe9d28784807353bd61c249680ddaa143b9891b034f33d",
+      "pagina": 28
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:09:39.850Z",
+    "conteudoHash": "9c93a914418ba908bfa2c98fcba141b9dd91876defc6e1c668f07df6ea7e71c0"
+  }
+}

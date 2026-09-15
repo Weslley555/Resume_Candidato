@@ -523,3 +523,219 @@ test('rascunho já completo não é reprocessado (idempotência)', async () => {
     assert.equal(chamadas, 1, 'não deve re-chamar o Gemini se rascunho completo existe');
     fs.rmSync(dir, { recursive: true });
 });
+
+test('main() com --intervalo aplica pausa entre candidaturas processadas', async () => {
+    const dir = tmpDir();
+    const chave2 = '2026_6259_MG_456';
+    const f = {
+        textos: { [chave]: [documento(h1)], [chave2]: [documento(h2)] },
+        documentos: { [chave]: { propostas: [] }, [chave2]: { propostas: [] } },
+        candidatos: { [chave]: {}, [chave2]: {} },
+        aliases: {}, exportacao: 'run-1', fonteHash: h1, snapshotHash: h1,
+        verificarPDF() {},
+    };
+    const pausas = [];
+    const resultados = await main([`--candidaturas=${chave},${chave2}`, `--dir=${dir}`, '--pausa=0', '--intervalo=15000'], {
+        carregarFonte: () => f,
+        gerarBloco: gerador,
+        sleep: async ms => pausas.push(ms),
+        log: () => {},
+    });
+    assert.equal(resultados.length, 2);
+    assert.ok(resultados.every(r => r.ok));
+    assert.deepEqual(pausas, [15000], 'deve pausar exatamente uma vez entre as duas candidaturas');
+    fs.rmSync(dir, { recursive: true });
+});
+
+test('main() não aplica intervalo se a candidatura for inelegível', async () => {
+    const dir = tmpDir();
+    const chaveInelegivel = '2026_6259_MG_999';
+    const docSemTexto = documento(h1);
+    docSemTexto.aptoParaRascunho = false;
+    docSemTexto.paginasPendentes = [1];
+    const f = {
+        textos: { [chaveInelegivel]: [docSemTexto], [chave]: [documento(h2)] },
+        documentos: { [chaveInelegivel]: { propostas: [] }, [chave]: { propostas: [] } },
+        candidatos: { [chaveInelegivel]: {}, [chave]: {} },
+        aliases: {}, exportacao: 'run-1', fonteHash: h1, snapshotHash: h1,
+        verificarPDF() {},
+    };
+    const pausas = [];
+    const resultados = await main([`--candidaturas=${chaveInelegivel},${chave}`, `--dir=${dir}`, '--pausa=0', '--intervalo=15000'], {
+        carregarFonte: () => f,
+        gerarBloco: gerador,
+        sleep: async ms => pausas.push(ms),
+        log: () => {},
+    });
+    assert.equal(resultados.length, 2);
+    assert.equal(resultados[0].ok, false);
+    assert.equal(resultados[1].ok, true);
+    assert.deepEqual(pausas, [], 'não deve pausar após candidatura inelegível que não chamou API');
+    fs.rmSync(dir, { recursive: true });
+});
+
+test('main() com --publicar salva resumo_publicado válido no diretório de publicação', async () => {
+    const dir = tmpDir();
+    const dirPub = tmpDir();
+    const f = fonte();
+    const resultados = await main([`--candidaturas=${chave}`, `--dir=${dir}`, '--pausa=0', '--publicar', '--revisor=Testador'], {
+        carregarFonte: () => f,
+        gerarBloco: gerador,
+        dirPublicados: dirPub,
+        log: () => {},
+    });
+    assert.equal(resultados.length, 1);
+    assert.equal(resultados[0].ok, true);
+    const arquivosPub = fs.readdirSync(dirPub);
+    assert.equal(arquivosPub.length, 1);
+    const publicado = JSON.parse(fs.readFileSync(path.join(dirPub, arquivosPub[0]), 'utf8'));
+    assert.equal(publicado.estado, 'resumo_publicado');
+    assert.equal(publicado.revisao.aprovado, true);
+    assert.equal(publicado.revisao.revisor, 'Testador');
+    assert.equal(publicado.chave, chave);
+    fs.rmSync(dir, { recursive: true });
+    fs.rmSync(dirPub, { recursive: true });
+});
+
+test('main() registra falha ao salvar publicação sem perder o rascunho', async () => {
+    const dir = tmpDir();
+    const dirPub = tmpDir();
+    const resultados = await main([`--candidaturas=${chave}`, `--dir=${dir}`, '--pausa=0', '--publicar'], {
+        carregarFonte: () => fonte(),
+        gerarBloco: gerador,
+        dirPublicados: dirPub,
+        writeFileSync: () => { throw new Error('disco indisponível'); },
+        log: () => {},
+    });
+    assert.equal(resultados.length, 1);
+    assert.deepEqual({ ok: resultados[0].ok, status: resultados[0].status,
+        gerado: resultados[0].gerado, publicado: resultados[0].publicado },
+    { ok: false, status: 'erro_publicacao', gerado: true, publicado: false });
+    assert.match(resultados[0].motivo, /disco indisponível/);
+    assert.equal(fs.readdirSync(dirPub).length, 0);
+    fs.rmSync(dir, { recursive: true });
+    fs.rmSync(dirPub, { recursive: true });
+});
+
+test('main() aplica intervalo após erro que consumiu chamadas e continua a fila', async () => {
+    const dir = tmpDir();
+    const chave2 = '2026_6259_MG_456';
+    const f = {
+        textos: { [chave]: [documento(h1)], [chave2]: [documento(h2)] },
+        documentos: { [chave]: { propostas: [] }, [chave2]: { propostas: [] } },
+        candidatos: { [chave]: {}, [chave2]: {} },
+        aliases: {}, exportacao: 'run-1', fonteHash: h1, snapshotHash: h1,
+        verificarPDF() {},
+    };
+    const pausas = [];
+    const gerarComFalha = async ({ paginas }) => {
+        if (paginas[0].sha256 === h1) {
+            const erro = new Error('resposta inválida');
+            erro.status = 502;
+            throw erro;
+        }
+        return saidaValida(paginas);
+    };
+    const resultados = await main([`--candidaturas=${chave},${chave2}`, `--dir=${dir}`, '--pausa=0', '--intervalo=15000', '--max-tentativas=2'], {
+        carregarFonte: () => f,
+        gerarBloco: gerarComFalha,
+        sleep: async ms => pausas.push(ms),
+        log: () => {},
+    });
+    assert.equal(resultados.length, 2);
+    assert.equal(resultados[0].status, 'erro');
+    assert.equal(resultados[1].status, 'gerado');
+    assert.deepEqual(pausas, [1000, 15000]);
+    fs.rmSync(dir, { recursive: true });
+});
+
+test('main() repete indisponibilidade 503 e abort com espera progressiva', async () => {
+    for (const erroOriginal of [Object.assign(new Error('high demand'), { status: 503 }), new Error('This operation was aborted')]) {
+        const dir = tmpDir();
+        const pausas = [];
+        let chamadas = 0;
+        const gerarTemporariamenteIndisponivel = async ({ paginas }) => {
+            chamadas++;
+            if (chamadas < 3) throw erroOriginal;
+            return saidaValida(paginas);
+        };
+        const resultados = await main([`--candidaturas=${chave}`, `--dir=${dir}`, '--pausa=0', '--max-tentativas=4'], {
+            carregarFonte: () => fonte(),
+            gerarBloco: gerarTemporariamenteIndisponivel,
+            sleep: async ms => pausas.push(ms),
+            log: () => {},
+        });
+        assert.equal(resultados[0].status, 'gerado');
+        assert.equal(chamadas, 3);
+        assert.deepEqual(pausas, [5000, 10000]);
+        fs.rmSync(dir, { recursive: true });
+    }
+});
+
+test('main() interrompe a fila ao esgotar quota e preserva checkpoints', async () => {
+    const dir = tmpDir();
+    const chave2 = '2026_6259_MG_456';
+    const f = {
+        textos: { [chave]: [documento(h1)], [chave2]: [documento(h2)] },
+        documentos: { [chave]: { propostas: [] }, [chave2]: { propostas: [] } },
+        candidatos: { [chave]: {}, [chave2]: {} },
+        aliases: {}, exportacao: 'run-1', fonteHash: h1, snapshotHash: h1,
+        verificarPDF() {},
+    };
+    let chamadas = 0;
+    const quota = async () => {
+        chamadas++;
+        const erro = new Error('quota diária esgotada');
+        erro.status = 429;
+        erro.retryAfter = 7200;
+        throw erro;
+    };
+    const resultados = await main([`--candidaturas=${chave},${chave2}`, `--dir=${dir}`, '--pausa=0', '--intervalo=15000'], {
+        carregarFonte: () => f,
+        gerarBloco: quota,
+        sleep: async () => assert.fail('não deve aguardar nem iniciar a próxima candidatura'),
+        log: () => {},
+    });
+    assert.equal(chamadas, 1);
+    assert.equal(resultados.length, 1);
+    assert.equal(resultados[0].status, 'quota');
+    assert.equal(resultados[0].gerado, false);
+    fs.rmSync(dir, { recursive: true });
+});
+
+test('main() reutiliza publicação válida sem sobrescrever o arquivo', async () => {
+    const dir = tmpDir();
+    const dirPub = tmpDir();
+    const args = [`--candidaturas=${chave}`, `--dir=${dir}`, '--pausa=0', '--publicar'];
+    const deps = { carregarFonte: () => fonte(), gerarBloco: gerador, dirPublicados: dirPub, log: () => {} };
+    const primeira = await main(args, deps);
+    const arquivo = path.join(dirPub, fs.readdirSync(dirPub)[0]);
+    const conteudoInicial = fs.readFileSync(arquivo, 'utf8');
+    const segunda = await main(args, { ...deps,
+        writeFileSync: () => assert.fail('publicação válida existente não deve ser sobrescrita') });
+    assert.equal(primeira[0].status, 'publicado');
+    assert.equal(segunda[0].status, 'publicado');
+    assert.equal(fs.readFileSync(arquivo, 'utf8'), conteudoInicial);
+    fs.rmSync(dir, { recursive: true });
+    fs.rmSync(dirPub, { recursive: true });
+});
+
+test('main() validação de argumento --intervalo', async () => {
+    const f = fonte();
+    await assert.rejects(
+        main(['--intervalo=-5'], { carregarFonte: () => f, log: () => {} }),
+        /--intervalo deve ser número inteiro ≥ 0/,
+    );
+    await assert.rejects(
+        main(['--intervalo=abc'], { carregarFonte: () => f, log: () => {} }),
+        /--intervalo deve ser número inteiro ≥ 0/,
+    );
+    await assert.rejects(
+        main(['--max-tentativas=0'], { carregarFonte: () => f, log: () => {} }),
+        /--max-tentativas deve ser inteiro entre 1 e 10/,
+    );
+    await assert.rejects(
+        main(['--max-tentativas=11'], { carregarFonte: () => f, log: () => {} }),
+        /--max-tentativas deve ser inteiro entre 1 e 10/,
+    );
+});

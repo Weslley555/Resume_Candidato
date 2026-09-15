@@ -1,0 +1,2522 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002550464",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:b03ebb904d76ef946bad8d1f768b3119af49aff52b1d0b465b98b4765d734ff2",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:19:52.531Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Agregar valor à produção mineral incentivando o beneficiamento de minérios no estado para fortalecer a indústria e a geração de empregos qualificados.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a capacidade de arrecadação combatendo a sonegação, revendo subsídios e benefícios fiscais, e buscando novas fontes de receitas, incluindo tributação sobre a exploração e exportação de riquezas minerais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar o parque tecnológico do Estado em parceria com universidades e focar em vocações regionais. Implantar política de qualificação profissional voltada a setores estratégicos com universidades, institutos, Sistema S e escolas técnicas. Ampliar o acesso de pequenas e médias empresas ao crédito produtivo e compras públicas estaduais. Fortalecer programas de inovação e transformação digital para pequenas e médias empresas com assistência técnica e consultorias. Implementar política de desenvolvimento industrial para fortalecer cadeias produtivas e gerar empregos qualificados. Fortalecer economia solidária, cooperativismo, artesanato, gastronomia e atividades de base territorial. Promover formação profissional e apoio a startups e setores criativos. Colaborar com a União no combate ao trabalho escravo contemporâneo e precarização das relações de trabalho.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Apoiar a pesquisa e o aproveitamento de minerais críticos ou estratégicos, obedecendo a prioridades nacionais e à Política de Soberania Mineral. Reavaliar isenções fiscais à mineração sem agregação de valor e revisar incentivos fiscais e redistribuição de benefícios. Aprimorar a fiscalização das receitas oriundas da CFEM para o Estado e municípios mineiros. Estimular processos produtivos menos poluentes na mineração e promover, em articulação com a União, a revisão de licenciamentos com riscos ambientais e radiológicos. Garantir consulta prévia, livre, prévia e informada às comunidades tradicionais afetadas por empreendimentos de minerais críticos. Criar o Polo Mineiro de Industrialização do Lítio para vincular sua exploração ao beneficiamento, processamento e fabricação de componentes para baterias no Vale do Jequitinhonha, articulando universidades, centros de pesquisa, empresas e municípios. Vincular incentivos do Estado à adoção de tecnologias de menor impacto ambiental, agregação de valor e transferência de tecnologia.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 29
+        },
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a agricultura familiar para ampliar o acesso a assistência, crédito, seguro, tecnologias, infraestrutura e mercados.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a cadeia produtiva do turismo para gerar trabalho e renda, apoiando pequenos negócios, empreendedores individuais, cooperativas e economia solidária em hospedagem, gastronomia, artesanato, produção cultural, comércio, transporte e serviços turísticos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a pesquisa, a assistência técnica e a defesa agropecuária integrando EPAMIG, EMATER-MG e IMA para difundir tecnologias, melhorar a produtividade e elevar a qualidade sanitária dos produtos mineiros.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a política agrícola e o desenvolvimento do agronegócio mineiro por meio da articulação entre a SEAPA, o MAPA e entidades estaduais, apoiando modernização, inovação tecnológica, agregação de valor e expansão de mercados.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a Política Estadual de Desenvolvimento Rural Sustentável da Agricultura Familiar priorizando agroecologia, juventude, mulheres, povos tradicionais e polos agroecológicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instituir Política Estadual de Desenvolvimento Regional com planos específicos para cada território, integrando investimentos em infraestrutura, ciência, inovação, turismo, agroindústria e economia criativa.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Instituir política permanente de fortalecimento da agricultura camponesa agroecológica com subsídios, crédito diferenciado, assistência técnica, pesquisa, infraestrutura e comercialização.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Preservar empresas públicas estratégicas sob o controle do Estado, mantendo Cemig, Codemig, Codemge e outras estatais fundamentais, garantindo que a Cemig permaneça como sociedade de economia mista.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Priorizar investimentos e políticas de incentivo à agricultura familiar e agroecológica, economia solidária e popular, turismo de base comunitária, cultura, ciência, tecnologia, inovação e indústria sustentável.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover uma estratégia de desenvolvimento econômico que reduza progressivamente a minerodependência de Minas Gerais, diversificando as economias regionais e fortalecendo atividades geradoras de trabalho, renda e sustentabilidade ambiental.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar a CFEM em instrumento de desenvolvimento regional destinando recursos prioritariamente à diversificação econômica de municípios mineradores, recuperação ambiental e investimentos em saúde, educação e infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Utilizar a riqueza mineral para construir uma economia menos dependente da mineração, convertendo receitas em educação, ciência, tecnologia, industrialização e novas atividades econômicas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aprimorar a regulação estadual do SUS, tornando-a regionalizada, integrada e transparente, com critérios públicos de prioridade e informações atualizadas sobre filas e leitos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Consolidar a cobertura de 100% da rede estadual de urgência e emergência do SAMU por meio de consórcios macrorregionais e ampliar o financiamento para o transporte eletivo com o Programa Estadual Caminhos da Saúde.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar uma rede estadual de serviços de atendimento à mulher vítima de violência em todas as suas dimensões.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Efetivar a implementação da Regionalização da Saúde em todo o território mineiro, fortalecendo as instâncias de governança do SUS, mapeando vazios assistenciais e criando um plano de investimentos para redução de desigualdades.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Estabelecer dispositivos e financiamento para a Rede de Atenção Obstétrica e Neonatal, garantindo pré-natal, acesso a parto seguro, ampliação de Casas da Gestante e do Bebê, Centros Seguros de Parto Normal, Programa de Ampliação da Enfermagem Obstétrica e Programa de Doulas Comunitárias, tratando a mortalidade materna e infantil como prioridade.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a atenção primária à saúde com aporte técnico e financeiro por parte do Estado, com vistas ao aumento da resolubilidade e eficiência, e ampliar a cobertura da Estratégia de Saúde da Família (ESF) e das equipes multiprofissionais, incluindo saúde mental e bucal.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a inserção de equipes de saúde bucal na atenção básica, incorporando procedimentos especializados de menor complexidade técnica.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a Rede Estadual de Saúde Mental da Juventude, articulada ao SUS e SUAS, com ações de prevenção ao suicídio, redução de danos e espaços de acolhimento.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a rede pública de cuidado ao câncer garantindo início do tratamento em prazo inferior a 60 dias após o diagnóstico.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer, com financiamento diferenciado, as políticas de saúde em territórios de vulnerabilidade social (populações rurais, indígenas, quilombolas, pescadores, negros e pessoas em situação de rua).",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir acesso dos jovens à saúde sexual e reprodutiva pelo SUS e criar uma Rede Estadual de Saúde Mental da Juventude articulada ao SUS e ao SUAS.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir atenção integral à saúde das mulheres no SUS, assegurando atendimento humanizado, saúde sexual e reprodutiva, assistência à maternidade e ações permanentes de prevenção.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir projeto e investimento em saúde digital no estado para viabilizar a articulação dos serviços e atendimentos por meio de ferramentas digitais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implementar a Política Nacional de Saúde Mental, Álcool e Outras Drogas, fortalecendo a Rede de Atenção Psicossocial (RAPS), ampliando os CAPS e serviços territoriais, e priorizando a redução de danos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Incorporar a perspectiva de saúde integrada articulando saúde humana, animal e ambiental, e fortalecer a prevenção e vigilância de zoonoses.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Priorizar a implantação da Política Nacional de Atenção Especializada, com foco no Programa Agora Tem Especialistas (PATE), para reduzir os tempos de espera para consultas, exames, procedimentos ambulatoriais e cirurgias eletivas, monitorados por sistema estadual interoperável.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Promover abordagem integral para pessoas com transtorno autista e outras neurodivergências, integrando com as políticas de educação inclusiva e assistência social.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Promover o cuidado à saúde dos idosos de forma multidimensional integrado à Política de Cuidados, incluindo cuidadores comunitários, alimentação saudável, acesso a vacinas, academias da saúde, saúde mental e atenção domiciliar.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Reconhecer e fortalecer os conhecimentos tradicionais das mulheres camponesas sobre plantas medicinais, práticas populares de cuidado e biodiversidade, integrando-os às políticas públicas de saúde, pesquisa e inovação.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Redimensionar as equipes regionais de saúde para apoiar as Secretarias Municipais e apoiar os municípios no planejamento e gestão do SUS com foco nas especificidades regionais, transparência e participação social.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Valorizar os trabalhadores do SUS por meio de política permanente de formação, educação continuada, dimensionamento adequado das equipes, melhoria das condições de trabalho, fortalecimento da gestão pública e da Mesa de Negociação Permanente do SUS Estadual, além de revisar os Planos de Cargos e Carreiras da SES.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Viabilizar a integração da APS, vigilância em saúde, assistência farmacêutica e atenção especializada por meio de prontuário eletrônico compartilhado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar a integração entre Bombeiros, Defesa Civil, órgãos ambientais, unidades de conservação, brigadas, municípios, universidades e comunidades para fortalecer sistemas de prevenção, alerta e resposta rápida.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer instituições públicas e ampliar capacidade técnica, operacional e financeira para prevenção, monitoramento e resposta a incêndios florestais, enchentes, secas e deslizamentos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Garantir o funcionamento das Casas da Mulher Brasileira e apoiar projetos de grupos reflexivos e de responsabilização para homens autores de violência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Instituir e consolidar o Sistema Único de Segurança Pública (SUSP) em Minas Gerais com atuação integrada, planejamento conjunto, valorização profissional e respeito aos direitos humanos. Ampliar o uso de inteligência e investigação integrada contra o crime organizado e desmantelar suas bases econômico-financeiras. Fortalecer o combate a crimes cibernéticos, fraudes digitais e roubo de celulares, criando sala integrada de resposta rápida com bancos, fintechs e operadoras para rastrear Pix e bloquear contas. Implantar a Estratégia Estadual Celular Seguro com operações permanentes para combater o comércio de aparelhos furtados. Ampliar e interiorizar a rede de proteção às mulheres com Casas da Mulher Brasileira, Delegacias Especializadas, Centros de Referência, Patrulha Maria da Penha e unidades móveis. Garantir melhores condições de trabalho, formação, qualificação e saúde integral aos agentes de segurança. Implementar política contra o feminicídio, o genocídio da juventude negra e outras formas de violência. Implantar progressivamente câmeras corporais nas forças de segurança estaduais com protocolos de uso. Reorganizar o sistema prisional reforçando a fiscalização, separando presos por gravidade do delito, melhorando as condições das unidades, reduzindo prisões provisórias em articulação com o Judiciário e ampliando centros de ressocialização com foco em educação, emprego, esporte e cultura.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 36
+        },
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Promover ações para preservar a vida e a dignidade de pessoas encarceradas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Ampliar a participação de municípios, universidades, movimentos sociais, brigadas voluntárias e povos tradicionais na formulação, implementação e controle social das políticas climáticas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Ampliar a transição agroecológica para apoiar a produção sustentável de alimentos, a conservação de recursos naturais e a redução do uso de agrotóxicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Apoiar a Política de Recursos Hídricos, fortalecer Comitês de Bacias Hidrográficas, priorizar ações de proteção ambiental e ampliar o Bolsa Reciclagem e a logística reversa no estado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Aumentar as áreas florestais no Estado com plantios em áreas públicas e privadas e estímulo à recuperação de nascentes e bacias.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Construir uma política estadual de enfrentamento à emergência climática integrando mitigação, adaptação, justiça climática, transformação ecológica, governança e educação ambiental.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Criar a Política Estadual de Emprego Verde e Cooperação Produtiva, articulada à reindustrialização, utilizando compras públicas, fóruns regionais, redes de cooperação e diagnósticos participativos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fomentar cadeias produtivas sustentáveis e a economia do cuidado, abrangendo saneamento básico, reciclagem, economia circular, energias renováveis e atividades de cuidado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fortalecer a Política de Economia Circular e de Resíduos Sólidos apoiando a cadeia de reciclagem, com inclusão, estruturação e remuneração justa de catadores, além de reforçar a logística reversa.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fortalecer o SISEMA, resgatando a importância do COPAM como instância deliberativa com equilíbrio tripartite entre governo, empresa e sociedade civil.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fortalecer o Sistema Estadual de Meio Ambiente para ampliar capacidades de fiscalização, proteção ambiental, gestão das águas e unidades de conservação.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fortalecer políticas públicas de proteção dos bens comuns da natureza, assegurando a recuperação e preservação de águas, nascentes, florestas, solos e sementes crioulas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Implementar política estadual de redução do uso de agrotóxicos com a efetivação do PRONARA, controle rigoroso de aplicações próximas a comunidades, monitoramento epidemiológico e incentivo à transição agroecológica.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Instituir uma governança climática estadual permanente, intersetorial e participativa, incorporando a questão climática ao planejamento e orçamento do Estado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Promover a segurança hídrica protegendo e recuperando nascentes, mananciais e bacias hidrográficas, e ampliar ações de prevenção às secas para garantir acesso à água em quantidade e qualidade adequadas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Promover emprego verde, diversificação econômica e reindustrialização com foco em trabalho decente em atividades que reduzam impactos ambientais e emissões, fortalecendo pequenas e médias empresas, cooperativas e economia solidária.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Regulamentar e implementar a Política Estadual de Agroecologia e Produção Orgânica e elaborar o respectivo Plano Estadual de Agroecologia e Produção Orgânica com orçamento, metas, indicadores e monitoramento.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar e fortalecer a Educação de Jovens e Adultos (EJA) estadual, especialmente no ensino médio.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar o quadro de servidores efetivos da rede estadual de educação mediante nomeação de aprovados em concursos vigentes e realização regular de novos concursos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Apoiar a construção do novo Plano Estadual de Educação e a organização da Conferência Estadual de Educação.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Apoiar a criação do programa Pé de Meia Estadual.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Aprimorar os planos de carreira, com implementação da Dedicação Exclusiva para os docentes, a promoção por escolaridade para os servidores técnicos administrativos e instituir funções gratificadas para a Gestão Universitária.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Articular com os municípios a ampliação progressiva das matrículas da educação básica em tempo integral.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Assegurar, em conjunto com os municípios, a ampliação e melhoria da infraestrutura física, a melhoria salarial dos professores e servidores educacionais e o fornecimento de alimentação adequada aos estudantes.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Atuar progressivamente para assegurar a obrigatoriedade legal da matrícula de todas as crianças e adolescentes na idade adequada.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar uma articulação entre todas as instituições públicas de educação superior do Estado para que possam atuar na formulação e execução de políticas públicas para o desenvolvimento social e econômico do Estado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Definir eixos prioritários para a Educação Profissional Técnica (EPT) em diálogo com o setor produtivo e os municípios, ofertando vagas diretamente pelo Estado e construindo uma Rede Estadual de Escolas Técnicas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver ações de letramento midiático para identificar e combater a desinformação, exercer a cidadania e fortalecer a democracia.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fomentar a formação de professores, técnicos e gestores em Educação Profissional Técnica em parceria com a UEMG, a Unimontes e universidades federais, estruturando uma plataforma didática específica.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a atuação da UEMG e da Unimontes no desenvolvimento regional, institucionalizando as políticas de financiamento de projetos de pesquisa e extensão nas universidades estaduais, ampliando as ações de pesquisa, extensão e a inovação em articulação com os municípios, os arranjos produtivos locais e as demandas sociais de cada território.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a educação ambiental como eixo transversal da política educacional, valorizando conhecimentos científicos, populares e tradicionais voltados ao cuidado com as águas, biodiversidade e prevenção de incêndios e desastres.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a Educação do Campo, impedindo o fechamento de escolas e garantindo currículos baseados nas realidades territoriais, culturais, ambientais e produtivas locais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a Educação Escolar Indígena com foco em ensino diferenciado, intercultural, bilíngue e comunitário.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a formação inicial e continuada de educadores da cidade e do campo em articulação com universidades públicas, institutos federais e movimentos sociais, valorizando a Educação Popular.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a política de assistência estudantil por meio da ampliação de benefícios e bolsas, com a implantação e manutenção de restaurantes universitários.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer institucionalmente a FUCAM, a Fundação Helena Antipoff e a Ultramig para atuarem como polos locais e regionais de educação.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer o papel da Fapemig, ampliando os investimentos em ciência, tecnologia e inovação e a interação com as universidades estaduais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer programas de combate à evasão escolar por meio do monitoramento da frequência e oferta de apoio social a grupos vulnerabilizados.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar um Programa Estadual de Boa Convivência nas Escolas para prevenir a violência, promover a cultura de paz, ampliar o apoio psicossocial e qualificar a mediação de conflitos contra o bullying.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 9
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Instituir a escola de conselhos tutelares.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Integrar as escolas à Política Estadual de Esporte e Lazer utilizando espaços escolares, fortalecendo a Educação Física e apoiando os Jogos Escolares de Minas Gerais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Integrar o ensino médio à formação técnico-profissional.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir em educação, ciência e tecnologia para promover o desenvolvimento e a diversidade econômica do Estado com a participação de instituições de ensino superior.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Organizar, em parceria com a Fapemig e indústrias mineiras, projetos de estímulo à inovação, estruturação de Empresas Júnior e empreendedorismo para estudantes da EPT.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover a melhoria dos processos de ensino e aprendizagem na Rede Estadual em todas as etapas, com atenção especial aos anos finais do ensino médio.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover a participação da comunidade escolar e da família na construção da escola.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover programas de capacitação para preparar o jovem do ensino médio para a cidadania e o trabalho.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover programas de estímulo ao estágio, ao Programa de Aprendizagem, ao Primeiro Emprego e a visitas técnicas integradas com setores empresariais e culturais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 10
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reafirmar a UEMG e a Unimontes como universidades estratégicas para o desenvolvimento socioeconômico de Minas Gerais, assegurando financiamento adequado, valorização das carreiras, realização de concursos e ampliação da infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reelaborar o projeto educacional com participação de profissionais, estudantes e famílias para garantir acesso, permanência e conclusão da educação básica.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reestatizar as escolas estaduais privatizadas e encerrar a militarização das escolas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reforçar a cooperação com os municípios nos anos iniciais, apoiando a melhoria da oferta e da aprendizagem.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Respeitar a autonomia universitária, apoiando a realização de eleições diretas para as Reitorias da UEMG e Unimontes.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 11
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Retomar investimentos na infraestrutura predial e modernização de laboratórios, com prioridade para a finalização de obras inacabadas nos campi.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 12
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Valorizar os profissionais da educação com ações para o pagamento do piso nacional, garantia de melhores condições de trabalho e atenção à saúde mental dos docentes.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 8
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Acompanhar transições institucionais no saneamento preservando o corpo técnico e capacidades institucionais, e promover regionalização respeitando a autonomia municipal.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar a infraestrutura e os investimentos no meio rural, com prioridade para estradas, logística, irrigação, acesso à água e conectividade para apoiar a produção, comercialização e geração de renda.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar a segurança rodoviária eliminando pontos críticos de acidentes e reforçando a drenagem e a estabilidade de encostas, além de pavimentar e recuperar rodovias que conectam municípios, distritos e polos regionais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar o acesso à água tratada e esgotamento sanitário, priorizando municípios com maiores déficits para reduzir desigualdades regionais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar programas de coleta seletiva solidária com infraestrutura, equipamentos e assistência técnica a associações e cooperativas de catadores.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Articular políticas territoriais para integrar o território estadual e melhorar a rede de acessibilidade viária, promovendo melhor distribuição urbana e populacional.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Defender o saneamento básico como política essencial, priorizar a universalização do acesso aos serviços e garantir que decisões estratégicas sejam fundamentadas em estudos técnicos e transparência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estruturar um Sistema Metropolitano de Transporte e Trânsito com planejamento regional, integração de linhas, bilhetagem e padrões de qualidade, além de desenvolver estudo técnico, fiscal e institucional sobre políticas de redução tarifária com modelo progressivo de tarifa zero.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fortalecer a integração logística do estado, conectar rodovias, ferrovias, aeroportos, plataformas logísticas e polos de produção para reduzir custos de transporte e melhorar o acesso aos serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fortalecer a Política Estadual de Saneamento Básico com estrutura permanente e recursos para apoiar os municípios.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implantar o Bilhete Único Metropolitano e integrar os sistemas de transporte da Região Metropolitana de Belo Horizonte com um sistema único de bilhetagem e integração tarifária entre ônibus metropolitanos, municipais e metrô.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implantar um Programa Permanente de Recuperação e Conservação das Rodovias Estaduais para priorizar pavimento, drenagem, pontes, acostamentos e sinalização com critérios técnicos e transparência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Instituir uma Política Estadual de Desenvolvimento Ferroviário para recuperar e ampliar a malha ferroviária e reduzir a dependência do transporte rodoviário, promovendo, em articulação com a União, ANTT e concessionárias, a retomada do transporte regional de passageiros, trens turísticos e expansão do transporte ferroviário de carga.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Priorizar investimentos estruturantes em infraestrutura, saneamento, educação, habitação, mobilidade e adaptação às mudanças climáticas para estimular o crescimento e ampliar receitas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Promover diálogo com municípios e sociedade antes de mudanças estruturais no saneamento e apoiar os municípios no encerramento de todos os lixões em Minas Gerais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Recuperar, modernizar e ampliar a qualidade da malha rodoviária estadual, priorizando a segurança viária, a manutenção da infraestrutura, a integração regional, a recuperação de trechos ferroviários estratégicos, a implantação de terminais intermodais, a expansão do metrô de Belo Horizonte e o aproveitamento do transporte hidroviário.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Rever o processo de privatização da Copasa para assegurar que os serviços de abastecimento de água e saneamento estejam subordinados ao interesse público, à universalização do acesso e à redução das desigualdades regionais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Criar um Programa Estadual de Locação Social e Subsídio ao Aluguel para famílias em situação de vulnerabilidade com ônus excessivo com aluguel, articulando auxílio financeiro, oferta de imóveis e mediação para prevenir despejos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Fortalecer programas de habitação rural, infraestrutura comunitária e melhoria das condições de vida nos territórios rurais, assegurando moradia digna, acesso a água, saneamento e energia.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Fortalecer programas de habitação rural, infraestrutura comunitária e melhoria das condições de vida nos territórios rurais, assegurando moradia digna, acesso à água, saneamento e energia.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Implementar a Política Estadual para a População em Situação de Rua priorizando acesso à moradia permanente pelo modelo Moradia Primeiro, ampliando locação social e moradias transitórias articuladas a saúde, assistência social e geração de renda.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Instituir uma Política Estadual de Habitação de Interesse Social, articulada ao sistema nacional, priorizando a produção e aquisição de moradias para famílias de baixa renda, urbanização e regularização de assentamentos precários e destinação de imóveis públicos ociosos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Promover a reforma urbana com regularização fundiária e fortalecimento das ocupações urbanas para enfrentar o déficit habitacional e garantir moradia.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Retomar o papel da Cohab Minas na construção de moradias populares para famílias de baixa renda e redução do déficit habitacional.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar a rede estadual de proteção de direitos para mulheres, crianças, adolescentes, idosos, pessoas com deficiência e população LGBTQIA+, priorizando o enfrentamento da violência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar as compras públicas da agricultura familiar por meio da articulação com o PAA e o PNAE para gerar renda no campo e garantir alimentação saudável.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar e articular políticas federais de agricultura familiar e segurança alimentar, facilitando acesso ao Pronaf, expandindo a participação no PAA e PNAE e fortalecendo a atuação da Conab.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar e fortalecer políticas de mobilidade acessível para estudantes e jovens trabalhadores para reduzir o peso das tarifas sobre a renda das famílias.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar o acesso das mulheres à terra, à água, ao crédito ou subsídio, à habitação rural, a equipamentos produtivos e a tecnologias apropriadas para produção agroecológica.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar programas de esporte e lazer para jovens de 15 a 29 anos em territórios vulneráveis, articulados a políticas de educação, cultura, saúde e assistência social para prevenção da violência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar programas regulares de esporte, lazer e atividades físicas para pessoas idosas em parceria com municípios para promover envelhecimento ativo.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Atuar em parceria com municípios, cooperativas e organizações da agricultura familiar para ampliar produção, comercialização, geração de renda no campo e abastecimento de alimentos saudáveis.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Combater a pejotização, a terceirização abusiva e outras formas de precarização do trabalho, além de enfrentar as desigualdades salariais entre homens, mulheres e grupos raciais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar e executar o Plano Estadual das Juventudes, articulando educação, cultura, esporte, qualificação profissional, cuidado psicossocial e primeiro emprego.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o Plano Estadual de Emprego para a Juventude, compreendendo programa estadual de primeiro emprego, estágio e qualificação profissional, com incentivo a empresas que contratem jovens e implantação de políticas de permanência no mercado de trabalho.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o Plano Estadual de Promoção da Igualdade Racial com metas de enfrentamento ao racismo e valorização da história e cultura afro-brasileira e indígena.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Defender a saúde e a segurança no trabalho, ampliar políticas públicas de emprego, qualificação e proteção social, e construir um projeto de desenvolvimento voltado à qualidade do emprego e redução de desigualdades regionais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Efetivar a Política Estadual de Apoio à Agricultura Urbana, reconhecendo a atividade como estratégia de segurança alimentar, geração de renda, saúde, educação e direito à cidade.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Elaborar e implementar uma Política Estadual para o Envelhecimento Ativo e Saudável para promover proteção, autonomia e qualidade de vida da população idosa.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a política de direitos da população LGBTQIA+, ampliando a rede de proteção contra a violência e garantindo acesso sem preconceito aos serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a política estadual de garantia dos direitos da pessoa idosa para prevenir violências, abandono e discriminação, assegurando atendimento e autonomia.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a Política Estadual de Segurança Alimentar e Nutricional Sustentável, valorizando os conselhos de segurança alimentar e nutricional e os centros de referência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a Política Estadual dos Direitos da Pessoa com Deficiência para garantir acessibilidade, inclusão e ampliação do acesso a serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer e aprimorar os serviços dos CRAS e CREAS em parceria com os municípios, ampliando a capacidade de prevenção, proteção e atendimento humanizado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer e executar a Política Estadual de Promoção dos Direitos das Comunidades Tradicionais e Quilombolas, articulando regularização fundiária, desenvolvimento sustentável, serviços e apoio à produção.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer e executar a Política Estadual de Proteção dos Povos Indígenas, cooperando com a União na regularização de territórios e assegurando saúde, educação, infraestrutura e segurança.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer iniciativas comunitárias de cuidado para idosos, pessoas com deficiência, crianças e adolescentes.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer o CONSEA-MG como espaço de participação e controle social das políticas de segurança alimentar e nutricional.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer os Centros de Referência Regionais de Juventude para oferecer orientação profissional, apoio psicossocial, cultura e esporte.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir acessibilidade nos serviços públicos a pessoas falantes de libras por meio da ampliação e divulgação da central de libras.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir condições para que a maternidade não interrompa os projetos de vida de jovens e mães solo, ampliando a oferta de creches públicas e articulando políticas de cuidado, assistência social, educação, qualificação profissional e inclusão produtiva.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir o funcionamento e ampliar o atendimento de programas de proteção em direitos humanos, como PPCAAM, PROVITA e PPDDH-MG.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir os direitos das populações atingidas por crimes socioambientais da mineração, assegurando reparação integral, indenização pelos responsáveis, atendimento de saúde e proteção social.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir política inclusiva de esporte e lazer com planos específicos para pessoas com deficiência, neurodivergentes, idosos, povos indígenas, comunidades quilombolas, população LGBTQIA+, pessoas em situação de rua e privadas de liberdade.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar e fortalecer o Programa A Vez Delas no estado, estruturando banco de empregos, atendimento a mulheres e qualificação profissional para garantir autonomia econômica a mulheres em situação de violência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar política estadual de prevenção e enfrentamento ao trabalho escravo com proteção e garantia de direitos às vítimas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar Política Estadual Integrada para as Mulheres a partir da 5ª Conferência Estadual, fortalecendo o enfrentamento à violência de gênero e promovendo autonomia financeira e expansão de políticas de cuidado.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar uma política estadual integrada para as mulheres a partir das deliberações da Quinta Conferência Estadual de Políticas para as Mulheres de 2025, fortalecendo a prevenção e o enfrentamento à violência de gênero, promovendo a autonomia financeira por meio de qualificação profissional e inclusão produtiva, expandindo políticas de cuidado e promovendo a equidade de gênero.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Instituir o Conselho Estadual de Políticas de Cuidado com participação de órgãos públicos e da sociedade civil, e instituir centros de cuidado para idosos e populações em situação de rua em parceria com os municípios.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Levar para todo o estado de Minas Gerais boas práticas de gestão de abastecimento e segurança alimentar, e ampliar investimentos em políticas para mulheres camponesas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promover a melhoria das condições de vida da população localizada nas periferias urbanas, com ênfase em habitação, transporte público, saneamento, educação infantil e básica, saúde e segurança.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promover a reforma agrária com regularização fundiária, assistência técnica, crédito, infraestrutura e inclusão produtiva dos assentamentos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promover a reforma agrária e implementar a Política de Juventude e Sucessão Rural em Minas Gerais, garantindo oportunidades de permanência da juventude no campo com educação, inovação e trabalho.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promover ações de atenção específica às meninas vítimas ou expostas à violência e proteção integral às crianças órfãs do feminicídio, com acompanhamento continuado pelas redes sociais, de saúde e educação.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Transformar Minas Gerais em território livre da fome por meio do fortalecimento da agricultura familiar, ampliação de hortas, cozinhas comunitárias e restaurantes populares.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Adotar uma administração estadual mais descentralizada, reduzindo a concentração na Região Metropolitana de Belo Horizonte.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprimorar o Programa de Pleno Pagamento de Dívidas dos Estados, ampliando o período de transição para pagamento integral dos encargos e buscando condições especiais com redução do estoque da dívida e ampliação de prazos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Articular qualificação profissional, acesso ao crédito e microcrédito, apoio à comercialização e incentivo à produção local para fortalecer vocações regionais por meio do turismo.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Assegurar que recursos do saneamento sejam aplicados no próprio setor, regulamentar e fortalecer o Fundo Estadual de Saneamento Básico (FUNESB), e fortalecer a ARSAE-MG com autonomia técnica, administrativa e financeira.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Destinar anualmente ao menos 1% da Receita Corrente Líquida do estado para um Orçamento Participativo Mineiro focado em investimentos em infraestrutura regional, viabilizando financiamentos adicionais com instituições como Ministério das Cidades, BNDES e BDMG.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Elaborar um novo Plano Estadual de Ciência, Tecnologia e Inovação de longo prazo articulado com a estratégia de desenvolvimento socioeconômico e ambiental. Estabelecer articulação permanente entre universidades, centros de pesquisa, indústrias e governo para transformar conhecimento científico em soluções. Ampliar o apoio à FAPEMIG, garantindo recursos constitucionais, previsibilidade financeira e planejamento plurianual, além de criar um fundo dedicado para sua autonomia. Discutir o contingenciamento de 30% da verba da FAPEMIG utilizado para amortizar a dívida do Estado. Articular fontes de conhecimento com o sistema empresarial e instituições públicas de fomento. Interiorizar os investimentos em CT&I para beneficiar regiões menos contempladas e fortalecer a UEMG, Unimontes, EPAMIG e outras instituições estaduais de pesquisa. Criar uma política estadual de parques científicos e tecnológicos priorizando o interior. Utilizar a CT&I para a reindustrialização e estabelecer programa de transformação tecnológica em regiões mineradoras. Implantar programas de pesquisa e inovação em áreas prioritárias como inteligência artificial, biotecnologia, saúde, novos materiais, semicondutores, transição energética, tecnologias ambientais e agricultura sustentável. Criar uma política mineira de soberania tecnológica para reduzir a dependência externa. Apoiar startups, pequenas empresas de base tecnológica, economia solidária e Unidades EMBRAPIIs mineiras. Apoiar a divulgação científica e o combate ao negacionismo. Apoiar a Fundação João Pinheiro na formação de gestores públicos e o Centro Nacional de Vacinas, FUNED e ações para polo de vacinas e medicamentos. Criar o Programa Mineiro de Inteligência Artificial em consonância com o plano brasileiro.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 33
+        },
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estabelecer prioridades e critérios redistributivos debatidos coletivamente por meio de orçamento participativo e tecnologias de diálogo e escuta da população.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estimular a criação e o funcionamento dos conselhos municipais de meio ambiente para avançar na democratização da gestão.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer a capacidade do Estado de regular e fiscalizar a atividade minerária, ampliar a participação social nas decisões territoriais e construir planos de transição e diversificação econômica de longo prazo nos municípios minerodependentes.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer a EMATER-MG e as políticas estaduais de apoio à agricultura familiar, articulando-as às políticas federais e ampliando sua presença nos municípios, com atenção a jovens, mulheres, povos tradicionais e assentamentos da reforma agrária.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer a governança da atividade mineral com maior rigor na fiscalização, segurança de barragens, transparência na aplicação da CFEM e participação das comunidades atingidas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir a gestão pública das medidas socioeducativas, preservando a responsabilidade direta do Estado na execução da política e atendimento aos adolescentes.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir a participação ativa das juventudes na elaboração, execução e avaliação de políticas públicas por meio de espaços de participação social.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implantar o Ciclo Estadual de Planejamento e Orçamento Participativo com Conselhos Regionais, criar um Portal Estadual de Participação e Monitoramento de obras, disponibilizar escritórios de projetos nas microrregiões, instituir um Fórum Interconselhos e inserir a juventude no Orçamento Participativo.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar critérios de justiça distributiva com relação aos recursos do estado para priorizar regiões e territórios historicamente excluídos e vulnerabilizados.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar plataforma digital para registrar informações de conselhos, viabilizar participação remota, consultas populares, plebiscitos e audiências públicas, e usar inteligência artificial para automatizar processos administrativos, reduzir burocracia e apoiar o planejamento governamental com base em evidências.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Inovar na criação de arranjos administrativos descentralizados, instituindo regiões metropolitanas, aglomerações urbanas, microrregiões ou novas formas de parceria administrativa local e regional.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Instituir uma Rede Estadual de Ouvidorias de Direitos Humanos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Modernizar a gestão da infraestrutura rodoviária com inteligência artificial, sistemas inteligentes de transporte, monitoramento em tempo real e resposta ágil a acidentes e eventos climáticos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover o uso ético e responsável de tecnologias de transformação digital e inteligência artificial para tornar o Estado mais eficiente, transparente, participativo e orientado por evidências.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover regionalização e territorialização participativa alinhada com as 66 microrregiões do estado e territórios de povos e comunidades tradicionais, realizando levantamento de organizações da sociedade civil e debates do Plano Plurianual de Ação Governamental.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Retomar concursos públicos, substituir progressivamente servidores temporários por efetivos, valorizar os servidores públicos preservando direitos e manter sob controle estatal empresas públicas estratégicas como Cemig e Codemig.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Ampliar a promoção de Minas Gerais em feiras de turismo e divulgar destinos e patrimônios reconhecidos pela UNESCO, como Ouro Preto, Congonhas, Diamantina e Pampulha.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Consolidar o Sistema Estadual de Cultura, convocar a V Conferência Estadual de Cultura e fortalecer o Fundo Estadual de Cultura, aprimorando incentivos fiscais e articulando recursos federais com calendário previsível, transparência e desconcentração territorial.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Criar Centros Regionais de Treinamento Esportivo para apoiar a formação e o desenvolvimento de atletas e paratletas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Descentralizar recursos e infraestrutura cultural, fortalecer a Política Estadual de Cultura Viva e instituir uma Política Estadual das Artes articulada com a educação e com instituições de ensino.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Desenvolver políticas para cultura digital e games, valorizar a cultura alimentar mineira, fortalecer a economia da cultura com apoio do BDMG e promover a internacionalização da produção mineira com retenção de valor nos territórios.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Estabelecer parcerias com universidades, institutos federais, Sistema S e clubes para ampliar espaços e equipamentos de esporte e lazer.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer a política do livro, leitura e bibliotecas, instituir política permanente de circulação cultural, retomar o programa Música Minas e reestruturar a Empresa Mineira de Comunicação, Rede Minas e Rádio Inconfidência.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer e regionalizar a Política Estadual de Turismo, promovendo agenda multissetorial articulada com cultura, meio ambiente e agricultura familiar, e aproximando o poder público de municípios e comunidades para elevar a competitividade dos destinos mineiros.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer programas de incentivo ao esporte amador, modalidades olímpicas e paraolímpicas, skate, danças urbanas, práticas comunitárias e novas formas de lazer.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implantar programas de esporte e lazer em parceria com municípios, criando Polos Comunitários e Núcleos de Aprendizagem e Formação Esportiva.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implementar o Museu de Direitos Humanos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Instituir o Plano Estadual de Esporte e Lazer com pilares de formação esportiva, esporte educacional, esporte de rendimento e modernização de equipamentos públicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Instituir política estadual permanente para o Carnaval e festas populares, fortalecer o IEPHA-MG e o Conselho Estadual do Patrimônio Cultural na proteção de acervos e patrimônio, e atualizar o Programa de Desenvolvimento do Audiovisual Mineiro (Prodam).",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Institutionalizar a Política Estadual de Proteção e Defesa dos Direitos Animais com referência formal de coordenação e criar o Conselho Estadual de Proteção e Direitos Animais.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Preservar a memória do esporte mineiro com a revitalização do Centro de Memória e Informação do Esporte de Minas Gerais e organizar um calendário estadual de eventos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Realizar campanhas estaduais sobre direitos animais, prevenção de crueldade, abandono, tráfico e proteção da fauna silvestre, integrando a proteção animal a políticas de resposta a desastres e mudanças climáticas.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Recriar a Secretaria de Estado de Cultura e recompor gradualmente sua capacidade técnica e de órgãos vinculados como IEPHA-MG, Fundação Clóvis Salgado e FAOP, com realização de concursos públicos.",
+      "referencias": [
+        {
+          "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+          "pagina": 57
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 1
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 2
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 3
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 4
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 5
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 6
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 7
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 8
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 9
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 10
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 11
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 12
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 13
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 14
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 15
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 16
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 17
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 18
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 19
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 20
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 21
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 22
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 23
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 24
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 25
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 26
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 27
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 28
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 29
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 30
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 31
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 32
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 33
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 34
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 35
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 36
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 37
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 38
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 39
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 40
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 41
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 42
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 43
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 44
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 45
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 46
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 47
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 48
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 49
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 50
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 51
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 52
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 53
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 54
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 55
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 56
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 57
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 58
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 59
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 60
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 61
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 62
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 63
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 64
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 65
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 66
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 67
+    },
+    {
+      "sha256": "edf7c6ac2ad4aad4931bdd8a929ab7595b9583f9c2a1e208e13b0298a26dc774",
+      "pagina": 68
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:19:52.544Z",
+    "conteudoHash": "0d9b10e3bf35602b612e6f8a2161c17c567a3c01dc4f6039ec6d82307a5000c6"
+  }
+}

@@ -202,10 +202,17 @@ O relatório distingue extração pendente, alerta OCR, blocos concluídos e cha
 npm run gerar-rascunhos -- --candidaturas=CHAVE --documentos=SHA256 --max-chamadas=10 --pausa=4000
 ```
 
-Checkpoints privados são gravados atomicamente em `checkpoints/rascunhos`, vinculados a candidatura, seleção, snapshot, extração, prompt/modelo, limite e hashes dos blocos. A retomada revalida cada checkpoint e processa somente os pendentes. `429` diário pausa a execução preservando o progresso; `Retry-After` curto é respeitado. O comando não roda no build, não publica e não oferece consumo ilimitado.
+Checkpoints privados são gravados atomicamente em `checkpoints/rascunhos`, vinculados a candidatura, seleção, snapshot, extração, prompt/modelo, limite e hashes dos blocos. A retomada revalida cada checkpoint e processa somente os pendentes. `429` pausa a fila preservando o progresso; `Retry-After` curto é respeitado. O comando não roda no build e não oferece consumo ilimitado.
+
+Para processar toda a fila com o modelo leve, intervalos entre candidaturas e salvamento automático em `data/resumos_publicados/`, execute:
+
+```sh
+npm run gerar-rascunhos:fila
+```
+
+O modo de fila diferencia rascunhos gerados de resumos efetivamente salvos, interrompe em caso de quota e pode ser executado novamente para retomar pelos checkpoints. Falhas temporárias `502`, `503`, `504`, timeout, abort e respostas incompletas são repetidas com espera progressiva; `--max-tentativas=N` controla de 1 a 10 tentativas por bloco. `--publicar` salva automaticamente os resultados estruturalmente válidos; `--revisor=NOME` altera o identificador registrado pela automação.
 
 2. Use o `rascunho.json` completo produzido pela CLI (ou um rascunho público curto).
-2. Confira o texto contra os PDFs originais, todas as referências, cobertura, neutralidade, alegações e eventuais conflitos. Corrija as afirmações do rascunho antes de aprovar. Revise OCR quando sinalizado.
 3. Confira semanticamente propostas, temas, repetições/divergências, neutralidade, cobertura e todas as referências contra os PDFs. Validação estrutural automatizada não substitui essa etapa. Em ambiente confiável, execute:
 
 ```sh

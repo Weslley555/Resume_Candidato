@@ -1,0 +1,4098 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002551547",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:cdbc428cd660805bec07196ce662248459171206215f9339b6c6d652608c19e5",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:12:32.994Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Agregar valor aos minerais estratégicos por meio da industrialização e incentivar cadeias produtivas completas desde a mineração responsável até a fabricação de produtos tecnológicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a capacidade de industrialização da produção rural por meio de cooperativas de agroindústria.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 132
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a cobertura do Programa de Subvenção ao Prêmio do Seguro Rural (PSR) para mitigar riscos climáticos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar acesso a crédito, incubadoras de startups, parques tecnológicos e capacitação em inovação digital para o empreendedorismo jovem.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar e simplificar as linhas de financiamento à exportação para pequenas e médias empresas, fortalecer mecanismos de garantia e seguro de crédito à exportação, e estimular a concorrência bancária e o uso do mercado de capitais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 42
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar investimentos em ciência, pesquisa e desenvolvimento em áreas como biotecnologia, energia, saúde, defesa e inteligência artificial.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar o acesso a crédito, assistência técnica, seguro rural, mecanização e mercados para pequenos agricultores, promovendo sucessão familiar e formação de jovens lideranças rurais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar programas de empreendedorismo feminino, acesso ao crédito, qualificação profissional e incentivo à liderança das mulheres.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aplicar tecnologia na agroindústria por meio de inteligência artificial, agricultura de precisão, drones, automação, robótica, melhoramento genético, rastreabilidade, gestão inteligente da água e bioinsumos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 128
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Apoiar a organização de cooperativas para ampliar e modernizar a avicultura, a suinocultura e a bovinocultura, permitindo que pequenos e médios produtores compartilhem tecnologia, alimentação animal, logística, assistência técnica e comercialização.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 133
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Apoiar tecnicamente, ofertar crédito, desburocratizar e incentivar a inovação para formar 10 milhões de novos empreendedores.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 39
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Apresentar proposta de revisão do pacto federativo no aspecto tributário para destinar mais recursos aos municípios em detrimento da União.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 37
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Atrair fundos soberanos, big techs energéticas e multinacionais de infraestrutura por meio de segurança jurídica, incentivos fiscais e parcerias público-privadas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 175
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 176
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Avaliar os impactos da reforma tributária com foco nas micro e pequenas empresas e setores estratégicos, propondo ajustes se houver distorções e defendendo a simplificação de tributos, redução da burocracia e unificação de procedimentos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Capacitar mulheres brasileiras no exterior por meio das embaixadas para atuarem como agentes de promoção do Brasil em supermercados, feiras e redes de varejo, criando a Rede Mulheres Embaixadoras do Brasil.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 152
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 153
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Construir um Estado eficiente que una responsabilidade fiscal e sensibilidade humana, combatendo desperdícios públicos enquanto investe em educação, saúde e oportunidades.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 18
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar a Secretaria Executiva ou Ministério do Empreendedorismo e da Economia Distribuída para apoiar micro e pequenas empresas, promover a inclusão produtiva e implementar os 10.000 Clubes de Empreendedorismo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 94
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 95
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 97
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 98
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar cinco Zonas Francas de Exportação (Fortaleza, Bahia, Rio de Janeiro, São Paulo e Rio Grande do Sul) especializadas em setores como energia renovável, tecnologia, petroquímica, petróleo e gás, Indústria 4.0, agroindústria e robótica aplicada.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 141
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar cinturões verdes e de proteína ao redor das médias e grandes cidades do Nordeste e do Norte de Minas, e atrair capital internacional para irrigação, reservação, packing houses, centros logísticos, câmaras frias e agroindústria.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 118
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar condições para o desenvolvimento de centros regionais de produção de proteína animal, com atenção especial ao Nordeste e ao MATOPIBA.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 127
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 128
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar cooperativas de compras para reunir empresas, produtores e consumidores para aquisições em grande escala, visando reduzir custos, melhorar condições de pagamento, ampliar competitividade e facilitar acesso a insumos e tecnologias.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 136
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar cooperativas industriais para que pequenos produtores e empreendedores compartilhem estruturas industriais, equipamentos, tecnologia e canais de distribuição.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 133
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar duas Black Weeks internacionais do turismo brasileiro por ano, com redução promocional de preços em parceria com o setor de turismo, visando aumentar o fluxo turístico, reposicionar a imagem do país e movimentar cadeias de emprego, renda e serviços.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 149
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 150
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar linhas de crédito rural de longo prazo, fundo garantidor, seguro rural em escala, linhas indexadas a dólar para cadeias exportadoras e spread reduzido para a agricultura familiar e empresarial.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 117
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o Banco do Empreendedor para fornecer crédito de até R$ 20.000,00 com taxas de juros de 5% a 6% ao ano e foco em início rápido.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 98
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o Banco Mundial do Empreendedor para oferecer microcrédito, capacitação e apoio técnico a pequenos empreendedores, financiando pequenos negócios, agricultura, comércio e serviços.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 158
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o Fundo Nacional do Empreendedor com capital inicial estimado entre R$ 30 bilhões e R$ 50 bilhões para atuar como capital rotativo e garantia para multiplicar a capacidade de crédito.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 108
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o programa Brasil Proteína 10.000 para atrair ou instalar 10 mil agroindústrias em oito anos, priorizando frango, suinocultura, bovinocultura, caprinocultura, ovinocultura, piscicultura e bacias leiteiras.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 117
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar o programa Influenciadores Embaixadores do Brasil, selecionando influenciadores nativos em outros países para vivenciarem imersões anuais no Brasil com foco na promoção de turismo, gastronomia, negócios, cultura, educação, inovação e qualidade de vida.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 149
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar um banco especializado em financiar pequenos empreendedores, microempresas e startups com crédito acessível, orientação técnica, educação financeira e redução do spread bancário.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar um programa nacional de inserção produtiva da juventude com incentivos fiscais para o primeiro emprego, estágios ampliados e aprendizagem tecnológica.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar uma plataforma digital nacional para integrar cooperativas, cooperados, fornecedores, consumidores, instituições financeiras e mercados internacionais, oferecendo cadastro unificado, capacitação, acesso ao crédito, comércio eletrônico, gestão financeira, inteligência de mercado, integração logística e acesso a compras públicas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 137
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar zonas estratégicas de industrialização com polos industriais para minerais críticos, incentivos ao processamento nacional, atração de empresas de alta tecnologia e formação de clusters entre mineração, universidades, centros tecnológicos e indústrias.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 179
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Defender a estabilidade regulatória, o respeito aos contratos, o fortalecimento institucional e a rapidez na solução de conflitos para garantir segurança jurídica aos investidores.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Defender uma política nacional para atrair investimentos na produção de chips, componentes eletrônicos e sistemas embarcados.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver a gestão hídrica no Semiárido combinando barragens inteligentes, pequenos reservatórios, cisternas produtivas, armazenamento de chuva, perfuração de poços, adutoras, dessalinização, reuso de água e irrigação de precisão.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 115
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver as etapas de separação, refino e transformação industrial, ampliando a participação brasileira nas cadeias tecnológicas internacionais e agregando valor no Brasil antes da exportação.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 179
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Direcionar parte dos lucros de empresas com participação da União para financiar políticas públicas de empreendedorismo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 98
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Dobrar a produção total de alimentos do Brasil em 8 a 10 anos, multiplicar por 10 a receita de exportações de frutas, transformar o Semiárido em plataforma de agricultura irrigada e cultivo protegido, e apoiar 3,9 milhões de estabelecimentos da agricultura familiar com crédito, assistência técnica, irrigação simplificada, energia solar, cooperativismo e acesso a mercados.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 117
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Dobrar o número de cooperativas no Brasil para mais de dez mil e duplicar o número de cooperados, passando de 27 milhões para 54 milhões em dez anos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 131
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 132
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Elevar o Ministério das Relações Exteriores a Secretaria de Estado, modernizar embaixadas como plataformas 4.0 para comércio, investimentos e inovação, e atrair empresas e tecnologia para o processamento de terras raras e minerais estratégicos no Brasil.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 64
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecer cooperações internacionais com Israel para irrigação de precisão e fertirrigação, com a China para mecanização leve, drones e automação, e com fundos soberanos do Golfo para investimentos em infraestrutura hídrica, centrais de frio, agroindústrias e plataformas exportadoras.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 116
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecer metas nacionais de dobrar o comércio do Brasil com o mundo em oito anos, aumentar a participação de industrializados e serviços na pauta exportadora, elevar a presença em mercados asiáticos, árabes e africanos, e consolidar o país como potência turística, alimentar, industrial e de serviços.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 150
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 151
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecer modelo regulatório para exportação com regime tributário competitivo, redução de impostos sobre insumos de exportação, licenciamento com prazos definidos, regulamentação simplificada e digitalizada, e incentivos para tecnologia e inovação.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 141
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 142
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecer parcerias internacionais com exigência de contrapartidas para transferência e desenvolvimento conjunto de tecnologia, processamento e produção local, formação de profissionais, geração de empregos qualificados e instalação de centros de pesquisa no Brasil.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 179
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estabelecer prazo legal máximo para a devolução dos créditos tributários acumulados pelo exportador.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular a criação e o fortalecimento de cooperativas agrícolas, industriais, de crédito e de serviços, com o objetivo de dobrar o número de cooperados em 10 anos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 48
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular a implantação de 100 grandes usinas de etanol de milho para processar mais de 100 milhões de toneladas de milho por ano e fomentar centros integrados de proteína animal ao redor dessas usinas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 126
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 127
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular a implantação, modernização e expansão de 10 mil agroindústrias em todo o território nacional, englobando cooperativas, pequenas agroindústrias familiares, médias empresas, grandes complexos, frigoríficos, indústrias de alimentos, fábricas de rações, processadoras de milho, soja e leite, e unidades de frutas, café e cacau.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 126
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular a metalurgia e a indústria avançada para desenvolver cadeias produtivas completas, incentivando a produção de ligas especiais, ímãs permanentes e componentes tecnológicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 179
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular cooperativas de seguros voltadas para seguro agrícola, seguro de vida, seguro empresarial, proteção patrimonial e saúde complementar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 134
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular cooperativas de tecnologia nas áreas de inteligência artificial, robótica, drones, softwares, automação, plataformas digitais e segurança e monitoramento inteligente.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 133
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 134
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular cooperativas voltadas à produção de energia renovável, etanol de milho, biogás, biomassa e outras fontes sustentáveis, incluindo a implantação de usinas cooperativas e a integração entre produção agrícola, energia e desenvolvimento regional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 133
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular investimentos em robótica, inteligência artificial, internet das coisas, automação industrial, computação em nuvem e manufatura avançada.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular o desenvolvimento e o uso de robótica, inteligência artificial e tecnologias da Indústria 4.0 no setor produtivo nacional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estruturar o Banco do Empreendedor como plataforma nacional de crédito produtivo em parceria com instituições financeiras e bancos públicos, adotando um sistema de crédito progressivo com etapas de valores para financiar pequenos empreendedores e negócios, com a meta de atender pelo menos 2 milhões de empreendedores em dez anos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 107
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 108
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir acordos comerciais estratégicos com diferentes blocos econômicos e diversificar mercados.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir acordos comerciais, promover a imagem do agronegócio e fortalecer a diplomacia econômica para dobrar a produção de alimentos em 10 anos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir as cooperativas financeiras de crédito para praticamente todos os municípios brasileiros para oferecer taxas justas, financiar pequenos empreendedores, fortalecer produtores rurais, manter recursos circulando nas regiões e democratizar o acesso a serviços financeiros.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 134
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Expandir o cooperativismo para todas as dimensões econômicas e sociais, democratizando o acesso a crédito, seguros, saúde, educação e consumo, e integrando cooperativas às cadeias agroindustriais, energéticas, industriais e tecnológicas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 131
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 132
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a economia brasileira reduzindo a burocracia sufocante, simplificando impostos e estimulando empreendedorismo, inovação, tecnologia e produtividade.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer mecanismos de transparência salarial, fiscalização e cumprimento da legislação de igualdade remuneratória, além de promover políticas para ampliar a presença feminina em posições de liderança.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 89
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implantar o modelo Embaixada 4.0 com metas anuais de abertura de mercados, atração de investimentos e apoio a exportadores.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implantar o programa Brasil Oásis voltado ao Semiárido e ao Norte de Minas, estruturado em quatro eixos: transformação hídrica e agroindustrial no Semiárido, apoio à agricultura familiar com crédito e assistência técnica, expansão da agricultura empresarial e exportadora com metas de dobrar a produção em até 10 anos, e instalação de agroindústrias e clusters de proteína animal e processamento regionalizado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 115
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implantar um programa nacional para estimular a instalação de 10 mil novas indústrias, com destaque para agroindústrias, distribuídas por todas as regiões para valorizar vocações locais e reduzir desigualdades.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar núcleos de inteligência comercial permanente nas embaixadas para analisar matrizes de importação e exportação, comparar pautas comerciais, identificar setores sub-representados, mapear gargalos e produzir relatórios trimestrais com oportunidades de expansão.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 148
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 149
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar políticas de transparência salarial, fiscalização e mecanismos de correção de desigualdades salariais e de crédito para mulheres.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 54
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar programas específicos para o Nordeste, a Amazônia e o interior do país com investimentos em infraestrutura, educação, tecnologia e geração de empregos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Impulsionar a economia criativa como setor estratégico de geração de empregos, inovação e exportação de conteúdo cultural.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Incentivar a modernização tecnológica de propriedades rurais de todos os portes com satélites, drones, sensores, inteligência artificial, robótica agrícola, bioinsumos, reciclagem de nutrientes e práticas como integração lavoura-pecuária-floresta.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Incentivar o turismo rural e o agroturismo como instrumentos de diversificação de renda e desenvolvimento econômico local.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Incentivar programas permanentes de conservação do solo e recursos hídricos, recuperação produtiva de áreas degradadas e sustentabilidade da agropecuária.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Industrializar o setor energético promovendo fábricas de equipamentos solares e eólicos, cadeia produtiva nacional e centros de inovação energética.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 176
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integrar a bioenergia e o etanol de milho com a agricultura para fomentar a produtividade no campo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 176
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Integrar o Projeto BEE ao plano nacional de formação de 10 milhões de microempreendedores, implantando polos organizados de empreendedorismo ao longo das rodovias brasileiras a cada dez a quinze quilômetros.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 120
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 121
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Investir em políticas de educação financeira para o público feminino e propor mudanças nos critérios e matrizes de risco para concessão de crédito.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 55
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Investir em segurança hídrica, irrigação eficiente, energia solar distribuída e agroindústrias adaptadas no semiárido.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 61
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Investir em tecnologia, pesquisa, irrigação, logística e inovação para ampliar a produção agrícola e estabelecer prazos máximos legais para licenciamento ambiental, sanitário e de outorga de água com procedimento digital integrado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 47
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Mapear reservas estratégicas de terras raras com a criação e atualização do Atlas Brasileiro de Minerais Críticos, integrando governo, universidades, centros de pesquisa e iniciativa privada.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 178
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Modernizar as regras das Zonas de Processamento de Exportação (ZPEs), simplificar processos de habilitação, assegurar prazos definidos para autorizações e priorizar sua implantação junto aos Corredores Estratégicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Multiplicar por dez as exportações de frutas em oito anos, priorizando as cadeias de manga, uva, melão, limão e cítricos, hortaliças de alto valor, cacau, café de nicho e o cultivo protegido por meio de estufas e manejo plástico.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 116
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Organizar cooperativas de consumo com supermercados, centrais de compras e redes de comercialização coletiva para reduzir preços de alimentos, medicamentos, materiais escolares e produtos essenciais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 135
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Orientar a política mineral para atender à demanda tecnológica em setores como semicondutores, baterias, veículos elétricos, energias renováveis, defesa, aeroespacial e robótica.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 178
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Perseguir a meta de déficit público próximo de zero durante o mandato, preservando investimentos estratégicos e fortalecendo a confiança dos investidores.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Priorizar nas unidades comerciais frutas regionais, hortaliças, agricultura orgânica, alimentação, artesanato, produtos naturais, bebidas regionais, cultura local, produtos agrícolas e utensílios domésticos, com foco em agricultores familiares, pequenos produtores, artesãos e empreendedores locais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 121
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 122
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover a redução gradual e sustentável da dívida pública por meio do crescimento econômico, responsabilidade fiscal, equilíbrio das contas e modernização do Estado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Promover estudos e mecanismos de transparência, em articulação com o Banco Central, instituições financeiras, Sebrae e universidades, para identificar distorções na concessão de crédito a mulheres.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 89
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 90
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Realizar feiras internacionais do Brasil em cada grande país prioritário (ao menos duas anuais) e em países menores (ao menos uma anual) para expor produtos industrializados, agronegócio, serviços de tecnologia, saúde, educação, inovação, franquias, turismo e economia criativa.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 148
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir gradualmente a dependência da exportação bruta de minerais estimulando o processamento interno e aplicando políticas tributárias e creditícias favoráveis a produtos de maior valor agregado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 178
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Tornar a abertura de empresas rápida, simples e digital, reduzindo exigências desnecessárias e integrando sistemas públicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Tornar o Brasil referência global em hidrogênio verde mediante a criação do Corredor Nacional do Hidrogênio Verde, hubs industriais no Nordeste e parcerias globais, com a meta de alcançar o Top 3 global em exportação até 2035.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 175
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Trabalhar para que a transição da reforma tributária resulte em uma carga menor para o cidadão e para o setor produtivo, estimando e divulgando o custo de regimes específicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar as embaixadas brasileiras em agências avançadas de oportunidades para conectar produtores, empresários, investidores e universidades, e promover o uso profissional de redes sociais, influência digital, prospecção de investimentos e atração de empresas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 148
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar as embaixadas brasileiras em braços de vendas, inteligência comercial, abertura sanitária, promoção da marca país e atração de investidores, criando uma unidade de agrointeligência exportadora em cada embaixada estratégica.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 117
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar microempresas em redes organizadas para compartilhamento de compras, logística, marketing, tecnologia, capacitação, crédito e canais de venda.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 135
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 136
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar o Brasil em potência em energia limpa através do projeto PENER-BR, com foco em hidrogênio verde, solar, eólica e oceânica.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 175
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar o Brasil em potência global de minerais estratégicos e terras raras por meio do projeto PETRA-BR, ampliando a capacidade de processamento, industrialização e produção de bens de alto valor agregado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 178
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar o Brasil em uma potência exportadora industrial, tecnológica e agroindustrial, reduzindo a dependência de commodities e aumentando a participação de produtos industrializados e de alto valor agregado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 140
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Utilizar o Fundo Nacional de Desenvolvimento Regional com critérios técnicos e objetivos para apoiar polos regionais de desenvolvimento produtivo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Valorizar pequenos empreendedores, estimulando quem produz riqueza de forma ética sem tratar o empreendedorismo como inimigo social.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 26
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar a capacidade nacional de pesquisa, desenvolvimento e fabricação de medicamentos, vacinas, equipamentos médicos e produtos biotecnológicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar consultas remotas, laudos digitais e a integração entre hospitais, clínicas e unidades básicas por meio da telemedicina.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Capacitar profissionais das Unidades Básicas de Saúde para identificar lesões suspeitas de câncer de pele, realizar documentação fotográfica e dermatoscopia digital, com encaminhamento remoto das imagens para dermatologistas especializados.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 168
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar o Programa Nacional '365 Dias de Saúde Emocional e Prevenção' para fornecer diariamente conteúdos de gestão da emoção, perguntas de reflexão e exercícios de autocuidado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 171
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 172
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Criar uma rede de pontos públicos de acesso digital assistido em unidades básicas de saúde, escolas, centros comunitários, municípios de pequeno porte, comunidades rurais e regiões de difícil acesso para viabilizar o uso da telemedicina.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 163
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Desenvolver ações permanentes nas escolas para prevenção da ansiedade excessiva, bullying, isolamento social e comportamentos de autoagressão, com encaminhamento para profissionais de saúde.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 83
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Disponibilizar a Academia de Gestão da Emocão (AGE) online com ferramentas para combater estresse e ansiedade, trabalhar autoestima, melhorar relacionamentos e tomada de decisão.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 196
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Disponibilizar conteúdo de educação emocional e suporte psicológico inicial para pacientes que aguardam atendimento, incluindo orientações sobre ansiedade e estresse, exercícios de respiração e relaxamento, vídeos educativos e conteúdos preventivos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 163
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Estabelecer meta nacional de atendimento digital em até trinta minutos para casos compatíveis com telemedicina por meio de uma plataforma nacional integrada que conecte profissionais de todas as regiões do país.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 162
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Expandir e adaptar o modelo do Hospital de Amor como referência nacional de qualidade em prevenção e diagnóstico do câncer, integrando-o aos Comitês SEA e a uma rede de unidades móveis.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 171
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Expandir o acesso a atendimento psicológico nas escolas, universidades e unidades de saúde, e realizar campanhas de prevenção para a saúde mental dos jovens.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer a gestão do SUS por meio da digitalização de prontuários, integração de sistemas, redução de filas, melhoria da eficiência administrativa e uso de indicadores de desempenho.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer políticas de prevenção e diagnóstico precoce do câncer, saúde materno-infantil, planejamento reprodutivo, prevenção de doenças crônicas, saúde mental, atenção às diferentes fases da vida e atendimento humanizado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 90
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Fortalecer políticas de saúde preventiva, saúde mental, atenção materno-infantil, prevenção do câncer, planejamento reprodutivo e atendimento humanizado para mulheres.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implantar uma ampla política nacional de saúde mental envolvendo escolas, empresas, universidades, forças de segurança, unidades de saúde e comunidades.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 44
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implementar o projeto Sociedade Está Abraçando (SEA) como estratégia integrada de prevenção do câncer, unindo educação continuada, gestão da emoção, tecnologia, mobilização social e comitês regionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 166
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 171
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 172
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 173
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Implementar programas focados na prevenção do suicídio, valorização da vida, promoção da saúde emocional e conscientização sobre o cuidado com o sofrimento psíquico.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 197
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Incentivar cooperativas de profissionais de saúde para ampliar atendimento, reduzir custos e integrar prevenção, cuidado e qualidade de vida, além de promover cooperativas de compra coletiva de medicamentos diretamente da indústria.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 135
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Instituir Comitês Sociedade Está Abraçando (SEA) em cada município com representantes de diversas áreas para desenvolver campanhas permanentes de prevenção, acompanhar pessoas resistentes a exames, promover educação emocional e oferecer apoio psicológico.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 172
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Instituir o Programa Nacional de Acompanhamento Anual Pediátrico/Médico e Emocional/Psicossocial da Infância e Adolescência (PNAPE) para prevenir transtornos mentais, negligência, discriminação, exploração, violência e abuso infantil.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 195
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Investir na prevenção de doenças, no acompanhamento das famílias e na ampliação de equipes multiprofissionais na atenção básica do SUS.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Organizar o sistema de saúde por meio de uma plataforma digital para resolução de casos simples e encaminhamento eficiente de casos que exijam exames físicos ou presenciais para a rede especializada, com o objetivo de reduzir filas, otimizar recursos e fortalecer a atenção primária.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 164
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Reunir médicos de diferentes especialidades na plataforma nacional de telemedicina por meio de incentivos específicos e implantar um sistema permanente de avaliação da qualidade dos atendimentos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 162
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Transformar o Brasil na maior plataforma pública de medicina digital do mundo (Tele Saúde Brasil) para democratizar o acesso à saúde e desafogar o SUS, priorizando crianças vulneráveis, idosos com dificuldade de locomoção, pessoas de baixa renda, gestantes, pessoas com deficiência e moradores de regiões remotas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 160
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 161
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Utilizar inteligência artificial na triagem clínica inicial de pacientes, realizando classificação automática de risco, priorização de casos graves, redução de filas e otimização do tempo médico.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 162
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Ampliar o uso de botões de alerta com geolocalização, aplicativos de emergência, monitoramento eletrônico de agressores, centrais integradas e protocolos de resposta prioritária para mulheres ameaçadas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 88
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Atuar para enfraquecer estruturas financeiras e logísticas de facções criminosas, intensificando o combate ao tráfico, lavagem de dinheiro, crimes cibernéticos e crimes contra idosos por meio da implementação do SUSP e atuação integrada com Receita Federal e COAF.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 45
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Combater o crime organizado com foco na desarticulação patrimonial e bloqueio de recursos ilícitos mediante integração entre Receita Federal, COAF, Polícia Federal, Ministério Público, Poder Judiciário e polícias estaduais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 189
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 190
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Criar o projeto Mulheres Vivas como política de Estado para proteção à vida, igualdade, autonomia econômica e saúde emocional das mulheres, estruturando prevenção ao feminicídio com articulação entre forças de segurança, justiça, assistência social e saúde.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 87
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Definir que o Diretor-Geral da Polícia Federal seja escolhido a partir de lista tríplice entre delegados de classe especial, com mandato de dois anos e possibilidade de recondução.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer a cooperação internacional contra o crime organizado e a atuação das Forças Armadas no controle estratégico de fronteiras terrestres, portos, vias navegáveis e repressão a pistas clandestinas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer o policiamento comunitário, a atuação das Guardas Municipais e a integração entre Delegacias Especializadas de Atendimento à Mulher, Ministério Público, Defensoria Pública, saúde e assistência social.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 87
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer o policiamento comunitário, as Guardas Municipais e a integração com Juizados Especializados de Violência Doméstica, utilizando monitoramento inteligente e aplicativos de emergência.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Garantir capacitação permanente aos profissionais de segurança em direitos humanos, mediação de conflitos, gerenciamento de crises, combate ao crime organizado, inteligência policial, tecnologia, atendimento, primeiros socorros, defesa pessoal e prevenção ao terrorismo e crimes cibernéticos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 188
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Garantir melhores condições de trabalho, formação contínua, equipamentos modernos e valorização profissional aos agentes de segurança.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar o programa FATO (Força de Alerta Total) para integrar, treinar, equipar e valorizar as forças policiais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar o Programa Mulheres Vivas, integrando tecnologia, forças de segurança, atendimento psicológico, assistência jurídica e proteção social.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implantar um Centro Integrado de Inteligência nacional para conectar órgãos de segurança e reunir dados em tempo real sobre mandados, veículos roubados, armas ilegais, organizações criminosas, pessoas desaparecidas, fronteiras e inteligência financeira.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 187
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Implementar fronteiras inteligentes com uso intensivo de drones, satélites, sensores, radares e inteligência artificial para controlar o tráfico internacional, armas, drogas, contrabando e organizações transnacionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 190
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Instalar em cada cidade um Centro Integrado de Segurança conectado ao sistema nacional para resposta a desastres, acidentes, violência urbana e emergências.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 190
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Integrar as escolas públicas ao sistema de segurança com botão de emergência, monitoramento inteligente, patrulhamento preventivo e protocolos de resposta rápida.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 189
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Integrar permanentemente a Polícia Federal, a Polícia Militar, a Polícia Civil e a Força de Combate Municipal (FOCO) para compartilhar informações, inteligência e planejamento operacional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 186
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 187
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Possibilitar a criação da Força de Combate Municipal (FOCO) por cada município brasileiro, correspondendo a cerca de 5% da força de trabalho do serviço público municipal, para atuar na prevenção da violência, proteção patrimonial, monitoramento urbano, apoio policial, proteção escolar, defesa civil, grandes eventos e resposta a crises.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 187
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Prever reforço temporário de segurança de 20% a 30% do efetivo e apoio integrado nas áreas mais sensíveis durante os períodos das Black Weeks do turismo, conforme planejamento federativo local.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 150
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Recriar o Ministério da Segurança Pública e promover integração plena entre Polícia Federal, Polícias Civis, Polícias Militares, Guardas Municipais (convertendo 5% dos colaboradores em polícia FOCO), Ministério Público, Poder Judiciário e órgãos de inteligência.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Reformar o sistema penitenciário com foco em segurança, controle, educação, trabalho e ressocialização, combatendo a superlotação e a ação de facções, e modernizar a tramitação de processos na Justiça.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Utilizar câmeras inteligentes, reconhecimento de padrões, análise preditiva, drones, monitoramento integrado e inteligência artificial na segurança pública.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 46
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Utilizar tecnologias como inteligência artificial, reconhecimento facial, leitura automática de placas, drones de patrulhamento, câmeras inteligentes, sensores urbanos, análise preditiva e centros de comando digitais na segurança pública.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 188
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Valorizar os profissionais da segurança pública com melhores salários, plano nacional de carreira, bônus por desempenho, assistência psicológica, equipamentos modernos e seguro de vida.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 188
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 189
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Ampliar investimentos em energia solar, eólica, biomassa e pequenas centrais hidrelétricas para consolidar a liderança em energia renovável.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Atuar na diplomacia climática e ambiental defendendo um modelo de desenvolvimento sustentável que reconheça a Amazônia e a biodiversidade.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Criar frotas regionais de drones para identificação de focos em tempo real, mapeamento de áreas críticas e apoio a brigadas terrestres com uso de agentes supressores de baixa toxicidade.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 182
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Desenvolver as populações ribeirinhas e as cidades amazônicas por meio de microempresas locais de bioeconomia, pesca sustentável, turismo ecológico, infraestrutura básica, saneamento, energia limpa e conectividade digital.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 183
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 184
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Estimular pesquisas científicas, biotecnologia, bioindústria e novos produtos derivados da biodiversidade brasileira.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Implantar um sistema nacional de monitoramento ambiental com satélites, inteligência artificial para detecção precoce de focos de calor, modelos preditivos e sala de comando integrada 24/7.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 182
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Implementar um programa de compensação ambiental inteligente com créditos ambientais auditados, reflorestamento com rastreabilidade digital e incentivos a empresas que neutralizam emissões.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 183
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Incentivar a produção em larga escala de hidrogênio verde, criando polos industriais e atraindo investimentos internacionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Realizar campanhas contínuas de educação e conscientização nacional sobre proteção ambiental em escolas, mídias e plataformas digitais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 183
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Regulamentar o mercado de créditos de carbono com segurança jurídica e instituir mecanismos de Pagamento por Serviços Ambientais (PSA).",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar programas de inclusão digital, capacitação tecnológica e acesso universal a ferramentas digitais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar significativamente a oferta de ensino técnico integrado ao ensino médio, aproximando escolas e empresas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Aproximar o Ensino Médio das necessidades da nova economia, fortalecendo a integração com ensino técnico, universidades, empresas, centros de inovação e projetos práticos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 77
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar o Mapa Nacional da Neurodiversidade em parceria com IBGE, MEC e Ministério da Saúde, além de estabelecer Planos de Inclusão e Desenvolvimento em cada escola.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 81
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 82
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 83
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 84
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar políticas públicas voltadas à educação para orientar sobre os efeitos das redes sociais na convivência social e na saúde mental.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Criar um Programa Nacional de Formação em Neurodiversidade e Gestão da Emoção para professores, coordenadores e gestores escolares.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 82
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver campanhas nacionais de valorização da diversidade, programas de educação emocional e ações educativas nas escolas sobre autoestima, identidade, pensamento crítico frente às redes sociais e prevenção ao bullying.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 91
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver políticas de educação emocional e cidadania digital com escolas, famílias, profissionais da saúde e sociedade civil para prevenir sofrimento emocional e automutilação.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 92
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver programas educacionais que promovam respeito mútuo, cultura de paz e resolução pacífica de conflitos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver programas educacionais voltados ao respeito mútuo, dignidade humana, cultura de paz, resolução pacífica de conflitos e habilidades socioemocionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 92
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Desenvolver um programa nacional de educação cooperativista com conteúdos em escolas, universidades e cursos técnicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 137
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Educar a população para operar as redes sociais com responsabilidade e promover o pensamento crítico.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 16
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Estimular o registro de patentes, fortalecer a cultura da propriedade intelectual, transferir tecnologia para o setor produtivo e valorizar a produção intelectual dos pesquisadores.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 78
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer a capacidade de pesquisa das universidades, ampliando as ações da CAPES e do CNPq, os investimentos em pesquisa e a criação de incubadoras, laboratórios tecnológicos e centros de pesquisa aplicada.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 78
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer universidades como polos de inovação, estimulando startups universitárias, laboratórios e pós-graduações aplicadas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implantar programas permanentes de gestão da emoção, prevenção da ansiedade, depressão, automutilação, bullying e violência escolar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 43
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implantar uma ampla rede nacional de 10 mil Escolas de Empreendedorismo para formar jovens e adultos na criação de empresas, inovação e administração de recursos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar o ensino de gestão da emoção nas escolas para que as crianças aprendam a administrar o medo, a ansiedade e a frustração.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar o método Escola de Pensadores (SOFT) para transformar a pedagogia expositiva em sala de aula, estimulando professores a atuarem como provocadores de perguntas, desafios e participação cognitiva e emocional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 195
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 196
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Implementar o Novo Ensino Médio integrado à formação técnica, ao trabalho, à inovação, à inteligência artificial, à tecnologia aplicada, ao cooperativismo e ao desenvolvimento de liderança.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 76
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incentivar a pesquisa aplicada, o empreendedorismo universitário, a inovação tecnológica e a criação de startups nas universidades.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incentivar cooperativas educacionais, escolas comunitárias, centros de formação técnica e programas voltados ao empreendedorismo coletivo, além de inserir a educação cooperativista nas escolas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 135
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incluir o ensino do cooperativismo como instrumento de cidadania, desenvolvimento econômico e inclusão produtiva nas escolas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 77
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Incorporar no currículo escolar os pilares de Gestão da Emoção, Educação Financeira e Empreendedorismo, além de promover oficinas práticas e projetos de inovação.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Instituir o Projeto Brasil Neuroinclusivo como política permanente de Estado para acolher alunos neurodivergentes por meio da Metodologia Psicoativa de inclusão.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 81
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Integrar centros de inovação das Zonas Francas com universidades, institutos de pesquisa e setor privado para desenvolvimento tecnológico.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 142
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir em educação emocional para enfrentar o crescimento da ansiedade, da automutilação e da desesperança juvenil.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 28
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir em formação continuada de professores, melhoria das condições de trabalho, remuneração baseada em qualificação e incentivo ao aperfeiçoamento.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir na alfabetização na idade certa, na melhoria da aprendizagem, na valorização dos professores e na redução das desigualdades educacionais, priorizando a educação básica.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Oferecer formação contínua ao corpo diplomático e administrativo em promoção comercial, inteligência de mercado, branding nacional, negociação internacional, turismo estratégico, comunicação institucional, economia digital e diplomacia pública.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 147
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover uma revolução pedagógica para que o professor atue como provocador da curiosidade, elogiador da participação e desafiador do pensamento, transformando a sala de aula em um laboratório de ideias.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 74
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Realizar campanhas de conscientização, regulação de conteúdos nocivos e fortalecimento da educação emocional nas escolas para tratar da saúde mental e estética.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Reformar os currículos educacionais para aproximar o ensino das demandas do mercado de trabalho, inovação tecnológica, empreendedorismo e competências socioemocionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 56
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Tornar a educação a maior prioridade estratégica do Estado, com foco em educação de excelência em tempo integral, valorização dos professores, proteção da saúde emocional dos alunos e formação de pensadores críticos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 68
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 69
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 72
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 73
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 74
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Transformar a escola em um espaço de proteção, escuta e prevenção ao sofrimento emocional e valorização da vida.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Transformar a identidade da escola com a inclusão de espaços de oratória, debates, teatro, expressão artística, música, criatividade, esportes, eventos culturais e práticas de elogio mútuo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar concessões e parcerias público-privadas com regras claras e segurança jurídica para acelerar obras e atrair investimentos em infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 49
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar cinco Corredores Estratégicos de Exportação articulados a portos, aeroportos, ferrovias e centros de armazenagem, com novos benefícios tributários, aduana integralmente digital, prazos garantidos de liberação de cargas e licenciamento acelerado.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 41
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Criar um banco de dados energético com plataforma nacional e Inteligência Artificial para mapeamento em tempo real do potencial de energias solar, eólica, marítima, biomassa e hidrogênio verde.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 175
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Duplicar as principais rodovias do país para garantir estradas seguras.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 120
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Executar projetos de urbanização e infraestrutura nas comunidades envolvendo saneamento básico, água potável, drenagem, pavimentação, iluminação pública, contenção de encostas, prevenção de enchentes, conectividade digital, melhoria habitacional, recuperação ambiental, mobilidade e espaços comunitários.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 108
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 109
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir a matriz limpa com solar, eólica offshore, energia marítima e sistemas de armazenamento, estabelecendo a meta de atingir 90% de matriz limpa até 2040.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 176
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fazer cumprir o Marco Legal do Saneamento Básico como prioridade nacional para universalizar o acesso à água tratada e esgoto.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fortalecer cidades médias como centros regionais de desenvolvimento para desconcentrar oportunidades das grandes metrópoles.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Implantar um programa nacional de integração logística em rodovias, ferrovias, hidrovias, portos e aeroportos, além de estimular a construção e ampliação de armazéns por meio de incentivos fiscais e parcerias.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Instalar em cada polo rodoviário unidades comerciais padronizadas, energia solar, banheiros compartilhados, estacionamento seguro, acessibilidade, sinalização integrada, áreas de descanso e cabines antiestresse.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 121
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Levar internet de alta velocidade a escolas, hospitais, comunidades rurais e regiões remotas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Planejar novas obras públicas para enfrentar eventos climáticos extremos utilizando tecnologias modernas e materiais sustentáveis.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 50
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Criar o Programa Nacional de Regularização Fundiária para acelerar a regularização de moradias com o uso da legislação da REURB, estabelecer cooperação entre entes federativos e criar o Mapa Nacional da Regularização Fundiária com tecnologias como drones, satélites e inteligência artificial, tendo a meta de regularizar até 5 milhões de moradias em dez anos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 105
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 106
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Estimular cooperativas habitacionais para organizar a compra de terrenos, a construção de moradias e o planejamento de comunidades a custos acessíveis.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 135
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Executar regularização fundiária para garantir segurança jurídica, valorização patrimonial, acesso a crédito e inclusão econômica de famílias que vivem sem documentação imobiliária.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Administrar o fundo global de combate à fome por meio de cooperação com organismos internacionais como ONU, FAO, Programa Mundial de Alimentos, Banco Mundial e países do G20, com gestão baseada em metas, auditorias e prestação de contas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 158
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 159
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar programas de inclusão produtiva para garantir acesso a renda, capacitação e oportunidades para famílias em vulnerabilidade.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Apoiar agricultores familiares com tecnologia, assistência técnica, sementes adaptadas, sistemas de irrigação e inovação agrícola para aumentar a produtividade e promover segurança alimentar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 158
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Auxiliar pais e mães por meio de políticas públicas para que possam alimentar a inteligência e a emoção dos filhos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar a Escola do Empreendedor, utilizando estruturas existentes como escolas públicas em horários alternativos e universidades, para oferecer cursos de capacitação e formação profissional com a meta de formar 5 milhões de brasileiros em dez anos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 106
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 107
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar o Banco Empreendedor Amazônico para ofertar linhas de crédito acessível, microcrédito com orientação técnica para pequenos empreendedores, cooperativas e negócios sustentáveis.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 184
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Criar um Fundo Internacional de Erradicação da Fome voltado ao combate mundial da fome, financiado por contribuições sobre fluxos de comércio internacional (0,5%) e transações da indústria armamentista (2%).",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 151
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 157
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Destinar os recursos do Fundo Internacional de Erradicação da Fome da seguinte forma: 80% para combate imediato à fome (distribuição de alimentos, nutrição infantil, alimentação escolar e estoques estratégicos), 10% para agricultura sustentável e familiar, e 10% para a criação do Banco Mundial do Empreendedor.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 157
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 158
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir acesso prioritário a programas de qualificação profissional, empregabilidade, empreendedorismo, educação financeira, microcrédito e apoio à autonomia econômica para mulheres vítimas de violência e em vulnerabilidade.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 88
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Implementar programas sociais que integrem transferência de renda com capacitação, pertencimento, protagonismo, autonomia, autoestima e esperança para os vulneráveis.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 14
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Manter proteção social para crianças em extrema pobreza, idosos frágeis e pessoas incapazes de competir economicamente.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 26
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Oferecer escuta ativa gratuita por meio do projeto TOUCHPEACE, com voluntários treinados para suporte emocional imediato a pessoas em risco de suicídio, conflitos familiares e transtornos emocionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 195
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Organizar redes neuroinclusivas municipais conectando escola, família, atenção básica de saúde, assistência social e serviços especializados.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 83
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Permitir que beneficiários do Bolsa Família acumulem temporariamente o auxílio ao assinarem carteira ou abrirem microempresa, recebendo incentivos e juros mais baixos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 98
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 99
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Promover o programa educacional de psiquiatria social e psicologia preventiva AMEM-SE para formar seres humanos emocionalmente saudáveis, líderes proativos e prevenir transtornos mentais, timidez e intoxicação digital nas famílias.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 196
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Transformar assentamentos e pequenas propriedades em cinturões de produção de alimentos próximos às cidades para reduzir custos logísticos, melhorar a nutrição urbana e criar microempreendedores rurais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 116
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Ampliar mecanismos de participação direta da população por meio de ferramentas digitais e consultas públicas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprimorar o uso de Inteligência Artificial para identificar fraudes, desperdícios, sobrepreços, pagamentos irregulares e ineficiências administrativas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Avaliar continuamente as políticas públicas por meio de indicadores transparentes, fortalecendo as eficientes e corrigindo ou substituindo as ineficazes.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Capacitar embaixadores e equipes estratégicas para atuar como comunicadores institucionais nas redes sociais, produzindo conteúdos sobre oportunidades de negócios, inovação, turismo, cultura, segurança alimentar, sustentabilidade, ciência e investimentos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 150
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Combater o desperdício público e a corrupção para proteger recursos destinados à saúde, educação e infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 26
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar a Autoridade Nacional do Cooperativismo (ANCOOP) para coordenar a expansão, integrar políticas públicas, simplificar regulamentação, monitorar resultados, promover transparência, apoiar a modernização e digitalização e conectar cooperativas a mercados internacionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 137
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 138
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar a Zona Nacional de Exportação (ZONE) para planejar, acompanhar, avaliar a implementação do programa de exportação, coordenar as zonas e garantir transparência e atração de investimentos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 143
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar em cada território participante um Conselho Comunitário de Transformação com a participação dos moradores para realizar diagnósticos técnicos, apresentar projetos publicamente e garantir transparência dos custos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 109
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar uma política nacional e um Marco Legal para desenvolvimento, regulação e aplicação da inteligência artificial em serviços públicos e governo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Desenvolver o Projeto BEE por meio de Parcerias Público-Privadas, cabendo ao Governo definir áreas, simplificar licenciamento, conceder incentivos fiscais e regulamentar o programa; à iniciativa privada construir, fazer gestão operacional e manutenção; e aos empreendedores produzir e comercializar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 122
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Desenvolver políticas públicas que cuidem simultaneamente da renda e da emoção, incluindo pausas psíquicas no cotidiano.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 14
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Elevar o Sebrae a um novo patamar como centro estratégico de formação, acompanhamento e segurança do empreendedorismo nacional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 98
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estabelecer mandatos de oito anos para os ministros do Supremo Tribunal Federal (STF), com idade mínima de 50 anos, vedação de filiação partidária nos cinco anos anteriores e redução da composição para nove ministros (seis da magistratura, dois do Ministério Público e um da advocacia, sendo no mínimo três mulheres), escolhidos pelas respectivas classes.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Estabelecer metas de eficiência, redução de desperdícios e avaliação permanente de resultados em cada ministério, eliminando gastos improdutivos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fixar metas anuais claras, mensuráveis e públicas para cada ministério, com prestação periódica de contas à sociedade.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 38
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer a soberania digital, a segurança cibernética e a proteção de dados pessoais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir a proteção contra especulação imobiliária por meio de educação patrimonial, assistência jurídica contra fraudes e mecanismos legais voltados aos moradores de áreas regularizadas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 110
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implantar a rede nacional de controle social Sociedade Está de Olho (SEO) e sistemas de Inteligência Artificial para identificar irregularidades e fiscalizar gastos públicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implantar programas permanentes de ética pública, integridade administrativa e governança corporativa no setor público.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar o Projeto Embaixadas Empreendedoras (PEE) para transformar embaixadas e consulados em plataformas de promoção econômica, comercial, turística, cultural e tecnológica.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 146
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Implementar transparência digital com painéis públicos em cada comunidade para monitorar valores destinados, obras contratadas, cronogramas, execução, recursos liberados e resultados, utilizando inteligência artificial para controle e fiscalização.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 110
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Indicar mulheres para as vagas disponíveis no Supremo Tribunal Federal (STF).",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Investir em tecnologia, integração de dados e capacitação técnica de órgãos de controle e disponibilizar dados governamentais em plataformas digitais abertas.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 52
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Modernizar o sistema político para reduzir a fragmentação partidária, fortalecer a governabilidade e aprimorar o sistema eleitoral.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Mudar o regime presidencialista para o semipresidencialista, onde o Presidente mantém funções estratégicas de Estado e o Primeiro-Ministro assume a administração do governo, apoiado pela maioria parlamentar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 63
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Oferecer linhas especiais de crédito, juros reduzidos, simplificação tributária, incentivos fiscais, assistência técnica, formação em gestão, plataformas digitais integradas e apoio à inserção em mercados nacional e internacional para apoiar o cooperativismo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 136
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 137
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Priorizar mulheres qualificadas nas indicações para vagas que surgirem no Supremo Tribunal Federal, observados os requisitos constitucionais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 93
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover a automação e integração entre órgãos públicos para reduzir custos, aumentar a produtividade e melhorar o atendimento.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover uma cultura nacional de pacificação e treinar líderes, professores, famílias, jovens, empresários e servidores públicos para administrar conflitos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 28
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Promover valores de respeito, diálogo, tolerância e convivência democrática para fortalecer a coesão social e reduzir conflitos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Propor a adoção do modelo semipresidencialista, com o Presidente compartilhando o governo com um Primeiro-Ministro escolhido pela maioria parlamentar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Proteger e restaurar o patrimônio histórico e cultural para preservar a memória nacional e fortalecer a identidade brasileira.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar reforma institucional do Supremo Tribunal Federal para garantir equilíbrio entre os Poderes, previsibilidade jurídica e segurança institucional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar um mutirão nacional de formalização com licença em até 48 horas, cadastro digital único, fiscalização orientadora, inclusão automática no Simples Nacional, tributação reduzida e benefícios para produtores e agricultura familiar.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 122
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 123
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Realizar uma ampla reforma administrativa para simplificar estruturas, eliminar sobreposições, avaliar a redução de ministérios, criar o ministério da segurança e modernizar carreiras públicas com avaliação de desempenho.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Reorganizar o Estado para torná-lo mais eficiente, digital e transparente, reduzindo a burocracia excessiva.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 60
+        },
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Revisar a distribuição do efetivo das embaixadas e consulados, deslocando cerca de 20% do pessoal dos Estados Unidos e 10% da Europa para reforçar a presença na Índia, China, Oriente Médio e outros mercados emergentes, com base em critérios técnicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 147
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Transformar o Brasil em referência mundial em governo digital por meio de plataformas integradas de serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Transformar o Brasil em uma potência global baseada em conhecimento, inovação, sustentabilidade e justiça social, com um Estado moderno, eficiente e transparente.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Adotar política externa ativa, equilibrada e pragmática, baseada no diálogo e na cooperação internacional.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer a cooperação Sul-Sul com países em desenvolvimento e defender o multilateralismo.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Incentivar a participação dos jovens na vida pública, conselhos e projetos sociais.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Tratar a cultura como ativo estratégico, incentivando a produção artística, audiovisual, musical, literária e digital.",
+      "referencias": [
+        {
+          "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+          "pagina": 62
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 1
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 2
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 3
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 4
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 5
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 6
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 7
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 8
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 9
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 10
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 11
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 12
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 13
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 14
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 15
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 16
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 17
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 18
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 19
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 20
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 21
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 22
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 23
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 24
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 25
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 26
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 27
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 28
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 29
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 30
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 31
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 32
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 33
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 34
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 35
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 36
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 37
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 38
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 39
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 40
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 41
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 42
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 43
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 44
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 45
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 46
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 47
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 48
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 49
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 50
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 51
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 52
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 53
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 54
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 55
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 56
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 57
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 58
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 59
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 60
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 61
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 62
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 63
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 64
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 65
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 66
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 67
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 68
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 69
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 70
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 71
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 72
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 73
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 74
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 75
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 76
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 77
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 78
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 79
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 80
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 81
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 82
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 83
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 84
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 85
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 86
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 87
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 88
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 89
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 90
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 91
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 92
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 93
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 94
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 95
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 96
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 97
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 98
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 99
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 100
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 101
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 102
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 103
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 104
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 105
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 106
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 107
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 108
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 109
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 110
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 111
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 112
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 113
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 114
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 115
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 116
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 117
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 118
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 119
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 120
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 121
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 122
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 123
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 124
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 125
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 126
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 127
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 128
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 129
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 130
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 131
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 132
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 133
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 134
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 135
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 136
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 137
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 138
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 139
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 140
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 141
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 142
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 143
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 144
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 145
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 146
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 147
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 148
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 149
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 150
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 151
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 152
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 153
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 154
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 155
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 156
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 157
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 158
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 159
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 160
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 161
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 162
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 163
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 164
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 165
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 166
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 167
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 168
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 169
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 170
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 171
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 172
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 173
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 174
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 175
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 176
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 177
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 178
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 179
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 180
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 181
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 182
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 183
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 184
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 185
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 186
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 187
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 188
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 189
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 190
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 191
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 192
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 193
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 194
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 195
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 196
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 197
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 198
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 199
+    },
+    {
+      "sha256": "fc0872d2b68aad863c8d62575323cf413a616b23d0f7ca4fd7f4558112c07b38",
+      "pagina": 200
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:12:33.019Z",
+    "conteudoHash": "785f40f7e19b005321ad1c41051c5f4a3ddf0eb3bf2d3de98617d87b2f466496"
+  }
+}

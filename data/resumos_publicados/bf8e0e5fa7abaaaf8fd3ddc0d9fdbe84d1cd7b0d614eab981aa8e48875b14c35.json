@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6259_MG_130002552308",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:bf8e0e5fa7abaaaf8fd3ddc0d9fdbe84d1cd7b0d614eab981aa8e48875b14c35",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-14T23:45:16.826Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Anular todas as dívidas dos trabalhadores com o sistema financeiro.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Cancelar a reforma trabalhista de 2016, restaurar a CLT e encerrar a terceirização com direitos iguais para todos.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Cancelar privatizações passadas de empresas como Eletrobrás, Vale, bancos e telefonia, e reestatizar companhias entregues ao capital estrangeiro.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar empresa estatal controlada por trabalhadores para explorar terras raras.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Nacionalizar o petróleo e tornar a Petrobrás 100% estatal sob controle dos trabalhadores, estatizar sem indenização reservas minerais e refinarias, destinar recursos do petróleo para saúde, educação, moradia e infraestrutura, reduzir o preço dos combustíveis em 50% e acabar com a política de paridade com o dólar.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Proibir demissões e estabelecer a ocupação e o controle dos trabalhadores sobre empresas que demitam ou fechem, além de instituir salário-desemprego igual ao último salário recebido.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Realizar reajuste salarial imediato com reposição integral de 100% das perdas e aumento emergencial de 50%, além de estabelecer escala móvel de salários com aumento automático a cada 3% de alta no custo de vida.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir a jornada de trabalho para o máximo de 7 horas por dia, 5 dias por semana, totalizando 35 horas semanais, sem prejuízo dos salários.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Reduzir taxas de juros, estatizar o sistema financeiro em um banco estatal único sob controle dos trabalhadores, acabar com a independência do Banco Central, cancelar dívidas interna e externa com grandes credores e eliminar impostos sobre consumo e salários, taxando apenas ganhos de capital e grandes fortunas.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aumentar verbas para a saúde pública sem limite de gastos, construir hospitais e postos de saúde, retornar com o programa Mais Médicos, validar diplomas de médicos nacionais e estrangeiros, abrir novos cursos de medicina e enfermagem com livre acesso nas universidades públicas e fixar piso salarial de R$ 8 mil para profissionais da saúde.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Dissolver a polícia militar e o aparato repressivo, além de formar comitês de autodefesa para trabalhadores urbanos, rurais e comunidades indígenas.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 5
+        },
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Garantir eleições diretas para postos de gestão escolar, direcionar verbas públicas exclusivamente para o ensino público, revogar reformas educacionais do regime anterior, extinguir vestibulares com livre ingresso nas universidades, estabelecer piso salarial nacional de R$ 8,5 mil para professores, limitar a jornada docente a 30 horas semanais, estatizar o ensino privado, proibir censura e permitir o uso de celulares nas escolas.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 5
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Expropriar imóveis vagos de especuladores imobiliários, proibir despejos e desocupações e executar plano nacional de construção de moradias populares sob controle dos trabalhadores.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir salário mínimo vital não inferior a R$ 7.500 delimitado por organizações operárias e conceder auxílio emergencial e Bolsa Família de pelo menos um salário mínimo.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Proibir despejos e cortes de serviços essenciais para desempregados, e garantir passe livre nos transportes para desempregados e trabalhadores da economia informal.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 2
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Revogar a reforma da Previdência, fixar a aposentadoria em no máximo 25 anos de trabalho para mulheres e 30 para homens, cobrar dívidas de grandes empresas com a previdência, instituir imposto sobre grandes fortunas para custear aposentadorias, reajustar benefícios com reposição de 100% das perdas e implementar gestão dos trabalhadores sobre fundos previdenciários, além de eliminar privilégios de militares e juízes.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 3
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Cancelar concessões de grandes meios de comunicação por supostos crimes, estatizar essas empresas sob controle operário, assegurar liberdade irrestrita de expressão, quebrar o monopólio da internet pelas teles e fornecer internet gratuita para a população.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Garantir direito irrestrito de greve sem intervenção estatal nos sindicatos, assegurar liberdade total de organização política sem leis restritivas, extinguir o Supremo Tribunal Federal (STF) e instituir a eleição de juízes e procuradores pelo voto popular com mandatos revogáveis.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 6
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Manter a estabilidade dos servidores públicos, ampliar verbas para saúde, educação e serviços essenciais, eliminar o teto de gastos e a Lei de Responsabilidade Fiscal, acabar com o congelamento de gastos, proibir terceirizações com isonomia imediata para contratados precários e realizar concursos públicos periódicos.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Romper alianças com partidos golpistas e neoliberais e instaurar um governo formado por organizações operárias e camponesas.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Assentar imediatamente sem-terra acampados, demarcar terras indígenas, expulsar latifundiários de áreas indígenas, ocupar latifúndios para reforma agrária e produção de alimentos, punir responsáveis por assassinatos no campo e garantir direito de autodefesa e armamento para trabalhadores rurais e indígenas.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 4
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Garantir recursos públicos para cultura e esporte, acabar com a perseguição a torcidas organizadas, assegurar controle de clubes por torcedores e trabalhadores do setor e investir em festas populares.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 7
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Rejeitar a internacionalização e ingerência estrangeira na Amazônia, manter controle de organizações populares sobre as riquezas da região e apoiar governos estrangeiros aliados e o povo palestino.",
+      "referencias": [
+        {
+          "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+          "pagina": 7
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 1
+    },
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 2
+    },
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 3
+    },
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 4
+    },
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 5
+    },
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 6
+    },
+    {
+      "sha256": "ed380b23d6e033e8616ce71efcf66eb42d2baee2b58f1c9ae80690009c20dfe9",
+      "pagina": 7
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-14T23:45:16.830Z",
+    "conteudoHash": "ab92f89fc7acc04ba5eb2b0d8ce1f43495250bc97600cbc162c0e3f1b8ecbd1c"
+  }
+}
