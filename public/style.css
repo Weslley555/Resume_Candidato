@@ -541,15 +541,15 @@ button:disabled {
    DOSSIER — NOVO LAYOUT 2 COLUNAS
    ========================================== */
 
-/* Header do Dossiê */
+/* Identificação técnica no fim da ficha */
 .dossier-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 14px;
-    margin-bottom: 16px;
-    border-bottom: 2px solid var(--btn-primary);
-    font-size: 0.82em;
+    padding: 14px 0 10px;
+    margin-top: 4px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.78em;
     color: var(--text-muted);
     flex-wrap: wrap;
     gap: 6px;
@@ -594,25 +594,36 @@ button:disabled {
 
 .dossier-card-title {
     margin: 0 0 12px;
-    font-size: 0.82em;
-    letter-spacing: 0.08em;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
     color: var(--text-main);
-    text-transform: uppercase;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Card Foto */
+/* Identidade principal */
+.dossier-card-identity {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
 .dossier-card-photo {
     display: flex;
     justify-content: center;
     padding: 8px 0;
 }
 
+.dossier-identity-content { min-width: 0; }
+
+@media (max-width: 620px) {
+    .dossier-card-identity { grid-template-columns: 1fr; gap: 8px; }
+}
+
 /* Card Proposta (IA) */
 .card-proposal {
-    background-color: var(--bg-overlay-warning-secao);
-    border-left: 4px solid var(--btn-warning);
+    border-left: 4px solid var(--btn-primary);
 }
 
 .btn-full-width {
@@ -680,6 +691,25 @@ button:disabled {
 
 .cand-dados-extra summary:hover {
     opacity: 0.8;
+}
+
+.grupo-complementar {
+    margin-top: 14px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+}
+
+.grupo-complementar > summary {
+    color: var(--link-color);
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+.grupo-complementar > .cand-dados-extra,
+.grupo-complementar > p,
+.grupo-complementar > a {
+    margin-left: 12px;
 }
 
 .cand-dados-extra .cand-dados-dl {
@@ -881,12 +911,64 @@ button:disabled {
 }
 
 .resumo-tema {
-    margin-top: 1.2rem;
+    margin-top: 0.65rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-overlay-subtle);
+    overflow: hidden;
+}
+
+.resumo-tema > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 0.9rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.resumo-tema[open] > summary { border-bottom: 1px solid var(--border-color); }
+.resumo-tema-titulo { font-weight: 700; }
+.resumo-tema-contagem {
+    color: var(--text-muted);
+    font-size: 0.78em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.resumo-proposta { margin: 0; padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--border-color); }
+.resumo-proposta:last-child { border-bottom: 0; }
+.resumo-proposta-texto { margin: 0; }
+
+.dossier-card a.resumo-citacao {
+    display: inline-block;
+    margin-left: 0.12rem;
+    font-size: 0.72em;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: super;
+    white-space: nowrap;
+}
+
+.resumo-referencias { margin-top: 1rem; }
+.resumo-referencias-lista { margin: 0.6rem 0 0; padding-left: 1.5rem; }
+.resumo-referencias-lista li { margin-bottom: 0.4rem; }
+
+.resumo-operacoes {
+    margin-top: 16px;
+    padding-top: 8px;
     border-top: 1px solid var(--border-color);
 }
 
-.resumo-tema h4 { margin-bottom: 0.5rem; }
-.resumo-proposta { margin-bottom: 1rem; }
+.resumo-operacoes > summary {
+    color: var(--link-color);
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+.resumo-operacoes fieldset { margin: 10px 0; }
 #loadingIA { margin: 0.75rem 0; line-height: 1.5; }
 
 .resultado-ia {

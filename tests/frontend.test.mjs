@@ -160,6 +160,21 @@ test('reabrir candidatura usa ficha em memória e ficha sem proposta não consul
     assert.equal(app.get('candIdHeader').textContent, chave);
 });
 
+test('PDF único é selecionado automaticamente e usa uma ação principal', async () => {
+    const app = await ambiente();
+    const pending = app.run(`abrirFicha('${chave}')`);
+    const dados = fichaMock(chave);
+    dados.documentos.propostas = [dados.documentos.propostas[0]];
+    app.chamadas[0].responder(dados); await pending;
+    assert.deepEqual(new URL(app.chamadas[1].url, 'https://site.test').searchParams.getAll('documentos'), [hash]);
+    app.chamadas[1].responder({ chave, exportacao: hash, estado: 'resumo_nao_preparado', documentosSelecionados: [hash], afirmacoes: [] });
+    await app.tick();
+    const input = app.get('opcoesDocumentos').querySelectorAll('*').find(n => n.tag === 'input');
+    assert.equal(input.checked, true);
+    assert.equal(app.get('btnGerarResumo').textContent, 'Gerar resumo com IA');
+    assert.equal(app.get('btnGerarResumo').disabled, false);
+});
+
 test('script real ignora ficha atrasada e resumo após voltar', async () => {
     const app = await ambiente();
     const a = app.run(`abrirFicha('${chave}')`);
@@ -183,10 +198,18 @@ test('link legado passa intacto à API, POST usa chave resolvida e seleção exp
     app.chamadas[0].responder(fichaMock(chave)); await app.tick();
     app.chamadas[1].responder({ chave, exportacao: hash, estado: 'rascunho_gerado', documentos: [{ sha256: hash }], afirmacoes: [{ tipo: 'proposta', tema: 'Saúde', texto: '<img src=x onerror=alert(1)>', referencias: [{ sha256: hash, pagina: 1 }] }] });
     await app.tick();
+    assert.match(app.get('resultadoIA').textContent, /NÃO REVISADO/, 'resumo existente aparece automaticamente');
+    assert.equal(app.get('btnGerarResumo').textContent, 'Ocultar resumo');
+    assert.equal(app.get('btnGerarResumo').disabled, false);
+    app.get('btnGerarResumo').events.click();
+    assert.equal(app.get('resultadoIA').classList.contains('hidden'), true);
+    assert.equal(app.get('btnGerarResumo').textContent, 'Mostrar resumo');
+    app.get('btnGerarResumo').events.click();
+    assert.equal(app.get('resultadoIA').classList.contains('hidden'), false);
     assert.match(app.get('resultadoIA').textContent, /NÃO REVISADO/);
     assert.match(app.get('resultadoIA').textContent, /<img src=x/);
     assert.equal(app.get('resultadoIA').querySelectorAll('*').some(n => n.tag === 'img'), false);
-    assert.equal(app.get('btnGerarResumo').disabled, true);
+    assert.equal(app.get('btnGerarResumo').textContent, 'Ocultar resumo');
     const inputs = app.get('opcoesDocumentos').querySelectorAll('*').filter(n => n.tag === 'input');
     assert.equal(inputs.length, 2, 'metadados do resumo não escondem o segundo PDF');
     assert.equal(inputs.some(n => n.checked), false);
@@ -196,7 +219,8 @@ test('link legado passa intacto à API, POST usa chave resolvida e seleção exp
     assert.deepEqual(JSON.parse(app.chamadas[2].options.body), { id_candidato: chave, exportacao: hash, documentos: [outroHash] });
     app.chamadas[2].responder({ chave, exportacao: hash, estado: 'resumo_publicado', afirmacoes: [] }); await app.tick();
     assert.match(app.get('resultadoIA').textContent, /Resumo publicado/);
-    assert.equal(app.get('btnGerarResumo').disabled, true);
+    assert.equal(app.get('btnGerarResumo').textContent, 'Ocultar resumo');
+    assert.equal(app.get('btnGerarResumo').disabled, false);
 });
 
 test('todos os estados do resumo são explícitos e flags legadas não publicam', async () => {
@@ -242,7 +266,7 @@ test('resumo atrasado de A não altera resumo nem loading de B', async () => {
     app.chamadas[3].responder({ chave: outraChave, exportacao: hash, estado: 'extracao_pendente', afirmacoes: [] }); await app.tick();
     assert.match(app.get('resultadoIA').textContent, /Extração pendente/);
     assert.equal(app.get('btnGerarResumo').disabled, true);
-    assert.equal(app.get('btnConsultarResumo').disabled, false);
+    assert.equal(app.get('btnGerarResumo').textContent, 'Resumo indisponível');
 });
 
 test('scripts inline do HTML têm sintaxe válida e não há fallback remoto de foto', async () => {
@@ -295,7 +319,7 @@ test('financeiro mantém registros originários repetidos, limite null e contage
         prestadores: [{ TP_PRESTACAO_CONTAS: 'FINAL', DT_PRESTACAO_CONTAS: '01/09/2026', NR_TURNO: '1' }] };
     app.run(`renderizarFinanceiro(${JSON.stringify(fin)}, {})`);
     const el = app.get('conteudoFinanceiro'), campos = camposExibidos(el);
-    const prestacoes = el.children.find(n => n.children[0]?.textContent?.startsWith('Prestações:'));
+    const prestacoes = el.querySelectorAll('*').find(n => n.children[0]?.textContent?.startsWith('Prestações:'));
     assert.equal(camposExibidos(el).get('Tipo de prestação (TSE)'), undefined, 'seção fechada não cria campos');
     prestacoes.open = true; prestacoes.events.toggle();
     const limite = el.querySelectorAll('*').find(n => n.children[0]?.textContent === 'Limite de gastos');
@@ -308,7 +332,7 @@ test('financeiro mantém registros originários repetidos, limite null e contage
     assert.equal(camposAbertos.get('Tipo de prestação (TSE)'), 'FINAL');
     assert.equal(camposAbertos.get('Data de prestação (TSE)'), '01/09/2026');
     assert.equal(camposAbertos.get('Turno (TSE)'), '1');
-    const originarios = el.children.find(n => n.children[0]?.textContent === 'Originários — registros, não doadores únicos — detalhes e campos TSE');
+    const originarios = el.querySelectorAll('*').find(n => n.children[0]?.textContent === 'Originários — registros, não doadores únicos — detalhes e campos TSE');
     assert.equal((originarios.textContent.match(/Repetido/g) ?? []).length, 0, 'seção fechada não materializa registros');
     originarios.open = true; originarios.events.toggle();
     const registros = originarios.children.filter(n => n.children[0]?.textContent?.startsWith('Registro '));
@@ -330,7 +354,7 @@ test('GET repete documentos, preserva seleção e mostra motivo/OCR/escopo do su
     assert.match(app.get('resultadoIA').textContent, /Motivo: selecao_documentos_obrigatoria/);
     const inputs = app.get('opcoesDocumentos').querySelectorAll('*').filter(n => n.tag === 'input');
     inputs.forEach(input => { input.checked = true; input.events.change(); });
-    app.get('btnConsultarResumo').events.click();
+    app.run('solicitarResumo()');
     assert.deepEqual(new URL(app.chamadas[2].url, 'https://site.test').searchParams.getAll('documentos'), [hash, outroHash]);
     app.chamadas[2].responder({ chave, exportacao: hash, estado: 'rascunho_gerado', documentos: [{ sha256: hash }, { sha256: outroHash }], documentosSelecionados: [hash, outroHash], afirmacoes: [] });
     await app.tick();
@@ -338,7 +362,7 @@ test('GET repete documentos, preserva seleção e mostra motivo/OCR/escopo do su
     assert.ok(novos.every(n => n.checked));
     novos[1].checked = false; novos[1].events.change();
     assert.equal(app.get('resultadoIA').textContent, '', 'não conserva resumo da seleção anterior');
-    app.get('btnConsultarResumo').events.click();
+    app.run('solicitarResumo()');
     assert.deepEqual(new URL(app.chamadas[3].url, 'https://site.test').searchParams.getAll('documentos'), [hash]);
     app.chamadas[3].responder({ chave, exportacao: hash, estado: 'revisao_necessaria', motivo: '<b>Conferir OCR</b>', avisoRevisaoOCR: true, documentosSelecionados: [hash], documentos: [{ sha256: hash }], afirmacoes: [] });
     await app.tick();
@@ -382,11 +406,18 @@ test('resumo mostra apenas propostas agrupadas por tema e mantém referências',
     ];
     app.run(`exibirResumo(${JSON.stringify({ estado: 'rascunho_gerado', afirmacoes })})`);
     const el = app.get('resultadoIA');
-    const grupos = el.children.filter(n => n.tag === 'section');
-    assert.deepEqual(grupos.map(n => n.children[0].textContent), ['Economia', 'Saúde', 'Outros']);
+    const grupos = el.children.filter(n => n.tag === 'details' && n.className === 'resumo-tema');
+    assert.deepEqual(grupos.map(n => n.children[0].children[0].textContent), ['Economia', 'Saúde', 'Outros']);
+    assert.deepEqual(grupos.map(n => n.children[0].children[1].textContent), ['1 proposta(s)', '2 proposta(s)', '1 proposta(s)']);
+    assert.ok(grupos.every(n => !n.open), 'temas começam recolhidos');
     assert.match(grupos[1].textContent, /Construir hospitais.*Ampliar equipes/);
     assert.doesNotMatch(el.textContent, /BIOGRAFIA OCULTA|OPINIAO OCULTA/);
-    assert.ok(el.querySelectorAll('*').some(n => n.tag === 'a' && n.href.endsWith('#page=2')));
+    const marcador = el.querySelectorAll('*').find(n => n.tag === 'a' && n.href.endsWith('#page=2'));
+    assert.equal(marcador.textContent, '[1]', 'a proposta usa citação compacta em vez de repetir o nome do PDF');
+    const referencias = el.children.find(n => n.className.includes('resumo-referencias'));
+    assert.equal(referencias.children.length, 1, 'lista completa de referências começa recolhida');
+    referencias.open = true; referencias.events.toggle();
+    assert.match(referencias.textContent, /PDF original — página 2/);
     assert.deepEqual(helpers.temasPropostas, ['Economia', 'Saúde', 'Segurança', 'Meio Ambiente', 'Educação', 'Infraestrutura', 'Habitação', 'Assistência Social', 'Gestão Pública', 'Outros']);
 });
 
@@ -407,7 +438,15 @@ test('certidões recolhidas com contagem, PDF de proposta e ressalva legal visí
     assert.equal(propostas.tag, 'div');
     assert.equal(propostas.querySelectorAll('*').filter(n => n.tag === 'a').length, 2);
     const html = await readFile(new URL('../public/index.html', import.meta.url), 'utf8');
+    assert.ok(html.indexOf('id="conteudoDadosCandidato"') < html.indexOf('id="resultadoIA"'), 'perfil com foto precede o resumo');
+    assert.ok(html.indexOf('id="resultadoIA"') < html.indexOf('id="btnGerarResumo"'), 'conteúdo do resumo precede sua ação');
+    assert.ok(html.indexOf('id="btnGerarResumo"') < html.indexOf('id="selecaoDocumentos"'), 'ação principal precede as opções técnicas');
+    assert.equal((html.match(/id="btnGerarResumo"/g) ?? []).length, 1);
+    assert.doesNotMatch(html, /id="btnGerarResumo"[^>]*><\/button>|<summary><\/summary>|<legend>Documentos<\/legend>/, 'controles mantêm conteúdo dentro das tags');
+    assert.doesNotMatch(html, /id="btnConsultarResumo"/);
     assert.ok(html.indexOf('id="conteudoFinanceiro"') < html.indexOf('id="conteudoPatrimonio"'));
+    assert.ok(html.indexOf('id="conteudoDocumentosJuridicos"') < html.indexOf('id="candIdHeader"'), 'identificação técnica fica ao final da ficha');
+    assert.doesNotMatch(html, /lock no Redis|cache de rascunhos dura 7 dias/);
     assert.match(html, /id="loadingIA"[^>]*role="status"[^>]*aria-live="polite"/);
 });
 
@@ -419,7 +458,6 @@ test('geração dá feedback imediato, impede repetição e recupera controles e
         const antes = app.chamadas.length;
         const pending = app.get('btnGerarResumo').events.click();
         assert.equal(app.get('btnGerarResumo').disabled, true);
-        assert.equal(app.get('btnConsultarResumo').disabled, true);
         assert.equal(app.get('selecaoDocumentos').disabled, true);
         assert.match(app.get('loadingIA').textContent, /Gerando propostas por tema/);
         assert.equal(app.get('loadingIA').classList.contains('hidden'), false);
@@ -431,7 +469,6 @@ test('geração dá feedback imediato, impede repetição e recupera controles e
         assert.match(app.get('resultadoIA').textContent, /Falha HTTP/);
         assert.doesNotMatch(app.get('resultadoIA').textContent, /Aguarde (um minuto|alguns instantes)/i);
         assert.equal(app.get('btnGerarResumo').disabled, false);
-        assert.equal(app.get('btnConsultarResumo').disabled, false);
         assert.equal(app.get('selecaoDocumentos').disabled, false);
         assert.equal(app.get('loadingIA').classList.contains('hidden'), true);
     }
@@ -469,7 +506,7 @@ test('timeout do resumo libera botões e não exibe resposta tardia', async () =
 test('resumo exige eco de chave e exportação em todo sucesso HTTP', async () => {
     const app = await abrirComResumoInicial();
     for (const eco of [{ chave }, { exportacao: hash }, { chave: outraChave, exportacao: hash }, { chave, exportacao: outroHash }]) {
-        app.get('btnConsultarResumo').events.click();
+        app.run('solicitarResumo()');
         app.chamadas.at(-1).responder({ ...eco, estado: 'resumo_publicado', afirmacoes: [{ texto: 'NÃO EXIBIR' }] });
         await app.tick();
         assert.match(app.get('resultadoIA').textContent, /Erro na consulta do resumo/);

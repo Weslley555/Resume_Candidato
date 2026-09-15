@@ -48,12 +48,9 @@
             <p>⚠️Essa é uma versão beta de testes, <strong>pode haver alguns dados faltantes ou inconsistentes.</strong> Caso encontre alguma divergência, você pode <a href="https://forms.gle/TuFSsPBaY6XFYcrq7" target="_blank" rel="noopener noreferrer" class="modal-link">reportar um erro aqui</a>.⚠️</p>
 
             <p>
-                Os termos da busca são filtrados no navegador. A nova proteção de geração de resumos usa
-                quotas globais e lock no Redis, sem IP nesse controle da aplicação. As páginas selecionadas
-                são enviadas ao Google Gemini; o cache de rascunhos dura 7 dias, o lock 60 segundos e os
-                contadores até 24 horas. Provedores podem manter logs técnicos conforme suas políticas;
-                esses prazos não definem a retenção dos provedores nem garantem ausência de coleta de IP.
-                <a href="/privacidade" class="modal-link">Saiba mais na nossa Política de Privacidade.</a>
+                Quando você solicita a geração de um resumo, o texto dos documentos selecionados é enviado
+                ao Google Gemini. Resumos automáticos podem conter erros ou omissões; confira sempre o plano
+                original. <a href="/privacidade" class="modal-link">Saiba mais na nossa Política de Privacidade.</a>
             </p>
 
             <p>O site também exibe informações como certidões criminais e registros de cassação.</p>
@@ -163,78 +160,64 @@
 
             <div id="conteudoFicha">
 
-    <!-- Dossier Header — identificador + última atualização -->
+    <!-- Identidade e informações essenciais -->
+    <div class="dossier-card dossier-card-identity">
+        <div class="dossier-card-photo">
+            <img id="candFoto" class="cand-foto-perfil" src="icons/candidato-placeholder.svg" alt="Foto indisponível">
+        </div>
+        <div class="dossier-identity-content">
+            <h3 class="dossier-card-title">Perfil da candidatura</h3>
+            <div id="conteudoDadosCandidato"></div>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal: propostas -->
+    <div class="dossier-card card-proposal">
+        <h3 class="dossier-card-title">Propostas por tema</h3>
+        <div id="loadingIA" class="hidden" role="status" aria-live="polite">
+            <span class="icon-img"><img class="img-b" src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg" alt=""></span>
+            Consultando o serviço de resumo...
+        </div>
+        <div id="resultadoIA" class="resultado-ia hidden" role="status" aria-live="polite"></div>
+        <button id="btnGerarResumo" class="btn-warning btn-full-width" disabled>
+            <span class="icon-img-fixed"><img src="icons/star_p.svg" alt=""></span>
+            Consultando resumo...
+        </button>
+        <details class="cand-dados-extra resumo-operacoes">
+            <summary>Documentos e opções do resumo</summary>
+            <fieldset id="selecaoDocumentos" style="min-width:0">
+                <legend>Documentos considerados</legend>
+                <p class="texto-mutado">Selecione os PDFs que deseja consultar ou resumir. Quando houver mais de um documento, um subconjunto não representa todas as propostas.</p>
+                <div id="opcoesDocumentos"></div>
+            </fieldset>
+        </details>
+    </div>
+
+    <!-- Informações secundárias -->
+    <div class="dossier-grid">
+        <div class="dossier-card">
+            <h3 class="dossier-card-title">Prestação de contas</h3>
+            <div id="conteudoFinanceiro"></div>
+        </div>
+
+        <div class="dossier-card">
+            <h3 class="dossier-card-title">Patrimônio declarado</h3>
+            <div id="conteudoPatrimonio"></div>
+        </div>
+    </div>
+
+    <div class="dossier-card">
+        <h3 class="dossier-card-title">Registros e documentos públicos</h3>
+        <div id="conteudoDocumentosJuridicos"></div>
+    </div>
+
+    <!-- Auditoria técnica disponível sem competir com a ficha -->
     <div class="dossier-header">
         <details class="dossier-id" style="overflow-wrap:anywhere">
             <summary>Identificação técnica da ficha</summary>
             Chave: <strong id="candIdHeader"></strong><br>Exportação (SHA-256): <span id="candExportacao"></span>
         </details>
         <span class="dossier-update">Exportação gerada em: <span data-data-geracao>Não informada</span></span>
-    </div>
-
-    <!-- Grid 2 colunas -->
-    <div class="dossier-grid">
-
-        <!-- ========== COLUNA ESQUERDA ========== -->
-        <div class="dossier-left">
-
-            <!-- Card: Foto do Candidato -->
-            <div class="dossier-card">
-                <div class="dossier-card-photo">
-                    <img id="candFoto" class="cand-foto-perfil" src="icons/candidato-placeholder.svg" alt="Foto indisponível">
-                </div>
-            </div>
-
-            <!-- Card: Resumo da Proposta de Governo (IA) -->
-            <div class="dossier-card card-proposal">
-                <h3 class="dossier-card-title">PROPOSTAS POR TEMA</h3>
-                <fieldset id="selecaoDocumentos" class="cand-dados-extra" style="min-width:0">
-                    <legend>Documentos para o resumo</legend>
-                    <p class="texto-mutado">Selecione explicitamente os PDFs para consultar ou gerar seu resumo. Um subconjunto não representa todas as propostas. A geração envia os textos selecionados ao serviço de IA e pode estar sujeita a limites de uso. O resultado não é revisado automaticamente.</p>
-                    <div id="opcoesDocumentos"></div>
-                </fieldset>
-                <button id="btnConsultarResumo" class="btn-secundario btn-full-width" disabled>Consultar estado / resumo existente</button>
-                <button id="btnGerarResumo" class="btn-warning btn-full-width" disabled>
-                    <span class="icon-img-fixed"><img src="icons/star_p.svg" alt=""></span>
-                    Gerar rascunho com IA
-                </button>
-                <div id="loadingIA" class="hidden" role="status" aria-live="polite">
-                    <span class="icon-img"><img class="img-b" src="icons/ampulheta_b.svg" alt=""><img class="img-p" src="icons/ampulheta_p.svg" alt=""></span>
-                    Consultando o serviço de resumo...
-                </div>
-                <div id="resultadoIA" class="resultado-ia hidden" role="status" aria-live="polite"></div>
-            </div>
-
-        </div>
-
-        <!-- ========== COLUNA DIREITA ========== -->
-        <div class="dossier-right">
-
-            <!-- Card: Dados do Candidato -->
-            <div class="dossier-card">
-                <h3 class="dossier-card-title">DADOS DO CANDIDATO</h3>
-                <div id="conteudoDadosCandidato"></div>
-            </div>
-
-            <div class="dossier-card">
-                <h3 class="dossier-card-title">PRESTAÇÃO DE CONTAS</h3>
-                <div id="conteudoFinanceiro"></div>
-            </div>
-
-            <!-- Card: Patrimônio Declarado -->
-            <div class="dossier-card">
-                <h3 class="dossier-card-title">PATRIMÔNIO DECLARADO</h3>
-                <div id="conteudoPatrimonio"></div>
-            </div>
-
-            <!-- Card: Documentos e Situação Jurídica -->
-            <div class="dossier-card">
-                <h3 class="dossier-card-title">REGISTROS PÚBLICOS DO TSE</h3>
-                <div id="conteudoDocumentosJuridicos"></div>
-            </div>
-
-        </div>
-
     </div>
 
     <div class="dossier-reportar-erro">

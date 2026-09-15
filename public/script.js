@@ -14,6 +14,7 @@ const cacheFichas = criarCacheLimitado(12);
 const cacheDetalhes = criarCacheLimitado(48);
 let listaBusca = [], exportacao = null, metadados = null, ficha = null;
 let documentosResumo = [], resumoOcupado = false, resumoEstado = null;
+let resumoDisponivel = null, resumoVisivel = false;
 
 function elemento(tag, texto, classe) {
     const el = document.createElement(tag);
@@ -62,6 +63,12 @@ function detalhes(container, titulo, value) {
     container.append(box);
     return box;
 }
+function grupoComplementar(container, titulo = 'Ver informações complementares e fontes') {
+    const box = elemento('details', null, 'cand-dados-extra grupo-complementar');
+    box.append(elemento('summary', titulo));
+    container.append(box);
+    return box;
+}
 function detalhesRemotos(container, titulo, carregar) {
     const box = elemento('details', null, 'cand-dados-extra');
     box.append(elemento('summary', titulo));
@@ -107,18 +114,10 @@ function detalhesPaginados(container, titulo, carregarPagina) {
 }
 function fonte(container, metadata = metadados) {
     container.append(elemento('p', 'A geração da exportação não é a data de coleta ou atualização das fontes TSE. Dados sujeitos a retificação.', 'texto-mutado'));
-    const box = elemento('details', null, 'cand-dados-extra');
-    box.append(elemento('summary', 'Fontes e detalhes técnicos'));
-    let montado = false;
-    box.addEventListener('toggle', () => {
-        if (!box.open || montado) return;
-        montado = true;
-        detalhes(box, 'Metadados públicos da exportação e das fontes', metadata);
-        const link = elemento('a', 'Consultar o Portal DivulgaCand');
-        link.href = 'https://divulgacandcontas.tse.jus.br';
-        link.target = '_blank'; link.rel = 'noopener noreferrer'; box.append(link);
-    });
-    container.append(box);
+    detalhes(container, 'Metadados públicos da exportação e das fontes', metadata);
+    const link = elemento('a', 'Consultar dados oficiais no Portal DivulgaCand');
+    link.href = 'https://divulgacandcontas.tse.jus.br';
+    link.target = '_blank'; link.rel = 'noopener noreferrer'; container.append(link);
 }
 function atualizarDatas() {
     const raw = metadados?.geradoEm;
@@ -195,7 +194,7 @@ function pesquisar() {
         row.append(btn, info); $('listaCandidatos').append(row);
     });
 }
-function renderizarCadastro(cand) {
+function renderizarCadastro(cand, metadata = metadados) {
     const el = $('conteudoDadosCandidato'); el.replaceChildren();
     el.append(elemento('p', texto(cand.nomeCompleto ?? cand.nomeUrna), 'cand-nome-completo'));
     campos(el, [
@@ -205,10 +204,12 @@ function renderizarCadastro(cand) {
         ['Instrução', cand.instrucao], ['Ocupação', cand.ocupacao],
         ['Candidatura à reeleição', cand.tentandoReeleicao],
     ]);
-    detalhes(el, 'Unidade eleitoral', cand.unidadeEleitoral);
-    detalhes(el, 'Resultados por turno', cand.resultadosPorTurno);
-    detalhes(el, 'Campos cadastrais recebidos do TSE', Object.fromEntries(Object.entries(cand).filter(([key]) => !/genero|corRaca/i.test(key))));
-    fonte(el);
+    const complementares = grupoComplementar(el);
+    detalhes(complementares, 'Unidade eleitoral', cand.unidadeEleitoral);
+    detalhes(complementares, 'Resultados por turno', cand.resultadosPorTurno);
+    detalhes(complementares, 'Campos cadastrais recebidos do TSE', Object.fromEntries(Object.entries(cand).filter(([key]) => !/genero|corRaca/i.test(key))));
+    detalhes(complementares, 'Metadados públicos da ficha', metadata);
+    fonte(complementares, metadata);
 }
 function renderizarPatrimonio(patrimonio) {
     const el = $('conteudoPatrimonio'); el.replaceChildren();
@@ -237,14 +238,19 @@ function renderizarPatrimonio(patrimonio) {
         total.append(elemento('span', 'Total declarado na exportação'), elemento('strong', fmtCentavos(patrimonio.totalCentavos) ?? 'Valor não informado'));
         el.append(total);
     }
-    detalhes(el, 'Detalhes do patrimônio', patrimonio); fonte(el);
+    const complementares = grupoComplementar(el, 'Ver detalhes e fontes do patrimônio');
+    detalhes(complementares, 'Dados completos do patrimônio', patrimonio);
+    fonte(complementares);
 }
 function renderizarFinanceiro(fin, cand) {
     const el = $('conteudoFinanceiro'); el.replaceChildren();
     el.append(elemento('p', 'Receitas, despesas contratadas, pagamentos e doadores originários são conjuntos distintos. Não são deduplicados nem somados entre si. Valores estimáveis e retificações exigem consulta à fonte.', 'texto-mutado'));
     campos(el, [['Prestação de contas — código informado (não é julgamento)', cand.situacaoPrestacaoContas]]);
-    if (!fin) el.append(elemento('p', 'Dados financeiros não disponíveis.'));
-    else {
+    if (!fin) {
+        el.append(elemento('p', 'Dados financeiros não disponíveis.'));
+        const complementares = grupoComplementar(el);
+        fonte(complementares);
+    } else {
         [
             ['Limite de gastos', 'limite_gastos_centavos', null],
             ['Total arrecadado', 'total_arrecadado_centavos', 'status_receitas'],
@@ -261,9 +267,10 @@ function renderizarFinanceiro(fin, cand) {
             ['Pagamentos — parcelas pagas', fin.quantidade_despesas_pagas],
             ['Originários — registros, não doadores únicos', Array.isArray(fin.doadoresOriginarios) ? fin.doadoresOriginarios.length : null],
         ]);
+        const complementares = grupoComplementar(el, 'Ver movimentações, dados completos e fontes');
         for (const [key, label] of [['receitas', 'Receitas'], ['despesasContratadas', 'Despesas contratadas'], ['pagamentos', 'Pagamentos'], ['doadoresOriginarios', 'Originários — registros, não doadores únicos']]) {
-            if (Array.isArray(fin[key])) detalhes(el, `${label} — detalhes e campos TSE`, fin[key]);
-            else detalhesPaginados(el, `${label} — detalhes e campos TSE`, pagina =>
+            if (Array.isArray(fin[key])) detalhes(complementares, `${label} — detalhes e campos TSE`, fin[key]);
+            else detalhesPaginados(complementares, `${label} — detalhes e campos TSE`, pagina =>
                 carregarDetalhe('financeiro', { conjunto: key, pagina, limite: 100 }));
         }
         if (Array.isArray(fin.prestadores)) {
@@ -279,18 +286,18 @@ function renderizarFinanceiro(fin, cand) {
                     ['Turno (TSE)', prestador.NR_TURNO],
                 ]));
             });
-            el.append(prestacoes);
-        } else detalhesPaginados(el, 'Prestações: tipo, data e turno (não é julgamento de regularidade)', pagina =>
+            complementares.append(prestacoes);
+        } else detalhesPaginados(complementares, 'Prestações: tipo, data e turno (não é julgamento de regularidade)', pagina =>
             carregarDetalhe('financeiro', { conjunto: 'prestadores', pagina, limite: 100 }));
-        detalhes(el, 'Demais campos financeiros recebidos', Object.fromEntries(Object.entries(fin).filter(([, valor]) => !Array.isArray(valor))));
+        detalhes(complementares, 'Demais campos financeiros recebidos', Object.fromEntries(Object.entries(fin).filter(([, valor]) => !Array.isArray(valor))));
+        fonte(complementares);
     }
-    fonte(el);
 }
 function urlDocumento(doc, tipo) {
     if (!hashValido(doc?.sha256)) return null;
     return assetURL(doc.arquivo ?? doc.caminho, { base, tipo, chave: ficha.chave, sha256: doc.sha256 });
 }
-function documento(container, doc, tipo) {
+function documento(container, doc, tipo, metadadosContainer) {
     const box = elemento('div', null, 'cand-juridico-subsecao');
     const href = urlDocumento(doc, tipo);
     if (href) {
@@ -298,7 +305,7 @@ function documento(container, doc, tipo) {
         link.href = href; link.target = '_blank'; link.rel = 'noopener noreferrer'; box.append(link);
     } else box.append(elemento('p', 'Documento indisponível ou caminho/hash inválido.'));
 
-    detalhes(box, 'Metadados do documento e vínculo', doc);
+    detalhes(metadadosContainer ?? box, `Metadados: ${doc.nome ?? 'documento original'}`, doc);
     container.append(box);
 }
 function renderizarJuridico(cand, docs, juridico) {
@@ -309,7 +316,8 @@ function renderizarJuridico(cand, docs, juridico) {
         ['N.º do processo', cand.nrProcesso], ['Situação do diploma', cand.situacaoDiploma],
         ['Situação eleitoral relacionada', cand.situacaoEleitoral], ['Situação da cassação', cand.situacaoCassacao],
     ]);
-    detalhes(el, 'Registros jurídicos e escopo informado', juridico);
+    const complementares = grupoComplementar(el, 'Ver dados jurídicos completos, metadados e fontes');
+    detalhes(complementares, 'Registros jurídicos e escopo informado', juridico);
     for (const [key, tipo, label] of [['propostas', 'proposta', 'Propostas de governo'], ['certidoes', 'certidao', 'Certidões']]) {
         const items = Array.isArray(docs?.[key]) ? docs[key] : [];
         const secao = tipo === 'certidao' ? elemento('details', null, 'cand-dados-extra') : elemento('div');
@@ -318,21 +326,25 @@ function renderizarJuridico(cand, docs, juridico) {
             if (secao._montado) return;
             secao._montado = true;
             if (!items.length) secao.append(elemento('p', 'Nenhum documento disponível na resposta.', 'texto-mutado'));
-            items.forEach(doc => documento(secao, doc, tipo));
+            items.forEach(doc => documento(secao, doc, tipo, complementares));
         };
         if (tipo === 'certidao') secao.addEventListener('toggle', () => { if (secao.open) montar(); });
         else montar();
         el.append(secao);
     }
-    fonte(el);
+    fonte(complementares);
 }
 function atualizarBotaoResumo() {
     const selecionados = documentosSelecionados();
-    const bloqueado = ['documento_indisponivel', 'extracao_pendente', 'resumo_publicado',
+    const bloqueado = ['documento_indisponivel', 'extracao_pendente',
         'processamento_offline_necessario', 'bloqueio_quota', 'bloqueio_configuracao'].includes(resumoEstado);
-    $('btnGerarResumo').disabled = !ficha || resumoOcupado || bloqueado || selecionados.length === 0;
-    $('btnGerarResumo').textContent = resumoOcupado ? 'Processando...' : 'Gerar rascunho com os documentos selecionados';
-    $('btnConsultarResumo').disabled = !ficha || resumoOcupado;
+    const botao = $('btnGerarResumo');
+    if (resumoOcupado) botao.textContent = resumoEstado === null ? 'Consultando resumo...' : 'Gerando resumo...';
+    else if (resumoDisponivel) botao.textContent = resumoVisivel ? 'Ocultar resumo' : 'Mostrar resumo';
+    else if (bloqueado) botao.textContent = resumoEstado === 'processamento_offline_necessario' ? 'Resumo em preparação' : 'Resumo indisponível';
+    else if (documentosResumo.length > 1 && selecionados.length === 0) botao.textContent = 'Selecione os documentos para gerar';
+    else botao.textContent = 'Gerar resumo com IA';
+    botao.disabled = !ficha || resumoOcupado || (!resumoDisponivel && (bloqueado || selecionados.length === 0));
     $('selecaoDocumentos').disabled = resumoOcupado;
 }
 function documentosSelecionados() {
@@ -346,10 +358,11 @@ function renderizarSelecao(docs) {
         const label = elemento('label');
         label.style.display = 'block'; label.style.overflowWrap = 'anywhere';
         const input = elemento('input'); input.type = 'checkbox'; input.value = doc.sha256;
-        // Preserva apenas escolhas explícitas; nunca seleciona o primeiro automaticamente.
-        input.checked = selecionados.has(doc.sha256);
+        // Um documento único não exige uma decisão do usuário. Com vários PDFs,
+        // escolhas continuam sempre explícitas para não alterar o escopo do resumo.
+        input.checked = selecionados.has(doc.sha256) || (documentosResumo.length === 1 && selecionados.size === 0);
         input.addEventListener('change', () => {
-            resumoEstado = null;
+            resumoEstado = null; resumoDisponivel = null; resumoVisivel = false;
             $('resultadoIA').replaceChildren(); $('resultadoIA').classList.add('hidden');
             atualizarBotaoResumo();
         });
@@ -363,54 +376,105 @@ function renderizarSelecao(docs) {
 function exibirResumo(data, selecaoSolicitada = []) {
     const el = $('resultadoIA'); el.replaceChildren(); el.classList.remove('hidden');
     resumoEstado = Object.hasOwn(estadosResumo, data.estado) ? data.estado : null;
-    el.append(elemento('p', resumoEstado ? estadosResumo[resumoEstado] : 'Estado de resumo não reconhecido; conteúdo não exibido.', 'disclaimer-ia'));
-    if (data.mensagem) el.append(elemento('p', data.mensagem));
-    if (data.motivo) {
-        if (typeof data.motivo === 'object') detalhes(el, 'Motivo informado pela API', data.motivo);
-        else el.append(elemento('p', `Motivo: ${data.motivo}`));
-    }
+    const estadoTexto = resumoEstado ? estadosResumo[resumoEstado] : 'Estado de resumo não reconhecido; conteúdo não exibido.';
     const selecionados = Array.isArray(data.documentosSelecionados) ? data.documentosSelecionados.filter(hashValido) : selecaoSolicitada;
     const total = new Set(documentosResumo.map(doc => doc.sha256)).size;
-    el.append(elemento('p', selecionados.length
+    const escopoTexto = selecionados.length
         ? `Escopo: ${selecionados.length} de ${total} PDF(s) disponíveis. ${selecionados.length < total ? 'Seleção de subconjunto: não representa todas as propostas.' : 'O resumo se limita aos documentos indicados; não garante cobertura integral do conteúdo.'}`
-        : 'Escopo documental não confirmado. Não interprete este resultado como resumo completo de todos os PDFs.', 'disclaimer-ia'));
-    if (selecionados.length) detalhes(el, 'Hashes dos documentos abrangidos nesta consulta', selecionados);
+        : 'Escopo documental não confirmado. Não interprete este resultado como resumo completo de todos os PDFs.';
     const alertaOCR = data.avisoRevisaoOCR === true || documentosResumo.some(doc => selecionados.includes(doc.sha256) &&
         (doc.requerRevisaoOCR === true || (Array.isArray(doc.paginasParaRevisao) ? doc.paginasParaRevisao.length > 0 : doc.paginasParaRevisao > 0)));
-    if (alertaOCR) el.append(elemento('p', 'Alerta OCR: há extração óptica sinalizada para revisão. Números, tabelas e ordem de leitura podem conter erros; confira o PDF original.', 'disclaimer-ia'));
-    if (data.alertas) detalhes(el, 'Alertas informados pela API', data.alertas);
-    if (['rascunho_gerado', 'resumo_publicado'].includes(resumoEstado)) {
-        const grupos = agruparPropostas(data.afirmacoes);
-        // Aviso de IA só aparece quando há conteúdo gerado para mostrar; evita
-        // afirmar que IA gerou algo quando o rascunho ainda não existe.
-        if (grupos.length || resumoEstado === 'resumo_publicado') {
-            el.append(elemento('p', 'Conteúdo gerado por IA, sujeito a erros e omissões. Confira as afirmações nos documentos originais.', 'disclaimer-ia'));
+    const grupos = ['rascunho_gerado', 'resumo_publicado'].includes(resumoEstado) ? agruparPropostas(data.afirmacoes) : [];
+    const temResumo = grupos.length > 0 || resumoEstado === 'resumo_publicado';
+
+    function adicionarDetalhesResumo(container) {
+        container.append(elemento('p', estadoTexto));
+        if (data.mensagem) container.append(elemento('p', data.mensagem));
+        if (data.motivo) {
+            if (typeof data.motivo === 'object') detalhes(container, 'Motivo informado pela API', data.motivo);
+            else container.append(elemento('p', `Motivo: ${data.motivo}`));
         }
-        if (!grupos.length) el.append(elemento('p', 'Nenhuma proposta estruturada disponível. Consulte os PDFs originais.'));
-        grupos.forEach(grupo => {
-            const secao = elemento('section', null, 'resumo-tema');
-            secao.append(elemento('h4', grupo.tema));
-            grupo.propostas.forEach(afirmacao => {
-                const item = elemento('div', null, 'resumo-proposta');
-                item.append(elemento('p', afirmacao.texto));
-                const refs = Array.isArray(afirmacao.referencias) ? afirmacao.referencias : [];
-                if (!refs.length) item.append(elemento('p', 'Referências não informadas.'));
-                refs.forEach(ref => {
-                    const pagina = Number.isSafeInteger(ref.pagina) && ref.pagina > 0 ? ref.pagina : null;
-                    const doc = documentosResumo.find(d => d.sha256 === ref.sha256);
-                    const href = doc && urlDocumento(doc, 'proposta');
-                    const label = `${doc?.nome ?? 'PDF original'} • Página: ${pagina ?? 'não informada'}`;
-                    const node = elemento(href && pagina ? 'a' : 'p', label);
-                    node.style.overflowWrap = 'anywhere';
-                    if (href && pagina) { node.href = `${href}#page=${pagina}`; node.target = '_blank'; node.rel = 'noopener noreferrer'; }
-                    item.append(node);
-                });
-                secao.append(item);
-            });
-            el.append(secao);
-        });
+        container.append(elemento('p', escopoTexto));
+        if (selecionados.length) detalhes(container, 'Hashes dos documentos abrangidos nesta consulta', selecionados);
+        if (data.alertas) detalhes(container, 'Alertas informados pela API', data.alertas);
+        if (data.documentos) detalhes(container, 'Documentos e rastreabilidade do resumo', data.documentos);
     }
-    if (data.documentos) detalhes(el, 'Documentos e rastreabilidade do resumo', data.documentos);
+
+    if (!temResumo) {
+        el.append(elemento('p', estadoTexto, 'disclaimer-ia'));
+        if (data.mensagem) el.append(elemento('p', data.mensagem));
+        if (data.motivo) {
+            if (typeof data.motivo === 'object') detalhes(el, 'Motivo informado pela API', data.motivo);
+            else el.append(elemento('p', `Motivo: ${data.motivo}`));
+        }
+        const consulta = grupoComplementar(el, 'Ver escopo e detalhes da consulta');
+        consulta.append(elemento('p', escopoTexto));
+        if (selecionados.length) detalhes(consulta, 'Hashes dos documentos abrangidos nesta consulta', selecionados);
+        if (data.alertas) detalhes(consulta, 'Alertas informados pela API', data.alertas);
+        if (data.documentos) detalhes(consulta, 'Documentos e rastreabilidade do resumo', data.documentos);
+        if (alertaOCR) el.append(elemento('p', 'Alerta OCR: há extração óptica sinalizada para revisão. Números, tabelas e ordem de leitura podem conter erros; confira o PDF original.', 'disclaimer-ia'));
+        return;
+    }
+
+    const referencias = new Map();
+    grupos.forEach(grupo => {
+        const secao = elemento('details', null, 'resumo-tema');
+        const cabecalho = elemento('summary');
+        cabecalho.append(
+            elemento('span', grupo.tema, 'resumo-tema-titulo'),
+            elemento('span', `${grupo.propostas.length} proposta(s)`, 'resumo-tema-contagem'),
+        );
+        secao.append(cabecalho);
+        grupo.propostas.forEach(afirmacao => {
+            const item = elemento('div', null, 'resumo-proposta');
+            const paragrafo = elemento('p', null, 'resumo-proposta-texto');
+            paragrafo.append(document.createTextNode(afirmacao.texto));
+            const refs = Array.isArray(afirmacao.referencias) ? afirmacao.referencias : [];
+            refs.forEach(ref => {
+                const pagina = Number.isSafeInteger(ref.pagina) && ref.pagina > 0 ? ref.pagina : null;
+                if (!hashValido(ref.sha256) || !pagina) return;
+                const chaveRef = `${ref.sha256}:${pagina}`;
+                const doc = documentosResumo.find(d => d.sha256 === ref.sha256);
+                const href = doc && urlDocumento(doc, 'proposta');
+                if (!referencias.has(chaveRef)) referencias.set(chaveRef, {
+                    numero: referencias.size + 1, pagina, doc, href,
+                });
+                const referencia = referencias.get(chaveRef);
+                const marcador = elemento(href ? 'a' : 'span', `[${referencia.numero}]`, 'resumo-citacao');
+                marcador.title = `${doc?.nome ?? 'PDF original'}, página ${pagina}`;
+                marcador.setAttribute('aria-label', `Fonte ${referencia.numero}: ${doc?.nome ?? 'PDF original'}, página ${pagina}`);
+                if (href) { marcador.href = `${href}#page=${pagina}`; marcador.target = '_blank'; marcador.rel = 'noopener noreferrer'; }
+                paragrafo.append(document.createTextNode(' '), marcador);
+            });
+            item.append(paragrafo); secao.append(item);
+        });
+        el.append(secao);
+    });
+
+    if (!grupos.length) el.append(elemento('p', 'Nenhuma proposta estruturada disponível. Consulte os PDFs originais.'));
+    if (referencias.size) {
+        const box = elemento('details', null, 'cand-dados-extra resumo-referencias');
+        box.append(elemento('summary', `Referências do resumo (${referencias.size} página(s))`));
+        let montado = false;
+        box.addEventListener('toggle', () => {
+            if (!box.open || montado) return;
+            montado = true;
+            const lista = elemento('ol', null, 'resumo-referencias-lista');
+            for (const referencia of referencias.values()) {
+                const item = elemento('li');
+                const label = `${referencia.doc?.nome ?? 'PDF original'} — página ${referencia.pagina}`;
+                const node = elemento(referencia.href ? 'a' : 'span', label);
+                if (referencia.href) { node.href = `${referencia.href}#page=${referencia.pagina}`; node.target = '_blank'; node.rel = 'noopener noreferrer'; }
+                item.append(node); lista.append(item);
+            }
+            box.append(lista);
+        });
+        el.append(box);
+    }
+    el.append(elemento('p', 'Conteúdo gerado por IA, sujeito a erros e omissões. Confira as afirmações nos documentos originais.', 'disclaimer-ia'));
+    if (alertaOCR) el.append(elemento('p', 'Alerta OCR: há extração óptica sinalizada para revisão. Números, tabelas e ordem de leitura podem conter erros; confira o PDF original.', 'disclaimer-ia'));
+    const sobre = grupoComplementar(el, 'Sobre este resumo');
+    adicionarDetalhesResumo(sobre);
 }
 async function solicitarResumo(gerar = false) {
     if (!ficha || resumoOcupado) return;
@@ -447,6 +511,9 @@ async function solicitarResumo(gerar = false) {
             renderizarSelecao([...porHash.values()]);
         }
         exibirResumo(data, documentos);
+        if (['rascunho_gerado', 'resumo_publicado'].includes(data.estado)) {
+            resumoDisponivel = data; resumoVisivel = true;
+        } else { resumoDisponivel = null; resumoVisivel = false; }
     } catch (error) {
         if (!request.vigente() || ficha !== contexto) return;
         exibirResumo({ estado: 'erro_geracao', mensagem: error.message });
@@ -472,6 +539,7 @@ function carregarDetalhe(secao, extras = {}) {
 
 function resetarFicha() {
     resumoControle.cancelar(); ficha = null; resumoOcupado = false; resumoEstado = null;
+    resumoDisponivel = null; resumoVisivel = false;
     documentosResumo = []; $('opcoesDocumentos').replaceChildren();
     $('resultadoIA').replaceChildren(); $('resultadoIA').classList.add('hidden');
     $('loadingIA').classList.add('hidden'); atualizarBotaoResumo();
@@ -502,10 +570,9 @@ async function abrirFicha(id) {
         foto.alt = foto.src.endsWith('candidato-placeholder.svg') ? 'Foto indisponível' : `Foto de ${texto(data.candidato.nomeUrna)}`;
         $('candIdHeader').textContent = data.chave;
         $('candExportacao').textContent = data.exportacao;
-        renderizarCadastro(data.candidato); renderizarPatrimonio(data.patrimonio);
+        renderizarCadastro(data.candidato, data.metadados); renderizarPatrimonio(data.patrimonio);
         renderizarFinanceiro(data.financeiro, data.candidato);
         renderizarJuridico(data.candidato, data.documentos, data.juridico);
-        detalhes($('conteudoDadosCandidato'), 'Metadados públicos da ficha', data.metadados);
         renderizarSelecao(data.documentos?.propostas);
         const url = new URL(location.href); url.searchParams.set('id', data.chave);
         history.replaceState(null, '', url);
@@ -531,8 +598,19 @@ window.addEventListener('popstate', () => {
     if (id && exportacao) void abrirFicha(id);
     else { fichaControle.cancelar(); resetarFicha(); }
 });
-$('btnGerarResumo').addEventListener('click', () => solicitarResumo(true));
-$('btnConsultarResumo').addEventListener('click', () => solicitarResumo());
+$('btnGerarResumo').addEventListener('click', () => {
+    if (resumoDisponivel) {
+        if (resumoVisivel) {
+            $('resultadoIA').classList.add('hidden'); resumoVisivel = false;
+        } else {
+            exibirResumo(resumoDisponivel, resumoDisponivel.documentosSelecionados ?? documentosSelecionados());
+            resumoVisivel = true;
+        }
+        atualizarBotaoResumo();
+        return;
+    }
+    return solicitarResumo(true);
+});
 // Não lê nem migra caches de fichas/favoritos por heurística. Links legados são resolvidos apenas pela API.
 atualizarDatas();
 void carregarListaBusca();
