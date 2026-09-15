@@ -1,0 +1,2535 @@
+{
+  "schemaVersion": 1,
+  "chave": "2026_6257_BR_280002542548",
+  "exportacao": "c756eb87d55fed722418648c38a73f4960d738f508f2a2faa7455da46a60e7b0",
+  "cacheKey": "resumos:v1:87b1b4ce323d2cd7a89e9954313c100d75a28984fc2d548dbf14f65eb5cf2b23",
+  "modelo": "gemini-3.5-flash-lite",
+  "versaoPrompt": "resumos-propostas-temas-v3",
+  "documentosSelecionados": [
+    "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36"
+  ],
+  "estado": "resumo_publicado",
+  "geradoEm": "2026-09-15T11:22:18.372Z",
+  "afirmacoes": [
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Acelerar a produção nacional de fertilizantes.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a mistura obrigatória de biocombustíveis para 32% de etanol na gasolina e 15% de biodiesel no diesel.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a oferta de Assistência Técnica e Extensão Rural (ATER) e aperfeiçoar a segurança agropecuária para agroindústrias familiares, facilitando a comercialização interestadual.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar a produção local em cadeias produtivas estratégicas, internalizar tecnologias, verticalizar cadeias produtivas e promover a digitalização e a renovação do maquinário industrial, com foco em setores de alta e média intensidade tecnológica.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar investimentos da Petrobras em exploração onshore e offshore para recuperar controle de reservas nacionais, expandir revitalização de campos maduros, retornar ao segmento de distribuição de combustíveis, expandir capacidade de refino e ampliar a atuação da Transpetro para logística de GNL.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar o programa Brasil Mais Produtivo para alcançar mais micro, pequenas e médias empresas com linhas de crédito voltadas à digitalização e ao aumento da produtividade.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Ampliar políticas para trabalhadores autônomos e pequenos empreendedores com acesso a crédito produtivo, qualificação, assistência técnica, simplificação tributária e proteção social.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 76
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Apoiar o turismo regional e internacional, desenvolvendo destinos baseados na riqueza natural e diversidade cultural, estimulando a colaboração entre setores criativos e turismo, criando novos roteiros temáticos e promovendo o país internacionalmente.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 56
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 57
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aprimorar a Política Nacional de Biocombustíveis (RenovaBio) e fortalecer a participação da Petrobras em biocombustíveis de forma integrada à Pbio.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aprimorar e fortalecer a neoindustrialização com foco em inovação, inteligência artificial, minerais críticos e geração de empregos, integrando políticas industrial, científica, tecnológica e de comércio exterior.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 50
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aprimorar instrumentos de fomento a sistemas produtivos integrados, como a Integração Lavoura-Pecuária-Floresta (ILPF).",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 61
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Aprimorar os mecanismos de utilização do poder de compra do Estado em todos os níveis da federação, estimulando o desenvolvimento territorial e a descentralização de contratações por meio de plataformas como o Contrata+ Brasil.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Assegurar condições adequadas de produção e prosperidade para a agricultura familiar, expandindo o Plano Safra da Agricultura Familiar com juros compatíveis e prioridade para a cesta básica, além de reforçar linhas de crédito específicas para agroecologia, produção orgânica, sociobiodiversidade e inovação tecnológica.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Assegurar que os investimentos da Petrobras continuem estimulando a indústria naval com reafirmação de regras de conteúdo local.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Atuar para mitigar a volatilidade dos preços internacionais de combustíveis e GLP, evitando exposição a choques externos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Continuar fortalecendo o crédito rural, ampliando os recursos do Plano Safra, assegurando juros compatíveis com a rentabilidade agropecuária e priorizando financiamento de máquinas, equipamentos, irrigação e tecnologias.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Criar condições para a redução sustentada das taxas de juros, mantendo o arcabouço fiscal, controlando o crescimento das despesas, melhorando a eficiência do gasto público, promovendo justiça tributária e combatendo privilégios.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Dar atenção adicional à política de aprendizagem para o trabalho, fomentar o empreendedorismo entre os jovens e apoiar a juventude rural com crédito e ações específicas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 24
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Dar continuidade à política de valorização do salário mínimo e integrar crédito público, assistência técnica, incentivos fiscais e compras governamentais à geração de empregos de qualidade.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 74
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Dar sequência ao Programa Conhecimento Brasil para repatriar e fixar talentos científicos, contribuindo para o desenvolvimento tecnológico e a inovação.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 50
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Desenvolver política específica para minerais críticos e terras raras com estratégia regional de mapeamento, beneficiamento e agregação de valor para evitar a simples exportação de matérias-primas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Elevar a taxa de investimento da economia em infraestrutura logística e social e incentivar investimentos privados na indústria com foco em inovação e setores de tecnologia.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Estimular as exportações industriais, ampliar a presença em novos mercados, tornar a pauta exportadora mais concentrada em produtos de maior valor agregado e aprimorar instrumentos de defesa comercial.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 52
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a diplomacia comercial, promover a imagem do agronegócio, reforçar a atuação de adidos agrícolas e ampliar missões comerciais para abertura e diversificação de mercados.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a Economia Popular e Solidária priorizando a inclusão produtiva de empreendedores populares, catadores, agricultores familiares e economia do cuidado.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 75
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 76
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a Embrapa com investimentos em biotecnologia, edição genômica e cultivares resistentes, e fomentar a expansão da conectividade no meio rural.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer a política de seguro rural por meio de diálogo com o setor produtivo para mitigar efeitos de catástrofes, cobrir perdas sistêmicas e promover educação em gestão de riscos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer instrumentos de apoio à indústria utilizando financiamento direcionado, parcerias entre crédito público e privado, compras públicas, concessões, regulações, benefícios condicionados a conteúdo local e margens de preferência para empresas brasileiras, além de assegurar o uso estratégico do FNDCT.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Fortalecer o Programa Garantia-Safra e ampliar o acesso ao seguro rural da agricultura familiar diante de eventos climáticos extremos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Implementar política macroeconômica comprometida com o crescimento, redução das desigualdades, valorização do trabalho, responsabilidade ambiental e fiscal, queda dos juros e inflação controlada.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 48
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Inserir na regulação do trabalho mediado por plataforma o financiamento da previdência social e a cobertura adequada para aposentadoria, incapacidade temporária, acidentes, maternidade e demais contingências sociais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 77
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter a inflação sob controle, assegurar a estabilidade do sistema financeiro nacional por meio do fortalecimento de órgãos de regulação, aprofundar o mercado de capitais doméstico e ampliar a atuação de investidores institucionais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter linhas de crédito diferenciadas para jovens agricultores, mulheres e cooperativas, simplificando o acesso ao crédito com soluções digitais e processos menos burocráticos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Manter o fomento à pesca artesanal e à aquicultura familiar com base nas diretrizes do Plano Nacional da Pesca Artesanal (PNPA) e proteger territórios pesqueiros e modos de vida tradicionais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Monitorar o endividamento de famílias e empresas, assegurar fundos garantidores, manter mecanismos de controle de gastos em apostas on-line e aprimorar regras de concessão de crédito para proteção dos consumidores.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 49
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Simplificar o ambiente de negócios, ampliar o acesso de pequenas empresas a compras governamentais, assegurar tratamento tributário justo na reforma tributária, estimular a inovação tecnológica, a inserção exportadora e o empreendedorismo feminino, além de potencializar o acesso a crédito via fundos garantidores e bancos públicos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 57
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Economia",
+      "texto": "Transformar a região Nordeste em polo de atração de plantas industriais eletrointensivas voltadas à produção de baixa emissão, como siderurgia verde, fertilizantes, química, cimento, alumínio, minerais críticos e hidrogênio de baixo carbono.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Acelerar a consolidação do prontuário único do cidadão por meio da Rede Nacional de Dados em Saúde (RNDS), disponibilizando marcação de consultas e resultados de exames no celular, e acelerar a utilização de inteligência artificial para triagem, priorização de casos graves, regulação por risco clínico e diagnóstico.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar investimentos na Rede de Atenção Psicossocial e nos CAPS, focando em crianças, adolescentes, jovens, diagnóstico e acompanhamento de TEA e outras neurodivergências, cuidado a mulheres em situação de violência e estratégias para problemas com jogos de apostas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Ampliar o número de Centros Especializados em Reabilitação e Oficinas Ortopédicas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aprimorar a política de saúde mental para a juventude com foco na Política Nacional de Atenção Psicossocial, redução de danos e desconstrução de preconceitos em escolas e universidades.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Aprimorar a regulação do acesso à atenção especializada com transparência das filas, uso de inteligência artificial, fila única digital ordenada por risco clínico e transporte sanitário.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Avançar na implantação de novos hospitais universitários e na articulação com o programa Agora tem Especialistas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Consolidar a rede pública de cuidado ao câncer com prevenção, diagnóstico, tratamento, atualização de medicamentos, consolidação do Supercentro Brasil de telediagnóstico e expansão de Centros Especializados (UNACONS e CACONS) e de radioterapia e cirurgias.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Continuar apoiando estados e municípios para cumprirem os percentuais de aquisição da agricultura familiar na alimentação escolar e de alimentos in natura ou minimamente processados, inclusive por meio da plataforma Contrata+Brasil.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Continuar investindo na ampliação e modernização de equipamentos para a rede pública (hemodinâmica, tomografia, ressonância magnética, radioterapia, PET-CT, salas de cirurgia, telessaúde, telecirurgia, cirurgia robótica e hospitais inteligentes).",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 38
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Garantir a saúde integral das mulheres, reforçando exames e tratamentos oncológicos, cuidados para endometriose, planejamento reprodutivo com métodos contraceptivos modernos gratuitos no SUS, fortalecimento do Programa Dignidade Menstrual e compromisso com a maternidade segura, redução da mortalidade materna, atenção a mulheres negras e fortalecimento do Samu e da Rede Alyne.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Impulsionar as ações do programa Agora Tem Especialistas por meio de expansão do terceiro turno, Carretas da Saúde, mutirões de atendimento e parceria com hospitais privados para exames e cirurgias.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Incluir exames laboratoriais, de diagnóstico e de monitoramento de condições crônicas como hipertensão e diabetes no Farmácia Popular.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Intensificar o apoio ao uso de ferramentas de saúde digital, como teleconsultas, teleorientação e teleacolhimento na rede básica, e investir no aumento da oferta de exames e recursos diagnósticos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter a implementação do programa Viver sem Limites, promover ambientes inclusivos com aplicação rigorosa da legislação de acessibilidade e fortalecer a fiscalização de cotas para pessoas com deficiência no mercado de trabalho.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter esforços para ampliar o acesso e adesão da população à vacinação com campanhas nacionais, vacinação nas escolas como eixo prioritário (destacando HPV), fortalecer a vacinação contra a dengue e o Vírus Sincicial Respiratório (VSR), e incorporar novas vacinas ao calendário do SUS.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 37
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter o apoio à expansão e qualificação das equipes de saúde da família e equipes multiprofissionais, fortalecendo instrumentos de indução e financiamento para qualidade do atendimento em territórios de maior vulnerabilidade social.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter o apoio aos municípios para a universalização da oferta de saúde bucal e transferência de equipamentos necessários.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter o Farmácia Popular 100% gratuito, assegurar revisão de medicamentos, distribuição de fraldas geriátricas e construir parcerias para ampliar locais de retirada em periferias e áreas desassistidas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 36
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter o Programa Mais Médicos com foco na vinculação e fixação de profissionais e na valorização da formação de especialistas em medicina de família e comunidade.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 35
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Manter regras de publicidade para evitar a indução do consumo de produtos nocivos à saúde e desestimular tais produtos por meio do Imposto Seletivo na regulamentação da reforma tributária.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 59
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Saúde",
+      "texto": "Mobilizar instituições públicas de saúde em articulação com empresas e universidades para fortalecer o Complexo Econômico e Industrial da Saúde (CEIS), aperfeiçoar as PDPs, pesquisar insumos da biodiversidade (com destaque para a Amazônia) e ampliar o sequenciamento genômico.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 39
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Consolidar o Sistema de Inteligência de Segurança Pública e Justiça Criminal, modernizar o SINESP e a Infoseg, e ampliar as Forças Integradas de Combate ao Crime Organizado (FICCOs).",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Construir programas de policiamento de proximidade, ampliar o uso de câmeras corporais com padrões nacionais de gestão e fortalecer controles internos e externos da atividade policial.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Cumprir as metas do Plano Pena Justa, instituir o Pacto Nacional de Execução Penal para o Enfrentamento ao Crime Organizado, apoiar estados na implementação de padrões de gestão penitenciária e fortalecer o sistema penitenciário federal com ampliação da capacidade de isolamento de lideranças.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Expandir e aprimorar o Programa Celular Seguro, intensificar o enfrentamento a redes de receptação, reduzir fraudes bancárias e golpes financeiros, e reforçar a repressão a crimes cibernéticos e financeiros.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer a Base Industrial e Tecnológica de Defesa para assegurar autonomia nacional e estimular inovações, bem como reforçar a defesa cibernética para proteger infraestruturas críticas e bases de dados governamentais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 78
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer a Inteligência de Estado com atuação em caráter civil, subordinada ao Estado Democrático de Direito, e proteger as fronteiras, a Amazônia e a Amazônia Azul, combatendo o crime organizado transnacional.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 79
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer ações de segurança na Amazônia Legal com patrulhamento fluvial e aéreo, inteligência policial e ambiental, cooperação com a OTCA, uso de tecnologia de monitoramento e combate prioritário à mineração ilegal.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer o Programa Brasil Contra o Crime Organizado em cooperação com estados e municípios para enfrentar o tráfico de armas e munições, sufocar financeiramente o crime organizado, qualificar a investigação de homicídios, retomar territórios e fortalecer a segurança no sistema prisional.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 27
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer políticas de prevenção à violência com foco na proteção da juventude negra, expansão de programas de mediação comunitária e justiça restaurativa em parceria com estados e municípios.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 29
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Fortalecer políticas de prevenção e combate à violência no campo para proteger moradores e defensores de direitos humanos e ambientais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Manter a estratégia de asfixia financeira do crime organizado, estabelecer procedimentos jurídicos ágeis para punir esses crimes e aplicar medidas rígidas para barrar candidaturas de indivíduos ligados ao crime organizado.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 27
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Manter o combate à pedofilia como prioritário, reforçando ações de inteligência e justiça para agilizar investigações e punição de crimes contra crianças e adolescentes, além de aprimorar o ECA Digital, regulamentar o uso de telas por faixa etária e regular plataformas de jogos e ambientes digitais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Segurança",
+      "texto": "Manter política de controle de armas e munições, aprimorar mecanismos de rastreabilidade e reforçar a capacidade de fiscalização da Polícia Federal e do Exército sobre empresas de segurança privada, defesa pessoal e registros de colecionadores, atiradores e caçadores.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Alcançar o desmatamento líquido zero até 2030, mantendo a atuação integrada de instâncias de governo em planos de controle, prevenção e manejo integrado do fogo.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Ampliar instrumentos de financiamento climático por meio do Fundo Clima, Eco Invest e Fundo Florestas Tropicais para Sempre.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Aperfeiçoar a capacidade de resposta da Defesa Civil, aprimorar obras de contenção de encostas e drenagem urbana sustentável, e fomentar a adaptação climática por meio de infraestrutura verde, proteção de mananciais e ocupação resiliente do território.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Aprimorar programas de Pagamento por Serviços Ambientais (PSA) para a biodiversidade e reconhecer legalmente a restauração biocultural.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Assegurar a efetividade do Código Florestal e da Lei da Mata Atlântica, avançar na destinação de terras públicas e reforçar a regularização fundiária.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 70
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Avançar em políticas bioenergéticas integradas para cadeias de grãos e proteínas, considerando impactos sobre solo, água e fertilizantes.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Avançar no Plano Nacional de Agroecologia e Produção Orgânica (PLANAPO), ampliar o Programa Nacional de Florestas Produtivas, sistemas agroflorestais, fomento à produção de bioinsumos, e incentivar a recuperação de áreas degradadas e conservação de nascentes por agricultores familiares.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Contribuir internacionalmente para a eliminação global do desmatamento e cumprir as metas da nova NDC.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Dar sequência ao programa de recuperação de pastagens degradadas, apoiar o melhoramento genético e a nutrição animal de precisão para reduzir emissões de gases de efeito estufa, e implementar sistemas de rastreabilidade individual do rebanho.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 62
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Expandir políticas públicas na Amazônia para estimular atividades industriais, farmacêuticas, alimentares, da construção civil e cosmética derivadas da biodiversidade, reforçar a regularização fundiária e manter recursos do Fundo Amazônia para o desenvolvimento sustentável.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fortalecer a fiscalização ambiental com mecanismos de rastreabilidade, devida diligência nas cadeias produtivas, monitoramento satelital e inteligência artificial.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Fortalecer arranjos regionais de planejamento e governança para acelerar políticas climáticas e eficiência de investimentos públicos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Implementar um programa nacional de resiliência climática no campo, ampliando áreas irrigadas, promovendo conservação dos solos, agricultura de precisão, plantio direto, e modernizando o monitoramento meteorológico e sistemas de alerta precoce.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 61
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Incentivar a criação de Reservas Particulares do Patrimônio Natural (RPPNs) e valorizar os parques nacionais integrando conservação, turismo sustentável e educação ambiental.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 71
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Incluir a Caatinga como ativo estratégico para adaptação climática e mitigação de emissões, estruturando financiamento permanente para o Semiárido.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Institucionalizar a adaptação climática no planejamento público, fortalecendo planos estaduais e municipais de enfrentamento a eventos extremos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 72
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 73
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Instituir incentivos através da Taxonomia Sustentável Brasileira para mobilizar a alocação de capital e orientar práticas produtivas sustentáveis, avançando na regulamentação do Sistema Brasileiro de Comércio de Emissões.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 51
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Meio Ambiente",
+      "texto": "Orientar os investimentos da Petrobras para a transição energética em alinhamento ao Acordo de Paris e NDC brasileira, com investimentos em fontes de baixo carbono, redução de emissões operacionais e readequação do marco legal do REPETRO.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Acelerar a implementação da Política Nacional de Equidade, Educação para as Relações Étnico-Raciais e Educação Escolar Quilombola (PNEERQ) e expandir campi quilombolas nos Institutos Federais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar o acervo do MEC Livros e incluir novas línguas no MEC Idiomas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar o fomento a estados e municípios por meio do Novo PAC para alcançar as metas do PNE relativas à educação infantil e creches.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar o Programa Nacional de Educação na Reforma Agrária (PRONERA) para garantir acesso ao ensino técnico e superior às populações do campo.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Ampliar oportunidades para os jovens na educação, lazer, cultura, esporte, descanso e desenvolvimento pessoal e profissional, aprimorando o Programa Pé-de-Meia, mantendo investimentos na rede nacional de cursinhos populares e fortalecendo a assistência estudantil com alimentação e moradia.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Apoiar a educação inclusiva e a educação bilíngue de surdos na rede federal, ofertando materiais, tecnologia assistiva e estruturando redes de serviços.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Avançar na integração da cultura com a educação por meio de programas como Mais Cultura nas Escolas e Arte e Cultura na Educação de Tempo Integral, consolidando atividades artísticas no currículo e programas de formação de plateia.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Continuar a expansão da rede de institutos federais de educação técnica e tecnológica (IFs), priorizando a interiorização, vazios educacionais, periferias urbanas e municípios com baixa oferta de cursos técnicos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Cumprir as metas do Plano Nacional de Educação 2026-2036, dar continuidade ao Compromisso Nacional Criança Alfabetizada para atingir 80% de crianças alfabetizadas na idade certa, fortalecer políticas contra o analfabetismo adulto e instituir estratégia de recomposição e aceleração de aprendizagens.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 30
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Dar continuidade e fortalecer o programa Pé-de-Meia para evitar a evasão no ensino médio.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Exercer liderança estratégica, apoiar tecnicamente estados, Distrito Federal e municípios, e avançar com o compartilhamento de dados para a execução de políticas educacionais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fomentar o ensino superior, concluir obras em curso e novos campi, concluir a implantação da nova unidade do ITA no Ceará, da Universidade Indígena e da Universidade do Esporte.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Fortalecer iniciativas de letramento digital para ampliar o acesso dos idosos aos serviços públicos digitais e reduzir vulnerabilidade a fraudes e crimes cibernéticos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Instituir uma Política Nacional de Letramento Digital para capacitar cidadãos, combater a desinformação e proteger a privacidade, além de criar um Conselho Nacional pela Soberania Digital.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Investir na ampliação e na melhoria da qualidade da pós-graduação nas áreas de conhecimento e regiões pouco ou não atendidas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 34
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Manter o apoio a estados e municípios na infraestrutura da educação básica com recursos do Novo PAC.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Manter o Piso Nacional do Magistério e dar continuidade às medidas de apoio à formação docente, elevação da atratividade das licenciaturas por meio do Pé-de-Meia Licenciatura, e fixação de docentes em regiões do país e áreas do conhecimento por meio do Bolsa Mais Professores.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Priorizar a expansão da educação em tempo integral, impulsionada pelo financiamento incluído no Fundeb.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 31
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Promover novo ciclo de expansão e interiorização da educação superior pública, além de adotar medidas para aperfeiçoar a assistência estudantil.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 33
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Educação",
+      "texto": "Universalizar a conectividade com internet de qualidade nas escolas brasileiras.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 32
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar a busca pela universalização do acesso à água potável, investir em saneamento rural ecológico, expandir o Programa Cisternas e buscar a universalização do acesso à energia elétrica no campo com prioridade para fontes renováveis como solar e eólica.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Ampliar a produção de biocombustíveis (etanol, biodiesel, SAF) e o aproveitamento de subprodutos da agroindústria para bioenergia e biogás.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 63
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Apoiar a gestão de resíduos sólidos e o tratamento de esgotos estimulando soluções inovadoras, como a produção de biogás e biometano.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 47
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Apoiar estados e municípios a universalizar o acesso à água tratada e ao esgotamento sanitário, priorizando periferias historicamente negligenciadas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Assegurar segurança energética, avançar na transição energética justa, combater a pobreza energética, incrementar fontes renováveis, ampliar armazenamento e flexibilidade do sistema elétrico, e substituir progressivamente combustíveis fósseis por biocombustíveis e de baixa intensidade de carbono.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Continuar apoiando investimentos em transporte coletivo de alta capacidade, modernização e eletrificação progressiva das frotas, gerando demanda para a indústria nacional de equipamentos de transporte.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Desenvolver tecnologias e expandir combustíveis sustentáveis como SAF, biometano e combustíveis marítimos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Estimular o papel do gás natural e do biometano, expandindo e integrando a infraestrutura gasífera para interiorizar malhas e fortalecer a integração gasífera sul-americana.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 66
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 67
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir a geração hidrelétrica por critérios socioambientais, buscar a repotenciação do parque hidrelétrico existente, acelerar a redução da produção de carvão, dar continuidade a leilões de transmissão e abrir nova fronteira de investimentos em baterias.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 65
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Expandir e aperfeiçoar o Novo PAC e revisar os planos nacional e setoriais de longo prazo da logística nas vertentes rodoviária, ferroviária, hidroviária, aérea e marítima, priorizando investimentos com potencial de redução de desigualdades e descarbonização.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 52
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 53
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Fomentar a descarbonização do transporte público coletivo com eletrificação de frotas de ônibus e expansão de trens e metrô.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 64
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Manter o ritmo de concessões rodoviárias, intensificar leilões de novos projetos ferroviários e a repactuação de contratos existentes, fortalecer investimentos em aeroportos regionais, incentivar novas rotas aéreas, dar prosseguimento a novos arrendamentos portuários e a concessões de manutenção de canais de acesso e serviços portuários.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 53
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Priorizar investimentos continuados na urbanização de favelas e periferias, requalificação de espaços públicos e ampliação do acesso a serviços essenciais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 28
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Promover debate sobre o barateamento da energia elétrica para consumidores residenciais e empresas para garantir justiça tarifária e sustentabilidade econômico-financeira do setor.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 65
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 66
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Reduzir o déficit de fibra óptica em municípios e ampliar o 5G no campo com prioridade para as regiões Norte, Nordeste e periferias, mantendo o uso do FUST para apoiar investimentos em conectividade.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Infraestrutura",
+      "texto": "Revitalizar bacias hidrográficas e ampliar infraestruturas de segurança hídrica e proteção contra cheias e enchentes.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Assegurar recursos para a conclusão de todas as obras do programa Periferia Viva e realizar novas rodadas de seleção para apoiar projetos de urbanização de favelas e regularização fundiária.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 46
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Dar continuidade ao programa Imóvel da Gente para destinar terrenos e imóveis da União à regularização fundiária ou conversão em equipamentos de saúde, educação e assistência social.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 17
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Habitação",
+      "texto": "Manter e ampliar o programa Minha Casa Minha Vida para todas as faixas de renda com foco nas famílias de baixa renda, mobilizando novos instrumentos como o Compra Assistida, utilizando áreas da União e aprimorando o Reforma Casa Brasil.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar as políticas de proteção às mulheres, combater a violência, promover a autonomia econômica, assegurar igualdade de oportunidades e garantir direitos sexuais e reprodutivos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar e fortalecer políticas para crianças por meio do enfrentamento da pobreza infantil, garantia de acesso a políticas públicas e direito ao brincar.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 24
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar o apoio aos municípios para expandir Centros-Dia e equipamentos de envelhecimento ativo, apoiar a ampliação de vagas em Instituições de Longa Permanência para Idosos (ILPIs) com fiscalização adequada, e dar escala nacional ao Programa de Atenção Domiciliar ao Idoso (PADI Brasil) do SUS.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar o Programa de Aquisição de Alimentos (PAA), priorizando a compra de alimentos frescos e diversificados da agricultura familiar para equipamentos públicos e famílias vulneráveis.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 59
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar o programa ProPatinhas de castração animal, manter o SinPatinhas e fortalecer o combate aos maus-tratos a animais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 71
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 72
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Ampliar parcerias com a iniciativa privada para qualificação e contratação de pessoas com mais de 60 anos, além de valorizar os saberes das pessoas idosas no mercado de trabalho.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Aprimorar a política de acesso à Previdência Social, reestruturar sua base de financiamento buscando a diversidade de fontes de custeio e construir mecanismos contributivos mais flexíveis para acompanhar trajetórias ocupacionais descontínuas e múltiplas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 77
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Assegurar políticas de apoio à inserção das mulheres no trabalho com linhas de crédito favorecidas no Pronaf, programas de qualificação como o Mulheres Mil, fomento ao empreendedorismo feminino e apoio à participação na ciência e pesquisa.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 21
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Avançar no fortalecimento da Proteção Social Básica e da Proteção Social Especial de média e alta complexidade no âmbito do SUAS, consolidar agenda de proteção social para povos e comunidades tradicionais e integrar o SUAS à agenda de enfrentamento às mudanças climáticas e desastres.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Consolidar a Política Nacional de Migrações, Refúgio e Apatridia (PNMRA), garantindo acolhimento digno, combate à xenofobia e ampliação do acesso a direitos e serviços públicos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Continuar o processo de titulação de territórios quilombolas, acelerando procedimentos e associando-os a políticas de desenvolvimento territorial.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 20
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Dar sequência ao Pacto de Enfrentamento ao Feminicídio concluindo a construção de Casas da Mulher Brasileira e Centros de Referência da Mulher Brasileira, ampliando Salas Lilás, distribuindo kits de monitoramento de agressores e fomentando a capacitação das forças de segurança.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer a inclusão produtiva de pessoas com deficiência e políticas de erradicação do trabalho análogo ao escravo e infantil.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer as instâncias de participação e governança na área da segurança alimentar e da produção de alimentos, dar seguimento a iniciativas internacionais de combate à fome e avançar na garantia de alimentação saudável internamente.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 58
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Fortalecer, dar escala e sustentabilidade às ações da Política Nacional de Cuidados, apoiar Cuidotecas, fomentar infraestruturas como lavanderias públicas, cozinhas solidárias e restaurantes populares, e instituir programa de capacitação de cuidadores com currículos inclusivos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 25
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 26
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Garantir proteção aos territórios indígenas por meio de demarcação e desintrusão, assegurar a educação escolar indígena fundamentada na autonomia e interculturalidade, implantar plenamente a Universidade Indígena e manter atenção especial à saúde e aos direitos dos povos, com destaque para os Yanomami.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 20
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 21
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Intensificar ações de promoção da autonomia e garantia de cuidado para a população idosa, organizando atendimento em saúde, lazer e assistência social, além de atendimento domiciliar de porta em porta.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 22
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Manter o combate ao racismo no centro da estratégia de desenvolvimento, implementar deliberações da V CONAPIR e avançar na regulamentação do Estatuto da Igualdade Racial.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Assistência Social",
+      "texto": "Manter, aperfeiçoar e ampliar as políticas de proteção social, combate às desigualdades e transferência de renda.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprimorar o modelo de centralização e compartilhamento de serviços de suporte entre ministérios e órgãos do Executivo federal.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprofundar a gestão de pessoas e o diálogo com servidores a partir da Mesa Nacional de Negociação Permanente.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprofundar a participação e o controle social nas políticas públicas, mantendo a realização de conferências e ampliando a participação no ciclo orçamentário federal e no PPA 2028-2031.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 15
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Aprofundar o Plano de Integridade e Combate à Corrupção 2025-2027, fortalecendo prevenção, investigação e responsabilização.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Avançar na regulação democrática das redes sociais e plataformas digitais para impedir a difusão de desinformação e campanhas de ódio.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Continuar o diálogo permanente com os atores do judiciário para estimular o aperfeiçoamento do sistema de Justiça.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Criar o Ministério da Segurança Pública, condicionado à aprovação da PEC da Segurança Pública, para coordenar as políticas do setor no âmbito do SUSP.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 30
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Dar continuidade às políticas de fomento à participação da população negra no funcionalismo público e nos espaços superiores da gestão governamental.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 19
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Debater o tema das emendas parlamentares com a sociedade para enfrentar distorções na elaboração e gestão do orçamento federal.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 15
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 16
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fomentar a negociação coletiva, estimular a contratação em diferentes âmbitos e implementar a regulamentação do direito de negociação no setor público.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 76
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Fortalecer a cooperação e a governança federativa para reduzir a desigualdade na capacidade de prestação de serviços de estados e municípios.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Instituir instrumentos para reforçar a capacidade técnica e financeira dos municípios para planejar, executar e fiscalizar investimentos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 45
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Investir na evolução do Portal da Transparência para uma plataforma inteligente baseada em dados abertos e inteligência artificial, fortalecendo a Ouvidoria-Geral da União e consultas públicas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 18
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Investir na universalização de serviços públicos digitais de qualidade, na infraestrutura pública digital e em plataformas como o Gov.br.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 17
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Manter a Política Nacional de Desenvolvimento e seus fundos constitucionais (FNE, FNO e FCO) como instrumentos centrais de promoção do equilíbrio territorial, regulamentar o Fundo Nacional de Desenvolvimento Regional e aplicar critérios de equilíbrio territorial em inovação, compras públicas e infraestrutura.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 55
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 56
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Gestão Pública",
+      "texto": "Planejar e construir políticas considerando dimensões de gênero, identidade, orientação sexual, étnico-raciais e classe social para atender adequadamente a população LGBTQIAP+.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 23
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Ampliar as condições de criação, produção e difusão na cultura digital, trabalhando pela aprovação de lei do direito autoral em ambiente digital e pela regulamentação da inteligência artificial para pagamento de músicos, autores e artistas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Ampliar o apoio a Arenas Brasil em todo o território nacional para assegurar acesso às práticas esportivas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 44
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Aperfeiçoar e implementar os instrumentos de fomento à cultura, nomeadamente a Lei Aldir Blanc e a Lei Rouanet.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 40
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Apoiar no Senado Federal o fim da escala 6x1 e a redução da jornada de trabalho para 40 horas semanais sem redução salarial.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Aprimorar a legislação trabalhista para inibir a precarização e retomar a assistência sindical nas homologações de rescisão.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Aprofundar a integração regional na América do Sul e no Caribe nas áreas de infraestrutura, defesa, segurança pública, energia e saúde, consolidando o Mercosul e promovendo redes multimodais e um mercado comum sul-americano de energia.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 80
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Avançar na política de reforma agrária assentando famílias acampadas, estruturando assentamentos, ampliando o acesso ao crédito fundiário e realizando regularização fundiária (com foco na região Norte), além de acelerar a titulação de territórios quilombolas e de comunidades tradicionais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 60
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Combater a pejotização espúria e consolidar um sistema de proteção aos trabalhadores na economia digital e de plataformas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 74
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Consolidar a transparência algorítmica e a rastreabilidade de conteúdo sintético por meio do Centro Nacional de Transparência Algorítmica.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Continuar ampliando e fortalecendo o programa Bolsa Atleta, manter o patrocínio de empresas estatais para o esporte de alto rendimento, realizar a Copa do Mundo de Futebol Feminino e implementar a Universidade do Esporte com uma rede nacional de pesquisa, inovação e tecnologia do esporte.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 43
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Dar continuidade aos investimentos para consolidar e manter a rede de equipamentos culturais nos territórios, fomentar programas de circulação e mobilidade artística e iniciativas de democratização da cultura.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Desenvolver infraestrutura computacional soberana com supercomputadores nacionais e estabelecer salvaguardas socioambientais obrigatórias para data centers e infraestruturas de IA, exigindo eficiência energética, fontes 100% renováveis, avaliações de impacto e contrapartidas de conteúdo local.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 54
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Desenvolver modelos de linguagem em português e outras línguas apoiados em plataforma nacional de dados, além de acelerar a difusão da inteligência artificial no setor produtivo (agro, saúde e serviços financeiros) e apoiar a pesquisa e a indústria de hardware e software.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 55
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Efetivar a equivalência remuneratória entre mulheres e homens aplicando a Lei de Igualdade Salarial com planos de ação obrigatórios nas empresas.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 75
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Expandir na rede SINE a Plataforma Pública Nacional de Empregabilidade com IA e estimular ocupações sociais em atividades de interesse coletivo.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 74
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fomentar o ecossistema nacional de tecnologia digital, desde datacenters até serviços de nuvem, fortalecendo a inteligência artificial desenvolvida por empresas brasileiras por meio de investimentos, inovação, compras governamentais e parcerias.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer a diplomacia cultural e a internacionalização da produção brasileira, estimulando o empreendedorismo cultural, a inovação, a formação profissional e o acesso a crédito para iniciativas de economia criativa, além de apoiar o setor de games.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 42
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer a produção cultural das juventudes, apoiar a produção cultural nas periferias, garantir acesso livre e promover integração artística com a economia criativa.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 25
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Fortalecer instâncias de participação social na elaboração, desenvolvimento e acompanhamento das políticas culturais, como o Conselho Nacional de Política Cultural e os Comitês de Cultura Estaduais, e preservar e difundir saberes, memórias e patrimônios culturais.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Garantir soberania digital para desenvolver, operar, regular e governar tecnologias estratégicas e infraestruturas críticas, assegurando que o ambiente digital proteja os direitos fundamentais e o interesse público.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 54
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Implementar políticas de salvaguarda, valorização e regras claras de direito autoral para mestras e mestres das culturas populares e tradicionais, além de fortalecer iniciativas culturais comunitárias e ampliar o fomento à infraestrutura cultural em territórios periféricos.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 41
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Liderar a construção de governança internacional para tecnologias digitais e inteligência artificial baseada em soberania digital, proteção de dados e regulamentação democrática, além de fortalecer a assistência consular a brasileiras e brasileiros no exterior.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 82
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Manter política externa universalista, diversificar parcerias comerciais, aprofundar relações com a África e o Sul Global, e engajar-se na reforma da ONU, da OMC e da arquitetura financeira internacional.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 80
+        },
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 81
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Preservar a competência nuclear brasileira para uso exclusivamente pacífico, avançando na autonomia do ciclo do combustível nuclear e aproveitando as reservas de urânio mediante viabilidade técnica, econômica, ambiental e social.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 68
+        }
+      ]
+    },
+    {
+      "tipo": "proposta",
+      "tema": "Outros",
+      "texto": "Trabalhar pela aprovação de regulamentação do streaming (VOD) no Congresso Nacional, fortalecer a governança das políticas do audiovisual, consolidar uma política industrial para o setor e fortalecer a proteção dos direitos autorais e da propriedade intelectual.",
+      "referencias": [
+        {
+          "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+          "pagina": 42
+        }
+      ]
+    }
+  ],
+  "cobertura": [
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 1
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 2
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 3
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 4
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 5
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 6
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 7
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 8
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 9
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 10
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 11
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 12
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 13
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 14
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 15
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 16
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 17
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 18
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 19
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 20
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 21
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 22
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 23
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 24
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 25
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 26
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 27
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 28
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 29
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 30
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 31
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 32
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 33
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 34
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 35
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 36
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 37
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 38
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 39
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 40
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 41
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 42
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 43
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 44
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 45
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 46
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 47
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 48
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 49
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 50
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 51
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 52
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 53
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 54
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 55
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 56
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 57
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 58
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 59
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 60
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 61
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 62
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 63
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 64
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 65
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 66
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 67
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 68
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 69
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 70
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 71
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 72
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 73
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 74
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 75
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 76
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 77
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 78
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 79
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 80
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 81
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 82
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 83
+    },
+    {
+      "sha256": "e1c162c20c81dafadf69b10bab230b5a6dc48f6b6c27c2cfce853b131a8bcc36",
+      "pagina": 84
+    }
+  ],
+  "revisao": {
+    "aprovado": true,
+    "neutralidadeConferida": true,
+    "referenciasConferidas": true,
+    "coberturaConferida": true,
+    "ocrConferido": true,
+    "revisor": "Automação",
+    "revisadoEm": "2026-09-15T11:22:18.395Z",
+    "conteudoHash": "b601959b7df54f6eeef0d8e56e124b49f621bb6974dfaacb0902647b744c8c93"
+  }
+}

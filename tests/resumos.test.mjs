@@ -162,6 +162,28 @@ test('multi PDFs nunca seleciona silenciosamente o apto', () => {
     assert.deepEqual(contexto([documento(), pendente], [h1]).base.documentosSelecionados, [h1]);
     for (const s of [[], [h1, h1], ['c'.repeat(64)], 'todos', null]) assert.throws(() => contexto([documento()], s));
 });
+test('extração parcial autorizada nominalmente gera contexto com alerta', () => {
+    const autorizada = '2026_6257_BR_280002542548';
+    const doc = documento();
+    doc.statusExtracao = 'texto_parcial';
+    doc.aptoParaRascunho = false;
+    doc.paginasPendentes = [1];
+    doc.paginasParaRevisao = [1];
+    doc.paginas[0].revisar = true;
+    const f = fonte();
+    f.textos = { [autorizada]: [doc] };
+    f.documentos = { [autorizada]: { propostas: [] } };
+    f.candidatos = { [autorizada]: {} };
+    const ctx = prepararContexto(f, autorizada);
+    assert.equal(ctx.resposta, undefined);
+    assert.equal(ctx.base.extracaoParcialAutorizada, true);
+    assert.equal(ctx.avisoRevisaoOCR, true);
+    assert.equal(ctx.paginas.length, 2);
+
+    doc.paginas.pop();
+    assert.equal(prepararContexto(f, autorizada).resposta.estado, 'extracao_pendente');
+});
+
 test('PDF no inventário sem extração aparece e bloqueia seleção completa', () => {
     const f = fonte(); f.documentos[chave].propostas.push({ sha256: h2, nome: 'Outro.pdf' });
     assert.equal(prepararContexto(f, chave).resposta.documentos.length, 2);
